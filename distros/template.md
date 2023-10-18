@@ -4,7 +4,18 @@
 
 This is a brief description of the distro.
 
-## Topics
+## Directory
 
-- [Topic 1](../topics/topic1.md)
-- [Topic 2](../topics/topic2.md)
+- [Distro](#distro)
+  - [Description](#description)
+  - [Directory](#directory)
+  - [Topic 1](#topic-1)
+  - [Topic 2](#topic-2)
+
+## [Topic 1](../topics/topic1.md)
+
+This is the content of the topic.
+
+## [Topic 2](../topics/topic2.md)
+
+This is the content of the topic.
