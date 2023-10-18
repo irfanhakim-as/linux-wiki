@@ -9,9 +9,10 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
 - [Bazzite](#bazzite)
 	- [Description](#description)
 	- [Directory](#directory)
+	- [References](#references)
 	- [Installation](#installation)
 		- [Description](#description-1)
-		- [References](#references)
+		- [References](#references-1)
 		- [Steps](#steps)
 	- [Plasma Discover Software Installation and Update](#plasma-discover-software-installation-and-update)
 	- [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
@@ -24,6 +25,10 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
 	- [Custom Emulator Configurations](#custom-emulator-configurations)
 	- [Custom Game Emulation Configurations](#custom-game-emulation-configurations)
 	- [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
+
+## References
+
+- [Bazzite](https://github.com/ublue-os/bazzite)
 
 ---
 
