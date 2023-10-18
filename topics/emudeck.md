@@ -310,7 +310,7 @@ Put the following BIOS files in `EMUDECK_FOLDER/bios`:
 
 - neogeo.zip (md5sum: `d4c3b4014bbbd00c5ad1b81bf38228b0`)
 
-> [!INFO]  
+> [!NOTE]  
 > To link a file using Dolphin, drag the source file to the destination folder while pressing <kbd>Ctrl + Shift</kbd>.
 
 Link/copy the following BIOS files from `EMUDECK_FOLDER/bios` to `EMUDECK_FOLDER/bios/mame` (create `mame` folder first) and `EMUDECK_FOLDER/roms/arcade`:
