@@ -30,6 +30,9 @@ A window switcher, Application launcher and dmenu replacement.
 
 This installs Rofi and sets it up as a Spotlight equivalent.
 
+> [!IMPORTANT]  
+> This guide assumes that you are using KDE Plasma as your desktop environment.
+
 ### Steps
 
 1. Install the `rofi` package using `yay`:
