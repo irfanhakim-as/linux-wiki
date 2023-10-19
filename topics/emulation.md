@@ -24,12 +24,19 @@ This guide focuses on general emulation topics.
       - [Hide OSD Messages](#hide-osd-messages)
   - [Custom Game Emulation Configurations](#custom-game-emulation-configurations)
     - [Description](#description-2)
-    - [Demon's Souls (PS3)](#demons-souls-ps3)
+    - [PS3](#ps3)
+      - [Demon's Souls](#demons-souls)
+    - [Nintendo Switch](#nintendo-switch)
+      - [Pikmin 4](#pikmin-4)
   - [Applying Translation Patches to ROMs](#applying-translation-patches-to-roms)
     - [Description](#description-3)
     - [References](#references-1)
     - [Steps](#steps)
     - [Notes](#notes)
+  - [Convert XCI Switch Games to NSP](#convert-xci-switch-games-to-nsp)
+    - [Description](#description-4)
+    - [References](#references-2)
+    - [Steps](#steps-1)
 
 ---
 
@@ -104,7 +111,11 @@ PCSX2 should already launch in fullscreen automatically, but if it does not:
 
 This details on certain configuration options or fixes for several games of various emulation systems.
 
-### Demon's Souls (PS3)
+### PS3
+
+This details additional configurations that may be required to fix or improve specific games on the RPCS3 emulator.
+
+#### Demon's Souls
 
 Black screen fix:
 
@@ -117,6 +128,30 @@ Black screen fix:
 4. In the **Additional Settings** section, select the **Write Color Buffers** checkbox.
 
 5. Click **Apply**, **Save custom configuration**, and **Close**.
+
+### Nintendo Switch
+
+This details additional configurations that may be required to fix or improve specific games on the Yuzu emulator.
+
+To configure a particular game on Yuzu:
+
+1. Launch the Yuzu app.
+
+2. In the Games list/directory on Yuzu, highlight the game we wish to configure.
+
+3. Right click on the highlighted game and select **Properties**.
+
+In the **Properties** window, several tabs and settings can be found and configured on a per-game basis.
+
+#### Pikmin 4
+
+Pikmin 4 has some graphical glitches when exploring the underground/burrow (at the time of writing, **yuzu 1524**). This can be fixed by configuring the graphical accuracy level:
+
+1. In the **Properties** window, navigate to the **Adv. Graphics** tab.
+
+2. Locate the **Accuracy Level** setting, and select the **High** option.
+
+3. Click the **OK** button to apply our changes.
 
 ---
 
@@ -181,3 +216,52 @@ Now you should have your output file that has been patched with the translation.
 - The former version is expected to be applied to a supported ROM that they have specified.
 
 - Meanwhile, the latter is expected to be applied to a ROM that has been patched with a specific **Full/Playable** patch. Apply these patches using **Flips** one by one.
+
+---
+
+## Convert XCI Switch Games to NSP
+
+### Description
+
+This details how we can convert `.xci` Nintendo Switch games to `.nsp`.
+
+### References
+
+- [4nxci](https://github.com/The-4n/4NXCI)
+- [4nxci-git](https://aur.archlinux.org/packages/4nxci-git)
+
+### Steps
+
+1. Install `4nxci-git` from the `AUR` in your system or in an Arch Linux based [Distrobox](distrobox.md) container:
+
+    ```sh
+    yay -S 4nxci-git
+    ```
+
+2. **(Optional)** Create a dedicated working directory for converting `.xci` games for ease of use:
+
+    ```sh
+    mkdir xci-to-nsp
+    ```
+
+3. Move your `prod.keys` file to the working directory:
+
+    ```sh
+    mv prod.keys xci-to-nsp
+    ```
+
+4. Place your `.xci` game (i.e. `MyGame.xci`) to the working directory:
+
+    ```sh
+    mv MyGame.xci xci-to-nsp
+    ```
+
+5. Perform the conversion using `4nxci`:
+
+    ```sh
+    4nxci MyGame.xci -k prod.keys
+    ```
+
+    `4nxci` expects the `.xci` game file, while the `-k` flag expects the full path to our keys, `prod.keys`.
+
+    You will get an `.nsp` game file of the `.xci` we had passed to `4nxci` to convert in the same working directory at the end.
