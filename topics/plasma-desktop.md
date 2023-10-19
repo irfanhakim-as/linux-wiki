@@ -17,6 +17,7 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
       - [Configure Dolphin options](#configure-dolphin-options)
       - [Show additional info and panel](#show-additional-info-and-panel)
       - [Show video thumbnails](#show-video-thumbnails)
+      - [Enable HEIC Images Support](#enable-heic-images-support)
       - [Enhancing Dolphin Functionality](#enhancing-dolphin-functionality)
     - [KRunner](#krunner)
     - [Spectacle](#spectacle)
@@ -99,6 +100,16 @@ This details on some things that could be done to improve the experience of usin
 5. Tick the **Video Files (ffmpegthumbs)** option.
 
 6. Click **Apply** and **OK**.
+
+#### Enable HEIC Images Support
+
+This allows the viewing and thumbnailing of HEIC images.
+
+1. Install the `kimageformats` package using `yay`:
+
+    ```sh
+    yay -S kimageformats
+    ```
 
 #### Enhancing Dolphin Functionality
 
