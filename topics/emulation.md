@@ -75,8 +75,7 @@ This process customises some PCSX2 configurations such as adding in the PS2 boot
 2. Go to **Settings** > **BIOS Settings** and uncheck the entry that says **Fast Boot**.
 
 > [!WARNING]  
-> Doing this will not bypass the BIOS/region check, which means some games may not be able to launch if you're missing a BIOS file or the game's region is incompatible.  
-> For these games, you may need to re-enable the Fast Boot option.
+> Doing this will not bypass the BIOS/region check, which means some games may not be able to launch if you're missing a BIOS file or the game's region is incompatible. For these games, you may need to leave the Fast Boot option enabled.
 
 #### Make Fullscreen
 

@@ -63,14 +63,15 @@ This details on how we can mount a remote directory.
     sudo nano /etc/fstab
     ```
 
-    > [!IMPORTANT]  
-    > This assumes that your remote server's hostname is `mynas` and has a directory named `mydir`, and that your username is `deck`.  
-    > Change `mynas/mydir` and `/home/deck` to `${NAS_SERVER}/${NAS_DIR}` and `/home/${USER}` respectively.
+    Sample `fstab` entry:
 
     ```sh
     # example.org
     //mynas/mydir                      /mnt/mynas    cifs    _netdev,nofail,mfsymlinks,credentials=/home/deck/.config/smb/.smbcreds,vers=3.0,uid=1000,gid=1000,iocharset=utf8   0 0
     ```
+
+    > [!IMPORTANT]  
+    > This assumes that your remote server's hostname is `mynas`, that it has a directory named `mydir`, and that your username is `deck`. Update them accordingly.
 
 6. Reload the `daemon` for it to recognise the changes made to our `fstab` file:
 
