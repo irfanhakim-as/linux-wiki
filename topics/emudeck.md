@@ -1,4 +1,4 @@
-# Emudeck
+# EmuDeck
 
 ## Description
 
@@ -6,7 +6,7 @@ EmuDeck is a collection of scripts that allows you to autoconfigure your Steam D
 
 ## Directory
 
-- [Emudeck](#emudeck)
+- [EmuDeck](#emudeck)
   - [Description](#description)
   - [Directory](#directory)
   - [References](#references)
