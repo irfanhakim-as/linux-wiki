@@ -233,14 +233,20 @@ This details some customisation options for the desktop.
 
 ### Task Switcher
 
-1. Launch the **System Settings** app.
+1. Install the `kdeplasma-addons` package using `yay` to add more task switcher options:
 
-2. Click the **Window Management** section.
+    ```sh
+    yay -S kdeplasma-addons
+    ```
 
-3. Click the **Task Switcher** section.
+2. Launch the **System Settings** app.
 
-4. In the **Main** tab, under the **Vizualisation** section, click the dropdown above the **Shortcuts** options.
+3. Click the **Window Management** section.
 
-5. By default, the **Breeze** task switcher is selected, switch this to **Thumbnail Grid**.
+4. Click the **Task Switcher** section.
 
-6. Click **Apply**.
+5. In the **Main** tab, under the **Vizualisation** section, click the dropdown above the **Shortcuts** options.
+
+6. By default, the **Breeze** task switcher is selected, switch this to **Thumbnail Grid**.
+
+7. Click **Apply**.
