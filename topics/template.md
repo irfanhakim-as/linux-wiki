@@ -9,10 +9,15 @@ This is a brief description of the topic.
 - [Topic](#topic)
   - [Description](#description)
   - [Directory](#directory)
+  - [References](#references)
   - [Subtopic](#subtopic)
     - [Description](#description-1)
-    - [References](#references)
+    - [References](#references-1)
     - [Content](#content)
+
+## References
+
+- [Reference 1](https://example.com)
 
 ---
 
