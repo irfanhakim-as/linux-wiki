@@ -421,7 +421,7 @@ Put the following ROM files in `EMUDECK_FOLDER/roms/psp`:
 
 ### Description
 
-This details how to setup our PS3 emulator, RPCS3, and add/setup PS3 games (i.e. Demon's Souls) using EmuDeck.
+This details how to setup our PS3 emulator, RPCS3, and add/setup PS3 games using EmuDeck.
 
 ### References
 

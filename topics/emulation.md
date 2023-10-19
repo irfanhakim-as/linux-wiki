@@ -25,6 +25,11 @@ This guide focuses on general emulation topics.
   - [Custom Game Emulation Configurations](#custom-game-emulation-configurations)
     - [Description](#description-2)
     - [Demon's Souls (PS3)](#demons-souls-ps3)
+  - [Applying Translation Patches to ROMs](#applying-translation-patches-to-roms)
+    - [Description](#description-3)
+    - [References](#references-1)
+    - [Steps](#steps)
+    - [Notes](#notes)
 
 ---
 
@@ -112,3 +117,67 @@ Black screen fix:
 4. In the **Additional Settings** section, select the **Write Color Buffers** checkbox.
 
 5. Click **Apply**, **Save custom configuration**, and **Close**.
+
+---
+
+## Applying Translation Patches to ROMs
+
+### Description
+
+This details on how you can apply translation patches to your supported ROMs.
+
+### References
+
+- [Apply ROM hacks and translations](https://emulation.gametechwiki.com/index.php/Apply_ROM_hacks_and_translations)
+
+### Steps
+
+1. Make sure you have your ROM, and download your translation patch file. Your translation patch file will normally detail on what exact ROM version you would need:
+
+   - Game name
+   - Region
+   - Revision
+   - Dump
+
+2. If the game provides the _sum_ (i.e. `MD5`) of the ROM, you can check if it matches by running:
+
+    ```sh
+    md5sum <my_rom_name>
+    ```
+
+    Replace `<my_rom_name>` with the exact name of your ROM file.
+
+3. Install a patching tool that is suitable for your translation patch file. In the case of `ips` and `bps` files, install **Flips** as a Flatpak.
+
+    ```sh
+    flatpak install --user com.github.Alcaro.Flips
+    ```
+
+4. In this example, we will assume these values:
+
+   - ROM name: `Dragon Quest Monsters - Caravan Heart (Japan).gba`
+   - Patch name: `Dragon Quest Monsters Caravan Heart.ips`
+
+5. To apply the patch to the ROM:
+
+   - Launch the **Flips** app.
+
+   - Click **Apply Patch**.
+
+   - Select your patch file (i.e. `Dragon Quest Monsters Caravan Heart.ips`).
+
+   - Select your ROM (i.e. `Dragon Quest Monsters - Caravan Heart (Japan).gba`).
+
+   - Name your output file (i.e. `Dragon Quest Monsters - Caravan Heart (Japan) [English].gba`).
+
+   - Click **Save**.
+
+Now you should have your output file that has been patched with the translation.
+
+### Notes
+
+- In some cases, there are translation files of different variants, **Full/Playable** and **Addendum**.
+
+- The former version is expected to be applied to a supported ROM that they have specified.
+
+- Meanwhile, the latter is expected to be applied to a ROM that has been patched with a specific **Full/Playable** patch. Apply these patches using **Flips** one by one.
