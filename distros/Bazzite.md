@@ -129,7 +129,7 @@ This details how to setup BIOS/ROM files for each emulator in EmuDeck.
 
 ## [PS3 Emulation Setup](../topics/emudeck.md#ps3-emulation-setup)
 
-This details how to setup our PS3 emulator, RPCS3, and add/setup PS3 games (i.e. Demon's Souls) using EmuDeck.
+This details how to setup our PS3 emulator, RPCS3, and add/setup PS3 games using EmuDeck.
 
 ---
 
