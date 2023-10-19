@@ -19,6 +19,7 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 	- [Fixing DRM issues with Google Chrome](#fixing-drm-issues-with-google-chrome)
 	- [Install Git LFS](#install-git-lfs)
 	- [Better Fonts](#better-fonts)
+		- [References](#references-1)
 	- [Convert XCI Switch Games to NSP](#convert-xci-switch-games-to-nsp)
 
 ## References
@@ -123,9 +124,14 @@ Git LFS is needed to acquire files from git repositories that requires LFS. This
 
 ---
 
-## [Better Fonts](../topics/fonts.md)
+## Better Fonts
 
-This details several configuration options for our desktop to have and use better looking fonts.
+This details several configuration options for our desktop to have and use better looking fonts. This also includes Emoji, Microsoft Fonts, and Apple Fonts support.
+
+### References
+
+- [Fonts Installation](../topics/fonts.md#Installation)
+- [Fonts Configuration](../topics/fonts.md#Configuration)
 
 ---
 
