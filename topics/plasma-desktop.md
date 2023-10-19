@@ -16,6 +16,8 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
       - [Add Refresh button](#add-refresh-button)
       - [Configure Dolphin options](#configure-dolphin-options)
       - [Show additional info and panel](#show-additional-info-and-panel)
+      - [Show video thumbnails](#show-video-thumbnails)
+      - [Enhancing Dolphin Functionality](#enhancing-dolphin-functionality)
     - [KRunner](#krunner)
     - [Spectacle](#spectacle)
   - [Theme Customisations](#theme-customisations)
@@ -79,6 +81,78 @@ This details on some things that could be done to improve the experience of usin
 2. Hover over **Show Additional Information**, and select **Size**.
 
 3. Now from the Hamburger menu, hover over **Show Panels**, and select **Information**.
+
+#### Show video thumbnails
+
+1. Install the `ffmpegthumbs` package using `yay`:
+
+    ```sh
+    yay -S ffmpegthumbs
+    ```
+
+2. Open **Dolphin**.
+
+3. Enter the **Configure Dolphin** menu (<kbd>Ctrl + Shift + ,</kbd>).
+
+4. In the **General** section, click the **Previews** tab.
+
+5. Tick the **Video Files (ffmpegthumbs)** option.
+
+6. Click **Apply** and **OK**.
+
+#### Enhancing Dolphin Functionality
+
+1. Install the `dolphin-plugins` package using `yay`:
+
+    ```sh
+    yay -S dolphin-plugins
+    ```
+
+2. Install the `kio-gdrive` package using `yay` to add Google Drive directly into Dolphin:
+
+    ```sh
+    yay -S kio-gdrive
+    ```
+
+3. Install several Dolphin Service Menus.
+
+    Create the `ServiceMenus` directory:
+
+    ```sh
+    mkdir -p ~/.local/share/kservices5/ServiceMenus
+    ```
+
+    Download and install [office2pdf](https://store.kde.org/p/1172774) to add Office documents conversion to PDF:
+
+    ```sh
+    cp office2pdf.desktop ~/.local/share/kservices5/ServiceMenus
+    ```
+
+    Download and install [KDE 5 Service Menu PDF](https://store.kde.org/p/1227799) using `yay` to add more PDF-related functionalities:
+
+    ```sh
+    yay -S kde-servicemenus-pdf
+    ```
+
+    Download and install [kompare_servicemenu](https://store.kde.org/p/1100884) using `yay` to add support for comparing different files:
+
+    ```sh
+    yay -S kde-servicemenus-komparemenu
+    ```
+
+    Download and install [KDE 5 Service Menu ReImage](https://store.kde.org/p/1231579) using `yay` to add support for extra image-related functionalities:
+
+    ```sh
+    yay -S kde-service-menu-reimage
+    ```
+
+    You may need to install some dependencies for `kde-service-menu-reimage` such as `jhead` for converting PNG images to JPG:
+
+    ```sh
+    yay -S jhead
+    ```
+
+4. Log out and log back into the desktop.
 
 ### KRunner
 

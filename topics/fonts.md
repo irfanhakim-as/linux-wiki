@@ -19,6 +19,16 @@ This guide seeks to add more fonts and use better fonts for our desktop.
   - [Configuration](#configuration)
     - [Description](#description-2)
     - [Steps](#steps-1)
+  - [Emoji Support](#emoji-support)
+    - [Description](#description-3)
+    - [Steps](#steps-2)
+  - [Microsoft Fonts Support](#microsoft-fonts-support)
+    - [Description](#description-4)
+    - [Steps](#steps-3)
+  - [Apple Fonts Support](#apple-fonts-support)
+    - [Description](#description-5)
+    - [References](#references-1)
+    - [Steps](#steps-4)
 
 ---
 
@@ -128,3 +138,230 @@ This details several configuration options for our desktop to use better looking
     You may adjust the font sizes to your liking.
 
 4. Restart your system for the changes to take effect.
+
+---
+
+## Emoji Support
+
+### Description
+
+This details several configuration options for our desktop to use better looking fonts we have installed.
+
+> [!IMPORTANT]
+> This guide is redundant and **NOT** needed if you have completed the [Installation](#installation) and [Configuration](#configuration) sections.
+
+### Steps
+
+1. Install an emoji font package using `yay`.
+
+    Install `ttf-twemoji` for Twitter emoji:
+
+    ```sh
+    yay -S ttf-twemoji
+    ```
+
+    Alternatively, install `ttf-apple-emoji` for Apple emoji:
+
+    ```sh
+    yay -S ttf-apple-emoji
+    ```
+
+2. Create the `fontconfig` directory if it's not available already:
+
+    ```sh
+    mkdir -p ~/.config/fontconfig
+    ```
+
+3. Update or create a new `fonts.conf` file in the `fontconfig` directory.
+
+    > [!IMPORTANT]
+    > Backup the existing `fonts.conf` file if any.
+
+    ```sh
+    nano ~/.config/fontconfig/fonts.conf
+    ```
+
+    Sample `fonts.conf` configuration for Twitter emoji:
+
+    ```conf
+    <?xml version='1.0'?>
+    <!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
+    <fontconfig>
+        <alias>
+            <family>sans-serif</family>
+            <prefer>
+                <family>Noto Sans</family>
+                <family>Twemoji</family>
+                <family>Noto Color Emoji</family>
+                <family>Noto Emoji</family>
+            </prefer>
+        </alias>
+        <alias>
+            <family>serif</family>
+            <prefer>
+                <family>Noto Serif</family>
+                <family>Twemoji</family>
+                <family>Noto Color Emoji</family>
+                <family>Noto Emoji</family>
+            </prefer>
+        </alias>
+        <alias>
+            <family>monospace</family>
+            <prefer>
+                <family>Noto Mono</family>
+                <family>Twemoji</family>
+                <family>Noto Color Emoji</family>
+                <family>Noto Emoji</family>
+            </prefer>
+        </alias>
+    </fontconfig>
+    ```
+
+    Alternatively, this is a sample `fonts.conf` configuration for Apple emoji:
+
+    ```conf
+    <?xml version='1.0'?>
+    <!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
+    <fontconfig>
+        <alias>
+            <family>sans-serif</family>
+            <prefer>
+                <family>Noto Sans</family>
+                <family>Apple Color Emoji</family>
+                <family>Noto Color Emoji</family>
+                <family>Noto Emoji</family>
+            </prefer>
+        </alias>
+        <alias>
+            <family>serif</family>
+            <prefer>
+                <family>Noto Serif</family>
+                <family>Apple Color Emoji</family>
+                <family>Noto Color Emoji</family>
+                <family>Noto Emoji</family>
+            </prefer>
+        </alias>
+        <alias>
+            <family>monospace</family>
+            <prefer>
+                <family>Noto Mono</family>
+                <family>Apple Color Emoji</family>
+                <family>Noto Color Emoji</family>
+                <family>Noto Emoji</family>
+            </prefer>
+        </alias>
+    </fontconfig>
+    ```
+
+4. Refresh the font cache:
+
+    ```
+    fc-cache -f -v
+    ```
+
+5. Log out and log back into the desktop.
+
+---
+
+## Microsoft Fonts Support
+
+### Description
+
+This details how to install and set up Microsoft Windows fonts on Linux.
+
+> [!IMPORTANT]
+> This guide is redundant and **NOT** needed if you have completed the [Installation](#installation) and [Configuration](#configuration) sections.
+
+### Steps
+
+1. Install Windows 10 fonts:
+
+    ```sh
+    yay -S ttf-ms-win10-auto
+    ```
+
+2. Fix anti-aliasing issue with the Calibri font (looks pixelated by default).
+
+    Create or update the `fonts.conf` file in the `fontconfig` directory:
+
+    ```sh
+    nano ~/.config/fontconfig/fonts.conf
+    ```
+
+    Add the following `match` block to the end of the `fonts.conf` file just before the closing of the `fontconfig` tag:
+
+    ```conf
+    <match target="font">
+        <edit name="embeddedbitmap" mode="assign">
+            <bool>false</bool>
+        </edit>
+    </match>
+    ```
+
+3. Log out and log back into the desktop.
+
+---
+
+## Apple Fonts Support
+
+### Description
+
+This details how to install and set up Apple macOS fonts on Linux.
+
+> [!IMPORTANT]
+> This guide is redundant and **NOT** needed if you have completed the [Installation](#installation) and [Configuration](#configuration) sections.
+
+### References
+
+- [apple-fonts](https://aur.archlinux.org/packages/apple-fonts)
+- [Fonts for Apple platforms](https://developer.apple.com/fonts)
+
+### Steps
+
+1. Install Apple fonts:
+
+    ```sh
+    yay -S apple-fonts
+    ```
+
+2. Set our `fonts.conf` config to use Apple fonts.
+
+    Create or update the `fonts.conf` file in the `fontconfig` directory:
+
+    ```sh
+    nano ~/.config/fontconfig/fonts.conf
+    ```
+
+    Replace the first preferred fonts of each `family` block in our config to `SF Pro Text`, `New York`, and `SF Mono`:
+
+    ```conf
+    <alias>
+        <family>sans-serif</family>
+        <prefer>
+            <family>SF Pro Text</family>
+            <family>Apple Color Emoji</family>
+            <family>Noto Color Emoji</family>
+            <family>Noto Emoji</family>
+        </prefer>
+    </alias>
+    <alias>
+        <family>serif</family>
+        <prefer>
+            <family>New York</family>
+            <family>Apple Color Emoji</family>
+            <family>Noto Color Emoji</family>
+            <family>Noto Emoji</family>
+        </prefer>
+    </alias>
+    <alias>
+        <family>monospace</family>
+        <prefer>
+            <family>SF Mono</family>
+            <family>Apple Color Emoji</family>
+            <family>Noto Color Emoji</family>
+            <family>Noto Emoji</family>
+        </prefer>
+    </alias>
+    ```
+
+3. Log out and log back into the desktop.
