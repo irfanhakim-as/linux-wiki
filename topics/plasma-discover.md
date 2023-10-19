@@ -9,9 +9,75 @@ This topic focuses on the Plasma Discover application, a graphical package manag
 - [Plasma Discover](#plasma-discover)
   - [Description](#description)
   - [Directory](#directory)
-  - [Software Installation and Update](#software-installation-and-update)
+  - [Discover and Flatpak Installation](#discover-and-flatpak-installation)
     - [Description](#description-1)
     - [Steps](#steps)
+      - [Arch Linux](#arch-linux)
+  - [Add Flathub Repository](#add-flathub-repository)
+    - [Description](#description-2)
+    - [Steps](#steps-1)
+  - [Software Installation and Update](#software-installation-and-update)
+    - [Description](#description-3)
+    - [Steps](#steps-2)
+
+---
+
+## Discover and Flatpak Installation
+
+### Description
+
+This details how to install the Plasma Discover application and Flatpak.
+
+### Steps
+
+#### Arch Linux
+
+1. Install the `discover` package using `yay`:
+
+    ```sh
+    yay -S discover
+    ```
+
+2. Install the `flatpak` package using `yay`:
+
+    ```sh
+    yay -S flatpak
+    ```
+
+---
+
+## Add Flathub Repository
+
+### Description
+
+This details how to add the Flathub repository so we have access to Flatpak applications.
+
+### Steps
+
+1. Add the Flathub repository for the user:
+
+    ```sh
+    flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    ```
+
+2. Add the Flathub repository for the system:
+
+    ```sh
+    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    ```
+
+3. To check the Flatpak repos/remotes available in our system:
+
+    ```sh
+    flatpak remotes --show-details
+    ```
+
+4. Add Flatpak/Flathub to the **Discover** app:
+
+   - Open **Discover**.
+   - Go to **Settings**.
+   - Select the Flatpak repos available (system and user).
+   - Make Default.
 
 ---
 
