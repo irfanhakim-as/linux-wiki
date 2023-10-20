@@ -26,6 +26,12 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
     - [Floating "Dock"](#floating-dock)
     - [Cleaner System Tray](#cleaner-system-tray)
     - [Task Switcher](#task-switcher)
+  - [Widgets](#widgets)
+    - [Description](#description-3)
+    - [KDE Thermal Monitor](#kde-thermal-monitor)
+      - [References](#references)
+      - [Steps](#steps)
+      - [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -261,3 +267,73 @@ This details some customisation options for the desktop.
 6. By default, the **Breeze** task switcher is selected, switch this to **Thumbnail Grid**.
 
 7. Click **Apply**.
+
+---
+
+## Widgets
+
+### Description
+
+This details some widgets we could add to our desktop for added functionality.
+
+### KDE Thermal Monitor
+
+#### References
+
+- [CPU temperature goes to off state](https://github.com/kotelnik/plasma-applet-thermal-monitor/issues/53#issuecomment-500287155)
+
+#### Steps
+
+1. Install the `plasma5-applets-thermal-monitor` package using `yay`:
+
+    ```sh
+    yay -S plasma5-applets-thermal-monitor
+    ```
+
+2. Check for available sensors on your system:
+
+    ```sh
+    sensors
+    ```
+
+    > [!NOTE]  
+    > Do note that some sensors may require additional packages to be installed (i.e. `zenpower3` for newer Ryzen CPUs).
+
+3. Add the widget and configure the sources:
+
+   - Add the widget to the menu/task bar.
+
+   - Right click the widget and click **Configure Thermal Monitor**.
+
+   - Add each source to the **Resources** list by hitting the **+** button.
+
+   - Choose a **Source**.
+
+   - Select **Show alias** and add a label to the source (i.e. `CPU`, `GPU`, `SSD`).
+
+   - Click the **OK** button.
+
+   - Do these for all your relevant sources. For example:
+     - CPU: `zenpower-pci-00c3/Tdie`
+     - GPU: `nvidia-smi`
+     - SSD: `nvme-pci-0500/Composite`
+
+   - Click the **Apply** button.
+
+   - Click the **Appearance** section.
+
+   - Adjust the **Alias font size** and other settings accordingly.
+
+   - Click **Apply** and **OK**.
+
+#### Troubleshooting
+
+Fix the KDE Thermal Monitor issue requiring "Reload Temperature Sources" when `plasmashell` is restarted:
+
+- Edit the `~/.local/share/plasma/plasmoids/org.kde.thermalMonitor/contents/ui/main.qml` file:
+
+    ```qml
+    property var systemmonitorAvailableSources: []
+    ```
+
+    Replace the `property var systemmonitorAvailableSources` line with the above line.

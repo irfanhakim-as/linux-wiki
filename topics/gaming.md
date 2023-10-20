@@ -13,6 +13,13 @@ This details all matters pertaining PC gaming.
     - [Description](#description-1)
     - [References](#references)
     - [Steps](#steps)
+  - [Custom Game Configurations](#custom-game-configurations)
+    - [Description](#description-2)
+    - [References](#references-1)
+    - [Notes](#notes)
+    - [Elden Ring](#elden-ring)
+    - [Eastward](#eastward)
+    - [Witcher 3 and Cyberpunk 2077](#witcher-3-and-cyberpunk-2077)
 
 ---
 
@@ -97,4 +104,74 @@ This guide goes through setting up packages and configuration options that could
 
     ```conf
     vm.max_map_count = 2147483642
+    ```
+
+---
+
+## Custom Game Configurations
+
+### Description
+
+This details any workarounds required for games that either do not work out of the box or perform poorly on Steam (Runtime).
+
+### References
+
+- [If you're using an older Nvidia GPU and experiencing poor performance in Elden Ring through Proton, try this!](https://www.reddit.com/r/linux_gaming/comments/t834b0/if_youre_using_an_older_nvidia_gpu_and)
+- [VKD3D-Proton - Environment variables](https://github.com/HansKristian-Work/vkd3d-proton#environment-variables)
+
+### Notes
+
+Generally, all Steam games are run with this **launch option** (on Steam) in order to get better performance with GameMode, and PC stats with MangoHud:
+
+```sh
+gamemoderun mangohud %command%
+```
+
+A few games however, *seems* to perform worse with GameMode, if that is the case, simply omit `gamemoderun` from the launch option command above.
+
+### Elden Ring
+
+- Adding the following environment variable `VKD3D_FEATURE_LEVEL=12_0` to the game's launch option fixes the white screen crash on launch:
+
+    ```sh
+    VKD3D_FEATURE_LEVEL=12_0 VKD3D_CONFIG=no_upload_hvv gamemoderun mangohud %command%
+    ```
+
+    > [!NOTE]  
+    > Adding `VKD3D_CONFIG=no_upload_hvv` may/not improve game performance on NVIDIA GPUs.
+
+- Fix controller issues with these steps in the **Steam** app:
+
+  - Click **Steam** in the toolbar
+
+  - Click **Settings**
+
+  - Click **Controller**
+
+  - Click **Desktop Configuration**
+
+  - Select **Browse Configs**
+
+  - Click **Templates**
+
+  - Select **Gamepad**
+
+  - Hit **Apply**
+
+### Eastward
+
+- Run the game with OpenGL.
+
+### Witcher 3 and Cyberpunk 2077
+
+- Skip the GOG/RED launcher when launching the game using the `--launcher-skip` flag:
+
+    ```sh
+    gamemoderun mangohud %command% --launcher-skip
+    ```
+
+- To use DX11 instead of DX12 for better performance on Witcher 3, edit the `launcher-configuration.json` file found in the game's folder and update the `fallback` value to `DirectX 11`:
+
+    ```json
+    "fallback": "DirectX 11"
     ```
