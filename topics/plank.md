@@ -64,19 +64,7 @@ This guides how to install and setup the Plank dock.
 
     - Remove any **Docklets** from the Plank dock.
 
-3. Set the Plank dock to autostart upon boot:
-
-    - Open the **System Settings** app.
-
-    - Click the **Startup and Shutdown** section.
-
-    - Click the **Autostart** tab.
-
-    - Click the **Add...** button.
-
-    - Click the **Add Application...** option.
-
-    - Select the **Plank** application.
+3. Set the Plank dock to [autostart](autostart.md#add-application-to-autostart) upon boot.
 
 4. Add applications to the dock by launching the application while the Plank dock is running and right clicking the application's icon in the dock and selecting the **Keep in Dock** option.
 

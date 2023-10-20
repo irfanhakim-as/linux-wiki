@@ -41,7 +41,7 @@ This details setting up GreenWithEnvy, a system utility for controlling NVIDIA G
 
 2. Set it to autostart hidden in the system tray:
 
-    - Add GreenWithEnvy to the list of startup applications in **Autostart**.
+    - Add GreenWithEnvy to the list of [autostart](autostart.md#add-application-to-autostart) applications.
 
     - Update its **Arguments** as the following:
 
