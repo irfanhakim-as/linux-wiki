@@ -29,6 +29,7 @@ This details how to enable WoWLAN on our system.
 
 - [How to enable WoW/WoWLAN](https://unix.stackexchange.com/a/553449)
 - [Wowlan (Wake on Wireless Lan) trouble Intel 7260 Wireless Card](https://bbs.archlinux.org/viewtopic.php?id=215563)
+- [Wake-on-LAN](https://wiki.archlinux.org/title/Wake-on-LAN)
 
 ### Steps
 
