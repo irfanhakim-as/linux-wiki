@@ -94,36 +94,37 @@ This details how to enable WoL on our system.
     ethtool -s enp7s0 wol g
     ```
 
-    To make it persistent, either create a `systemd.link` configuration or use `wol-systemd` on Arch Linux based systems.
+    To make it persistent, either create a `wol@` `systemd` service or install the `wol-systemd` package on Arch Linux based systems.
 
-    Create a `systemd.link` configuration file:
+    Create a `wol@.service` `systemd` service:
 
     ```sh
-    sudo nano /etc/systemd/network/50-wired.link
+    sudo nano /etc/systemd/system/wol@.service
     ```
 
-    Content of the `50-wired.link` file:
+    Content of the `wol@.service` file:
 
     ```
-    [Match]
-    MACAddress=aa:bb:cc:dd:ee:ff
+    [Unit]
+    Description=Wake-on-LAN for %i
+    Requires=network.target
+    After=network.target
 
-    [Link]
-    NamePolicy=kernel database onboard slot path
-    MACAddressPolicy=persistent
-    WakeOnLan=magic
+    [Service]
+    ExecStart=/usr/bin/ethtool -s %i wol g
+    Type=oneshot
+
+    [Install]
+    WantedBy=multi-user.target
     ```
 
-    > [!IMPORTANT]  
-    > Replace `aa:bb:cc:dd:ee:ff` with the actual MAC address of your network interface (i.e. `80:eg:f9:5f:06:28`).
-
-    Alternatively, install the `wol-systemd` package from the `AUR` using `yay`:
+    **Alternatively**, install the `wol-systemd` package from the `AUR` using `yay`:
 
     ```sh
     yay -S wol-systemd
     ```
 
-    Then, start and enable the `wol-systemd` service for the network interface (i.e. `enp7s0`):
+    Lastly in either options, start and enable the `wol@` `systemd` service for the network interface (i.e. `enp7s0`):
 
     ```sh
     sudo systemctl enable --now wol@enp7s0.service
