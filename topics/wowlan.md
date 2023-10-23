@@ -150,6 +150,9 @@ This details how to enable WoWLAN on our system.
 
 This details how to trigger WoWLAN on a system from another system.
 
+> [!IMPORTANT]  
+> This only works if the target system is connected to the same network wirelessly, and the target system's power is on (i.e. sleeping, not shutdown).
+
 ### Steps
 
 1. Install the `wakeonlan` package from the `AUR` using `yay`:
@@ -169,6 +172,3 @@ This details how to trigger WoWLAN on a system from another system.
     ```sh
     wakeonlan 80:eg:f9:5f:06:28
     ```
-
-> [!IMPORTANT]  
-> This only works if the target system is connected to the same network wirelessly, and the target system's power is on (i.e. suspended, not shutdown).

@@ -49,8 +49,8 @@ This details how to enable WoL on our system.
 
    - Press the <kbd>F10</kbd> key to save and exit the BIOS.
 
-> [!NOTE]  
-> In some cases, you may need to also disable **ERP** if it was enabled by default by the motherboard.
+    > [!NOTE]  
+    > In some cases, you may need to also disable **ERP** if it was enabled by default by the motherboard.
 
 ### Software
 
@@ -138,6 +138,9 @@ This details how to enable WoL on our system.
 
 This details how to trigger WoL on a system from another system.
 
+> [!IMPORTANT]  
+> This only works if the target system is connected to the same network (via Ethernet) as the system you are triggering the WoL from.
+
 ### Steps
 
 1. Install the `wakeonlan` package from the `AUR` using `yay`:
@@ -157,6 +160,3 @@ This details how to trigger WoL on a system from another system.
     ```sh
     wakeonlan 80:eg:f9:5f:06:28
     ```
-
-> [!IMPORTANT]  
-> This only works if the target system is connected to the same network (via Ethernet) as the system you are triggering the WoL from.
