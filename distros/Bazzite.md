@@ -25,6 +25,8 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
 	- [Custom Emulator Configurations](#custom-emulator-configurations)
 	- [Custom Game Emulation Configurations](#custom-game-emulation-configurations)
 	- [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
+	- [Wake on LAN or Wireless](#wake-on-lan-or-wireless)
+		- [References](#references-2)
 
 ## References
 
@@ -148,3 +150,14 @@ This details on certain configuration options or fixes for several games of vari
 ## [Install Applications/Libraries via Distrobox](../topics/distrobox.md#software-installation)
 
 This details how we can install certain applications or libraries not present in Bazzite via Distrobox.
+
+---
+
+## Wake on LAN or Wireless
+
+This details on how to enable, setup and use Wake on LAN (WoL) or Wake on Wireless (WoWLAN) on our system.
+
+### References
+
+- [Wake on LAN](../topics/wol.md)
+- [Wake on Wireless](../topics/wowlan.md)

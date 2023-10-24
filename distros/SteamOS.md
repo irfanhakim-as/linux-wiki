@@ -21,6 +21,8 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 	- [Better Fonts](#better-fonts)
 		- [References](#references-1)
 	- [Convert XCI Switch Games to NSP](#convert-xci-switch-games-to-nsp)
+	- [Wake on LAN or Wireless](#wake-on-lan-or-wireless)
+		- [References](#references-2)
 
 ## References
 
@@ -138,3 +140,14 @@ This details several configuration options for our desktop to have and use bette
 ## [Convert XCI Switch Games to NSP](../topics/emulation.md#convert-xci-switch-games-to-nsp)
 
 This details how we can convert `.xci` Nintendo Switch games to `.nsp`.
+
+---
+
+## Wake on LAN or Wireless
+
+This details on how to enable, setup and use Wake on LAN (WoL) or Wake on Wireless (WoWLAN) on our system.
+
+### References
+
+- [Wake on LAN](../topics/wol.md)
+- [Wake on Wireless](../topics/wowlan.md)
