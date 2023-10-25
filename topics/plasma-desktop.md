@@ -19,6 +19,7 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
       - [Show video thumbnails](#show-video-thumbnails)
       - [Enable HEIC Images Support](#enable-heic-images-support)
       - [Enhancing Dolphin Functionality](#enhancing-dolphin-functionality)
+      - [Make Flatpak Apps Use KDE File Picker](#make-flatpak-apps-use-kde-file-picker)
     - [KRunner](#krunner)
     - [Spectacle](#spectacle)
   - [Theme Customisations](#theme-customisations)
@@ -170,6 +171,38 @@ This allows the viewing and thumbnailing of HEIC images.
     ```
 
 4. Log out and log back into the desktop.
+
+#### Make Flatpak Apps Use KDE File Picker
+
+This makes Flatpak apps use Dolphin as the File Picker and not Nautilus (GTK).
+
+1. Add these variables to `/etc/environment` *(might not be needed)*:
+
+    ```sh
+    GTK_USE_PORTAL=1
+    XDG_CURRENT_DESKTOP=KDE
+    ```
+
+2. Make sure these packages are installed on your machine:
+
+    ```
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal
+    ```
+
+3. Install the `xdg-desktop-portal-kde` package using `yay`:
+
+    ```sh
+    yay -S xdg-desktop-portal-kde
+    ```
+
+4. Uninstall the `xdg-desktop-portal-gnome` package if it is installed:
+
+    ```sh
+    yay -Rns xdg-desktop-portal-gnome
+    ```
+
+5. Reboot your system.
 
 ### KRunner
 

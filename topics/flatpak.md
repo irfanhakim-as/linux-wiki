@@ -20,6 +20,9 @@ Flatpak, formerly known as xdg-app, is a utility for software deployment and pac
     - [Description](#description-2)
     - [References](#references-2)
     - [Steps](#steps)
+  - [Make Flatpak Apps Use KDE File Picker](#make-flatpak-apps-use-kde-file-picker)
+    - [Description](#description-3)
+    - [References](#references-3)
 
 ## References
 
@@ -63,3 +66,15 @@ This solves the issue of (some) Flatpak apps not looking native in KDE, and defa
     ```sh
     sudo flatpak override --system --filesystem=xdg-config/gtk-3.0:ro --filesystem=xdg-config/gtkrc-2.0:ro --filesystem=xdg-config/gtk-4.0:ro --filesystem=xdg-config/gtkrc:ro --env "GTK_THEME=Breeze"
     ```
+
+---
+
+## Make Flatpak Apps Use KDE File Picker
+
+### Description
+
+This makes Flatpak apps use Dolphin as the File Picker and not Nautilus (GTK).
+
+### References
+
+- [Make Flatpak Apps Use KDE File Picker](plasma-desktop.md#make-flatpak-apps-use-kde-file-picker)
