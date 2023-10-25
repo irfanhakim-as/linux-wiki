@@ -14,6 +14,10 @@ Use any Linux distribution inside your terminal. Enable both backward and forwar
     - [Description](#description-1)
     - [References](#references-1)
     - [Steps](#steps)
+  - [VS Code Integration](#vs-code-integration)
+    - [Description](#description-2)
+    - [References](#references-2)
+    - [Steps](#steps-1)
 
 ### References
 
@@ -89,3 +93,125 @@ This details how we can install certain applications or libraries not present in
     ```sh
     distrobox-export --bin $(which unrar) --export-path /home/${USER}/.local/bin --delete
     ```
+
+---
+
+## VS Code Integration
+
+### Description
+
+This allows attaching to a Distrobox Container from within VS Code (on the host system) like you would on Windows with WSL.
+
+> [!NOTE]  
+> This guide assumes that you are using the Flatpak version of VS Code.
+
+### References
+
+- [Integrate VSCode and Distrobox](https://github.com/89luca89/distrobox/blob/main/docs/posts/integrate_vscode_distrobox.md)
+
+### Steps
+
+1. Install the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension on VS Code.
+
+2. Create a `podman` wrapper from within the Distrobox container to access the host's `podman` (or `docker`) in `~/.local/bin/podman-host`:
+
+    ```sh
+    nano ~/.local/bin/podman-host
+    ```
+
+    Content of `podman-host`:
+
+    ```sh
+    #!/bin/bash
+    set -x
+    if [ "$1" == "exec" ]; then
+        # Remove 'exec' from $@
+        shift
+        script='
+            result_command="podman exec"
+            for i in $(printenv | grep "=" | grep -Ev " |\"" |
+                grep -Ev "^(HOST|HOSTNAME|HOME|PATH|SHELL|USER|_)"); do
+
+                result_command=$result_command --env="$i"
+            done
+
+            exec ${result_command} "$@"
+            '
+        exec flatpak-spawn --host sh -c "$script" - "$@"
+    else
+        exec flatpak-spawn --host podman "$@"
+    fi
+    ```
+
+3. Make the `podman-host` script executable:
+
+    ```sh
+    chmod +x ~/.local/bin/podman-host
+    ```
+
+4. Open up VS Code and head to **Settings** by pressing <kbd>Ctrl + ,</kbd>.
+
+5. Add the `podman-host` script as the Docker Path under the **Dev > Containers: Docker Path** setting.
+
+    ```
+    /home/<container-user>/.local/bin/podman-host
+    ```
+
+    Replace `<container-user>` with the user of your container.
+
+6. From the host system, make the container findable/recognisable from within VS Code by creating a `json` file with the name of your container.
+
+    Create the `json` file at `~/.var/app/com.visualstudio.code/config/Code/User/globalStorage/ms-vscode-remote.remote-containers/cli-bin/<container-name>.json`:
+
+    ```sh
+    nano ~/.var/app/com.visualstudio.code/config/Code/User/globalStorage/ms-vscode-remote.remote-containers/cli-bin/<container-name>.json
+    ```
+
+    Replace `<container-name>` with the name of your container (i.e. `arch`).
+
+    Content of the `<container-name>.json` file:
+
+    ```json
+    {
+        "name" : "", // PUT YOUR DISTROBOX NAME HERE
+        "remoteUser": "${localEnv:USER}",
+        "settings": {
+            "remote.containers.copyGitConfig": false,
+            "remote.containers.gitCredentialHelperConfigLocation": "none",
+            "terminal.integrated.profiles.linux": {
+            "shell": {
+                "path": "${localEnv:SHELL}",
+                "args": [
+                "-l"
+                ]
+            }
+            },
+            "terminal.integrated.defaultProfile.linux": "shell"
+        },
+        "remoteEnv": {
+            "COLORTERM": "${localEnv:COLORTERM}",
+            "DBUS_SESSION_BUS_ADDRESS": "${localEnv:DBUS_SESSION_BUS_ADDRESS}",
+            "DESKTOP_SESSION": "${localEnv:DESKTOP_SESSION}",
+            "DISPLAY": "${localEnv:DISPLAY}",
+            "LANG": "${localEnv:LANG}",
+            "SHELL": "${localEnv:SHELL}",
+            "SSH_AUTH_SOCK": "${localEnv:SSH_AUTH_SOCK}",
+            "TERM": "${localEnv:TERM}",
+            "VTE_VERSION": "${localEnv:VTE_VERSION}",
+            "XDG_CURRENT_DESKTOP": "${localEnv:XDG_CURRENT_DESKTOP}",
+            "XDG_DATA_DIRS": "${localEnv:XDG_DATA_DIRS}",
+            "XDG_MENU_PREFIX": "${localEnv:XDG_MENU_PREFIX}",
+            "XDG_RUNTIME_DIR": "${localEnv:XDG_RUNTIME_DIR}",
+            "XDG_SESSION_DESKTOP": "${localEnv:XDG_SESSION_DESKTOP}",
+            "XDG_SESSION_TYPE": "${localEnv:XDG_SESSION_TYPE}"
+        }
+    }
+    ```
+
+    Be sure to add the name of your container to the `name` field.
+
+7. To attach the container from within VS Code in the host system, open the Command Palette by pressing <kbd>Ctrl + Shift + P</kbd>.
+
+8. Search and click the **Attach to Running Container** option.
+
+9. Click the name of the container we have configured (i.e. `arch`).
