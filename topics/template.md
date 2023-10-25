@@ -13,7 +13,7 @@ This is a brief description of the topic.
   - [Subtopic](#subtopic)
     - [Description](#description-1)
     - [References](#references-1)
-    - [Content](#content)
+    - [Steps](#steps)
 
 ## References
 
@@ -32,6 +32,6 @@ This is a brief description of the subtopic.
 - [Reference 1](https://example.com)
 - [Reference 2](https://example.com)
 
-### Content
+### Steps
 
 This is the content of the subtopic.

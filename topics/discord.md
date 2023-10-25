@@ -56,7 +56,7 @@ This details several troubleshooting steps and workarounds for specific issues w
 
 ### Lucky Day Issue
 
-This is workaround for when Discord forces an update to a new version, before it becomes available on Linux.
+This is a workaround for when Discord forces an update to a new version, before it becomes available on Linux.
 
 1. Update Discord's `build_info.json` file.
 
