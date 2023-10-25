@@ -29,6 +29,9 @@ This guide seeks to add more fonts and use better fonts for our desktop.
     - [Description](#description-5)
     - [References](#references-1)
     - [Steps](#steps-4)
+  - [Improve Fonts Legibility](#improve-fonts-legibility)
+    - [Description](#description-6)
+    - [Steps](#steps-5)
 
 ---
 
@@ -365,3 +368,35 @@ This details how to install and set up Apple macOS fonts on Linux.
     ```
 
 3. Log out and log back into the desktop.
+
+---
+
+## Improve Fonts Legibility
+
+### Description
+
+This improves how fonts and texts are rendered to make them clearer and more legible. Note that this might break Apple fonts/emoji.
+
+> [!WARNING]  
+> This might break certain fonts including Apple fonts/emoji recommended by this wiki, more testing is needed!
+
+> [!NOTE]  
+> This guide assumes that you are using KDE Plasma as your desktop environment.
+
+### Steps
+
+1. Launch the **System Settings** application.
+
+2. Click the **Appearance** category.
+
+3. Click **Fonts**.
+
+4. Configure the following settings as such:
+
+    ```
+    ✅ Enable Anti-Aliasing
+    Sub-pixel rendering: RGB
+    Hinting: Full
+    ```
+
+5. Click the **Apply** button.
