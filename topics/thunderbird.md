@@ -42,7 +42,7 @@ This details how to configure Thunderbird including its default sort order and s
 4. Update the following configurations and set the default sort order to `descending (2)` and view to `unthreaded (0)`:
 
     ```
-    mailnews.default_news_sort_order		    2
-    mailnews.default_sort_order					2
-    mailnews.default_view_flags					0
+    mailnews.default_news_sort_order            2
+    mailnews.default_sort_order                 2
+    mailnews.default_view_flags                 0
     ```
