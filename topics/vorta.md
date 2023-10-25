@@ -52,13 +52,13 @@ This sets up Vorta to its ideal configurations.
 
 ### Steps
 
-1. Set the **Repository**. In this example we'll use a Samba Share mountpoint as the Vorta repository, but this can also be set to any directory on any drives in your system.
+1. Set the **Repository**. In this example we'll use a Samba Share mountpoint as the Vorta repository, but this can also be set to any directory on any drives in your system:
 
     ```
     /mnt/mynas/System/Backups/Snapshots/mycomputer
     ```
 
-2. Set backup **Source Folders and Files** to our home directory.
+2. Set backup **Source Folders and Files** to our home directory:
 
     ```
     /home/${USER}
@@ -66,7 +66,7 @@ This sets up Vorta to its ideal configurations.
 
     Replace `${USER}` with your actual username.
 
-3. Set **Exclude Patterns**.
+3. Set **Exclude Patterns**:
 
     ```
     *[Cc]ache*/*
@@ -91,13 +91,13 @@ This sets up Vorta to its ideal configurations.
 
     Add any additional directories or files you wish to exclude from the backup (i.e. `~/Videos/Handbrake/*`).
 
-4. Set **Exclude if Present**.
+4. Set **Exclude if Present**:
 
     ```
     .nobackup
     ```
 
-5. Configure **Schedule**.
+5. Configure **Schedule**:
 
     ```
     ✅ Backup periodically every 3 hours
@@ -106,7 +106,7 @@ This sets up Vorta to its ideal configurations.
     ✅ Validate repo data on a 2-week interval
     ```
 
-6. Leave **Archives/Prune** options as default
+6. Leave **Archives/Prune** options as default.
 
 7. Leave **Misc** by default except these:
 

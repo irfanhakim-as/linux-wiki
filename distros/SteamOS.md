@@ -59,7 +59,7 @@ To save storage space, game data can be moved to the SD card, and symlinked to t
 
 This backs up directories deemed to be important for our games using Vorta.
 
-1. The **Repository** we'll be using is a Samba Share mountpoint.
+1. The **Repository** we'll be using is a Samba Share mountpoint:
 
 	```
 	/home/deck/mynas/System/Backups/Snapshots/steamdeck
