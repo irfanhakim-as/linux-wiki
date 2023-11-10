@@ -17,6 +17,9 @@ Steam is a video game digital distribution service and storefront developed by [
     - [Description](#description-1)
     - [Steps](#steps)
     - [Recommendations](#recommendations)
+  - [Troubleshooting](#troubleshooting)
+    - [Description](#description-2)
+    - [Move Content Failure](#move-content-failure)
 
 ## References
 
@@ -77,3 +80,35 @@ This details how to add non-Steam services based on Google Chrome, to Steam so i
 - Add some artworks (i.e. capsules, hero, logo, etc.) for the service using the **SteamGridDB** plugin from **Decky Loader**.
 
 - To exit from the app while in gaming mode, use the left menu button on your controller (i.e. **Share** on the DS4 controller, **View** on the Steam Deck controller). The **Web Browser** controller layout must be used for this to work.
+
+---
+
+## Troubleshooting
+
+### Description
+
+This details troubleshooting steps or workarounds for certain issues within SteamOS.
+
+### Move Content Failure
+
+When trying to move content from one drive to another, it fails with the following error: `content file locked`.
+
+1. Identify the ID of the game that has failed to move from the game's Steam store page or SteamDB.
+
+    As an example, if the link to the game's Steam store page is like so:
+
+    ```
+    https://store.steampowered.com/app/641990/The_Escapists_2
+    ```
+
+    Then the ID of the game is `641990`.
+
+2. Move the game's `compatdata` from the source drive (i.e. `/run/media/mmcblk0p1`) to the internal drive (i.e. `/home/deck`):
+
+    ```sh
+    mv -f /run/media/mmcblk0p1/steamapps/compatdata/641990 /home/deck/.local/share/Steam/steamapps/compatdata/
+    ```
+
+    Replace `641990` with the ID of the game.
+
+3. Restart the attempt to move the game accordingly via the **Storage** section in the Steam client within Gaming mode.
