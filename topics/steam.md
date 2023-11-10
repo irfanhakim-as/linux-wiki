@@ -19,6 +19,7 @@ Steam is a video game digital distribution service and storefront developed by [
     - [Recommendations](#recommendations)
   - [Troubleshooting](#troubleshooting)
     - [Description](#description-2)
+    - [References](#references-1)
     - [Move Content Failure](#move-content-failure)
 
 ## References
@@ -88,6 +89,10 @@ This details how to add non-Steam services based on Google Chrome, to Steam so i
 ### Description
 
 This details troubleshooting steps or workarounds for certain issues within SteamOS.
+
+### References
+
+- [Content File Locked woes](https://www.reddit.com/r/SteamDeck/comments/uaoa4r/content_file_locked_woes)
 
 ### Move Content Failure
 
