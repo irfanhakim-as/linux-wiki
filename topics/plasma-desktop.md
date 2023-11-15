@@ -22,6 +22,7 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
       - [Make Flatpak Apps Use KDE File Picker](#make-flatpak-apps-use-kde-file-picker)
     - [KRunner](#krunner)
     - [Spectacle](#spectacle)
+    - [Spectacle-like Window Management](#spectacle-like-window-management)
   - [Theme Customisations](#theme-customisations)
     - [Description](#description-2)
     - [Floating "Dock"](#floating-dock)
@@ -234,6 +235,29 @@ This makes Flatpak apps use Dolphin as the File Picker and not Nautilus (GTK).
 	- **Capture Rectangular Region**: <kbd>Alt + Shift + 4</kbd>
 
 8. Click **Apply** then **OK**.
+
+### Spectacle-like Window Management
+
+This adds shortcuts that would make managing and moving application windows similar to the third-party macOS application, Spectacle.
+
+1. Launch the **System Settings** app.
+
+2. Expand the **Shortcuts** section.
+
+3. Use the provided **Search** bar to search for these shortcuts and add the following custom shortcuts accordingly:
+
+    - Quick Tile Window to the Bottom: <kbd>Alt + Shift + Down</kbd>
+    - Quick Tile Window to the Left: <kbd>Alt + Shift + Left</kbd>
+    - Quick Tile Window to the Right: <kbd>Alt + Shift + Right</kbd>
+    - Quick Tile Window to the Top: <kbd>Alt + Shift + Up</kbd>
+    - Quick Tile Window to the Top Left: <kbd>Meta + Alt + Shift + Left</kbd>
+    - Quick Tile Window to the Top Right: <kbd>Meta + Alt + Shift + Right</kbd>
+    - Quick Tile Window to the Bottom Left: <kbd>Ctrl + Alt + Shift + Left</kbd>
+    - Quick Tile Window to the Bottom Right: <kbd>Ctrl + Alt + Shift + Right</kbd>
+    - Move Window to the Center: <kbd>Alt + Shift + C</kbd>
+    - Maximize Window: <kbd>Alt + Shift + F</kbd>
+
+4. Click the **Apply** button.
 
 ---
 
