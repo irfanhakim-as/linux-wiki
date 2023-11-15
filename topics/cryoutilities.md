@@ -10,14 +10,101 @@ Scripts and utilities to improve performance and manage storage on the Steam Dec
   - [Description](#description)
   - [Directory](#directory)
   - [References](#references)
-  - [Undo Sync Game Data](#undo-sync-game-data)
+  - [Installation](#installation)
     - [Description](#description-1)
     - [References](#references-1)
     - [Steps](#steps)
+  - [Setup](#setup)
+    - [Description](#description-2)
+    - [References](#references-2)
+    - [Steps](#steps-1)
+  - [Undo Sync Game Data](#undo-sync-game-data)
+    - [Description](#description-3)
+    - [References](#references-3)
+    - [Steps](#steps-2)
 
 ## References
 
 - [CryoUtilities](https://github.com/CryoByte33/steam-deck-utilities)
+
+---
+
+## Installation
+
+### Description
+
+This details the installation steps for CryoUtilities.
+
+### References
+
+- [Install](https://github.com/CryoByte33/steam-deck-utilities#install)
+
+### Steps
+
+1. Download the installer to the `Desktop` directory:
+
+    ```sh
+    curl -L -o ~/Desktop/InstallCryoUtilities.desktop https://raw.githubusercontent.com/CryoByte33/steam-deck-utilities/main/InstallCryoUtilities.desktop
+    ```
+
+2. Double click the `InstallCryoUtilities.desktop` file on the desktop to run the installer.
+
+3. When prompted with a Warning, click the **Continue** button.
+
+4. When informed that CryoUtilities has been installed, click the **OK** button.
+
+5. Delete the `Install Cryo Utilities` (`InstallCryoUtilities.desktop`) file from the `Desktop` directory.
+
+---
+
+## Setup
+
+### Description
+
+This details the setup steps for CryoUtilities in order to optimise our Steam Deck's performance.
+
+### References
+
+- [Usage](https://github.com/CryoByte33/steam-deck-utilities#usage)
+
+### Steps
+
+> [!IMPORTANT]  
+> You must already have set a password for the `deck` user before running the CryoUtilities app.
+
+1. From the `Desktop`, double click the **CryoUtilities** programme to launch the app.
+
+2. When prompted with the **Disclaimer**, click the **Yes** button.
+
+3. Enter your `sudo`/`deck` password in the provided field and click **Submit**.
+
+4. In the **Swap** section:
+
+    - Set the **Swap File** to `16GB`.
+
+    - Set the **Swappiness** to `1`.
+
+5. In the **Memory** section:
+
+    - Under **HugePages**, click the **Enable HugePages** button.
+
+    - Under **Shared Memory in THP**, click the **Enable Shared Memory in THP** button.
+
+    - Under **Compaction Proactiveness**, click the **Set Compaction Proactiveness** button.
+
+    - Under **Huge Page Defragmentation**, click the **Disable Page Defragmentation** button.
+
+    - Under **Page Lock Unfairness**, click the **Set Page Lock Unfairness** button.
+
+6. In the **Storage** section, you'll have access to optional features including:
+
+    - Sync Game Data: Use the **Sync** feature to move game data to the SD card and symlink it to the Deck's SSD.
+
+    - Delete Game Data: Use the **Clean** feature to delete game data for selected games.
+
+7. In the **VRAM** section, it recommends you to set the **VRAM** (or **UMA Frame Buffer Size**) to `4GB` in the Steam Deck's BIOS.
+
+8. Close the **CryoUtilities** app.
 
 ---
 
