@@ -10,18 +10,134 @@ Use any Linux distribution inside your terminal. Enable both backward and forwar
   - [Description](#description)
   - [Directory](#directory)
     - [References](#references)
-  - [Software Installation](#software-installation)
+  - [Installation](#installation)
     - [Description](#description-1)
     - [References](#references-1)
     - [Steps](#steps)
-  - [VS Code Integration](#vs-code-integration)
+  - [Software Installation](#software-installation)
     - [Description](#description-2)
     - [References](#references-2)
     - [Steps](#steps-1)
+  - [VS Code Integration](#vs-code-integration)
+    - [Description](#description-3)
+    - [References](#references-3)
+    - [Steps](#steps-2)
 
 ### References
 
 - [Distrobox](https://github.com/89luca89/distrobox)
+
+---
+
+## Installation
+
+### Description
+
+This details how we can install and setup Distrobox.
+
+### References
+
+- [Install Podman in a static manner](https://github.com/89luca89/distrobox/blob/main/docs/posts/install_podman_static.md)
+- [Useful tips](https://github.com/89luca89/distrobox/blob/main/docs/useful_tips.md)
+- [distrobox-create](https://github.com/89luca89/distrobox/blob/main/docs/usage/distrobox-create.md)
+- [Containers Distros](https://github.com/89luca89/distrobox/blob/main/docs/compatibility.md#containers-distros)
+- [Install Distrobox on the Steamdeck](https://github.com/89luca89/distrobox/blob/main/docs/posts/steamdeck_guide.md)
+
+### Steps
+
+> [!IMPORTANT]  
+> Ensure the path to `~/.local/bin` is in your `$PATH`.
+
+1. Ensure you have `/etc/subuid` and `/etc/subgid`, if you don't, create the files:
+
+    ```sh
+    sudo touch /etc/subuid /etc/subgid
+    ```
+
+    and add a `subuid` and `subgid`:
+
+    ```sh
+    sudo usermod --add-subuid 100000-165535 --add-subgid 100000-165535 $USER
+    ```
+
+2. Download and install the latest `podman` release as our container runtime of choice by creating the following script:
+
+    ```sh
+    nano ~/get-podman-launcher.sh
+    ```
+
+    Content of the `get-podman-launcher.sh` script:
+
+    ```sh
+    if ! [ -x "$(command -v podman)" ]; then
+        curl -Lo "${HOME}/podman-launcher-amd64" "https://github.com/89luca89/podman-launcher/releases/latest/download/podman-launcher-amd64"
+        chmod +x "${HOME}/podman-launcher-amd64"
+        mkdir -p "${HOME}/.local/bin"
+        mv "${HOME}/podman-launcher-amd64" "${HOME}/.local/bin/podman"
+    else
+        echo "podman is already installed"
+    fi
+    ```
+
+    Run the script to install `podman`:
+
+    ```sh
+    bash ~/get-podman-launcher.sh
+    ```
+
+3. Install `distrobox`:
+
+    ```sh
+    curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sh -s -- --prefix ~/.local
+    ```
+
+4. Make sure `$HOME/.local/podman/bin` is in your `$PATH`, and also `~/.distroboxrc`.
+
+5. In order to have graphical applications working, set `~/.distroboxrc` up like so:
+
+    ```
+    xhost +si:localuser:$USER
+    export PATH=$PATH:$HOME/.local/bin
+    ```
+
+    If setting this up on SteamOS (Steam Deck) an additional line is needed to force the use of `pulseaudio` in the container:
+
+    ```
+    xhost +si:localuser:$USER
+    export PIPEWIRE_RUNTIME_DIR=/dev/null
+    export PATH=$PATH:$HOME/.local/bin
+    ```
+
+6. Create a custom `$HOME` directory (i.e. `~/distrobox/ubuntu`) for the container:
+
+    ```sh
+    mkdir ~/distrobox/ubuntu
+    # chmod 700 ~/distrobox/ubuntu
+    ```
+
+7. Create a distrobox container i.e. based on Ubuntu 22.04, named `ubuntu`, with a custom `$HOME` directory:
+
+    ```sh
+    distrobox create --image ubuntu:22.04 --name ubuntu --home ~/distrobox/ubuntu
+    ```
+
+8.  To enter the distrobox container named `ubuntu` (to its home directory):
+
+    ```sh
+    distrobox enter ubuntu -nw
+    ```
+
+9.  To stop and delete a distrobox container named `ubuntu`:
+
+    ```sh
+    distrobox stop ubuntu && distrobox rm ubuntu
+    ```
+
+10. To run commands on the client machine from a distrobox container, use the `distrobox-host-exec` command:
+
+    ```sh
+    distrobox-host-exec flatpak run com.google.Chrome
+    ```
 
 ---
 
@@ -49,7 +165,7 @@ This details how we can install certain applications or libraries not present in
 2. Create an Arch Linux based Distrobox container:
 
     ```sh
-    distrobox create --image archlinux --name arch --home ~/distrobox/arch
+    distrobox create --image docker.io/library/archlinux --name arch --home ~/distrobox/arch
     ```
 
 3. Enter our Distrobox container (i.e. `arch`):
