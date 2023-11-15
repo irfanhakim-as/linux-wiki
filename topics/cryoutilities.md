@@ -83,7 +83,7 @@ This details the setup steps for CryoUtilities in order to optimise our Steam De
 
 4. In the **Swap** section:
 
-    - Set the **Swap File** to `16GB`.
+    - Set the **Swap File** to `16GB` if you have the storage capacity, otherwise you can set it at a minimum of `4GB`.
 
     - Set the **Swappiness** to `1`.
 
