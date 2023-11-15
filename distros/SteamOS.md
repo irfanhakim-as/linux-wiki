@@ -9,7 +9,21 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 	- [Description](#description)
 	- [Directory](#directory)
 	- [References](#references)
-	- [PS3 Emulation Setup](#ps3-emulation-setup)
+	- [Setup](#setup)
+		- [Description](#description-1)
+		- [References](#references-1)
+		- [Update Hostname](#update-hostname)
+		- [Increase VRAM Size](#increase-vram-size)
+		- [Remote Desktop](#remote-desktop)
+		- [Create User Password](#create-user-password)
+		- [Recommended Software Installation](#recommended-software-installation)
+		- [Default Applications](#default-applications)
+	- [Enabling Remote Access](#enabling-remote-access)
+	- [Add Flathub Repository](#add-flathub-repository)
+	- [ProtonUp-Qt](#protonup-qt)
+	- [CryoUtilities](#cryoutilities)
+		- [References](#references-2)
+	- [EmuDeck](#emudeck)
 	- [Custom Game Emulation Configurations](#custom-game-emulation-configurations)
 	- [Custom Emulator Configurations](#custom-emulator-configurations)
 	- [Undo CryoUtilities Sync Game Data](#undo-cryoutilities-sync-game-data)
@@ -19,10 +33,14 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 	- [Fixing DRM issues with Google Chrome](#fixing-drm-issues-with-google-chrome)
 	- [Install Git LFS](#install-git-lfs)
 	- [Better Fonts](#better-fonts)
-		- [References](#references-1)
+		- [References](#references-3)
 	- [Convert XCI Switch Games to NSP](#convert-xci-switch-games-to-nsp)
 	- [Wake on LAN or Wireless](#wake-on-lan-or-wireless)
-		- [References](#references-2)
+		- [References](#references-4)
+	- [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
+	- [Plasma Desktop Theme Customisations](#plasma-desktop-theme-customisations)
+	- [Distrobox Installation](#distrobox-installation)
+	- [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
 
 ## References
 
@@ -31,9 +49,144 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 
 ---
 
-## [PS3 Emulation Setup](../topics/emudeck.md#ps3-emulation-setup)
+## Setup
 
-This details how to setup our PS3 emulator, RPCS3, and add/setup PS3 games using EmuDeck.
+### Description
+
+This details how to setup SteamOS on initial installation/boot.
+
+### References
+
+- [Adjusting VRAM](https://youtu.be/7RPAxT7HJ7Q?t=332)
+
+### Update Hostname
+
+Change the hostname of the Steam Deck via Gaming mode.
+
+1. In Gaming mode, open the **Steam** menu by clicking the <kbd>STEAM</kbd> button.
+
+2. Click the **Settings** menu item.
+
+3. Click the **System** tab.
+
+4. Under the **About** section, click the button corresponding to the **Hostname**.
+
+5. Add your desired hostname for the Steam Deck in the provided text field.
+
+6. Click the **Change & Restart** button.
+
+### Increase VRAM Size
+
+Get into the BIOS and change the UMA Frame Buffer Size from 1GB to 4GB.
+
+1. Turn off your Steam Deck.
+
+2. Hold the <kbd>+</kbd> (Volume Up) button and the <kbd>Power</kbd> button simultaneously until the boot chime is heard.
+
+3. After the Steam logo appears and disappears, you will be given access to 4 menu options. Select the **Setup Utility** option.
+
+4. Click the **Advanced** tab.
+
+5. Locate the **UMA Frame Buffer Size** option and change it from the default `1GB` value to `4GB`.
+
+6. Press the <kbd>Select</kbd> button to save the changes and exit.
+
+### Remote Desktop
+
+Get into desktop mode and use the Discover app to install the AnyDesk app, and set it to autostart.
+
+1. In Gaming mode, open the **Steam** menu by clicking the <kbd>STEAM</kbd> button.
+
+2. Click the **Power** menu item.
+
+3. Select the **Switch to Desktop** option.
+
+4. Search and [install](../topics/plasma-discover.md#software-installation-and-update) the `AnyDesk` app using the **Discover** app.
+
+5. Once installed, click the **Launch** button in the top right.
+
+6. In the **AnyDesk** app, open the **General** hamburger menu in the top right.
+
+7. Click **Settings**.
+
+8.  Go to the **Security** section.
+
+9.  Check the **Enable unattended access** option.
+
+10. Click the **Set password...** button, add a secure password accordingly, and click **OK**.
+
+11. Close the **Settings** tab and take note of your Steam Deck's AnyDesk address under **Your Address**. You can now remote into your Steam Deck from other devices using the AnyDesk app using this address and the password you had set.
+
+12. Set the AnyDesk app to [autostart](../topics/autostart.md#add-application-to-autostart) each time the Steam Deck is in Desktop mode.
+
+### Create User Password
+
+Set up a `sudo` password for the `deck` user.
+
+1. Enter Desktop mode.
+
+2. Open the **Konsole** app.
+
+3. Run the following command and follow the instructions to set a password for the `deck` user:
+
+	```sh
+	passwd
+	```
+
+### Recommended Software Installation
+
+Open up the Discover app and [install](../topics/plasma-discover.md#software-installation-and-update) some essential apps (as user):
+
+- Firefox
+- Plex
+- Discord
+- Spotify
+- Google Chrome
+- OBS Studio
+- discord-screenaudio
+- KDiskMark
+- WhatsApp Desktop
+- LibreOffice
+- Signal Desktop
+
+### Default Applications
+
+Set the [default Web browser application](../topics/plasma-desktop.md#default-application) to Firefox instead of Google Chrome.
+
+---
+
+## [Enabling Remote Access](../topics/enabling-remote-access.md)
+
+This details how we can enable remote access into our Steam Deck from other devices in the same network via SSH.
+
+---
+
+## [Add Flathub Repository](../topics/plasma-discover.md#add-flathub-repository)
+
+SteamOS already comes with access to Flathub system-wide, follow this guide to add the Flathub repository specifically for the user.
+
+---
+
+## [ProtonUp-Qt](../topics/protonup-qt.md)
+
+This details the installation of ProtonUp-Qt and GE-Proton.
+
+---
+
+## [CryoUtilities](../topics/cryoutilities.md)
+
+This details the installation and the setup steps for CryoUtilities in order to optimise our Steam Deck's performance.
+
+### References
+
+- [CryoUtilities Installation](../topics/cryoutilities.md#installation)
+- [CryoUtilities Setup](../topics/cryoutilities.md#setup)
+
+---
+
+## [EmuDeck](../topics/emudeck.md)
+
+This details how to install, setup, and maintain EmuDeck on SteamOS.
 
 ---
 
@@ -151,3 +304,27 @@ This details on how to enable, setup and use Wake on LAN (WoL) or Wake on Wirele
 
 - [Wake on LAN](../topics/wol.md)
 - [Wake on Wireless](../topics/wowlan.md)
+
+---
+
+## [Plasma Desktop Quality of Life Improvements](../topics/plasma-desktop.md#quality-of-life-improvements)
+
+This details on some things that could be done to improve the experience of using the desktop mode.
+
+---
+
+## [Plasma Desktop Theme Customisations](../topics/plasma-desktop.md#theme-customisations)
+
+This details some customisation options for the Plasma desktop.
+
+---
+
+## [Distrobox Installation](../topics/distrobox.md#installation)
+
+This details some customisation options for the Plasma desktop.
+
+---
+
+## [Install Applications/Libraries via Distrobox](../topics/distrobox.md#software-installation)
+
+This details how we can install certain applications or libraries not present in SteamOS via Distrobox.
