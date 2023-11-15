@@ -20,8 +20,6 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
 	- [Mounting Remote Directory](#mounting-remote-directory)
 	- [Enabling Remote Access](#enabling-remote-access)
 	- [EmuDeck](#emudeck)
-	- [Emulator BIOS and ROMS](#emulator-bios-and-roms)
-	- [PS3 Emulation Setup](#ps3-emulation-setup)
 	- [Custom Emulator Configurations](#custom-emulator-configurations)
 	- [Custom Game Emulation Configurations](#custom-game-emulation-configurations)
 	- [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
@@ -120,18 +118,6 @@ This details how we can enable remote access into our Bazzite system from other 
 ## [EmuDeck](../topics/emudeck.md)
 
 This details how to install, setup, and maintain EmuDeck on Bazzite.
-
----
-
-## [Emulator BIOS and ROMS](../topics/emudeck.md#bios-and-roms)
-
-This details how to setup BIOS/ROM files for each emulator in EmuDeck.
-
----
-
-## [PS3 Emulation Setup](../topics/emudeck.md#ps3-emulation-setup)
-
-This details how to setup our PS3 emulator, RPCS3, and add/setup PS3 games using EmuDeck.
 
 ---
 
