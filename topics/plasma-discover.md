@@ -93,9 +93,9 @@ While in desktop mode, you're able to install desktop apps for everyday use. Thi
 
 1. To install apps, simply launch the **Discover** app.
 
-2. Search/browse for the apps you wish to install.
+2. Search/browse for the apps you wish to install using the provided **Search** bar in the top left.
 
-3. Select the application to open its detailed view.
+3. Select the application from the search result to open its detailed view.
 
 4. Select the **Sources** dropdown if available and select **Flathub** or **Flathub (user)**.
 
@@ -107,4 +107,4 @@ If any updates are available to these apps, they will appear in the **Updates** 
 
 2. Wait for Discover to fetch available updates.
 
-3. Click the **Update** button to update your apps accordingly.
+3. Click the **Update All** button in the top right to update all of your apps accordingly.
