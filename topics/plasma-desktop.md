@@ -35,6 +35,9 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
       - [References](#references)
       - [Steps](#steps)
       - [Troubleshooting](#troubleshooting)
+  - [Default Application](#default-application)
+    - [Description](#description-4)
+    - [Steps](#steps-1)
 
 ---
 
@@ -431,3 +434,32 @@ Fix the KDE Thermal Monitor issue requiring "Reload Temperature Sources" when `p
     ```
 
     Replace the `property var systemmonitorAvailableSources` line with the above line.
+
+---
+
+## Default Application
+
+### Description
+
+This details on how to configure default applications of various types on KDE Plasma.
+
+### Steps
+
+1. Open the **System Settings** app.
+
+2. Expand the **Applications** section.
+
+3. Open the **Default Applications** menu item.
+
+4. Here, you can configure the default application of various types including:
+
+    - Web browser
+    - File manager
+    - Email client
+    - Terminal emulator
+    - Map
+    - Dialer
+
+5. To configure the default application for a certain type, click its corresponding dropdown and select the application you wish to use accordingly.
+
+6. Click the **Apply** button to save your changes.
