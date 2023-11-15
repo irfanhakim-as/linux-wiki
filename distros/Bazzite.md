@@ -18,7 +18,7 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
 	- [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
 	- [Plasma Desktop Theme Customisations](#plasma-desktop-theme-customisations)
 	- [Mounting Remote Directory](#mounting-remote-directory)
-	- [Enabling Remote Access](#enabling-remote-access)
+	- [Remote Access](#remote-access)
 	- [EmuDeck](#emudeck)
 	- [Custom Emulator Configurations](#custom-emulator-configurations)
 	- [Custom Game Emulation Configurations](#custom-game-emulation-configurations)
@@ -109,9 +109,9 @@ It's recommended to replace the mounting point in the referenced guide with a di
 
 ---
 
-## [Enabling Remote Access](../topics/enabling-remote-access.md)
+## [Remote Access](../topics/remote-access.md)
 
-This details how we can enable remote access into our Bazzite system from other devices in the same network via SSH.
+This details how we can enable remote access into our system from other devices in the same network or externally.
 
 ---
 

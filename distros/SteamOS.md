@@ -18,7 +18,7 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 		- [Create User Password](#create-user-password)
 		- [Recommended Software Installation](#recommended-software-installation)
 		- [Default Applications](#default-applications)
-	- [Enabling Remote Access](#enabling-remote-access)
+	- [Remote Access](#remote-access)
 	- [Add Flathub Repository](#add-flathub-repository)
 	- [ProtonUp-Qt](#protonup-qt)
 	- [CryoUtilities](#cryoutilities)
@@ -101,23 +101,7 @@ Get into desktop mode and use the Discover app to install the AnyDesk app, and s
 
 3. Select the **Switch to Desktop** option.
 
-4. Search and [install](../topics/plasma-discover.md#software-installation-and-update) the `AnyDesk` app using the **Discover** app.
-
-5. Once installed, click the **Launch** button in the top right.
-
-6. In the **AnyDesk** app, open the **General** hamburger menu in the top right.
-
-7. Click **Settings**.
-
-8.  Go to the **Security** section.
-
-9.  Check the **Enable unattended access** option.
-
-10. Click the **Set password...** button, add a secure password accordingly, and click **OK**.
-
-11. Close the **Settings** tab and take note of your Steam Deck's AnyDesk address under **Your Address**. You can now remote into your Steam Deck from other devices using the AnyDesk app using this address and the password you had set.
-
-12. Set the AnyDesk app to [autostart](../topics/autostart.md#add-application-to-autostart) each time the Steam Deck is in Desktop mode.
+4. In Desktop mode, install and set `AnyDesk` up as per the [Remote Desktop](../topics/remote-access.md#remote-desktop) guide.
 
 ### Create User Password
 
@@ -155,7 +139,7 @@ Set the [default Web browser application](../topics/plasma-desktop.md#default-ap
 
 ---
 
-## [Enabling Remote Access](../topics/enabling-remote-access.md)
+## [Remote Access](../topics/remote-access.md#remote-shell)
 
 This details how we can enable remote access into our Steam Deck from other devices in the same network via SSH.
 
