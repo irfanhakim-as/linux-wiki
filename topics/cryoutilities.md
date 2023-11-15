@@ -22,6 +22,9 @@ Scripts and utilities to improve performance and manage storage on the Steam Dec
     - [Description](#description-3)
     - [References](#references-3)
     - [Steps](#steps-2)
+  - [Increase VRAM Size](#increase-vram-size)
+    - [Description](#description-4)
+    - [Steps](#steps-3)
 
 ## References
 
@@ -102,7 +105,7 @@ This details the setup steps for CryoUtilities in order to optimise our Steam De
 
     - Delete Game Data: Use the **Clean** feature to delete game data for selected games.
 
-7. In the **VRAM** section, it recommends you to set the **VRAM** (or **UMA Frame Buffer Size**) to `4GB` in the Steam Deck's BIOS.
+7. In the **VRAM** section, it recommends you to [set the **VRAM** (or **UMA Frame Buffer Size**) to `4GB`](#increase-vram-size) on the Steam Deck through the BIOS. You can do this at the end after closing the **CryoUtilities** app.
 
 8. Close the **CryoUtilities** app.
 
@@ -149,3 +152,28 @@ To save storage space, game data can be moved to the SD card, and symlinked to t
     ```sh
     mv /run/media/mmcblk0p1/cryoutilities_steam_data/shadercache/1458100 /home/deck/.local/share/Steam/steamapps/shadercache/1458100
     ```
+
+---
+
+## Increase VRAM Size
+
+### Description
+
+This details on how to increase the VRAM size for the integrated GPU on the Steam Deck.
+
+> [!IMPORTANT]  
+> This guide is intended only for the Steam Deck on SteamOS.
+
+### Steps
+
+1. Turn off your Steam Deck.
+
+2. Hold the <kbd>+</kbd> (Volume Up) button and the <kbd>Power</kbd> button simultaneously until the boot chime is heard.
+
+3. After the Steam logo appears and disappears, you will be given access to 4 menu options. Select the **Setup Utility** option.
+
+4. Click the **Advanced** tab.
+
+5. Locate the **UMA Frame Buffer Size** option and change it from the default `1GB` value to `4GB`.
+
+6. Press the <kbd>Select</kbd> button to save the changes and exit.

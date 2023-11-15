@@ -13,7 +13,6 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 		- [Description](#description-1)
 		- [References](#references-1)
 		- [Update Hostname](#update-hostname)
-		- [Increase VRAM Size](#increase-vram-size)
 		- [Remote Desktop](#remote-desktop)
 		- [Create User Password](#create-user-password)
 		- [Recommended Software Installation](#recommended-software-installation)
@@ -74,22 +73,6 @@ Change the hostname of the Steam Deck via Gaming mode.
 5. Add your desired hostname for the Steam Deck in the provided text field.
 
 6. Click the **Change & Restart** button.
-
-### Increase VRAM Size
-
-Get into the BIOS and change the UMA Frame Buffer Size from 1GB to 4GB.
-
-1. Turn off your Steam Deck.
-
-2. Hold the <kbd>+</kbd> (Volume Up) button and the <kbd>Power</kbd> button simultaneously until the boot chime is heard.
-
-3. After the Steam logo appears and disappears, you will be given access to 4 menu options. Select the **Setup Utility** option.
-
-4. Click the **Advanced** tab.
-
-5. Locate the **UMA Frame Buffer Size** option and change it from the default `1GB` value to `4GB`.
-
-6. Press the <kbd>Select</kbd> button to save the changes and exit.
 
 ### Remote Desktop
 
