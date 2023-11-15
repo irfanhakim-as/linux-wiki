@@ -9,7 +9,7 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 	- [Description](#description)
 	- [Directory](#directory)
 	- [References](#references)
-	- [Setup](#setup)
+	- [Initial Setup](#initial-setup)
 		- [Description](#description-1)
 		- [References](#references-1)
 		- [Update Hostname](#update-hostname)
@@ -49,7 +49,7 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 
 ---
 
-## Setup
+## Initial Setup
 
 ### Description
 
