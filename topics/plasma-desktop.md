@@ -224,7 +224,7 @@ This makes Flatpak apps use Dolphin as the File Picker and not Nautilus (GTK).
 
 4. For the **After taking a screenshot** option, check the **Save file to default folder** box and set the dropdown value to **Copy image to clipboard**.
 
-5. For the **Rectangular Region Selection** option, check the **Accept on click-and-release** box.
+5. For the **Rectangular Region Selection** option, check the **Accept on click-and-release** box, and uncheck the **Show capture instructions** box.
 
 6. Head to the **Save** tab and change the **Save Location** to `~/Pictures/Screenshots/Desktop` (create the folder beforehand).
 
@@ -267,19 +267,31 @@ This details some customisation options for the desktop.
 
 2. Click **Configure System Tray...**.
 
-3. Click the **Entries** section.
+3. In the **General** section:
 
-4. Switch **KDE Connect** to **Always shown**.
+    - Set the **Panel icon size** to `Small`.
 
-5. Switch **Keyboard Layout** to **Always hidden**.
+    - Set the **Panel icon spacing** to `Small`.
 
-6. Switch **Lock Keys Status** to **Always hidden**.
+4. Navigate to the **Entries** section and make the following (recommended) configurations:
 
-7. Switch **Clipboard** to **Always hidden**.
+    - Set **AnyDesk** to `Always hidden`.
 
-8. Switch **Notifications** to **Always shown**.
+    - Set **Media Player** to `Always hidden`.
 
-9. Click **Apply** then **OK**.
+    - Set **Notifications** to `Always shown`.
+
+    - Set **Updates** to `Always hidden`.
+
+    - Set **KDE Connect** to `Always shown`.
+
+    - Set **Keyboard Layout** to `Always hidden`.
+
+    - Set **Lock Keys Status** to `Always hidden`.
+
+    - Set **Clipboard** to `Always hidden`.
+
+5. Click **Apply** then **OK**.
 
 ### Task Switcher
 
