@@ -131,12 +131,12 @@ This details several configuration options for our desktop to use better looking
 
 3. Edit the fonts used in the **System Settings** app under **Appearance** > **Fonts**:
 
-        General: SF Pro Text 12pt
-        Fixed width: SF Mono Powerline 12pt
-        Small: SF Compact 10pt
-        Toolbar: SF Pro Display 12pt
-        Menu: SF Pro Display 12pt
-        Window title: SF Pro Display 12pt
+    - General: `SF Pro Text 12pt`
+    - Fixed width: `SF Mono Powerline 12pt`
+    - Small: `SF Compact 10pt`
+    - Toolbar: `SF Pro Display 12pt`
+    - Menu: `SF Pro Display 12pt`
+    - Window title: `SF Pro Display 12pt`
 
     You may adjust the font sizes to your liking.
 
