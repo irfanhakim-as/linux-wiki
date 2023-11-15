@@ -11,7 +11,6 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 	- [References](#references)
 	- [Initial Setup](#initial-setup)
 		- [Description](#description-1)
-		- [References](#references-1)
 		- [Update Hostname](#update-hostname)
 		- [Remote Desktop](#remote-desktop)
 		- [Create User Password](#create-user-password)
@@ -21,7 +20,7 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 	- [Add Flathub Repository](#add-flathub-repository)
 	- [ProtonUp-Qt](#protonup-qt)
 	- [CryoUtilities](#cryoutilities)
-		- [References](#references-2)
+		- [References](#references-1)
 	- [EmuDeck](#emudeck)
 	- [Custom Game Emulation Configurations](#custom-game-emulation-configurations)
 	- [Custom Emulator Configurations](#custom-emulator-configurations)
@@ -32,10 +31,10 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 	- [Fixing DRM issues with Google Chrome](#fixing-drm-issues-with-google-chrome)
 	- [Install Git LFS](#install-git-lfs)
 	- [Better Fonts](#better-fonts)
-		- [References](#references-3)
+		- [References](#references-2)
 	- [Convert XCI Switch Games to NSP](#convert-xci-switch-games-to-nsp)
 	- [Wake on LAN or Wireless](#wake-on-lan-or-wireless)
-		- [References](#references-4)
+		- [References](#references-3)
 	- [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
 	- [Plasma Desktop Theme Customisations](#plasma-desktop-theme-customisations)
 	- [Distrobox Installation](#distrobox-installation)
@@ -53,10 +52,6 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 ### Description
 
 This details how to setup SteamOS on initial installation/boot.
-
-### References
-
-- [Adjusting VRAM](https://youtu.be/7RPAxT7HJ7Q?t=332)
 
 ### Update Hostname
 

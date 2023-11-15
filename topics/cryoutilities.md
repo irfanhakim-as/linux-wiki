@@ -24,6 +24,7 @@ Scripts and utilities to improve performance and manage storage on the Steam Dec
     - [Steps](#steps-2)
   - [Increase VRAM Size](#increase-vram-size)
     - [Description](#description-4)
+    - [References](#references-4)
     - [Steps](#steps-3)
 
 ## References
@@ -163,6 +164,10 @@ This details on how to increase the VRAM size for the integrated GPU on the Stea
 
 > [!IMPORTANT]  
 > This guide is intended only for the Steam Deck on SteamOS.
+
+### References
+
+- [Adjusting VRAM](https://youtu.be/7RPAxT7HJ7Q?t=332)
 
 ### Steps
 
