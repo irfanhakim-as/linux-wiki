@@ -111,7 +111,7 @@ It's recommended to replace the mounting point in the referenced guide with a di
 
 ## [Enabling Remote Access](../topics/enabling-remote-access.md)
 
-This details how we can enable remote access into our Bazzite system from other devices in the same network.
+This details how we can enable remote access into our Bazzite system from other devices in the same network via SSH.
 
 ---
 
