@@ -28,6 +28,7 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
     - [Floating "Dock"](#floating-dock)
     - [Cleaner System Tray](#cleaner-system-tray)
     - [Task Switcher](#task-switcher)
+    - [Prettier Icons](#prettier-icons)
   - [Widgets](#widgets)
     - [Description](#description-3)
     - [KDE Thermal Monitor](#kde-thermal-monitor)
@@ -336,6 +337,30 @@ This details some customisation options for the desktop.
 6. By default, the **Breeze** task switcher is selected, switch this to **Thumbnail Grid**.
 
 7. Click **Apply**.
+
+### Prettier Icons
+
+1. Launch the **System Settings** app.
+
+2. Expand the **Appearance** section.
+
+3. Get into the **Icons** page.
+
+4. Click the **Get New Icons...** button.
+
+5. Search for the `Mkos-Big-Sur` icon set and click the **Install** button.
+
+6. Click the **Use** button to use the icon set and close the **Download New Icons** window.
+
+7. Get into the **Cursors** page.
+
+8. Click the **Get New Cursors...** button.
+
+9. Search for the `Bibata Modern Classic` cursor set and click the **Install** button.
+
+10. Click the **Install** button next to the `Bibata-Modern-Classic.tar.xz` option.
+
+11. Click the **Use** button to use the icon set and close the **Download New Cursors** window.
 
 ---
 
