@@ -68,13 +68,29 @@ This guides us how to install EmuDeck.
 
 ### Steps
 
-1. On the desktop, click on the **EmuDeck** icon to run the installer.
+1. Download the **EmuDeck** installer to the desktop:
 
-2. Choose **Advanced Installation** and follow all the installation prompts throughout the installation, make changes according to your specific needs.
+    ```sh
+    curl -L -o ~/Desktop/EmuDeck.desktop https://www.emudeck.com/EmuDeck.desktop
+    ```
 
-3. When selecting emulators to be installed, I recommend also selecting **MAME** in addition to the other emulators selected by default.
+2. Double click the **Install EmuDeck** (`EmuDeck.desktop`) file on the desktop to run the installer.
 
-4. Do note where EmuDeck has installed your emulation setup - if it's installed on your disk locally, likely it'd be at `~/Emulation`.
+3. When prompted with a Warning, click the **Continue** button.
+
+4. Choose **Custom Mode** and click **Continue**.
+
+5. Under **Select your ROM Directory**, pick the location where you'd like to install EmuDeck to (i.e. `SD Card`) and click **Next**.
+
+6. Under **Select your device**, pick your device (i.e. `Steam Deck`) and click **Next**.
+
+7. Under **Emulators for `Device`**, I recommend also selecting **MAME** in addition to the other emulators selected by default and click **Continue**.
+
+8. Leave the **Emulator Configurations** as is and click **Continue**.
+
+9. Go through the rest of the installation/configuration process and make your selections as you see fit.
+
+10. Do note where EmuDeck has installed your emulation setup - if it's installed on your disk locally, likely it'd be at `~/Emulation`. If you're installing on an SD card on a Steam Deck, it'd be at `/run/media/mmcblk0p1/Emulation`.
 
 ---
 
