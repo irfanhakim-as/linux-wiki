@@ -16,7 +16,7 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 		- [Create User Password](#create-user-password)
 		- [Recommended Software Installation](#recommended-software-installation)
 		- [Default Applications](#default-applications)
-	- [Remote Access](#remote-access)
+	- [Remote Shell](#remote-shell)
 	- [Add Flathub Repository](#add-flathub-repository)
 	- [ProtonUp-Qt](#protonup-qt)
 	- [CryoUtilities](#cryoutilities)
@@ -117,7 +117,7 @@ Set the [default Web browser application](../topics/plasma-desktop.md#default-ap
 
 ---
 
-## [Remote Access](../topics/remote-access.md#remote-shell)
+## [Remote Shell](../topics/remote-access.md#remote-shell)
 
 This details how we can enable remote access into our Steam Deck from other devices in the same network via SSH.
 
