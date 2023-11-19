@@ -135,7 +135,7 @@ This details the installation of ProtonUp-Qt and GE-Proton.
 
 ---
 
-## [CryoUtilities](../topics/cryoutilities.md)
+## CryoUtilities
 
 This details the installation and the setup steps for CryoUtilities in order to optimise our Steam Deck's performance.
 
