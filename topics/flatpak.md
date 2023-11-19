@@ -104,14 +104,14 @@ This details how to set global permissions for Flatpak apps and the recommended 
 
 4. Under **Other files**, click the **Add folder** icon and add in the following paths to the (existing) list:
 
-     - xdg-videos:rw
-     - xdg-music:rw
-     - xdg-documents:rw
-     - xdg-download:rw
-     - xdg-pictures:rw
-     - xdg-config/fontconfig:ro
-     - ~/.icons:ro
-     - /mnt/mynas:rw
+   - xdg-videos:rw
+   - xdg-music:rw
+   - xdg-documents:rw
+   - xdg-download:rw
+   - xdg-pictures:rw
+   - xdg-config/fontconfig:ro
+   - ~/.icons:ro
+   - /mnt/mynas:rw
 
     > [!WARNING]  
     > Replace `/mnt/mynas` with the path of your remote directory if you have one, else exclude it.
