@@ -23,6 +23,9 @@ Flatpak, formerly known as xdg-app, is a utility for software deployment and pac
   - [Make Flatpak Apps Use KDE File Picker](#make-flatpak-apps-use-kde-file-picker)
     - [Description](#description-3)
     - [References](#references-3)
+  - [Recommended Global Permissions](#recommended-global-permissions)
+    - [Description](#description-4)
+    - [Steps](#steps-1)
 
 ## References
 
@@ -79,3 +82,41 @@ This makes Flatpak apps use Dolphin as the File Picker and not Nautilus (GTK).
 ### References
 
 - [Make Flatpak Apps Use KDE File Picker](plasma-desktop.md#make-flatpak-apps-use-kde-file-picker)
+
+---
+
+## Recommended Global Permissions
+
+### Description
+
+This details how to set global permissions for Flatpak apps and the recommended permissions to set. This should fix issues such as custom cursor icons not being used, and files not being able to be read or written in Flatpak apps to/from a remote directory.
+
+> [!IMPORTANT]  
+> The **Flatseal** Flatpak app is required for this guide.
+
+### Steps
+
+1. Launch the **Flatseal** app.
+
+2. On Flatseal, click the **All Applications** menu item.
+
+3. In the All Applications view, scroll down to the **Filesystem** section.
+
+4. Under **Other files**, click the **Add folder** icon and add in the following paths to the (existing) list:
+
+     - xdg-videos:rw
+     - xdg-music:rw
+     - xdg-documents:rw
+     - xdg-download:rw
+     - xdg-pictures:rw
+     - xdg-config/fontconfig:ro
+     - ~/.icons:ro
+     - /mnt/mynas:rw
+
+    > [!WARNING]  
+    > Replace `/mnt/mynas` with the path of your remote directory if you have one, else exclude it.
+
+    > [!NOTE]  
+    > It is also highly recommended to have all user fonts to be installed in the `~/.local/share/fonts` directory so our Flatpak apps can use them. The `xdg-config/fontconfig:ro` override allows Flatpak apps to utilise the configurations we have done using the `~/.config/fontconfig/fonts.conf` file.
+
+5. After doing this, simply restart any running Flatpak apps for these overrides to apply.
