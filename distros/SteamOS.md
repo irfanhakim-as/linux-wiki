@@ -21,10 +21,10 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 	- [ProtonUp-Qt](#protonup-qt)
 	- [CryoUtilities](#cryoutilities)
 		- [References](#references-1)
+	- [CryoUtilities Undo Sync Game Data](#cryoutilities-undo-sync-game-data)
 	- [EmuDeck](#emudeck)
 	- [Custom Game Emulation Configurations](#custom-game-emulation-configurations)
 	- [Custom Emulator Configurations](#custom-emulator-configurations)
-	- [Undo CryoUtilities Sync Game Data](#undo-cryoutilities-sync-game-data)
 	- [Backing up with Vorta](#backing-up-with-vorta)
 	- [Add Non-Steam Services](#add-non-steam-services)
 	- [Applying Translation Patches to ROMs](#applying-translation-patches-to-roms)
@@ -146,6 +146,12 @@ This details the installation and the setup steps for CryoUtilities in order to 
 
 ---
 
+## [CryoUtilities Undo Sync Game Data](../topics/cryoutilities.md#undo-sync-game-data)
+
+To save storage space, game data can be moved to the SD card, and symlinked to the Deck's SSD. This procedure is called "Sync Game Data". This may cause issues for some games however, and this guide will undo the process for a particular game after having done it using the CryoUtilities programme.
+
+---
+
 ## [EmuDeck](../topics/emudeck.md)
 
 This details how to install, setup, and maintain EmuDeck on SteamOS.
@@ -161,12 +167,6 @@ This details on certain configuration options or fixes for several games of vari
 ## [Custom Emulator Configurations](../topics/emulation.md#custom-emulator-configurations)
 
 This details on certain configuration options for several emulators.
-
----
-
-## [Undo CryoUtilities Sync Game Data](../topics/cryoutilities.md#undo-sync-game-data)
-
-To save storage space, game data can be moved to the SD card, and symlinked to the Deck's SSD. This procedure is called "Sync Game Data". This may cause issues for some games however, and this guide will undo the process for a particular game after having done it using the CryoUtilities programme.
 
 ---
 
