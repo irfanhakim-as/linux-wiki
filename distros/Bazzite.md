@@ -105,7 +105,8 @@ This details some customisation options for the Plasma desktop.
 
 This details on how we can mount a remote directory, should we want to.
 
-It's recommended to replace the mounting point in the referenced guide with a directory in our home folder (i.e. `/home/deck/mynas`).
+> [!NOTE]  
+> It's recommended to replace the mounting point in the referenced guide with a directory in our home folder (i.e. `/home/deck/mynas`) to avoid potential issues with Bazzite's immutability.
 
 ---
 
