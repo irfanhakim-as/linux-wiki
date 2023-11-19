@@ -283,7 +283,7 @@ This details some customisation options for the Plasma desktop.
 
 ## [Distrobox Installation](../topics/distrobox.md#installation)
 
-This details some customisation options for the Plasma desktop.
+This details how we can install and setup Distrobox.
 
 ---
 
