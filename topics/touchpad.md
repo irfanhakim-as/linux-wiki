@@ -103,8 +103,10 @@ This details how we could configure our trackpad to behave more like it would on
           </action>
         </gesture>
         <gesture type="SWIPE" fingers="3" direction="DOWN">
-          <action type="SHOW_DESKTOP">
-            <animate>true</animate>
+          <action type="RUN_COMMAND">
+            <repeat>false</repeat>
+            <command>qdbus org.kde.kglobalaccel /component/kwin invokeShortcut 'ExposeClass'</command>
+            <on>begin</on>
           </action>
         </gesture>
         <gesture type="SWIPE" fingers="3" direction="RIGHT">
