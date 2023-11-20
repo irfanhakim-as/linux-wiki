@@ -48,20 +48,7 @@ This details how to install Bazzite and some things that need to be done.
 
 2. When given the choice (_in GRUB_) upon attempting to boot into the installer, choose the option to install `bazzite-deck` for a Steam Deck-like experience.
 
-3. Upon the initial boot into the desktop, before proceeding with Bazzite's **First Boot Setup**, create a GPG key first:
-
-   - Launch the **Konsole** app.
-
-   - Run the following command to generate a GPG key:
-
-		```sh
-		gpg --full-gen-key
-		```
-
-   - Leave most of the prompts/values at the default, except when it asks for your:
-     - Real name (i.e. `user`)
-     - Email (i.e. `user@example.org`)
-     - Passphrase (make this the same as your user password)
+3. Upon the initial boot into the desktop, before proceeding with Bazzite's **First Boot Setup**, [generate a GPG Key](../topics/gpg.md#generate-gpg-key) first.
 
 4. Once a GPG key has successfully been generated, proceed with the first boot setup.
 
