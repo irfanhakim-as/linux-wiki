@@ -37,13 +37,15 @@ This details how to generate a GPG key.
 
 ### Steps
 
-1. Generate a GPG key using the `gpg` command:
+1. Launch a Terminal app (i.e. **Konsole**).
+
+2. Generate a GPG key using the `gpg` command:
 
     ```sh
     gpg --full-gen-key
     ```
 
-2. Add the following values when prompted:
+3. Add the following values when prompted:
 
    - What kind of key: `1`
    - Keysize: `3072`
@@ -54,7 +56,7 @@ This details how to generate a GPG key.
    - Comment: (Leave this blank or add a comment)
    - Change name, comment, email, or okay/quit: `o`
 
-3. Enter a passphrase when prompted. Save to password manager if given the option.
+4. Enter a passphrase when prompted. Save to password manager if given the option.
 
 ---
 
