@@ -51,7 +51,7 @@ This details how to generate a GPG key.
    - Is this correct: `y`
    - Real name: `My Name` (Add your real name here)
    - Email address: `user@example.org` (Add your email address here)
-   - Comment: `` (Leave this blank or add a comment)
+   - Comment: (Leave this blank or add a comment)
    - Change name, comment, email, or okay/quit: `o`
 
 3. Enter a passphrase when prompted. Save to password manager if given the option.
