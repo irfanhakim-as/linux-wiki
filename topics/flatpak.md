@@ -116,7 +116,10 @@ This details how to set global permissions for Flatpak apps and the recommended 
   > [!WARNING]  
   > Replace `/mnt/mynas` with the path of your remote directory if you have one, else exclude it.
 
+  > [!TIP]  
+  > It is highly recommended to have all user fonts installed to the `~/.local/share/fonts` directory so our Flatpak apps can see/use them.
+
   > [!NOTE]  
-  > It is also highly recommended to have all user fonts installed to the `~/.local/share/fonts` directory so our Flatpak apps can use them. The `xdg-config/fontconfig:ro` override allows Flatpak apps to utilise the configurations we have done using the `~/.config/fontconfig/fonts.conf` file.
+  > The `xdg-config/fontconfig:ro` override allows Flatpak apps to utilise the font configurations we have done using the `~/.config/fontconfig/fonts.conf` file.
 
 5. After doing this, simply restart any running Flatpak apps for these overrides to apply.
