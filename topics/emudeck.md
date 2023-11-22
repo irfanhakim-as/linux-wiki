@@ -326,7 +326,7 @@ Put the following BIOS files in `EMUDECK_FOLDER/bios`:
 
 - neogeo.zip (md5sum: `d4c3b4014bbbd00c5ad1b81bf38228b0`)
 
-> [!NOTE]  
+> [!TIP]  
 > To link a file using Dolphin, drag the source file to the destination folder while pressing <kbd>Ctrl + Shift</kbd>.
 
 Link/copy the following BIOS files from `EMUDECK_FOLDER/bios` to `EMUDECK_FOLDER/bios/mame` (create `mame` folder first) and `EMUDECK_FOLDER/roms/arcade`:
@@ -349,8 +349,8 @@ Put the following ROM files in `EMUDECK_FOLDER/roms/xbox360/roms`:
 
 #### [Nintendo 3DS](https://emudeck.github.io/cheat-sheet/#nintendo-cheat-sheet)
 
-> [!WARNING]  
-> If your ROMs have not been decrypted, you will need to add the `aes_keys.txt` BIOS file to `EMUDECK_FOLDER/bios/citra/keys`!
+> [!IMPORTANT]  
+> If your ROMs have not been decrypted, you will need to add the `aes_keys.txt` BIOS file to `EMUDECK_FOLDER/bios/citra/keys`.
 
 Put the following ROM files in `EMUDECK_FOLDER/roms/3ds`:
 
@@ -418,7 +418,7 @@ Put the following ROM files in `EMUDECK_FOLDER/roms/mastersystem`:
 
 ### [PS3](https://emudeck.github.io/cheat-sheet/#sony-cheat-sheet)
 
-> [!WARNING]  
+> [!IMPORTANT]  
 > PS3 Firmware/ROMs requires direct installation in the emulator, RPCS3, and is discussed in the [PS3 Emulation Setup](#ps3-emulation-setup) section.
 
 Put the following ROM files in `EMUDECK_FOLDER/roms/ps3`:
