@@ -35,7 +35,7 @@ This guide details on how we could clone a disk using KDE Partition Manager.
 ### Steps
 
 > [!NOTE]  
-> To copy a source partition to a destination partition of another drive, the two partitions will need to not be mounted - this makes it almost (if not entirely) impossible to do right from your host system. Hence, the rest of this guide will be done from a (Full) Manjaro KDE Plasma Live USB, which has KDE Partition Manager installed by default.
+> To copy a source partition to a target partition of another drive, the two partitions will need to not be mounted - this makes it almost (if not entirely) impossible to do right from your host system. Hence, the rest of this guide will be done from a (Full) Manjaro KDE Plasma Live USB, which has KDE Partition Manager installed by default.
 
 1. Download the [Manjaro KDE Plasma ISO](https://download.manjaro.org/kde/22.1.3/manjaro-kde-22.1.3-230529-linux61.iso) file.
 
