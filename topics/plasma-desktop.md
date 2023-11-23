@@ -38,6 +38,10 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
   - [Default Application](#default-application)
     - [Description](#description-4)
     - [Steps](#steps-1)
+  - [Auto Login](#auto-login)
+    - [Description](#description-5)
+    - [References](#references-1)
+    - [Steps](#steps-2)
 
 ---
 
@@ -463,3 +467,29 @@ This details on how to configure default applications of various types on KDE Pl
 5. To configure the default application for a certain type, click its corresponding dropdown and select the application you wish to use accordingly.
 
 6. Click the **Apply** button to save your changes.
+
+---
+
+## Auto Login
+
+### Description
+
+This guides how to enable auto login to the desktop for our user.
+
+### References
+
+- [How to configure automatic login in KDE](https://www.simplified.guide/kde/automatic-login)
+
+### Steps
+
+1. Launch the **System Settings** application.
+
+2. Expand the **Startup and Shutdown** section under the **Workspace** group.
+
+3. Open the **Login Screen (SDDM)** page.
+
+4. Click the **Behavior** button at the bottom.
+
+5. Check the **Automatically log in** box and select your **user** from the dropdown alongside it. You can also change the default **session** (`Plasma`/`Wayland`) here.
+
+6. Click the **Apply** button at the bottom.
