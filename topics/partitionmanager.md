@@ -14,6 +14,9 @@ KDE Partition Manager is an application to help you manage the disk devices, par
     - [Description](#description-1)
     - [References](#references-1)
     - [Steps](#steps)
+  - [Mounting a Secondary Internal Disk](#mounting-a-secondary-internal-disk)
+    - [Description](#description-2)
+    - [Steps](#steps-1)
 
 ## References
 
@@ -156,3 +159,97 @@ This guide details on how we could clone a disk using KDE Partition Manager.
       ```
 
    - Restart your PC to confirm that the new GRUB config works, and your brand new drive and cloned desktop should be all set.
+
+---
+
+## Mounting a Secondary Internal Disk
+
+### Description
+
+This details how we could add a secondary internal drive to our computer.
+
+> [!CAUTION]  
+> This guide will lead you to wipe the secondary drive clean, make sure that you have backed up all the data you need from the secondary drive before proceeding!
+
+### Steps
+
+1. Launch the **KDE Partition Manager** application.
+
+> [!NOTE]  
+> Make sure that the secondary drive has been physically installed to the PC.
+
+2. Locate the secondary drive within the list of available **Devices**.
+
+3. Remove any existing partitions on the secondary drive by clicking on each partition and selecting the **Delete** option at the top.
+
+4. Select an `unallocated` partition and click the **New** button at the top to create a new partition:
+
+   - Set the **File system** (i.e. `btrfs`).
+
+   - Give it a **Label** (i.e. `data`).
+
+   - Set the **Size**.
+
+   - Click the **OK** button.
+
+   - Click the **Apply** button at the top to apply the changes.
+
+5. Once we have prepared our drive's partition, create a mounting point for the new secondary drive (i.e. `/mnt/data`):
+
+   ```sh
+   sudo mkdir /mnt/data
+   ```
+
+6. Identify the new partition we have created and will be mounting, and take note of its `UUID` value:
+
+   ```sh
+   sudo blkid
+   ```
+
+   Sample output:
+
+   ```
+   /dev/nvme1n1p1: LABEL="data" UUID="586e85aa-3a23-4ec4-a159-c25a5f15df20" UUID_SUB="8cd35ec7-e2a2-4a86-8a39-a2e129f88200" BLOCK_SIZE="4096" TYPE="btrfs" PARTUUID="c708eb71-46b7-4de7-b396-abc55a0bfc5d"
+   ```
+
+   In this example, the `UUID` of the new partition is `586e85aa-3a23-4ec4-a159-c25a5f15df20`.
+
+7. Register our secondary drive to the `fstab` file.
+
+   Edit the `fstab` file:
+
+   ```sh
+   sudo nano /etc/fstab
+   ```
+
+   Add the following entry, with the new partition's `UUID` value (i.e. `586e85aa-3a23-4ec4-a159-c25a5f15df20`):
+
+   ```
+   # data
+   UUID=586e85aa-3a23-4ec4-a159-c25a5f15df20   /mnt/data           btrfs   defaults                                                                                                            0 0
+   ```
+
+   > [!WARNING]  
+   > In addition to replacing the `UUID` value, make sure to also replace `/mnt/data` with the path to your actual mounting point!
+
+8. Reload our daemon so that our new `fstab` is recognised:
+
+   ```sh
+   sudo systemctl daemon-reload
+   ```
+
+9. Try and mount our drive to its mounting point (i.e. `/mnt/data`):
+
+   ```sh
+   sudo mount /mnt/data
+   ```
+
+10. If it has mounted successfully, we likely still are not able to write to it as the mounting point is owned by the `root` user.
+
+      Change the ownership of the mounting point of the new partition (i.e. `/mnt/data`) to make it writable by our user:
+
+      ```sh
+      sudo chown $USER: /mnt/data
+      ```
+
+      The secondary drive should now be automatically mounted upon boot and available under the **Devices** section in our **Dolphin** file explorer application (as well as in a shell session through its mounting point).
