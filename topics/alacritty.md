@@ -27,7 +27,7 @@ Alacritty is a modern terminal emulator that comes with sensible defaults, but a
 This installs and sets up Alacritty as the default terminal.
 
 > [!IMPORTANT]  
-> This guide assumes that you are using KDE Plasma as your desktop environment.
+> This guide assumes that you are using the KDE Plasma desktop environment.
 
 ### Steps
 
