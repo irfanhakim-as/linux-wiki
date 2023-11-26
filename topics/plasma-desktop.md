@@ -21,6 +21,8 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
       - [Enhancing Dolphin Functionality](#enhancing-dolphin-functionality)
       - [Make Flatpak Apps Use KDE File Picker](#make-flatpak-apps-use-kde-file-picker)
     - [KRunner](#krunner)
+      - [Center KRunner by Default](#center-krunner-by-default)
+      - [Adding Additional Plugins](#adding-additional-plugins)
     - [Spectacle](#spectacle)
     - [Spectacle-like Window Management](#spectacle-like-window-management)
   - [Theme Customisations](#theme-customisations)
@@ -218,6 +220,8 @@ This makes Flatpak apps use Dolphin as the File Picker and not Nautilus (GTK).
 
 ### KRunner
 
+#### Center KRunner by Default
+
 1. Launch KRunner by pressing <kbd>Alt + Space</kbd>.
 
 2. Click the inline **Settings** icon on KRunner's far left.
@@ -225,6 +229,20 @@ This makes Flatpak apps use Dolphin as the File Picker and not Nautilus (GTK).
 3. In the KRunner Settings module, change the **Position on screen** option from **Top** to **Center**.
 
 4. Click **Apply** then **OK**.
+
+#### Adding Additional Plugins
+
+1. Launch KRunner by pressing <kbd>Alt + Space</kbd>.
+
+2. Click the **Cogwheel** icon to the far left of KRunner.
+
+3. Click the **Configure Enabled Search Plugins...** button.
+
+4. In the **Plasma Search** section, click the **Get New Plugins** at the bottom right.
+
+5. Search for the plugin you wish to install using the provided search bar.
+
+6. Select the plugin you wish to install and click the **Install** button on the top right.
 
 ### Spectacle
 
