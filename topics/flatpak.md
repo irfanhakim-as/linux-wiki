@@ -26,6 +26,10 @@ Flatpak, formerly known as xdg-app, is a utility for software deployment and pac
   - [Recommended Global Permissions](#recommended-global-permissions)
     - [Description](#description-4)
     - [Steps](#steps-1)
+  - [Migrating to Flatpak](#migrating-to-flatpak)
+    - [Description](#description-5)
+    - [References](#references-4)
+    - [Steps](#steps-2)
 
 ## References
 
@@ -123,3 +127,81 @@ This details how to set global permissions for Flatpak apps and the recommended 
   > The `xdg-config/fontconfig:ro` override allows Flatpak apps to utilise the font configurations we have done using the `~/.config/fontconfig/fonts.conf` file.
 
 5. After doing this, simply restart any running Flatpak apps for these overrides to apply.
+
+---
+
+## Migrating to Flatpak
+
+### Description
+
+This details how to migrate your configurations and data from _standard_ packages to Flatpaks.
+
+> [!NOTE]  
+> The exact steps to do this for each app might vary, but they are largely the same. This guide will focus on **Mozilla Firefox** as an example.
+
+### References
+
+- [Back up and restore information in Firefox profiles](https://support.mozilla.org/en-US/kb/back-and-restore-information-firefox-profiles#w_restoring-to-a-different-location)
+
+### Steps
+
+> [!NOTE]  
+> This guide assumes that you have been using the standard package of Firefox, and intend to migrate to the Flatpak version without losing your configurations and data.
+
+1. [Install](./plasma-discover.md#software-installation-and-update) [Firefox](https://flathub.org/apps/details/org.mozilla.firefox) as a Flatpak if you haven't already.
+
+2. Launch the **Firefox** Flatpak at least once so that a default (Firefox) profile gets created
+
+3. Identify the folder of your **old**/existing default Firefox (the _standard_ version) profile in `~/.mozilla/firefox`. The name of the folder should end with `.default-release`.
+
+    List the contents of the `~/.mozilla/firefox` directory:
+
+    ```sh
+    ls -la ~/.mozilla/firefox
+    ```
+
+    Sample output:
+
+    ```
+    drwx------   - myuser 21 Oct  2022 b89131cr.default
+    drwx------   - myuser 23 Nov 20:17 'Crash Reports'
+    drwx------   - myuser 11 Nov  2022 'Pending Pings'
+    drwx------   - myuser 26 Nov 20:02 9h74n8km.dev-edition-default
+    drwx------   - myuser 31 Jan 00:37 30y0vmjh.default-release
+    .rw-r--r-- 128 myuser  1 Nov  2022 installs.ini
+    .rw-r--r-- 416 myuser  1 Nov  2022 profiles.ini
+    ```
+
+    In this example, the folder of the old/existing default Firefox profile is `~/.mozilla/firefox/30y0vmjh.default-release`.
+
+4. Identify the folder of your **new** default Firefox (Flatpak) profile in `~/.var/app/org.mozilla.firefox/.mozilla/firefox`. The name of the folder should end with `.default-release`.
+
+    List the contents of the `~/.var/app/org.mozilla.firefox/.mozilla/firefox` directory:
+
+    ```sh
+    ls -la ~/.var/app/org.mozilla.firefox/.mozilla/firefox
+    ```
+
+    Sample output:
+
+    ```
+    drwx------   - myuser 31 Jan 00:37 .
+    drwxr-xr-x   - myuser 31 Jan 00:37 ..
+    drwx------   - myuser 21 Nov 23:25 'Crash Reports'
+    drwx------   - myuser 31 Jan 00:37 7a4wff6q.default
+    drwx------   - myuser 31 Jan 00:37 'Pending Pings'
+    drwx------   - myuser 26 Nov 21:17 l43l38rr.default-release
+    .rw-r--r--  62 myuser 31 Jan 00:37 installs.ini
+    .rw-r--r-- 259 myuser 31 Jan 00:37 profiles.ini
+    ```
+
+    In this example, the folder of the new default Firefox profile is `~/.var/app/org.mozilla.firefox/.mozilla/firefox/l43l38rr.default-release`.
+
+5. Copy the **contents** of the **old**/existing (standard) Firefox profile folder (i.e. `30y0vmjh.default-release`), into the **new** (Flatpak) Firefox profile folder (i.e. `l43l38rr.default-release`):
+
+    > [!TIP]  
+    > If you have a `cp` alias for `cp -i`, you can override the alias to skip prompts asking to overwrite files by adding `command` to the beginning of the command below (before `cp`).
+
+    ```sh
+    cp -rf ~/.mozilla/firefox/30y0vmjh.default-release/* ~/.var/app/org.mozilla.firefox/.mozilla/firefox/l43l38rr.default-release
+    ```
