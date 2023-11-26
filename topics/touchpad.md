@@ -19,6 +19,10 @@ This details how we could configure and setup a touchpad for use on desktop Linu
     - [Description](#description-2)
     - [References](#references)
     - [Steps](#steps-1)
+  - [Smooth Scrolling in Firefox](#smooth-scrolling-in-firefox)
+    - [Description](#description-3)
+    - [References](#references-1)
+    - [Steps](#steps-2)
 
 ---
 
@@ -394,3 +398,42 @@ This details how we could configure our trackpad to behave more like it would on
     ```
 
 6. To further configure the Touchégg gestures, you can do so graphically through the Touché app.
+
+---
+
+## Smooth Scrolling in Firefox
+
+### Description
+
+This details how to enable smooth scrolling in Firefox on X11.
+
+### References
+
+- [Kinetic Scrolling on Linux?](https://community.frame.work/t/solved-kinetic-scrolling-on-linux/17564)
+- [PSA for Firefox users: set MOZ_USE_XINPUT2=1 to enable macOS-like smooth scrolling](https://www.reddit.com/r/linux/comments/72mfv8/psa_for_firefox_users_set_moz_use_xinput21_to)
+
+### Steps
+
+> [!NOTE]  
+> This is intended for the Mozilla Firefox Flatpak and the X11 graphics platform.
+
+1. Launch the **Flatseal** application. [Install](./plasma-discover.md#software-installation-and-update) [Flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal) if you haven't already.
+
+2. From the **Applications** list, select **org.mozilla.firefox**.
+
+3. In Firefox's details view, get to the **Environment** section.
+
+4. Click the **+** button to add a new environment variable.
+
+5. In the new provided text field, enter the following parameter and value:
+
+    ```sh
+    MOZ_USE_XINPUT2=1
+    ```
+
+6. Close the **Flatseal** application.
+
+> [!TIP]  
+> The **Use smooth scrolling** option in Firefox's **Preferences** > **General** > **Browsing** section should be enabled.
+
+7. Close Firefox if it's running, and launch it again.
