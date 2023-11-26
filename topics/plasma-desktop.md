@@ -51,6 +51,9 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
 
 This details on some things that could be done to improve the experience of using the desktop.
 
+> [!NOTE]  
+> Feel free to skip parts of this section that you do not wish to implement.
+
 ### Dolphin
 
 #### Show hidden files
@@ -274,6 +277,9 @@ This adds shortcuts that would make managing and moving application windows simi
 ### Description
 
 This details some customisation options for the desktop.
+
+> [!NOTE]  
+> Feel free to skip parts of this section that you do not wish to implement.
 
 ### Floating "Dock"
 
