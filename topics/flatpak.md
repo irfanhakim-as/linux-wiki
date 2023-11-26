@@ -96,7 +96,7 @@ This details how to set global permissions for Flatpak apps and the recommended 
 
 ### Steps
 
-1. Launch the **Flatseal** app.
+1. Launch the **Flatseal** app. [Install](./plasma-discover.md#software-installation-and-update) [Flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal) if you haven't already.
 
 2. On Flatseal, click the **All Applications** menu item.
 
