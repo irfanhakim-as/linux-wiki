@@ -17,6 +17,7 @@ This wiki is a collection of guides and tips mostly focused on Linux, and is pri
 This is a list of distro-specific guides that compiles individual topics in this repository into a single guide catered to the distro.
 
 - [Bazzite](distros/Bazzite.md)
+- [EndeavourOS](distros/EndeavourOS.md)
 - [SteamOS](distros/SteamOS.md)
 
 ## Topics
