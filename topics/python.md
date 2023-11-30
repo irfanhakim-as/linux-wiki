@@ -10,14 +10,114 @@ Python is a programming language that lets you work quickly and integrate system
   - [Description](#description)
   - [Directory](#directory)
   - [References](#references)
-  - [Miniconda Environments](#miniconda-environments)
+  - [Installation](#installation)
     - [Description](#description-1)
     - [References](#references-1)
     - [Steps](#steps)
+  - [Pip Usage](#pip-usage)
+    - [Description](#description-2)
+    - [References](#references-2)
+    - [Steps](#steps-1)
+  - [Miniconda Environments](#miniconda-environments)
+    - [Description](#description-3)
+    - [References](#references-3)
+    - [Steps](#steps-2)
 
 ## References
 
 - [Python](https://www.python.org)
+
+---
+
+## Installation
+
+### Description
+
+This guide details on how to install both `python`, the programming language, and `pip`, Python's package manager.
+
+### References
+
+- [Python Installation](https://wiki.archlinux.org/title/python#Installation)
+- [Pip Installation](https://pip.pypa.io/en/stable/installation)
+
+### Steps
+
+1. Install `python` using `pacman` (or `yay`):
+
+    ```sh
+    sudo pacman -S python
+    ```
+
+2. Install `pip` using `pacman` (or `yay`):
+
+    ```sh
+    sudo pacman -S python-pip
+    ```
+
+    Alternatively, we could also install `pip` using `python` itself:
+
+    ```sh
+    python -m ensurepip --upgrade
+    ```
+
+---
+
+## Pip Usage
+
+### Description
+
+This guide details on how use `pip` to perform several operations including installing Python packages.
+
+### References
+
+- [Pip User Guide](https://pip.pypa.io/en/stable/user_guide)
+
+### Steps
+
+> [!NOTE]  
+> Replace `<package>` with the actual name of the package you wish to search, install, or update.
+
+1. To install a Python package:
+
+    ```sh
+    pip install <package>
+    ```
+
+2. To upgrade a Python package:
+
+    ```sh
+    pip install --upgrade <package>
+    ```
+
+3. To uninstall a Python package:
+
+    ```sh
+    pip uninstall <package>
+    ```
+
+4. To search for a Python package:
+
+    ```sh
+    pip search <package>
+    ```
+
+5. To list all installed Python packages:
+
+    ```sh
+    pip list
+    ```
+
+6. To freeze all installed Python packages into a `requirements.txt` file:
+
+    ```sh
+    pip freeze > requirements.txt
+    ```
+
+7. To install all Python packages listed in a `requirements.txt` file:
+
+    ```sh
+    pip install -r requirements.txt
+    ```
 
 ---
 
