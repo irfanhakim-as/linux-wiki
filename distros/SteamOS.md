@@ -39,6 +39,7 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 	- [Plasma Desktop Theme Customisations](#plasma-desktop-theme-customisations)
 	- [Distrobox Installation](#distrobox-installation)
 	- [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
+	- [Make Flatpak Apps Respect KDE Theme](#make-flatpak-apps-respect-kde-theme)
 
 ## References
 
@@ -290,3 +291,9 @@ This details how we can install and setup Distrobox.
 ## [Install Applications/Libraries via Distrobox](../topics/distrobox.md#software-installation)
 
 This details how we can install certain applications or libraries not present in SteamOS via Distrobox.
+
+---
+
+## [Make Flatpak Apps Respect KDE Theme](../topics/flatpak.md#respect-kde-theme)
+
+This solves the issue of (some) Flatpak apps not looking native in KDE, and defaulting to a GTK theme instead.

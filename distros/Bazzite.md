@@ -25,6 +25,7 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
 	- [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
 	- [Wake on LAN or Wireless](#wake-on-lan-or-wireless)
 		- [References](#references-2)
+	- [Make Flatpak Apps Respect KDE Theme](#make-flatpak-apps-respect-kde-theme)
 
 ## References
 
@@ -135,3 +136,9 @@ This details on how to enable, setup and use Wake on LAN (WoL) or Wake on Wirele
 
 - [Wake on LAN](../topics/wol.md)
 - [Wake on Wireless](../topics/wowlan.md)
+
+---
+
+## [Make Flatpak Apps Respect KDE Theme](../topics/flatpak.md#respect-kde-theme)
+
+This solves the issue of (some) Flatpak apps not looking native in KDE, and defaulting to a GTK theme instead.
