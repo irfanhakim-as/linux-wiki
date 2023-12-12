@@ -67,19 +67,25 @@ This details how we can enable remote access into our system from other devices 
     inet 192.168.0.25/24 brd 192.168.0.255 scope global noprefixroute wlp4s0
     ```
 
-3. Enable SSH access on our system:
+3. Ensure that the `openssh` package is installed. If not, install it using `yay`:
+
+    ```sh
+    yay -S openssh
+    ```
+
+4. Enable SSH access on our system:
 
     ```sh
     sudo systemctl enable --now sshd.service
     ```
 
-4. Try accessing our system from another device (assuming our user is `deck` and its static IPv4 address is `192.168.0.25`):
+5. Try accessing our system from another device (assuming our user is `deck` and its static IPv4 address is `192.168.0.25`):
 
     ```sh
     ssh deck@192.168.0.25
     ```
 
-5. If the SSH connection was established successfully, we can also copy the other device's SSH public key to our system in order to enable passwordless access.
+6. If the SSH connection was established successfully, we can also copy the other device's SSH public key to our system in order to enable passwordless access.
 
     Do so from the other device:
 
