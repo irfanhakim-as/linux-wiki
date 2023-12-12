@@ -117,6 +117,11 @@ git-lfs
 bluez-hid2hci
 cloudflared
 plasma-systemmonitor
+traceroute
+unrar
+unzip
+wget
+which
 ```
 
 [Flatpak](../topics/plasma-discover.md#software-installation-and-update) packages:
