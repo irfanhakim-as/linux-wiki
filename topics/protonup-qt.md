@@ -12,7 +12,6 @@ Install and manage GE-Proton and Luxtorpeda for Steam and Wine-GE for Lutris wit
   - [References](#references)
   - [Setup](#setup)
     - [Description](#description-1)
-    - [References](#references-1)
     - [Steps](#steps)
 
 ## References
