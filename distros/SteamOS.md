@@ -19,8 +19,9 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 	- [Remote Shell](#remote-shell)
 	- [Add Flathub Repository](#add-flathub-repository)
 	- [ProtonUp-Qt](#protonup-qt)
-	- [CryoUtilities](#cryoutilities)
 		- [References](#references-1)
+	- [CryoUtilities](#cryoutilities)
+		- [References](#references-2)
 	- [CryoUtilities Undo Sync Game Data](#cryoutilities-undo-sync-game-data)
 	- [EmuDeck](#emudeck)
 	- [Custom Game Emulation Configurations](#custom-game-emulation-configurations)
@@ -31,10 +32,10 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 	- [Fixing DRM issues with Google Chrome](#fixing-drm-issues-with-google-chrome)
 	- [Install Git LFS](#install-git-lfs)
 	- [Better Fonts](#better-fonts)
-		- [References](#references-2)
+		- [References](#references-3)
 	- [Convert XCI Switch Games to NSP](#convert-xci-switch-games-to-nsp)
 	- [Wake on LAN or Wireless](#wake-on-lan-or-wireless)
-		- [References](#references-3)
+		- [References](#references-4)
 	- [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
 	- [Plasma Desktop Theme Customisations](#plasma-desktop-theme-customisations)
 	- [Distrobox Installation](#distrobox-installation)
@@ -130,9 +131,14 @@ SteamOS already comes with access to Flathub system-wide, follow this guide to a
 
 ---
 
-## [ProtonUp-Qt](../topics/protonup-qt.md)
+## ProtonUp-Qt
 
-This details the installation of ProtonUp-Qt and GE-Proton.
+This details the installation of ProtonUp-Qt and GE-Proton, as well as how to update GE-Proton for your installed games down the line.
+
+### References
+
+- [ProtonUp-Qt Setup](../topics/protonup-qt.md#setup)
+- [ProtonUp-Qt Update GE-Proton](../topics/protonup-qt.md#update-ge-proton)
 
 ---
 
