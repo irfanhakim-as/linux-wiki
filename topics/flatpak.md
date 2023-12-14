@@ -23,13 +23,16 @@ Flatpak, formerly known as xdg-app, is a utility for software deployment and pac
   - [Make Flatpak Apps Use KDE File Picker](#make-flatpak-apps-use-kde-file-picker)
     - [Description](#description-3)
     - [References](#references-3)
-  - [Recommended Global Permissions](#recommended-global-permissions)
+  - [Add Permission Overrides](#add-permission-overrides)
     - [Description](#description-4)
     - [Steps](#steps-1)
-  - [Migrating to Flatpak](#migrating-to-flatpak)
+  - [Recommended Global Permissions](#recommended-global-permissions)
     - [Description](#description-5)
-    - [References](#references-4)
     - [Steps](#steps-2)
+  - [Migrating to Flatpak](#migrating-to-flatpak)
+    - [Description](#description-6)
+    - [References](#references-4)
+    - [Steps](#steps-3)
 
 ## References
 
@@ -89,6 +92,69 @@ This makes Flatpak apps use Dolphin as the File Picker and not Nautilus (GTK).
 
 ---
 
+## Add Permission Overrides
+
+### Description
+
+This details how to add permission overrides for Flatpaks using Flatseal.
+
+> [!IMPORTANT]  
+> The **Flatseal** Flatpak app is required for this guide.
+
+### Steps
+
+1. Launch the **Flatseal** app. [Install](./plasma-discover.md#software-installation-and-update) [Flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal) if you haven't already.
+
+2. Choose the Flatpak application you wish to add permission overrides for:
+
+   - To add permission overrides for **all Flatpaks (Global)**, select the **All Applications** menu item.
+
+   - To add permission overrides for **a specific Flatpak**, select the **specific Flatpak application** menu item.
+
+3. In the selected Flatpak app's view, several sections of permissions are listed that could be overridden.
+
+    These sections include:
+
+   - **Share**: List of subsystems shared with the host system.
+
+   - **Socket**: List of well-known sockets available in the sandbox.
+
+   - **Device**: List of devices available in the sandbox.
+
+   - **Allow**: List of features available to the application.
+
+   - **Filesystem**: List of filesystem subsets available to the application.
+
+   - **Persistent**: List of homedir-relative paths created in the sandbox.
+
+   - **Environment**: List of variables exported to the application.
+
+   - **System Bus**: List of well-known names on the system bus.
+
+   - **Session Bus**: List of well-known names on the session bus.
+
+    Most of these sections could easily be updated through simple toggles, some require adding in specific paths or values.
+
+4. To expose additional, specific file or directory paths to the application:
+
+   - Under **Other files**, click the **Add folder** icon.
+
+   - Add in the path to the file or directory you want to expose to the application in the provided text field.
+
+   - To remove a path, simply click the corresponding cross or **X** icon next to the path.
+
+5. To add in specific environment variables:
+
+   - Under **Variables** within the **Environment** section, click the **+** button.
+
+   - Add in the environment variable (and value) you want to export to the application in the provided text field.
+
+   - To remove an environment variable, simply click the corresponding cross or **X** icon next to the environment variable.
+
+6. After updating the permissions, simply restart the (running) Flatpak app for the changes to apply.
+
+---
+
 ## Recommended Global Permissions
 
 ### Description
@@ -100,33 +166,27 @@ This details how to set global permissions for Flatpak apps and the recommended 
 
 ### Steps
 
-1. Launch the **Flatseal** app. [Install](./plasma-discover.md#software-installation-and-update) [Flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal) if you haven't already.
+1. Refer to the [Add Permission Overrides](#add-permission-overrides) section to set permission overrides for all of your installed Flatpak applications (globally).
 
-2. On Flatseal, click the **All Applications** menu item.
+2. Under **Other files** in the **Filesystem** section, expose the following paths to your Flatpak applications globally:
 
-3. In the All Applications view, scroll down to the **Filesystem** section.
+   - `xdg-videos:rw`
+   - `xdg-music:rw`
+   - `xdg-documents:rw`
+   - `xdg-download:rw`
+   - `xdg-pictures:rw`
+   - `xdg-config/fontconfig:ro`
+   - `~/.icons:ro`
+   - `/mnt/mynas:rw`
 
-4. Under **Other files**, click the **Add folder** icon and add in the following paths to the (existing) list:
+    > [!WARNING]  
+    > Replace `/mnt/mynas` with the path of your remote directory if you have one, else exclude it.
 
-   - xdg-videos:rw
-   - xdg-music:rw
-   - xdg-documents:rw
-   - xdg-download:rw
-   - xdg-pictures:rw
-   - xdg-config/fontconfig:ro
-   - ~/.icons:ro
-   - /mnt/mynas:rw
+    > [!TIP]  
+    > It is highly recommended to have all user fonts installed to the `~/.local/share/fonts` directory so our Flatpak apps can see/use them.
 
-  > [!WARNING]  
-  > Replace `/mnt/mynas` with the path of your remote directory if you have one, else exclude it.
-
-  > [!TIP]  
-  > It is highly recommended to have all user fonts installed to the `~/.local/share/fonts` directory so our Flatpak apps can see/use them.
-
-  > [!NOTE]  
-  > The `xdg-config/fontconfig:ro` override allows Flatpak apps to utilise the font configurations we have done using the `~/.config/fontconfig/fonts.conf` file.
-
-5. After doing this, simply restart any running Flatpak apps for these overrides to apply.
+    > [!NOTE]  
+    > The `xdg-config/fontconfig:ro` override allows Flatpak apps to utilise the font configurations we have made using the `~/.config/fontconfig/fonts.conf` file.
 
 ---
 
