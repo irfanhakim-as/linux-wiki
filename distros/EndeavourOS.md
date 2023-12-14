@@ -105,7 +105,6 @@ game-devices-udev
 htop
 python-eduvpn-client
 openvpn
-protonup-qt
 anydesk-bin
 helm
 notable-insiders-bin
@@ -127,26 +126,21 @@ which
 [Flatpak](../topics/plasma-discover.md#software-installation-and-update) packages:
 
 ```
-chat.revolt.RevoltDesktop
 com.borgbase.Vorta
 com.calibre_ebook.calibre
 com.discordapp.Discord
-com.github.Alcaro.Flips
 com.github.Eloston.UngoogledChromium
+com.github.Matoking.protontricks
 com.github.joseexposito.touche
 com.github.tchx84.Flatseal
 com.google.Chrome
 com.heroicgameslauncher.hgl
 com.leinardi.gwe
-com.microsoft.Edge
 com.obsproject.Studio
-com.pojtinger.felicitas.Multiplex
-com.poweriso.PowerISO
 com.slack.Slack
 com.spotify.Client
 com.system76.Popsicle
 com.ticktick.TickTick
-com.valvesoftware.SteamLink
 com.visualstudio.code
 de.shorsh.discord-screenaudio
 fr.handbrake.ghb
@@ -155,9 +149,9 @@ io.github.mimbrero.WhatsAppDesktop
 io.gitlab.librewolf-community
 io.mpv.Mpv
 it.mijorus.gearlever
+net.davidotek.pupgui2
 org.audacityteam.Audacity
 org.bunkus.mkvtoolnix-gui
-org.fedoraproject.MediaWriter
 org.filezillaproject.Filezilla
 org.gimp.GIMP
 org.inkscape.Inkscape
@@ -167,7 +161,6 @@ org.kde.kclock
 org.kde.kcolorchooser
 org.kde.kdenlive
 org.kde.krita
-org.kde.subtitlecomposer
 org.libreoffice.LibreOffice
 org.mozilla.Thunderbird
 org.mozilla.firefox
