@@ -20,6 +20,10 @@ This details all matters pertaining PC gaming.
     - [Elden Ring](#elden-ring)
     - [Eastward](#eastward)
     - [Witcher 3 and Cyberpunk 2077](#witcher-3-and-cyberpunk-2077)
+  - [Link's Awakening DX HD](#links-awakening-dx-hd)
+    - [Description](#description-3)
+    - [References](#references-2)
+    - [Steps](#steps-1)
 
 ---
 
@@ -171,3 +175,95 @@ A few games however, *seems* to perform worse with GameMode, if that is the case
     ```json
     "fallback": "DirectX 11"
     ```
+
+---
+
+## Link's Awakening DX HD
+
+### Description
+
+This details how to install and run the Link's Awakening DX HD _port_.
+
+> [!NOTE]  
+> Parts of this guide assumes that you are using the KDE Plasma desktop environment.
+
+### References
+
+- [Link's Awakening DX HD](https://linksawakeningdxhd.itch.io/links-awakening-dx-hd)
+- [How to play Link's Awakening DX HD on Steam Deck](https://overkill.wtf/how-to-play-legend-of-zelda-links-awakening-dx-native-pc-port-on-steam-deck)
+
+### Steps
+
+1. [Install and setup](./protontricks.md#installation) the **Protontricks** Flatpak if you haven't already as it will be required.
+
+2. Visit the [Link's Awakening DX HD](https://linksawakeningdxhd.itch.io/links-awakening-dx-hd) page on a web browser.
+
+3. Click the **Download** button to download the game.
+
+    > [!NOTE]  
+    > If you receive a "This Page Has Been Quarantined" warning message, expand the **I understand the risks, let me download anyway...** section and click the **Download** button from there.
+
+4. Unzip the downloaded file:
+
+   - Launch the **Dolphin** application.
+
+   - Navigate to where the game's zip file was downloaded to i.e. the **Downloads** directory.
+
+   - Select and right click the zip file.
+
+   - Hover over the **Extract** section, and select the **Extract archive here** option.
+
+5. Delete the zip file as it is no longer needed.
+
+6. Move the extracted game folder (i.e. **Links Awakening DX HD**) to a suitable directory (i.e. `~/Games`).
+
+    Create the destination directory beforehand if it does not yet exist:
+
+    ```sh
+    mkdir -p ~/Games
+    ```
+
+7. In the **Links Awakening DX HD** folder, select and right click the **Link's Awakening DX HD.exe** file.
+
+8. Select the **Add to Steam** context menu option.
+
+9. Launch the **Steam** application.
+
+10. Find the **Link's Awakening DX HD.exe** application from the **Library** section.
+
+11. Select and right click the application.
+
+12. Click the **Properties** context menu option.
+
+13. In the newly opened **Properties** window:
+
+    - Navigate to the **Shortcut** section.
+
+    - Update the name of the application to `Link's Awakening DX HD`.
+
+    - Navigate to the **Compatibility** section.
+
+    - Check the **Force the use of a specific Steam Play compatibility tool** checkbox.
+
+    - Select **Proton Experimental** from the dropdown menu.
+
+14. Close the **Properties** window.
+
+15. Launch the game from Steam by hitting the **Play** button.
+
+16. When met with an error message saying that _the `.NET` runtime needs to be installed_, proceed to download the `.NET` installer.
+
+17. Once the `.NET` installer has been downloaded through your default browser, select and right click the `.NET` installer from your **Downloads** directory using **Dolphin**.
+
+18. Select the **Open with Protontricks** context menu option.
+
+19. In the newly opened **Protontricks** application, locate and select the **Non-Steam shortcut: Link's Awakening DX HD: RANDOM_NUMBER** menu item.
+
+20. Click the **OK** button.
+
+21. When prompted to install the `.NET` **Windows Desktop Runtime**, click the **Install** button.
+
+22. Once the installation is done, you may delete the downloaded `.NET` installer file and launch the game from Steam.
+
+    > [!NOTE]  
+    > You may also make optional aesthetic changes to the game on Steam such as adding custom artwork (i.e. using [SteamGridDB](./decky-loader.md#plugin-installation) on a SteamOS based distro).

@@ -41,6 +41,7 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 	- [Distrobox Installation](#distrobox-installation)
 	- [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
 	- [Make Flatpak Apps Respect KDE Theme](#make-flatpak-apps-respect-kde-theme)
+	- [Link's Awakening DX HD](#links-awakening-dx-hd)
 
 ## References
 
@@ -303,3 +304,9 @@ This details how we can install certain applications or libraries not present in
 ## [Make Flatpak Apps Respect KDE Theme](../topics/flatpak.md#respect-kde-theme)
 
 This solves the issue of (some) Flatpak apps not looking native in KDE, and defaulting to a GTK theme instead.
+
+---
+
+## [Link's Awakening DX HD](../topics/gaming.md#links-awakening-dx-hd)
+
+This details how to install and run the Link's Awakening DX HD _port_.
