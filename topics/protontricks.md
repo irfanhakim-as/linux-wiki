@@ -41,7 +41,7 @@ This details how to install and setup Protontricks.
 
     - Select the **Protontricks** application.
 
-    - Under **Other files** in the **Filesystem** section, add and expose the intended path (i.e. `/run/media`).
+    - Under **Other files** in the **Filesystem** section, add and expose the intended path(s) (i.e. `/run/media`).
 
     - Close the **Flatseal** application.
 
