@@ -228,7 +228,7 @@ This details how to install and run the Link's Awakening DX HD _port_.
 8. Select the **Add to Steam** context menu option.
 
     > [!NOTE]  
-    > If the **Add to Steam** context menu option is not available for you (i.e. on non-SteamOS distros), you will need to add the `.exe` file to Steam manually.
+    > If the **Add to Steam** context menu option is not available to you (i.e. on non-SteamOS distros), you will need to add the `.exe` file to Steam manually.
 
 9.  Launch the **Steam** application.
 
