@@ -34,7 +34,7 @@ This details the installation of ProtonUp-Qt and GE-Proton.
 
 3. Click the **Add version** button.
 
-4. Under **Compatbililty tool**, select `GE-Proton`.
+4. Under **Compatibility tool**, select `GE-Proton`.
 
 5. Under **Version**, select the latest version available.
 
