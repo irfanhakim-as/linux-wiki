@@ -156,6 +156,7 @@ org.filezillaproject.Filezilla
 org.gimp.GIMP
 org.inkscape.Inkscape
 org.kde.audiotube
+org.kde.filelight
 org.kde.kasts
 org.kde.kclock
 org.kde.kcolorchooser
