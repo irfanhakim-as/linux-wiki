@@ -133,6 +133,7 @@ com.github.Eloston.UngoogledChromium
 com.github.Matoking.protontricks
 com.github.joseexposito.touche
 com.github.tchx84.Flatseal
+com.github.xournalpp.xournalpp
 com.google.Chrome
 com.heroicgameslauncher.hgl
 com.leinardi.gwe
