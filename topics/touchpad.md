@@ -19,7 +19,7 @@ This details how we could configure and setup a touchpad for use on desktop Linu
     - [Description](#description-2)
     - [References](#references)
     - [Steps](#steps-1)
-  - [Smooth Scrolling in Firefox](#smooth-scrolling-in-firefox)
+  - [Smooth Scrolling in Mozilla Applications](#smooth-scrolling-in-mozilla-applications)
     - [Description](#description-3)
     - [References](#references-1)
     - [Steps](#steps-2)
@@ -401,11 +401,11 @@ This details how we could configure our trackpad to behave more like it would on
 
 ---
 
-## Smooth Scrolling in Firefox
+## Smooth Scrolling in Mozilla Applications
 
 ### Description
 
-This details how to enable smooth scrolling in Firefox on X11.
+This details how to enable smooth scrolling in Mozilla applications including Firefox and Thunderbird on X11.
 
 ### References
 
@@ -415,7 +415,7 @@ This details how to enable smooth scrolling in Firefox on X11.
 ### Steps
 
 > [!NOTE]  
-> This is intended for the Mozilla Firefox Flatpak and the X11 graphics platform.
+> This is intended for the Mozilla Firefox and Mozilla Thunderbird Flatpak and the X11 graphics platform.
 
 1. Launch the **Flatseal** application. [Install](./plasma-discover.md#software-installation-and-update) [Flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal) if you haven't already.
 
@@ -437,3 +437,5 @@ This details how to enable smooth scrolling in Firefox on X11.
 > The **Use smooth scrolling** option in Firefox's **Preferences** > **General** > **Browsing** section should be enabled.
 
 7. Close Firefox if it's running, and launch it again.
+
+8. Repeat the same steps but for the Thunderbird (**org.mozilla.Thunderbird**) Flatpak. Its **Smooth scrolling** option is located under **Settings** > **General** > **Scrolling**.

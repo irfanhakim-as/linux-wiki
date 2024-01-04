@@ -432,7 +432,7 @@ This details on how to configure and use a trackpad such as the Apple Magic Trac
 
 - [Touchpad Configuration](../topics/touchpad.md#touchpad-configuration)
 - [macOS-like Gestures](../topics/touchpad.md#macos-like-gestures)
-- [Smooth Scrolling in Firefox](../topics/touchpad.md#smooth-scrolling-in-firefox)
+- [Smooth Scrolling in Mozilla Applications](../topics/touchpad.md#smooth-scrolling-in-mozilla-applications)
 
 ---
 
