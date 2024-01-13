@@ -62,6 +62,7 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [Mounting a Secondary Internal Disk](#mounting-a-secondary-internal-disk)
 	- [Fix Kwallet Error in Visual Studio Code](#fix-kwallet-error-in-visual-studio-code)
 	- [Miniconda Environments](#miniconda-environments)
+	- [XP-Pen](#xp-pen)
 
 ## References
 
@@ -505,3 +506,9 @@ This guide details on how we could solve the **You're running in a KDE environme
 ## [Miniconda Environments](../topics/python.md#miniconda-environments)
 
 This guide details on how we could install, setup, and use Conda to create `python` environments of various `python` versions.
+
+---
+
+## [XP-Pen](../topics/graphics-tablet.md#xp-pen)
+
+This briefs how to set up an XP-Pen drawing tablet on Linux and addresses an issue with using it on a multi-monitor setup.
