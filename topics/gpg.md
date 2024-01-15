@@ -47,8 +47,8 @@ This details how to generate a GPG key.
 
 3. Add the following values when prompted:
 
-   - What kind of key: `1`
-   - Keysize: `3072`
+   - What kind of key: `9` (`ECC (sign and encrypt) *default*`)
+   - Which elliptic curve you want: `1` (`Curve 25519 *default*`)
    - Key is valid for: `1y`
    - Is this correct: `y`
    - Real name: `My Name` (Add your real name here)
@@ -87,7 +87,7 @@ This details how we can enforce automatic signing for all our commits and tags i
 2. From this output, locate our GPG key and take note of the value of the second column from the row that has `sec` in the first column:
 
     ```
-    sec   rsa3072/1H89FHO4MGAJTJ9Z
+    sec   ed25519/1H89FHO4MGAJTJ9Z
     ```
 
 3. Copy the value trailing the `/` (i.e. `1H89FHO4MGAJTJ9Z`), and get our GPG public key using the following command:
