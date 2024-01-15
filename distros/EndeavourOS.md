@@ -138,6 +138,7 @@ com.github.xournalpp.xournalpp
 com.google.Chrome
 com.heroicgameslauncher.hgl
 com.leinardi.gwe
+com.microsoft.Edge
 com.obsproject.Studio
 com.slack.Slack
 com.spotify.Client
