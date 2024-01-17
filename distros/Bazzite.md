@@ -54,6 +54,7 @@ This details how to install Bazzite and some things that need to be done.
 4. Once a GPG key has successfully been generated, proceed with the first boot setup.
 
 5. During the first boot setup, simply follow all the prompts, and select any applications you may wish to install. I recommend:
+
 	- EmuDeck
 	- DeckyLoader
 	- LibreOffice
@@ -61,13 +62,19 @@ This details how to install Bazzite and some things that need to be done.
 	- VLC
 	- Google Chrome
 
-6. Once you're done, you can now reboot - which will then boot you into Steam's **Gaming Mode**.
+6. By default, Bazzite should run in a Wayland session. If you wish for Bazzite to run in an X.Org/X11 session by default, you can toggle this by running the following command:
 
-7. Go through the setup on Gaming mode, I also recommend changing your hostname (device name) through the **Settings** while you're in Gaming mode.
+	```sh
+	ujust _toggle_wayland
+	```
 
-8. In Gaming mode, you have access to the **Steam Menu** via the <kbd>Ctrl + 1</kbd> key, and the **Quick Access Menu** via the <kbd>Ctrl + 2</kbd> key.
+7. Once you're done, you can now reboot - which will then boot you into Steam's **Gaming Mode**.
 
-9. After a reboot, if you have more things to setup in **Desktop Mode**, head to **Power** in the Steam menu and click the **Switch to Desktop** option.
+8. Go through the setup on Gaming mode, I also recommend changing your hostname (device name) through the **Settings** while you're in Gaming mode.
+
+9. In Gaming mode, you have access to the **Steam Menu** via the <kbd>Ctrl + 1</kbd> key, and the **Quick Access Menu** via the <kbd>Ctrl + 2</kbd> key.
+
+10. After a reboot, if you have more things to setup in **Desktop Mode**, head to **Power** in the Steam menu and click the **Switch to Desktop** option.
 
 ---
 
