@@ -34,6 +34,7 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
 ## References
 
 - [Bazzite](https://github.com/ublue-os/bazzite)
+- [Universal Blue Discourse Documentation](https://universal-blue.discourse.group/docs)
 
 ---
 
