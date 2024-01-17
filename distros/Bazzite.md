@@ -14,6 +14,10 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
 		- [Description](#description-1)
 		- [References](#references-1)
 		- [Steps](#steps)
+	- [Update](#update)
+		- [Description](#description-2)
+		- [References](#references-2)
+		- [Steps](#steps-1)
 	- [Plasma Discover Software Installation and Update](#plasma-discover-software-installation-and-update)
 	- [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
 	- [Plasma Desktop Theme Customisations](#plasma-desktop-theme-customisations)
@@ -24,7 +28,7 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
 	- [Custom Game Emulation Configurations](#custom-game-emulation-configurations)
 	- [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
 	- [Wake on LAN or Wireless](#wake-on-lan-or-wireless)
-		- [References](#references-2)
+		- [References](#references-3)
 	- [Make Flatpak Apps Respect KDE Theme](#make-flatpak-apps-respect-kde-theme)
 
 ## References
@@ -75,6 +79,45 @@ This details how to install Bazzite and some things that need to be done.
 9. In Gaming mode, you have access to the **Steam Menu** via the <kbd>Ctrl + 1</kbd> key, and the **Quick Access Menu** via the <kbd>Ctrl + 2</kbd> key.
 
 10. After a reboot, if you have more things to setup in **Desktop Mode**, head to **Power** in the Steam menu and click the **Switch to Desktop** option.
+
+---
+
+## Update
+
+### Description
+
+This details how to update and maintain a Bazzite system.
+
+### References
+
+- [Update your system](https://universal-blue.org/cheatsheet/just/#update-your-system)
+
+### Steps
+
+1. To update the system, simply run the following command:
+
+	```sh
+	just update
+	```
+
+	This simple command will update the system, update the Flatpak apps, as well as Distrobox containers like so:
+
+	```sh
+	rpm-ostree update
+	flatpak update -y
+	distrobox upgrade -a
+	```
+
+2. If a major upgrade is required (i.e. Bazzite goes through an overhaul or if something is broken), perform a rebase with the following command:
+
+	```sh
+	rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/bazzite-deck:latest
+	```
+
+	> [!NOTE]  
+	> This rebase is for the `bazzite-deck` image (i.e. for Steam Deck/HTPC devices). Replace the image name with the appropriate Bazzite image of your choosing.
+
+3. Reboot the system after the update or rebase is complete.
 
 ---
 
