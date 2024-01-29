@@ -14,10 +14,14 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
 		- [Description](#description-1)
 		- [References](#references-1)
 		- [Steps](#steps)
-	- [Update](#update)
+	- [Toggle Wayland](#toggle-wayland)
 		- [Description](#description-2)
 		- [References](#references-2)
 		- [Steps](#steps-1)
+	- [Update](#update)
+		- [Description](#description-3)
+		- [References](#references-3)
+		- [Steps](#steps-2)
 	- [Plasma Discover Software Installation and Update](#plasma-discover-software-installation-and-update)
 	- [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
 	- [Plasma Desktop Theme Customisations](#plasma-desktop-theme-customisations)
@@ -28,7 +32,7 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
 	- [Custom Game Emulation Configurations](#custom-game-emulation-configurations)
 	- [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
 	- [Wake on LAN or Wireless](#wake-on-lan-or-wireless)
-		- [References](#references-3)
+		- [References](#references-4)
 	- [Make Flatpak Apps Respect KDE Theme](#make-flatpak-apps-respect-kde-theme)
 
 ## References
@@ -80,6 +84,26 @@ This details how to install Bazzite and some things that need to be done.
 9. In Gaming mode, you have access to the **Steam Menu** via the <kbd>Ctrl + 1</kbd> key, and the **Quick Access Menu** via the <kbd>Ctrl + 2</kbd> key.
 
 10. After a reboot, if you have more things to setup in **Desktop Mode**, head to **Power** in the Steam menu and click the **Switch to Desktop** option.
+
+---
+
+## Toggle Wayland
+
+### Description
+
+Bazzite defaults to a Wayland session, this details how to toggle between a Wayland and X.Org/X11 session.
+
+### References
+
+- [Use X11 for Steam Deck images instead of Wayland](https://universal-blue.discourse.group/docs?topic=37#use-x11-for-steam-deck-images-instead-of-wayland-12)
+
+### Steps
+
+To toggle between a Wayland and X.Org/X11 session, simply run the following command:
+
+```sh
+ujust _toggle_wayland
+```
 
 ---
 
