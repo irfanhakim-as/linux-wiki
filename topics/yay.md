@@ -20,6 +20,10 @@ Yet Another Yogurt - An AUR Helper Written in Go.
   - [Usage](#usage)
     - [Description](#description-2)
     - [Steps](#steps-1)
+      - [Install](#install)
+      - [Update](#update)
+      - [Uninstall](#uninstall)
+      - [Query](#query)
 
 ## References
 
@@ -104,38 +108,48 @@ This details how to use `yay` to search, install, update, or uninstall packages 
 > [!NOTE]  
 > Replace `<package>` with the actual name of the package you wish to search, install, or update.
 
+#### Install
+
 1. To install a package:
 
     ```sh
     yay -S <package>
     ```
 
-2. To search for a package:
+    Add the `--noconfirm` flag to skip any prompts for input.
 
-    ```sh
-    yay -Ss <package>
-    ```
+#### Update
 
-3. To update a package:
+1. To update a package:
 
     ```sh
     yay -Syu <package>
     ```
 
-4. To update all packages:
+2. To update all packages:
 
     ```sh
     yay -Syu
     ```
 
-5. To uninstall a package:
+#### Uninstall
+
+1. To uninstall a package:
 
     ```sh
     yay -Rns <package>
     ```
 
-6. To uninstall orphaned packages:
+2. To uninstall orphaned packages:
 
     ```sh
     sudo pacman -Rns (pacman -Qtdq)
+    ```
+
+#### Query
+
+1. To search for a package:
+
+    ```sh
+    yay -Ss <package>
     ```

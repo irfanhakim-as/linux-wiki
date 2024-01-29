@@ -97,7 +97,7 @@ This guide details on how to install both `python`, the programming language, an
 
 This list contains applications that may not be bundled with EndeavourOS, but are recommended.
 
-[Yay/Pacman](../topics/yay.md#usage) packages:
+[Yay/Pacman](../topics/yay.md#usage#install) packages:
 
 ```
 partitionmanager
