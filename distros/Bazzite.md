@@ -46,7 +46,7 @@ This details how to install Bazzite and some things that need to be done.
 
 ### References
 
-- [Installing Bazzite and Initial Setup](https://universal-blue.org/images/bazzite/installation)
+- [Installing Bazzite and Initial Setup](https://universal-blue.discourse.group/docs?topic=30)
 
 ### Steps
 
