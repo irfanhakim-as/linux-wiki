@@ -63,6 +63,9 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [Fix Kwallet Error in Visual Studio Code](#fix-kwallet-error-in-visual-studio-code)
 	- [Miniconda Environments](#miniconda-environments)
 	- [XP-Pen](#xp-pen)
+	- [OBS Studio](#obs-studio)
+		- [References](#references-6)
+	- [Magewell Capture Device on OBS](#magewell-capture-device-on-obs)
 
 ## References
 
@@ -513,3 +516,21 @@ This guide details on how we could install, setup, and use Conda to create `pyth
 ## [XP-Pen](../topics/graphics-tablet.md#xp-pen)
 
 This briefs how to set up an XP-Pen drawing tablet on Linux and addresses an issue with using it on a multi-monitor setup.
+
+---
+
+## OBS Studio
+
+This details how to set up and configure OBS Studio for recording of all purposes including gaming and have separate audio tracks for each application.
+
+### References
+
+- [Setup](../topics/obs.md#setup)
+- [Capturing Steam Games](../topics/obs.md#capturing-steam-games)
+- [Separate Audio Tracks by Application](../topics/obs.md#separate-audio-tracks-by-application)
+
+---
+
+## [Magewell Capture Device on OBS](../topics/obs.md#magewell-usb-capture-hdmi-4k-plus)
+
+This details the recommended configuration for the Magewell USB Capture HDMI 4K Plus on OBS.
