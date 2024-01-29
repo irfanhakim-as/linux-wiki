@@ -288,7 +288,7 @@ This details how to separate audio tracks by application virtually in OBS using 
 
 ### Description
 
-This details the recommended configuration for the Magewell USB Capture HDMI 4K Plus.
+This details the recommended configuration for the Magewell USB Capture HDMI 4K Plus on OBS.
 
 ### References
 
