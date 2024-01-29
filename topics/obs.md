@@ -129,7 +129,7 @@ This details how to install and set up OBS.
      - Overwrite if file exists: `Disabled`
      - Automatically remux to MP4: `Disabled`
      - Replay Buffer Filename Prefix: `Replay`
-     - Replay Buffer Filename Suffix: ``
+     - Replay Buffer Filename Suffix: (Leave blank)
 
 10. Click the **Apply** button in the bottom right corner and then click **OK**.
 
