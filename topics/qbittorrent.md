@@ -78,11 +78,15 @@ This guide details on how we could look for torrent files from qBittorrent direc
 
    - Click **Add Indexer**.
 
-   - Select the checkboxes of indexers you would like to add.
+   - In the **Select an indexer to setup** page, expand the **Type** dropdown, and select the **Public** option.
 
-   - Click **Add Selected** and **Close** if it does not close automatically.
+   - Select the checkboxes of all indexers or those that you wish to add.
 
-   - Back at the dashboard homepage, click **Test All**.
+   - Click the **Add Selected** button, and wait for it to finish adding all of your selected indexers.
+
+   - **Close** the page if it does not close automatically.
+
+   - Back at the dashboard homepage, in the **Configured Indexers** section, click the **Test All** button.
 
    - Click the **Delete** icon for each indexer that returns an error after the test.
 
