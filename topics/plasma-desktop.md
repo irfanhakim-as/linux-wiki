@@ -319,7 +319,7 @@ This details some customisation options for the desktop.
 
 ### Cleaner System Tray
 
-1. Right click the **Upward Arrow** icon at the bottom right of the taskbar that says **Show hidden icons**.
+1. Right click the **Upward/Downward Arrow** icon at the system taskbar or menu bar that says **Show hidden icons**.
 
 2. Click **Configure System Tray...**.
 
@@ -332,6 +332,8 @@ This details some customisation options for the desktop.
 4. Navigate to the **Entries** section and make the following (recommended) configurations:
 
     - Set **AnyDesk** to `Always hidden`.
+
+    - Set **firewall-applet** to `Always hidden`.
 
     - Set **Updates** to `Always hidden`.
 
