@@ -163,7 +163,7 @@ This allows the viewing and thumbnailing of HEIC images.
     Download and install [KDE 5 Service Menu PDF](https://store.kde.org/p/1227799) using `yay` to add more PDF-related functionalities:
 
     ```sh
-    yay -S kde-servicemenus-pdf
+    yay -S kf5-servicemenus-pdf
     ```
 
     Download and install [kompare_servicemenu](https://store.kde.org/p/1100884) using `yay` to add support for comparing different files:
