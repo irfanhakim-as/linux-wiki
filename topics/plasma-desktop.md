@@ -32,6 +32,7 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
     - [Cleaner System Tray](#cleaner-system-tray)
     - [Task Switcher](#task-switcher)
     - [Prettier Icons](#prettier-icons)
+    - [Menu Bar](#menu-bar)
   - [Widgets](#widgets)
     - [Description](#description-3)
     - [KDE Thermal Monitor](#kde-thermal-monitor)
@@ -421,6 +422,83 @@ This details some customisation options for the desktop.
 10. Click the **Install** button next to the `Bibata-Modern-Classic.tar.xz` option.
 
 11. Click the **Use** button to use the icon set and close the **Download New Cursors** window.
+
+### Menu Bar
+
+1. Right click the desktop, hover over the **Add Panel** menu item, and select the **Application Menu Bar** option.
+
+2. Right click the **Application Menu Bar** at the top and select the **Enter Edit Mode** option.
+
+3. Configure the **Panel height** accordingly i.e. `27` on a 1080p screen or `33` on a 1440p screen.
+
+4. Click the **More Options...** button and configure accordingly:
+
+   - Panel Alignment: `Center`.
+   - Visibility: `Always Visible`.
+   - Opacity: `Adaptive`.
+
+5. Add Widgets to the Menu Bar:
+
+   - Click the **Add Widgets...** button.
+   
+   - Search for the widget in the provided search bar from the **Widgets** panel.
+   
+   - Locate the widget and click and drag it to the Menu Bar.
+   
+   - Release the widget to add it to the Menu Bar.
+   
+   - Do so for each of the following widgets:
+
+     - `Application Launcher`.
+     - `Window Title Applet` (Requires a download).
+     - `Global Menu` (added by default).
+     - `Better inline clock` (Requires a download).
+     - `System Tray`.
+     - `Peek at Desktop`.
+
+        For widgets that require a download, download them by:
+        
+        - Clicking the **Get New Widgets...** button.
+        - Select the **Download New Plasma Widgets** option.
+        - Use the provided search bar to search for the widget by their name.
+        - Locate the widget and click the **Install** button.
+        - If prompted to **Pick Your Installation Option**, click the desired downloadable item's corresponding **Install** button.
+        - Close the **Download New Plasma Widgets** window after you've finished downloading all the widgets you need.
+
+6. Position the widgets by clicking and dragging them like so on the Menu Bar in this order (from left to right):
+
+   - `Application Launcher`.
+   - `Window Title`.
+   - `Global Menu`.
+   - Add a `Panel Spacer` by clicking the **Add Spacer** button.
+   - `Better inline clock`.
+   - Add a `Panel Spacer` by clicking the **Add Spacer** button.
+   - `System Tray`.
+   - `Peek at Desktop`.
+
+7. Configure the widgets by right clicking each widget and selecting the **Configure...** option:
+
+   - **Window Title**:
+     - **Appearance**:
+       - Icon - Show when available: `Disabled`.
+       - Font - Bold: `Disabled`.
+       - Click the **Apply** button.
+     - **Behavior**:
+       - Placeholder - Show activity information: `Disabled`.
+       - Placeholder (text) - Add the name of your system (i.e. `Arch`).
+       - Click the **Apply** button.
+     - Leave the rest as default and click the **OK** button.
+   - **Better inline clock**:
+     - **Appearance**:
+       - Information - Show Separator: `Disabled`.
+       - Information - Use 24-hour Clock: `Disabled`.
+       - Information - Use fixed font size: `Enabled`.
+       - Font Size: `16`.
+       - Date format: `Qt Date`.
+       - Spacing: Add some spacing using the provided slider as you see fit.
+       - Click the **Apply** button.
+     - Leave the rest as default and click the **OK** button.
+   - [**System Tray**](#cleaner-system-tray).
 
 ---
 
