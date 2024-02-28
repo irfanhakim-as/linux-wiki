@@ -57,9 +57,9 @@ This details how to setup SteamOS on initial installation/boot.
 
 ### Update Hostname
 
-Change the hostname of the Steam Deck via Gaming mode.
+From Gaming mode, update the hostname of the Steam Deck.
 
-1. In Gaming mode, open the **Steam** menu by clicking the <kbd>STEAM</kbd> button.
+1. Open the **Steam** menu by clicking the <kbd>STEAM</kbd> button.
 
 2. Click the **Settings** menu item.
 
@@ -73,13 +73,11 @@ Change the hostname of the Steam Deck via Gaming mode.
 
 ### Create User Password
 
-Set up a `sudo` password for the `deck` user.
+From Desktop mode, set up a `sudo` password for the `deck` user.
 
-1. Enter Desktop mode.
+1. Launch the **Konsole** app.
 
-2. Open the **Konsole** app.
-
-3. Run the following command and follow the instructions to set a password for the `deck` user:
+2. Run the following command and follow the instructions to set a password for the `deck` user:
 
 	```sh
 	passwd
@@ -91,7 +89,7 @@ From Desktop mode, this details how we can enable remote access into our system 
 
 ### Recommended Software Installation
 
-Open up the Discover app and [install](../topics/plasma-discover.md#software-installation-and-update) some essential apps (as user):
+From Desktop mode, launch the Discover application and [install](../topics/plasma-discover.md#software-installation-and-update) some essential apps (as user):
 
 - Firefox
 - Plex
