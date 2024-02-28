@@ -12,8 +12,8 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 	- [Initial Setup](#initial-setup)
 		- [Description](#description-1)
 		- [Update Hostname](#update-hostname)
-		- [Remote Access](#remote-access)
 		- [Create User Password](#create-user-password)
+		- [Remote Access](#remote-access)
 		- [Recommended Software Installation](#recommended-software-installation)
 		- [Default Application](#default-application)
 	- [Add Flathub Repository](#add-flathub-repository)
@@ -71,10 +71,6 @@ Change the hostname of the Steam Deck via Gaming mode.
 
 6. Click the **Change & Restart** button.
 
-### [Remote Access](../topics/remote-access.md)
-
-From Desktop mode, this details how we can enable remote access into our system from other devices in the same network or externally.
-
 ### Create User Password
 
 Set up a `sudo` password for the `deck` user.
@@ -88,6 +84,10 @@ Set up a `sudo` password for the `deck` user.
 	```sh
 	passwd
 	```
+
+### [Remote Access](../topics/remote-access.md)
+
+From Desktop mode, this details how we can enable remote access into our system from other devices in the same network or externally.
 
 ### Recommended Software Installation
 
