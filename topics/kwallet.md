@@ -60,9 +60,20 @@ This details how to set our KDE Wallet to auto unlock with our desktop at the ex
 
    - Under the **Personalization** group, expand the **KDE Wallet** section.
 
+   - If a wallet has not yet been created, create one first:
+
+     - Under the **Automatic Wallet Selection** section, click the **New** button corresponding to the **Select wallet to use as default** option.
+     - Enter a name for the wallet i.e. `kdewallet` and click the **OK** button.
+     - Select the **Use GPG encryption, for better protection** option and click the **Next** button.
+     - Select an existing trusted key in the list. If none exists, [create a new GPG key](./gpg.md#generate-gpg-key) and return to this step.
+     - Click the **Finish** button.
+
    - Click the **Launch Wallet Manager** button at the bottom right.
 
    - Click the **Change Password** button on the top right.
+
+      > [!NOTE]  
+      > If your wallet uses GPG encryption, you will need to change (remove) the passphrase for the GPG key instead of the wallet password.
 
    - Leave both the **Password** and **Verify** fields empty and click the **OK** button.
 
