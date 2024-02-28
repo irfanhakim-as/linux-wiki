@@ -12,11 +12,10 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 	- [Initial Setup](#initial-setup)
 		- [Description](#description-1)
 		- [Update Hostname](#update-hostname)
-		- [Remote Desktop](#remote-desktop)
+		- [Remote Access](#remote-access)
 		- [Create User Password](#create-user-password)
 		- [Recommended Software Installation](#recommended-software-installation)
-		- [Default Applications](#default-applications)
-	- [Remote Shell](#remote-shell)
+		- [Default Application](#default-application)
 	- [Add Flathub Repository](#add-flathub-repository)
 	- [ProtonUp-Qt](#protonup-qt)
 		- [References](#references-1)
@@ -72,17 +71,9 @@ Change the hostname of the Steam Deck via Gaming mode.
 
 6. Click the **Change & Restart** button.
 
-### Remote Desktop
+### [Remote Access](../topics/remote-access.md)
 
-Get into desktop mode and use the Discover app to install the AnyDesk app, and set it to autostart.
-
-1. In Gaming mode, open the **Steam** menu by clicking the <kbd>STEAM</kbd> button.
-
-2. Click the **Power** menu item.
-
-3. Select the **Switch to Desktop** option.
-
-4. In Desktop mode, install and set `AnyDesk` up as per the [Remote Desktop](../topics/remote-access.md#remote-desktop) guide.
+From Desktop mode, this details how we can enable remote access into our system from other devices in the same network or externally.
 
 ### Create User Password
 
@@ -114,15 +105,9 @@ Open up the Discover app and [install](../topics/plasma-discover.md#software-ins
 - LibreOffice
 - Signal Desktop
 
-### Default Applications
+### [Default Application](../topics/plasma-desktop.md#default-application)
 
-Set the [default Web browser application](../topics/plasma-desktop.md#default-application) to Firefox instead of Google Chrome.
-
----
-
-## [Remote Shell](../topics/remote-access.md#remote-shell)
-
-This details how we can enable remote access into our Steam Deck from other devices in the same network via SSH.
+From Desktop mode, this details on how to configure default applications of various types on KDE Plasma.
 
 ---
 
