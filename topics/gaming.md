@@ -64,11 +64,7 @@ This guide goes through setting up packages and configuration options that could
     yay -S gamemode lib32-gamemode
     ```
 
-5. Install MangoHud:
-
-    ```sh
-    yay -S mangohud lib32-mangohud
-    ```
+5. Install and configure [MangoHud](./mangohud.md#setup).
 
 6. If a Ryzen CPU is in use (at least for Zen 3), `zenpower3` is needed to get CPU wattage readings:
 
