@@ -327,15 +327,11 @@ This details some customisation options for the desktop.
 
     - Set the **Panel icon size** to `Small`.
 
-    - Set the **Panel icon spacing** to `Small`.
+    - Set the **Panel icon spacing** to `Small` (on a screen lower than 1080p) or `Normal` (on a 1080p or higher screen).
 
 4. Navigate to the **Entries** section and make the following (recommended) configurations:
 
     - Set **AnyDesk** to `Always hidden`.
-
-    - Set **Media Player** to `Always hidden`.
-
-    - Set **Notifications** to `Always shown`.
 
     - Set **Updates** to `Always hidden`.
 
@@ -346,6 +342,10 @@ This details some customisation options for the desktop.
     - Set **Lock Keys Status** to `Always hidden`.
 
     - Set **Clipboard** to `Always hidden`.
+
+    - Set **Media Player** to `Always hidden`.
+
+    - Set **Notifications** to `Always shown`.
 
 5. Click **Apply** then **OK**.
 
