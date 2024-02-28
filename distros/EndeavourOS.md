@@ -55,7 +55,8 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [Generate GPG Key and Use with Git](#generate-gpg-key-and-use-with-git)
 		- [References](#references-5)
 	- [Desktop Auto Login](#desktop-auto-login)
-	- [Auto Unlock KDE Wallet](#auto-unlock-kde-wallet)
+	- [KDE Wallet](#kde-wallet)
+		- [References](#references-6)
 	- [Distrobox Installation](#distrobox-installation)
 	- [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
 	- [Deb Package Installation](#deb-package-installation)
@@ -66,7 +67,7 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [Miniconda Environments](#miniconda-environments)
 	- [XP-Pen](#xp-pen)
 	- [OBS Studio](#obs-studio)
-		- [References](#references-6)
+		- [References](#references-7)
 	- [Magewell Capture Device on OBS](#magewell-capture-device-on-obs)
 
 ## References
@@ -473,9 +474,14 @@ This guides how to enable auto login to the desktop for our user.
 
 ---
 
-## [Auto Unlock KDE Wallet](../topics/kwallet.md#auto-unlock)
+## KDE Wallet
 
-This details how to set our KDE Wallet to auto unlock with our desktop at the expense of security.
+This details how to how to setup and create a default KDE Wallet and set it to auto unlock with our desktop at the expense of security.
+
+### References
+
+- [Setup](../topics/kwallet.md#setup)
+- [Auto Unlock](../topics/kwallet.md#auto-unlock)
 
 ---
 
