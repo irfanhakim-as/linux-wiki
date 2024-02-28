@@ -22,6 +22,7 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
 		- [Description](#description-3)
 		- [References](#references-3)
 		- [Steps](#steps-2)
+	- [Default Application](#default-application)
 	- [Plasma Discover Software Installation and Update](#plasma-discover-software-installation-and-update)
 	- [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
 	- [Plasma Desktop Theme Customisations](#plasma-desktop-theme-customisations)
@@ -143,6 +144,12 @@ This details how to update and maintain a Bazzite system.
 	> This rebase is for the `bazzite-deck` image (i.e. for Steam Deck/HTPC devices). Replace the image name with the appropriate Bazzite image of your choosing.
 
 3. Reboot the system after the update or rebase is complete.
+
+---
+
+## [Default Application](../topics/plasma-desktop.md#default-application)
+
+From Desktop mode, this details on how to configure default applications of various types on KDE Plasma.
 
 ---
 
