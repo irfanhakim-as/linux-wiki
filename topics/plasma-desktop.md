@@ -369,7 +369,19 @@ This details some customisation options for the desktop.
 
 6. By default, the **Breeze** task switcher is selected, switch this to **Thumbnail Grid**.
 
-7. Click **Apply**.
+7. Under the **Shortcuts** section, configure as follows:
+
+    - All windows:
+
+      - Forward: <kbd>Alt + Tab</kbd>
+      - Reverse: <kbd>Alt + `</kbd>
+
+    - Current application:
+
+      - Forward: `None`
+      - Reverse: `None`
+
+8. Click **Apply**.
 
 ### Prettier Icons
 
