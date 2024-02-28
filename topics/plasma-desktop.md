@@ -11,6 +11,7 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
   - [Directory](#directory)
   - [Quality of Life Improvements](#quality-of-life-improvements)
     - [Description](#description-1)
+    - [Workspace Behaviour](#workspace-behaviour)
     - [Dolphin](#dolphin)
       - [Show hidden files](#show-hidden-files)
       - [Add Refresh button](#add-refresh-button)
@@ -55,6 +56,20 @@ This details on some things that could be done to improve the experience of usin
 
 > [!NOTE]  
 > Feel free to skip parts of this section that you do not wish to implement.
+
+### Workspace Behaviour
+
+1. Launch the **System Settings** application.
+
+2. Expand the **Workspace** section.
+
+3. Click the **Workspace Behavior** menu item.
+
+4. In the **General Behavior** tab, configure as follows:
+
+   - Clicking files or folders: `Selects them`
+
+5. Click the **Apply** button.
 
 ### Dolphin
 
