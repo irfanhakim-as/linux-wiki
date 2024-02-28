@@ -49,4 +49,22 @@ This details setting up GreenWithEnvy, a system utility for controlling NVIDIA G
         run --branch=stable --arch=x86_64 --command=/app/bin/gwe --file-forwarding com.leinardi.gwe --hide-window @@u %U @@
         ```
 
-3. TODO: Configure the fan profile
+3. Configure a custom fan profile:
+
+    - In the **Fan profile** section, expand the dropdown (currently defaults to **Auto**) and select **Custom**.
+
+    - Click the corresponding **Pencil** icon to launch the **Speed Profile** editor window.
+
+    - Use the editor to configure the fan speed and temperature curve as desired.
+
+        Sample values:
+
+        - Temperature: `40°C`, Duty: `40%`
+        - Temperature: `50°C`, Duty: `60%`
+        - Temperature: `60°C`, Duty: `70%`
+        - Temperature: `70°C`, Duty: `85%`
+        - Temperature: `75°C`, Duty: `100%`
+
+    - Save each temperature and duty configuration and close the editor window.
+
+    - Back in the **Fan profile** section, click **Apply** to use the custom fan profile.
