@@ -35,11 +35,15 @@ This details how to configure Thunderbird including its default sort order and s
 
 1. Launch the **Thunderbird** application.
 
-2. Open the Config Editor under **Settings** > **Config Editor**.
+2. Head to Settings by clicking on the **Hamburger** icon in the top right corner and selecting **Settings**.
 
-3. Search for `mailnews.default`.
+3. In the **General** page, under the **Thunderbird Start Page** section, uncheck the **When Thunderbird launches, Show the Start Page in the message area** option.
 
-4. Update the following configurations and set the default sort order to `descending (2)` and view to `unthreaded (0)`:
+4. Open the Config Editor under **Settings** > **Config Editor**.
+
+5. Search for `mailnews.default`.
+
+6. Update the following configurations and set the default sort order to `descending (2)` and view to `unthreaded (0)`:
 
     ```
     mailnews.default_news_sort_order            2
