@@ -33,6 +33,7 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
     - [Task Switcher](#task-switcher)
     - [Prettier Icons](#prettier-icons)
     - [Menu Bar](#menu-bar)
+    - [macOS-like Desktop](#macos-like-desktop)
   - [Widgets](#widgets)
     - [Description](#description-3)
     - [KDE Thermal Monitor](#kde-thermal-monitor)
@@ -499,6 +500,91 @@ This details some customisation options for the desktop.
        - Click the **Apply** button.
      - Leave the rest as default and click the **OK** button.
    - [**System Tray**](#cleaner-system-tray).
+
+### macOS-like Desktop
+
+1. Launch the **System Settings** application.
+
+2. Click the **Appearance** section.
+
+3. Configure the **Application Style**:
+
+   - Click the **Application Style** menu item.
+
+   - Click the **Configure GNOME/GTK Application Style...** button.
+
+   - Click the **Get New GNOME/GTK Application Styles...** button.
+
+   - In the provided search bar, search for `WhiteSur GTK Theme` and click the **Install** button.
+
+   - When prompted to **Pick Your Installation Option**, click the corresponding **Install** button for:
+
+     - `WhiteSur-Dark.tar.xz` (Dark) or `WhiteSur-Light.tar.xz` (Light).
+
+        > [!TIP]  
+        > Download the `-solid` variant if you are using an NVIDIA GPU.
+
+   - Close the **Download New GNOME/GTK Application Styles** window.
+
+   - In the **GNOME/GTK Application Style** page, expand the **GTK theme** dropdown and select the `WhiteSur-Dark` (Dark) or `WhiteSur-Light` (Light) option.
+
+   - Click the **Apply** button.
+
+4. Configure the **Plasma Style**:
+
+   - Click the **Plasma Style** menu item.
+   - Click the **Get New Plasma Styles...** button.
+   - In the provided search bar, search for `Mkos-BigSur-plasma` and click the **Install** button.
+   - Close the **Download New Plasma Styles** window.
+   - In the **Plasma Style** page, select the **mkos-BigSur** option and click the **Apply** button.
+
+5. Configure the **Window Decorations**:
+
+   - Click the **Window Decorations** menu item.
+
+   - Click the **Get New Window Decorations...** button.
+
+   - In the provided search bar, search for `Mkos-BigSur-AuroraNight` (Dark) or `Mkos-BigSur-Aurora` (Light) and click the **Install** button.
+
+   - Close the **Download New Window Decorations** window.
+
+   - In the **Window Decorations** page, select the **Mkos-BigSur** option and click the **Apply** button.
+
+   - Configure the **Titlebar Buttons**:
+
+     - Click the **Titlebar Buttons** tab.
+     - Remove the **More actions for this window** button.
+     - Remove the **On all desktops** button.
+     - Remove the **Context Help** button.
+     - Drag the **Close** button to the far left.
+     - Drag the **Minimize** button to the right of the **Close** button.
+     - Drag the **Maximize** button to the right of the **Minimize** button.
+     - Click the **Apply** button.
+
+6. Configure the **Splash Screen** *(Optional)*:
+
+   - Click the **Splash Screen** menu item.
+
+   - In the **Splash Screen** page, select the **None** option and click the **Apply** button.
+
+7. Configure the **Login Screen**:
+
+    - From the **System Settings** application, click the **Startup and Shutdown** section.
+    - Click the **Login Screen (SDDM)** menu item.
+    - Click the **Get New SDDM Themes...** button.
+    - In the provided search bar, search for `Apple Sonoma V3` and click the **Install** button.
+    - Enter your user password when prompted.
+    - Close the **Download New Login Screen** window.
+    - In the **Login Screen (SDDM)** page, select the **Apple-Sonoma-V3** option and click the **Apply** button.
+    - Enter your user password once again when prompted.
+
+8. Add an [**Application Menu Bar**](#menu-bar) to the top of the screen.
+
+9. Replace the default system taskbar with a [**Plank**](./plank.md#setup) dock.
+
+10. Configure macOS-like [**Icons**](#prettier-icons).
+
+11. [Install](./fonts.md#installation) and [Configure](./fonts.md#configuration) macOS-like **Fonts** (including Emojis).
 
 ---
 
