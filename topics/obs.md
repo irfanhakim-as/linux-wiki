@@ -60,6 +60,7 @@ This details how to install and set up OBS.
 6. In the **Output** page, configure the following:
 
    - **Streaming**:
+     - Output Mode: `Advanced`
      - Audio Encoder: `libfdk AAC`
      - Video Encoder: `NVIDIA NVENC H.264 (FFmpeg)`
      - Rescale Output: `Disabled`
