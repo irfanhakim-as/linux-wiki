@@ -28,7 +28,7 @@ Discord is an instant messaging and VoIP social platform. Users have the ability
 
 ### Description
 
-The official Discord client does not support screen sharing with audio on Linux. This is a workaround to enable screen sharing with audio in Discord on Linux.
+The official Discord client does not support screen sharing with audio on Linux. This is a workaround to enable screen sharing with audio in Discord on Linux using a custom Discord client.
 
 ### References
 

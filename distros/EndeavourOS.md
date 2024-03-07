@@ -314,7 +314,7 @@ This installs GreenWithEnvy, A system utility for controlling NVIDIA GPUs. The m
 
 ## [Discord Screen Sharing with Audio](../topics/discord.md#screen-sharing-with-audio)
 
-The official Discord client does not support screen sharing with audio on Linux. This is a workaround to enable screen sharing with audio in Discord on Linux.
+The official Discord client does not support screen sharing with audio on Linux. This is a workaround to enable screen sharing with audio in Discord on Linux using a custom Discord client.
 
 ---
 
