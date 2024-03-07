@@ -97,7 +97,7 @@ From Desktop mode, launch the Discover application and [install](../topics/plasm
 - Spotify
 - Google Chrome
 - OBS Studio
-- discord-screenaudio
+- Vesktop
 - KDiskMark
 - WhatsApp Desktop
 - LibreOffice

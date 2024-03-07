@@ -32,19 +32,27 @@ The official Discord client does not support screen sharing with audio on Linux.
 
 ### References
 
-- [discord-screenaudio](https://github.com/maltejur/discord-screenaudio)
+- [Vesktop](https://github.com/Vencord/Vesktop)
 
 ### Steps
 
-1. Install `discord-screenaudio` as a Flatpak:
+1. Install Vesktop as a Flatpak:
 
     ```sh
-    flatpak install --user de.shorsh.discord-screenaudio
+    flatpak install --user dev.vencord.Vesktop
     ```
 
-2. Launch and use the app as you normally would with the official Discord client.
+2. Launch and use the Vesktop app as you normally would with the official Discord client.
 
-3. When you attempt to share your screen, you will be prompted with a dropdown to select the specific application audio to share. The only caveat is that you will only have the option to share the entire screen.
+3. While in a call or a voice channel, click the **Share Your Screen** button.
+
+4. Select the window or the screen you wish to share.
+
+5. Under the **Stream Settings** section, select the desired **Resolution** and **Frame Rate**.
+
+6. Expand the **Audio** dropdown and select the audio source you wish to share.
+
+7. Click the **Go Live** button to start sharing your screen/window with the selected audio.
 
 ---
 

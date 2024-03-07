@@ -151,7 +151,7 @@ com.spotify.Client
 com.system76.Popsicle
 com.ticktick.TickTick
 com.visualstudio.code
-de.shorsh.discord-screenaudio
+dev.vencord.Vesktop
 fr.handbrake.ghb
 io.github.jonmagon.kdiskmark
 io.github.mimbrero.WhatsAppDesktop
