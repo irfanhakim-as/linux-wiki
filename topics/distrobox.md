@@ -47,7 +47,7 @@ This details how we can install and setup Distrobox.
 ### Steps
 
 > [!IMPORTANT]  
-> Ensure the path to `~/.local/bin` is in your `$PATH`.
+> Ensure the path to `~/.local/bin` is in your `${PATH}` environment variable.
 
 1. Ensure you have `/etc/subuid` and `/etc/subgid`, if you don't, create the files:
 
