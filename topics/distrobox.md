@@ -56,9 +56,7 @@ This details how we can install and setup Distrobox.
     curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sh -s -- --prefix ~/.local
     ```
 
-3. Make sure `${HOME}/.local/podman/bin` is in both your `${PATH}` environment variable and also `~/.distroboxrc`.
-
-4. In order to have graphical applications working, set `~/.distroboxrc` up like so:
+3. In order to have graphical applications working, set `~/.distroboxrc` up like so:
 
     ```
     xhost +si:localuser:$USER
