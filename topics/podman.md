@@ -59,14 +59,10 @@ This details the installation and setup of Podman on Linux and macOS as an alter
     Add the following content to the `get-podman-launcher.sh` script:
 
     ```sh
-    if ! [ -x "$(command -v podman)" ]; then
-        curl -Lo "${HOME}/podman-launcher-amd64" "https://github.com/89luca89/podman-launcher/releases/latest/download/podman-launcher-amd64"
-        chmod +x "${HOME}/podman-launcher-amd64"
-        mkdir -p "${HOME}/.local/bin"
-        mv "${HOME}/podman-launcher-amd64" "${HOME}/.local/bin/podman"
-    else
-        echo "podman is already installed"
-    fi
+    curl -Lo "${HOME}/podman-launcher-amd64" "https://github.com/89luca89/podman-launcher/releases/latest/download/podman-launcher-amd64"
+    chmod +x "${HOME}/podman-launcher-amd64"
+    mkdir -p "${HOME}/.local/bin"
+    mv -f "${HOME}/podman-launcher-amd64" "${HOME}/.local/bin/podman"
     ```
 
 3. Install `podman` by running the script:
