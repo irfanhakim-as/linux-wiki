@@ -26,7 +26,7 @@ Podman (the POD MANager) is a tool for managing containers and images, volumes m
 
 ### Description
 
-This details the installation and setup of Podman on Linux and macOS.
+This details the installation and setup of Podman on Linux and macOS as an alternative to Docker.
 
 ### References
 
