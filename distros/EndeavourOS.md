@@ -24,6 +24,7 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [GRUB Dual Booting](#grub-dual-booting)
 	- [GRUB Theme Customisation](#grub-theme-customisation)
 	- [Setup Docker](#setup-docker)
+	- [Setup Podman](#setup-podman)
 	- [Better Fonts](#better-fonts)
 		- [References](#references-2)
 	- [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
@@ -248,6 +249,12 @@ This details how to change the theme/appearance of the GRUB bootloader.
 ## [Setup Docker](../topics/docker.md#setup)
 
 This details how to install and set up Docker for use by `${USER}` without needing `sudo` (not rootless).
+
+---
+
+## [Setup Podman](../topics/podman.md#linux)
+
+This details the installation and setup of Podman on Linux as an alternative to Docker.
 
 ---
 
