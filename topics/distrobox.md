@@ -180,7 +180,7 @@ This details how we can install certain applications or libraries not present in
     yay -S unrar
     ```
 
-5. Export the binary we had installed, `unrar` from the container so that we have access to it on our Bazzite desktop:
+5. Export the binary we had installed, `unrar` from the container so that we have access to it on our desktop:
 
     ```sh
     distrobox-export --bin $(which unrar) --export-path /home/${USER}/.local/bin
