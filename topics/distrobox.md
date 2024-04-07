@@ -14,14 +14,18 @@ Use any Linux distribution inside your terminal. Enable both backward and forwar
     - [Description](#description-1)
     - [References](#references-1)
     - [Steps](#steps)
-  - [Software Installation](#software-installation)
+  - [Usage](#usage)
     - [Description](#description-2)
     - [References](#references-2)
     - [Steps](#steps-1)
-  - [VS Code Integration](#vs-code-integration)
+  - [Software Installation](#software-installation)
     - [Description](#description-3)
     - [References](#references-3)
     - [Steps](#steps-2)
+  - [VS Code Integration](#vs-code-integration)
+    - [Description](#description-4)
+    - [References](#references-4)
+    - [Steps](#steps-3)
 
 ### References
 
@@ -38,9 +42,6 @@ This details how we can install and setup Distrobox.
 ### References
 
 - [Install Podman in a static manner](https://github.com/89luca89/distrobox/blob/main/docs/posts/install_podman_static.md)
-- [Useful tips](https://github.com/89luca89/distrobox/blob/main/docs/useful_tips.md)
-- [distrobox-create](https://github.com/89luca89/distrobox/blob/main/docs/usage/distrobox-create.md)
-- [Containers Distros](https://github.com/89luca89/distrobox/blob/main/docs/compatibility.md#containers-distros)
 - [Install Distrobox on the Steamdeck](https://github.com/89luca89/distrobox/blob/main/docs/posts/steamdeck_guide.md)
 
 ### Steps
@@ -108,36 +109,62 @@ This details how we can install and setup Distrobox.
     export PATH=$PATH:$HOME/.local/bin
     ```
 
-6. Create a custom `$HOME` directory (i.e. `~/distrobox/ubuntu`) for the container:
+---
+
+## Usage
+
+### Description
+
+This details how we can use Distrobox by creating, entering, and managing containers.
+
+### References
+
+- [Useful tips](https://github.com/89luca89/distrobox/blob/main/docs/useful_tips.md)
+- [distrobox-create](https://github.com/89luca89/distrobox/blob/main/docs/usage/distrobox-create.md)
+- [Containers Distros](https://github.com/89luca89/distrobox/blob/main/docs/compatibility.md#containers-distros)
+
+### Steps
+
+1. Create a home directory for our Distrobox container (i.e. `ubuntu`):
 
     ```sh
-    mkdir ~/distrobox/ubuntu
-    # chmod 700 ~/distrobox/ubuntu
+    mkdir -p ~/distrobox/ubuntu
     ```
 
-7. Create a distrobox container i.e. based on Ubuntu 22.04, named `ubuntu`, with a custom `$HOME` directory:
+2. Create a Distrobox container based on i.e. Ubuntu 22.04, named `ubuntu`, with a custom `${HOME}` directory:
 
     ```sh
-    distrobox create --image ubuntu:22.04 --name ubuntu --home ~/distrobox/ubuntu
+    distrobox create --image docker.io/library/ubuntu:22.04 --name ubuntu --home ~/distrobox/ubuntu
     ```
 
-8.  To enter the distrobox container named `ubuntu` (to its home directory):
+3.  Enter a Distrobox container named i.e. `ubuntu`:
 
     ```sh
     distrobox enter ubuntu -nw
     ```
 
-9.  To stop and delete a distrobox container named `ubuntu`:
+    > [!NOTE]  
+    > The `-nw` flag is optional and is used to send the user directly to the container's home directory.
+
+    You may exit the container by using the <kbd>Ctrl + D</kbd> key combination or running the following command:
+
+    ```sh
+    exit
+    ```
+
+4.  To stop and delete a Distrobox container named i.e. `ubuntu` from the host system:
 
     ```sh
     distrobox stop ubuntu && distrobox rm ubuntu
     ```
 
-10. To run commands on the client machine from a distrobox container, use the `distrobox-host-exec` command:
+5. To run commands on the host system from inside a Distrobox container, use the `distrobox-host-exec` command:
 
     ```sh
     distrobox-host-exec flatpak run com.google.Chrome
     ```
+
+    This example runs the `flatpak` command on the host system from inside the Distrobox container.
 
 ---
 
