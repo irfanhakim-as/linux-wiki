@@ -93,39 +93,39 @@ This details several configuration options for our desktop to use better looking
     <?xml version='1.0'?>
     <!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
     <fontconfig>
-        <alias>
-            <family>sans-serif</family>
-            <prefer>
-                <family>SF Pro Text</family>
-                <family>Apple Color Emoji</family>
-                <family>Noto Color Emoji</family>
-                <family>Noto Emoji</family>
-            </prefer>
-        </alias>
-        <alias>
-            <family>serif</family>
-            <prefer>
-                <family>New York</family>
-                <family>Apple Color Emoji</family>
-                <family>Noto Color Emoji</family>
-                <family>Noto Emoji</family>
-            </prefer>
-        </alias>
-        <alias>
-            <family>monospace</family>
-            <prefer>
-                <family>SF Mono Powerline</family>
-                <family>Apple Color Emoji</family>
-                <family>Noto Color Emoji</family>
-                <family>Noto Emoji</family>
-            </prefer>
-        </alias>
-        <match target="font">
-            <edit mode="assign" name="embeddedbitmap">
-                <bool>false</bool>
-            </edit>
-        </match>
-        <dir>~/.fonts</dir>
+     <alias>
+      <family>sans-serif</family>
+      <prefer>
+       <family>SF Pro Text</family>
+       <family>Apple Color Emoji</family>
+       <family>Noto Color Emoji</family>
+       <family>Noto Emoji</family>
+      </prefer>
+     </alias>
+     <alias>
+      <family>serif</family>
+      <prefer>
+       <family>New York</family>
+       <family>Apple Color Emoji</family>
+       <family>Noto Color Emoji</family>
+       <family>Noto Emoji</family>
+      </prefer>
+     </alias>
+     <alias>
+      <family>monospace</family>
+      <prefer>
+       <family>SF Mono Powerline</family>
+       <family>Apple Color Emoji</family>
+       <family>Noto Color Emoji</family>
+       <family>Noto Emoji</family>
+      </prefer>
+     </alias>
+     <match target="font">
+      <edit mode="assign" name="embeddedbitmap">
+       <bool>false</bool>
+      </edit>
+     </match>
+     <dir>~/.fonts</dir>
     </fontconfig>
     ```
 
