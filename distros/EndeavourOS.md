@@ -493,7 +493,7 @@ This details how we can install and setup Distrobox.
 
 ## [Install Applications/Libraries via Distrobox](../topics/distrobox.md#software-installation)
 
-This details how we can install certain applications or libraries not present in SteamOS via Distrobox.
+This details how we can install certain applications or libraries not present in your system via Distrobox.
 
 ---
 

@@ -206,7 +206,7 @@ This details on certain configuration options or fixes for several games of vari
 
 ## [Install Applications/Libraries via Distrobox](../topics/distrobox.md#software-installation)
 
-This details how we can install certain applications or libraries not present in Bazzite via Distrobox.
+This details how we can install certain applications or libraries not present in your system via Distrobox.
 
 ---
 
