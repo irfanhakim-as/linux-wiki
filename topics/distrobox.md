@@ -41,7 +41,6 @@ This details how we can install and setup Distrobox.
 
 ### References
 
-- [Install Podman in a static manner](https://github.com/89luca89/distrobox/blob/main/docs/posts/install_podman_static.md)
 - [Install Distrobox on the Steamdeck](https://github.com/89luca89/distrobox/blob/main/docs/posts/steamdeck_guide.md)
 
 ### Steps
@@ -49,52 +48,17 @@ This details how we can install and setup Distrobox.
 > [!IMPORTANT]  
 > Ensure the path to `~/.local/bin` is in your `${PATH}` environment variable.
 
-1. Ensure you have `/etc/subuid` and `/etc/subgid`, if you don't, create the files:
+1. If your system does not already have a container runtime (i.e. Docker) set up, install [Podman](./podman.md#linux).
 
-    ```sh
-    sudo touch /etc/subuid /etc/subgid
-    ```
-
-    and add a `subuid` and `subgid`:
-
-    ```sh
-    sudo usermod --add-subuid 100000-165535 --add-subgid 100000-165535 $USER
-    ```
-
-2. Download and install the latest `podman` release as our container runtime of choice by creating the following script:
-
-    ```sh
-    nano ~/get-podman-launcher.sh
-    ```
-
-    Content of the `get-podman-launcher.sh` script:
-
-    ```sh
-    if ! [ -x "$(command -v podman)" ]; then
-        curl -Lo "${HOME}/podman-launcher-amd64" "https://github.com/89luca89/podman-launcher/releases/latest/download/podman-launcher-amd64"
-        chmod +x "${HOME}/podman-launcher-amd64"
-        mkdir -p "${HOME}/.local/bin"
-        mv "${HOME}/podman-launcher-amd64" "${HOME}/.local/bin/podman"
-    else
-        echo "podman is already installed"
-    fi
-    ```
-
-    Run the script to install `podman`:
-
-    ```sh
-    bash ~/get-podman-launcher.sh
-    ```
-
-3. Install `distrobox`:
+2. Install `distrobox`:
 
     ```sh
     curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sh -s -- --prefix ~/.local
     ```
 
-4. Make sure `$HOME/.local/podman/bin` is in your `$PATH`, and also `~/.distroboxrc`.
+3. Make sure `${HOME}/.local/podman/bin` is in both your `${PATH}` environment variable and also `~/.distroboxrc`.
 
-5. In order to have graphical applications working, set `~/.distroboxrc` up like so:
+4. In order to have graphical applications working, set `~/.distroboxrc` up like so:
 
     ```
     xhost +si:localuser:$USER
