@@ -63,7 +63,7 @@ This details how we can install and setup Distrobox.
     export PATH=${PATH}:${HOME}/.local/bin
     ```
 
-    If setting this up on SteamOS (Steam Deck) an additional line is needed to force the use of `pulseaudio` in the container:
+    If you are setting this up on SteamOS (Steam Deck), an additional line is needed to force the use of `pulseaudio` in the container:
 
     ```
     xhost +si:localuser:${USER}
