@@ -57,7 +57,8 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [Desktop Auto Login](#desktop-auto-login)
 	- [KDE Wallet](#kde-wallet)
 		- [References](#references-6)
-	- [Distrobox Installation](#distrobox-installation)
+	- [Distrobox Installation and Usage](#distrobox-installation-and-usage)
+		- [References](#references-7)
 	- [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
 	- [Deb Package Installation](#deb-package-installation)
 	- [Discover Torrents using qBittorrent](#discover-torrents-using-qbittorrent)
@@ -67,7 +68,7 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [Miniconda Environments](#miniconda-environments)
 	- [XP-Pen](#xp-pen)
 	- [OBS Studio](#obs-studio)
-		- [References](#references-7)
+		- [References](#references-8)
 	- [Magewell Capture Device on OBS](#magewell-capture-device-on-obs)
 
 ## References
@@ -485,9 +486,14 @@ This details how to how to setup and create a default KDE Wallet and set it to a
 
 ---
 
-## [Distrobox Installation](../topics/distrobox.md#installation)
+## Distrobox Installation and Usage
 
-This details how we can install and setup Distrobox.
+This details how we can install, setup, and use Distrobox.
+
+### References
+
+- [Installation](../topics/distrobox.md#installation)
+- [Usage](../topics/distrobox.md#usage)
 
 ---
 

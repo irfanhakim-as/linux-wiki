@@ -37,7 +37,8 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 		- [References](#references-4)
 	- [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
 	- [Plasma Desktop Theme Customisations](#plasma-desktop-theme-customisations)
-	- [Distrobox Installation](#distrobox-installation)
+	- [Distrobox Installation and Usage](#distrobox-installation-and-usage)
+		- [References](#references-5)
 	- [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
 	- [Make Flatpak Apps Respect KDE Theme](#make-flatpak-apps-respect-kde-theme)
 	- [Link's Awakening DX HD](#links-awakening-dx-hd)
@@ -272,9 +273,14 @@ This details some customisation options for the Plasma desktop.
 
 ---
 
-## [Distrobox Installation](../topics/distrobox.md#installation)
+## Distrobox Installation and Usage
 
-This details how we can install and setup Distrobox.
+This details how we can install, setup, and use Distrobox.
+
+### References
+
+- [Installation](../topics/distrobox.md#installation)
+- [Usage](../topics/distrobox.md#usage)
 
 ---
 
