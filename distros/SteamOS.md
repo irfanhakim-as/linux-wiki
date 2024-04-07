@@ -275,6 +275,9 @@ This details some customisation options for the Plasma desktop.
 
 ## Distrobox Installation and Usage
 
+> [!NOTE]  
+> As of SteamOS version 3.5, Distrobox (and Podman) should already be pre-installed by default.
+
 This details how we can install, setup, and use Distrobox.
 
 ### References
