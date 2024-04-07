@@ -46,7 +46,6 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [Backing up with Vorta](#backing-up-with-vorta)
 	- [Thunderbird Configuration](#thunderbird-configuration)
 	- [Discord Troubleshooting](#discord-troubleshooting)
-	- [VS Code Integration with Distrobox](#vs-code-integration-with-distrobox)
 	- [Migrating (Firefox) to Flatpak](#migrating-firefox-to-flatpak)
 	- [EmuDeck](#emudeck)
 	- [Recommended Global Flatpak Permissions](#recommended-global-flatpak-permissions)
@@ -60,6 +59,7 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [Distrobox Installation and Usage](#distrobox-installation-and-usage)
 		- [References](#references-7)
 	- [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
+	- [VS Code Integration with Distrobox](#vs-code-integration-with-distrobox)
 	- [Deb Package Installation](#deb-package-installation)
 	- [Discover Torrents using qBittorrent](#discover-torrents-using-qbittorrent)
 	- [Cloning a Disk](#cloning-a-disk)
@@ -422,12 +422,6 @@ This details several troubleshooting steps and workarounds for specific issues w
 
 ---
 
-## [VS Code Integration with Distrobox](../topics/distrobox.md#vs-code-integration)
-
-This allows attaching to a Distrobox Container from within VS Code (on the host system) like you would on Windows with WSL.
-
----
-
 ## [Migrating (Firefox) to Flatpak](../topics/flatpak.md#migrating-to-flatpak)
 
 This details how to migrate your configurations and data from _standard_ packages to Flatpaks, such as Mozilla Firefox installed by the distro.
@@ -500,6 +494,12 @@ This details how we can install, setup, and use Distrobox.
 ## [Install Applications/Libraries via Distrobox](../topics/distrobox.md#software-installation)
 
 This details how we can install certain applications or libraries not present in your system via Distrobox.
+
+---
+
+## [VS Code Integration with Distrobox](../topics/distrobox.md#vs-code-integration)
+
+This allows attaching to a Distrobox Container from within VS Code (on the host system) like you would on Windows with WSL.
 
 ---
 
