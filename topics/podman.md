@@ -105,6 +105,7 @@ This details the installation and setup of Podman on Linux and macOS.
     ```fish
     # start podman machine if not running
     if status is-interactive
+        # check if podman is installed
         if command -v podman >/dev/null
             # check if podman machine is running
             set machine_info (podman machine info)
