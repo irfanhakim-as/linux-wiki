@@ -56,19 +56,19 @@ This details how we can install and setup Distrobox.
     curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sh -s -- --prefix ~/.local
     ```
 
-3. In order to have graphical applications working, set `~/.distroboxrc` up like so:
+3. In order to have graphical applications working, set up a `~/.distroboxrc` profile:
 
     ```
-    xhost +si:localuser:$USER
-    export PATH=$PATH:$HOME/.local/bin
+    xhost +si:localuser:${USER}
+    export PATH=${PATH}:${HOME}/.local/bin
     ```
 
     If setting this up on SteamOS (Steam Deck) an additional line is needed to force the use of `pulseaudio` in the container:
 
     ```
-    xhost +si:localuser:$USER
+    xhost +si:localuser:${USER}
     export PIPEWIRE_RUNTIME_DIR=/dev/null
-    export PATH=$PATH:$HOME/.local/bin
+    export PATH=${PATH}:${HOME}/.local/bin
     ```
 
 ---
