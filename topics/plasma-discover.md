@@ -62,7 +62,7 @@ This details how to add the Flathub repository to Plasma Discover so we have acc
 
 ### Description
 
-This details how to use Plasma Discover to search, install, update, or uninstall packages.
+This details how to use the Plasma Discover application to search, install, update, or uninstall packages graphically.
 
 ### Steps
 
