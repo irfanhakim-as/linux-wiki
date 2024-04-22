@@ -39,31 +39,15 @@ This details how to install the Plasma Discover application (and Flatpak).
 
 ### Description
 
-This details how to add the Flathub repository so we have access to Flatpak applications.
+This details how to add the Flathub repository to Discover so we have access to Flatpak applications.
 
 ### Steps
 
-1. Add the Flathub repository for the user:
+1. Follow [this guide](flatpak.md#add-flathub-repository) to add the Flathub repository for the user and system.
 
-    ```sh
-    flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    ```
+2. Add Flatpak/Flathub to the **Discover** app and make them default:
 
-2. Add the Flathub repository for the system:
-
-    ```sh
-    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    ```
-
-3. To check the Flatpak repos/remotes available in our system:
-
-    ```sh
-    flatpak remotes --show-details
-    ```
-
-4. Add Flatpak/Flathub to the **Discover** app:
-
-   - Open **Discover**.
+   - Launch the **Discover** app.
    - Go to **Settings**.
    - Select the Flatpak repos available (system and user).
    - Make Default.
