@@ -15,9 +15,13 @@ This topic focuses on the Plasma Discover application, a graphical package manag
   - [Add Flathub Repository](#add-flathub-repository)
     - [Description](#description-2)
     - [Steps](#steps-1)
-  - [Software Installation and Update](#software-installation-and-update)
+  - [Usage](#usage)
     - [Description](#description-3)
     - [Steps](#steps-2)
+      - [Install](#install)
+      - [Update](#update)
+      - [Uninstall](#uninstall)
+      - [Query](#query)
 
 ---
 
@@ -54,30 +58,47 @@ This details how to add the Flathub repository to Plasma Discover so we have acc
 
 ---
 
-## Software Installation and Update
+## Usage
 
 ### Description
 
-This details how to install desktop applications (as **Flatpaks**) and update them.
+This details how to use Plasma Discover to search, install, update, or uninstall packages.
 
 ### Steps
 
-While in desktop mode, you're able to install desktop apps for everyday use. This is done using the **Discover** app.
+#### Install
 
-1. To install apps, simply launch the **Discover** app.
+1. In the **Discover** app, search/browse for the apps you wish to install using the provided **Search** bar in the top left.
 
-2. Search/browse for the apps you wish to install using the provided **Search** bar in the top left.
+2. Select the application from the search result to open its detailed view.
 
-3. Select the application from the search result to open its detailed view.
+3. Select the **Sources** dropdown if available and select a source where you wish to install the package from:
 
-4. Select the **Sources** dropdown if available and select **Flathub** or **Flathub (user)**.
+   - **Flathub**: To install from the Flathub repository for the entire system.
+   - **Flathub (user)**: To install from the Flathub repository for the current user only.
 
-5. Click **Install** to install them.
+4. Click **Install** to install them.
 
-If any updates are available to these apps, they will appear in the **Updates** section found in the bottom left of the side panel in the Discover app.
+#### Update
 
-1. To update apps, just go to the **Updates** section.
+1. In the **Discover** app, go to the **Updates** section.
 
 2. Wait for Discover to fetch available updates.
 
 3. Click the **Update All** button in the top right to update all of your apps accordingly.
+
+#### Uninstall
+
+1. In the **Discover** app, search/browse for the apps you wish to uninstall using the provided **Search** bar in the top left.
+
+2. Select the application from the search result to open its detailed view.
+
+3. Click **Remove** to uninstall them.
+
+4. After it's done uninstalling, click the **Delete settings and user data** button to remove its app data.
+
+#### Query
+
+1. In the **Discover** app, search/browse for the apps you wish to find using the provided **Search** bar in the top left by entering the app name.
+
+2. To view more details about an app, click on the app from the search result to open its detailed view.
