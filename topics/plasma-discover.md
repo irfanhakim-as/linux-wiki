@@ -9,10 +9,9 @@ This topic focuses on the Plasma Discover application, a graphical package manag
 - [Plasma Discover](#plasma-discover)
   - [Description](#description)
   - [Directory](#directory)
-  - [Discover and Flatpak Installation](#discover-and-flatpak-installation)
+  - [Installation](#installation)
     - [Description](#description-1)
     - [Steps](#steps)
-      - [Arch Linux](#arch-linux)
   - [Add Flathub Repository](#add-flathub-repository)
     - [Description](#description-2)
     - [Steps](#steps-1)
@@ -22,27 +21,17 @@ This topic focuses on the Plasma Discover application, a graphical package manag
 
 ---
 
-## Discover and Flatpak Installation
+## Installation
 
 ### Description
 
-This details how to install the Plasma Discover application and Flatpak.
+This details how to install the Plasma Discover application (and Flatpak).
 
 ### Steps
 
-#### Arch Linux
+1. [Install](yay.md#install) the `discover` package using `yay`.
 
-1. Install the `discover` package using `yay`:
-
-    ```sh
-    yay -S discover
-    ```
-
-2. Install the `flatpak` package using `yay`:
-
-    ```sh
-    yay -S flatpak
-    ```
+2. Follow [this guide](flatpak.md#installation) to install Flatpak so we could use it with Discover.
 
 ---
 
