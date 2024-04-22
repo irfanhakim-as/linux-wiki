@@ -16,23 +16,30 @@ Flatpak, formerly known as xdg-app, is a utility for software deployment and pac
   - [Setup](#setup)
     - [Description](#description-1)
     - [References](#references-1)
-  - [Respect KDE Theme](#respect-kde-theme)
+  - [Usage](#usage)
     - [Description](#description-2)
-    - [References](#references-2)
     - [Steps](#steps)
-  - [Make Flatpak Apps Use KDE File Picker](#make-flatpak-apps-use-kde-file-picker)
+      - [Install](#install)
+      - [Update](#update)
+      - [Uninstall](#uninstall)
+      - [Query](#query)
+  - [Respect KDE Theme](#respect-kde-theme)
     - [Description](#description-3)
+    - [References](#references-2)
+    - [Steps](#steps-1)
+  - [Make Flatpak Apps Use KDE File Picker](#make-flatpak-apps-use-kde-file-picker)
+    - [Description](#description-4)
     - [References](#references-3)
   - [Add Permission Overrides](#add-permission-overrides)
-    - [Description](#description-4)
-    - [Steps](#steps-1)
-  - [Recommended Global Permissions](#recommended-global-permissions)
     - [Description](#description-5)
     - [Steps](#steps-2)
-  - [Migrating to Flatpak](#migrating-to-flatpak)
+  - [Recommended Global Permissions](#recommended-global-permissions)
     - [Description](#description-6)
-    - [References](#references-4)
     - [Steps](#steps-3)
+  - [Migrating to Flatpak](#migrating-to-flatpak)
+    - [Description](#description-7)
+    - [References](#references-4)
+    - [Steps](#steps-4)
 
 ## References
 
@@ -50,6 +57,74 @@ This details how to install the Plasma Discover application and Flatpak, as well
 
 - [Discover and Flatpak Installation](plasma-discover.md#discover-and-flatpak-installation)
 - [Add Flathub Repository](plasma-discover.md#add-flathub-repository)
+
+---
+
+## Usage
+
+### Description
+
+This details how to use `flatpak` to search, install, update, or uninstall packages through the terminal.
+
+### Steps
+
+> [!NOTE]  
+> Replace `<package>` with the actual name of the package you wish to search, install, or update.
+
+> [!TIP]  
+> To install or update a package graphically, use the [Discover](plasma-discover.md#software-installation-and-update) app.
+
+#### Install
+
+1. To install a package:
+
+    ```sh
+    flatpak install <package>
+    ```
+
+    Add the `--user` flag to install the package for the current user only instead of system-wide:
+
+    ```sh
+    flatpak install --user <package>
+    ```
+
+#### Update
+
+1. To update a package:
+
+    ```sh
+    flatpak update <package>
+    ```
+
+2. To update all packages:
+
+    ```sh
+    flatpak update
+    ```
+
+#### Uninstall
+
+1. To uninstall a package:
+
+    ```sh
+    flatpak uninstall <package>
+    ```
+
+2. To uninstall orphaned (unused) packages:
+
+    ```sh
+    flatpak uninstall --unused
+    ```
+
+    Add the `--delete-data` flag to also delete the app data.
+
+#### Query
+
+1. To search for a package:
+
+    ```sh
+    flatpak search <package>
+    ```
 
 ---
 
