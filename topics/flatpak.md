@@ -68,11 +68,11 @@ This details how to use `flatpak` to search, install, update, or uninstall Flatp
 
 ### Steps
 
-> [!NOTE]  
-> Replace `<package>` with the actual name of the package you wish to search, install, or update.
-
 > [!TIP]  
 > To install or update a package graphically, use the [Discover](plasma-discover.md#software-installation-and-update) app.
+
+> [!NOTE]  
+> Replace `<package>` with the actual name of the package you wish to search, install, or update.
 
 #### Install
 
