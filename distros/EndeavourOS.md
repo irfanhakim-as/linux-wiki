@@ -90,7 +90,7 @@ This installs the Discover app store, Flatpak, and adds the Flathub repository.
 
 ### References
 
-- [Install Discover and Flatpak](../topics/plasma-discover.md#discover-and-flatpak-installation)
+- [Install Discover and Flatpak](../topics/plasma-discover.md#installation)
 - [Add Flathub Repository](../topics/plasma-discover.md#add-flathub-repository)
 
 ---
