@@ -64,7 +64,7 @@ This details how to install the Plasma Discover application and Flatpak, as well
 
 ### Description
 
-This details how to use `flatpak` to search, install, update, or uninstall packages through the terminal.
+This details how to use `flatpak` to search, install, update, or uninstall Flatpak packages.
 
 ### Steps
 
