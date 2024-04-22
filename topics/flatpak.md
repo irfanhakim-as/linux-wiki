@@ -15,7 +15,8 @@ Flatpak, formerly known as xdg-app, is a utility for software deployment and pac
   - [References](#references)
   - [Setup](#setup)
     - [Description](#description-1)
-    - [References](#references-1)
+    - [Installation](#installation)
+    - [Add Flathub Repository](#add-flathub-repository)
   - [Usage](#usage)
     - [Description](#description-2)
     - [Steps](#steps)
@@ -25,11 +26,11 @@ Flatpak, formerly known as xdg-app, is a utility for software deployment and pac
       - [Query](#query)
   - [Respect KDE Theme](#respect-kde-theme)
     - [Description](#description-3)
-    - [References](#references-2)
+    - [References](#references-1)
     - [Steps](#steps-1)
   - [Make Flatpak Apps Use KDE File Picker](#make-flatpak-apps-use-kde-file-picker)
     - [Description](#description-4)
-    - [References](#references-3)
+    - [References](#references-2)
   - [Add Permission Overrides](#add-permission-overrides)
     - [Description](#description-5)
     - [Steps](#steps-2)
@@ -38,7 +39,7 @@ Flatpak, formerly known as xdg-app, is a utility for software deployment and pac
     - [Steps](#steps-3)
   - [Migrating to Flatpak](#migrating-to-flatpak)
     - [Description](#description-7)
-    - [References](#references-4)
+    - [References](#references-3)
     - [Steps](#steps-4)
 
 ## References
@@ -51,12 +52,31 @@ Flatpak, formerly known as xdg-app, is a utility for software deployment and pac
 
 ### Description
 
-This details how to install the Plasma Discover application and Flatpak, as well as how to add the Flathub repository so we have access to Flatpak applications.
+This details how to install Flatpak and add the Flathub repository so we have access to Flatpak applications.
 
-### References
+### Installation
 
-- [Discover and Flatpak Installation](plasma-discover.md#discover-and-flatpak-installation)
-- [Add Flathub Repository](plasma-discover.md#add-flathub-repository)
+1. [Install](yay.md#install) the `flatpak` package using `yay`.
+
+### Add Flathub Repository
+
+1. Add the Flathub repository for the user:
+
+    ```sh
+    flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    ```
+
+2. Add the Flathub repository for the system:
+
+    ```sh
+    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    ```
+
+3. To check the Flatpak repos/remotes available in our system:
+
+    ```sh
+    flatpak remotes --show-details
+    ```
 
 ---
 
