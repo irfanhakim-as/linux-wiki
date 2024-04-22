@@ -171,7 +171,7 @@ This details how to capture and record Steam games using OBS.
 
 ### OBS Configuration
 
-1. [Install](./yay.md#usage#install) `obs-vkcapture-git` from the `AUR` using `yay`.
+1. [Install](./yay.md#install) `obs-vkcapture-git` from the `AUR` using `yay`.
 
 2. Additionally, if you are using the Flatpak version of OBS, [install](./plasma-discover.md#software-installation-and-update) the `com.obsproject.Studio.Plugin.OBSVkCapture` OBS plugin Flatpak.
 
