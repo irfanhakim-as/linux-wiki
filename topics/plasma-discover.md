@@ -39,7 +39,7 @@ This details how to install the Plasma Discover application (and Flatpak).
 
 ### Description
 
-This details how to add the Flathub repository to Discover so we have access to Flatpak applications.
+This details how to add the Flathub repository to Plasma Discover so we have access to Flatpak applications.
 
 ### Steps
 
