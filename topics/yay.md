@@ -118,6 +118,8 @@ This details how to use `yay` to search, install, update, or uninstall packages 
 
     Add the `--noconfirm` flag to skip any prompts for input.
 
+    Add the `--needed` flag to skip the installation if the package is already installed.
+
 2. To install multiple packages, simply append the package names to the same command:
 
     ```sh
