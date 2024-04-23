@@ -102,7 +102,7 @@ This details how to use `flatpak` to search, install, update, or uninstall Flatp
     flatpak install <package>
     ```
 
-    Add the `--user` flag to install the package for the current user only instead of system-wide:
+    Optionally, add the `--user` flag to install the package for the current user only instead of system-wide:
 
     ```sh
     flatpak install --user <package>
