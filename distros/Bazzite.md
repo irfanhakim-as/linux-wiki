@@ -23,7 +23,7 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
 		- [References](#references-3)
 		- [Steps](#steps-2)
 	- [Default Application](#default-application)
-	- [Plasma Discover Software Installation and Update](#plasma-discover-software-installation-and-update)
+	- [Plasma Discover Usage](#plasma-discover-usage)
 	- [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
 	- [Plasma Desktop Theme Customisations](#plasma-desktop-theme-customisations)
 	- [Mounting Remote Directory](#mounting-remote-directory)
@@ -153,9 +153,9 @@ From Desktop mode, this details on how to configure default applications of vari
 
 ---
 
-## [Plasma Discover Software Installation and Update](../topics/plasma-discover.md#software-installation-and-update)
+## [Plasma Discover Usage](../topics/plasma-discover.md#usage)
 
-This details how to install desktop applications and update them using the Plasma Discover application.
+This details how to use the Plasma Discover application to search, install, update, or uninstall packages graphically.
 
 ---
 
