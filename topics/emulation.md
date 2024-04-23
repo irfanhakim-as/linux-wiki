@@ -31,12 +31,15 @@ This guide focuses on general emulation topics.
   - [Applying Translation Patches to ROMs](#applying-translation-patches-to-roms)
     - [Description](#description-3)
     - [References](#references-1)
-    - [Steps](#steps)
+    - [Getting Started](#getting-started)
+    - [Flips](#flips)
+    - [xdelta3](#xdelta3)
+    - [applyppf](#applyppf)
     - [Notes](#notes)
   - [Convert XCI Switch Games to NSP](#convert-xci-switch-games-to-nsp)
     - [Description](#description-4)
     - [References](#references-2)
-    - [Steps](#steps-1)
+    - [Steps](#steps)
 
 ---
 
@@ -167,7 +170,7 @@ This details on how you can apply translation patches to your supported ROMs.
 
 - [Apply ROM hacks and translations](https://emulation.gametechwiki.com/index.php/Apply_ROM_hacks_and_translations)
 
-### Steps
+### Getting Started
 
 1. Make sure you have your ROM, and download your translation patch file. Your translation patch file will normally detail on what exact ROM version you would need:
 
@@ -184,18 +187,24 @@ This details on how you can apply translation patches to your supported ROMs.
 
     Replace `<my_rom_name>` with the exact name of your ROM file.
 
-3. Install a patching tool that is suitable for your translation patch file. In the case of `ips` and `bps` files, install **Flips** as a Flatpak.
+3. Install a patching tool that is suitable for your translation patch file:
 
-    ```sh
-    flatpak install --user com.github.Alcaro.Flips
-    ```
+    - In the case of `ips` and `bps` files, [install](flatpak.md#install) the **Flips** (`com.github.Alcaro.Flips`) app as a Flatpak.
 
-4. In this example, we will assume these values:
+    - In the case of `xdelta` files, [install](./yay.md#install) `xdelta3` from the `AUR` using `yay`.
+
+    - In the case of `ppf` files, [install](./yay.md#install) `applyppf` from the `AUR` using `yay`.
+
+4. Follow the rest of this guide according to the specific patching tool you will need to use.
+
+### Flips
+
+1. In this example, we will assume these values:
 
    - ROM name: `Dragon Quest Monsters - Caravan Heart (Japan).gba`
    - Patch name: `Dragon Quest Monsters Caravan Heart.ips`
 
-5. To apply the patch to the ROM:
+2. To apply the patch to the ROM:
 
    - Launch the **Flips** app.
 
@@ -209,7 +218,83 @@ This details on how you can apply translation patches to your supported ROMs.
 
    - Click **Save**.
 
-Now you should have your output file that has been patched with the translation.
+    Now you should have your output file that has been patched with the translation.
+
+### xdelta3
+
+1. In this example, we will assume these values:
+
+   - ROM name: `Boku no Natsuyasumi 2 - Umi no Bouken-hen (Japan).iso`
+   - Patch name: `Boku2EnglishPatch1.1.xdelta`
+
+    We will also assume that these files are in the same directory, i.e. `~/Downloads`.
+
+2. To apply the patch to the ROM:
+
+   - Get into the directory where your ROM and patch files are located:
+
+      ```sh
+      cd ~/Downloads
+      ```
+
+   - Apply the `xdelta` patch to the ROM file:
+
+      ```sh
+      xdelta3 -d -s <ROM_FILE> <PATCH_FILE> <NEW_ROM_FILE>
+      ```
+
+      Based on our example, the exact command would be like so:
+
+      ```sh
+      xdelta3 -d -s "Boku no Natsuyasumi 2 - Umi no Bouken-hen (Japan).iso" "Boku2EnglishPatch1.1.xdelta" "Boku no Natsuyasumi 2 - Umi no Bouken-hen (Japan) [English].iso"
+      ```
+
+      In this example, the intended `NEW_ROM_FILE` name is `Boku no Natsuyasumi 2 - Umi no Bouken-hen (Japan) [English].iso`.
+
+    Now you should have your output file that has been patched with the translation.
+
+### applyppf
+
+1. In this example, we will assume these values:
+
+   - ROM name: `Dragon Quest V - Tenkuu no Hanayome (Japan).iso`
+   - Patch name: `DQ5_English_Translation_Patch_v1.2_DQ.ppf`
+
+    We will also assume that these files are in the same directory, i.e. `~/Downloads`.
+
+2. To apply the patch to the ROM:
+
+   - Get into the directory where your ROM and patch files are located:
+
+      ```sh
+      cd ~/Downloads
+      ```
+
+   - Make a backup of your ROM file, which will then later use for the patch:
+
+      ```sh
+      cp "Dragon Quest V - Tenkuu no Hanayome (Japan).iso" "Dragon Quest V - Tenkuu no Hanayome (Japan) [Backup].iso"
+      ```
+
+   - Apply the `ppf` patch to the (Backup) ROM file:
+
+      ```sh
+      applyppf a <ROM_FILE> <PATCH_FILE>
+      ```
+
+      Based on our example, the exact command would be like so:
+
+      ```sh
+      applyppf a "Dragon Quest V - Tenkuu no Hanayome (Japan) [Backup].iso" "DQ5_English_Translation_Patch_v1.2_DQ.ppf"
+      ```
+
+3. Now the (Backup) ROM file that you have applied the patch to should have been patched with the translation successfully.
+
+    Optionally, rename the patched ROM file to something more sensible to finish things off:
+
+    ```sh
+    mv "Dragon Quest V - Tenkuu no Hanayome (Japan) [Backup].iso" "Dragon Quest V - Tenkuu no Hanayome (Japan) [English].iso"
+    ```
 
 ### Notes
 
@@ -217,7 +302,7 @@ Now you should have your output file that has been patched with the translation.
 
 - The former version is expected to be applied to a supported ROM that they have specified.
 
-- Meanwhile, the latter is expected to be applied to a ROM that has been patched with a specific **Full/Playable** patch. Apply these patches using **Flips** one by one.
+- Meanwhile, the latter is expected to be applied to a ROM that has been patched with a specific **Full/Playable** patch. Apply these patches using a patching tool such as **Flips**, one by one.
 
 ---
 
