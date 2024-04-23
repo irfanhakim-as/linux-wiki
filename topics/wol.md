@@ -102,21 +102,7 @@ This details how to enable WoL on our system.
     sudo nano /etc/systemd/system/wol@.service
     ```
 
-    Content of the `wol@.service` file:
-
-    ```
-    [Unit]
-    Description=Wake-on-LAN for %i
-    Requires=network.target
-    After=network.target
-
-    [Service]
-    ExecStart=/usr/bin/ethtool -s %i wol g
-    Type=oneshot
-
-    [Install]
-    WantedBy=multi-user.target
-    ```
+    Copy the content of the sample [wol@.service](../attachments/wol@.service) file, paste it into the service file you created, and save it.
 
     **Alternatively**, [install](yay.md#install) the `wol-systemd` package from the `AUR` using `yay`.
 

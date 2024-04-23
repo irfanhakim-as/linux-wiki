@@ -96,21 +96,7 @@ This details how to enable WoWLAN on our system.
     sudo nano /etc/systemd/system/wowlan@.service
     ```
 
-    Content of the `wowlan@.service` file:
-
-    ```
-    [Unit]
-    Description=Enable WoWLAN for %i
-    Requires=network.target
-    After=network.target
-
-    [Service]
-    ExecStart=/usr/sbin/iw %i wowlan enable magic-packet
-    Type=oneshot
-
-    [Install]
-    WantedBy=multi-user.target
-    ```
+    Copy the content of the sample [wowlan@.service](../attachments/wowlan@.service) file, paste it into the service file you created, and save it.
 
     Then, start and enable the `wowlan@` service for the wireless interface (i.e. `phy0`):
 
