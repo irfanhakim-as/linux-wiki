@@ -74,7 +74,7 @@ This details the installation of the Fish shell and making it the default shell 
 
 ### Description
 
-This details an example, ideal configuration and profile for the Fish shell.
+This details an example, ideal configuration or profile for the Fish shell.
 
 ### References
 
