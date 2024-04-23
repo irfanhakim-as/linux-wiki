@@ -36,11 +36,7 @@ This details on how to setup and configure Razer Peripherals.
 
 1. Install the open-source driver, `openrazer-meta`, using `yay`:
 
-    ```sh
-    yay -S openrazer-meta
-    ```
-
-2. Add current user to the `plugdev` group:
+2. Add the current user to the `plugdev` group:
 
     ```sh
     sudo gpasswd -a ${USER} plugdev
