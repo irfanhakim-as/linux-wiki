@@ -52,7 +52,7 @@ This details on how to setup and configure Razer Peripherals.
 
 5. Setup and configure the mouse:
 
-   - Launch the **polychromatic** app.
+   - Launch the **Polychromatic** app.
 
    - Select your device in the **Devices** list.
 
