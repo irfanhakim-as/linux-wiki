@@ -36,11 +36,7 @@ This details how to install and set up Docker for use by `${USER}` without needi
 
 ### Steps
 
-1. Install the `docker` package using `yay`:
-
-    ```sh
-    yay -S docker
-    ```
+1. [Install](yay.md#install) the **Docker** (`docker`) package using `yay`.
 
 2. Add our user to the `docker` group:
 
