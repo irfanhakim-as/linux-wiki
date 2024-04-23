@@ -30,25 +30,25 @@ This details the installation and basic configuration of MangoHud.
 
 1. [Install](yay.md#install) **MangoHud** (`mangohud lib32-mangohud`) using `yay`.
 
-2. Configure the MangoHud overlay.
+2. Configure the MangoHud overlay:
 
-    Create the configuration directory:
+   - Create the configuration directory:
 
-    ```sh
-    mkdir -p ~/.config/MangoHud
-    ```
+        ```sh
+        mkdir -p ~/.config/MangoHud
+        ```
 
-    Create the configuration file:
+   - Create the configuration file:
 
-    ```sh
-    nano ~/.config/MangoHud/MangoHud.conf
-    ```
+        ```sh
+        nano ~/.config/MangoHud/MangoHud.conf
+        ```
 
-    Copy the content of the sample [MangoHud.conf](../attachments/MangoHud.conf) file and paste it into the configuration file.
+   - Copy the content of the sample [MangoHud.conf](../attachments/MangoHud.conf) file and paste it into the configuration file.
 
-3. Make your own modifications and add in your own values to the configuration file as you see fit, then save the file.
+   - Make your own modifications and add in your own values to the configuration file as you see fit, then save the file.
 
-4. Enable MangoHud for a Steam game by adding `mangohud` to the game's **Launch Options** on Steam. For example:
+3. Enable MangoHud for a Steam game by adding `mangohud` to the game's **Launch Options** on Steam. For example:
 
     ```sh
     mangohud %command%
