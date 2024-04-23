@@ -98,6 +98,9 @@ This details how to install Yay, a very necessary tool for installing AUR packag
 
 ## Usage
 
+> [!IMPORTANT]  
+> If you are running on a distribution that is unable to use `pacman` or `yay` (i.e. Immutable systems, non-Arch Linux systems), [install](#installation) and use `yay` on an Arch Linux based container through [Distrobox](distrobox.md).
+
 > [!NOTE]  
 > Replace `<package>` with the actual name of the package you wish to search, install, or update.
 
