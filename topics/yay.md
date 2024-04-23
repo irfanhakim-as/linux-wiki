@@ -118,6 +118,12 @@ This details how to use `yay` to search, install, update, or uninstall packages 
 
     Add the `--noconfirm` flag to skip any prompts for input.
 
+2. To install multiple packages, simply append the package names to the same command:
+
+    ```sh
+    yay -S <package1> <package2> <package3>
+    ```
+
 ### Update
 
 1. To update a package:
