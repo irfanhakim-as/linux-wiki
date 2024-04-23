@@ -14,6 +14,8 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 		- [References](#references-1)
 	- [Python/Pip Installation](#pythonpip-installation)
 	- [Recommended Software](#recommended-software)
+	- [Fish Shell](#fish-shell)
+		- [References](#references-2)
 	- [Remote Access](#remote-access)
 	- [Enable Bluetooth](#enable-bluetooth)
 	- [Dual-Boot Bluetooth](#dual-boot-bluetooth)
@@ -26,7 +28,7 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [Setup Docker](#setup-docker)
 	- [Setup Podman](#setup-podman)
 	- [Better Fonts](#better-fonts)
-		- [References](#references-2)
+		- [References](#references-3)
 	- [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
 	- [Default Application](#default-application)
 	- [Set Alacritty as Default Terminal](#set-alacritty-as-default-terminal)
@@ -43,7 +45,7 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [Wallpaper Engine Integration with KDE Plasma](#wallpaper-engine-integration-with-kde-plasma)
 	- [Razer Peripheral Support](#razer-peripheral-support)
 	- [Wake on LAN or Wireless](#wake-on-lan-or-wireless)
-		- [References](#references-3)
+		- [References](#references-4)
 	- [Backing up with Vorta](#backing-up-with-vorta)
 	- [Thunderbird Configuration](#thunderbird-configuration)
 	- [Discord Troubleshooting](#discord-troubleshooting)
@@ -51,14 +53,14 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [EmuDeck](#emudeck)
 	- [Recommended Global Flatpak Permissions](#recommended-global-flatpak-permissions)
 	- [Using a Touchpad](#using-a-touchpad)
-		- [References](#references-4)
-	- [Generate GPG Key and Use with Git](#generate-gpg-key-and-use-with-git)
 		- [References](#references-5)
+	- [Generate GPG Key and Use with Git](#generate-gpg-key-and-use-with-git)
+		- [References](#references-6)
 	- [Desktop Auto Login](#desktop-auto-login)
 	- [KDE Wallet](#kde-wallet)
-		- [References](#references-6)
-	- [Distrobox Installation and Usage](#distrobox-installation-and-usage)
 		- [References](#references-7)
+	- [Distrobox Installation and Usage](#distrobox-installation-and-usage)
+		- [References](#references-8)
 	- [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
 	- [VS Code Integration with Distrobox](#vs-code-integration-with-distrobox)
 	- [Deb Package Installation](#deb-package-installation)
@@ -69,7 +71,7 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [Miniconda Environments](#miniconda-environments)
 	- [XP-Pen](#xp-pen)
 	- [OBS Studio](#obs-studio)
-		- [References](#references-8)
+		- [References](#references-9)
 	- [Magewell Capture Device on OBS](#magewell-capture-device-on-obs)
 
 ## References
@@ -189,6 +191,17 @@ tv.plex.PlexDesktop
 ```
 bt-dualboot
 ```
+
+---
+
+## Fish Shell
+
+This details the installation of the Fish shell, making it the default shell for the user, and setting an ideal configuration or profile for the Fish shell.
+
+### References
+
+- [Fish Setup](../topics/fish.md#setup)
+- [Fish Configuration](../topics/fish.md#configuration)
 
 ---
 

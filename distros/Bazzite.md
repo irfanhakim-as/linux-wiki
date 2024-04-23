@@ -22,6 +22,9 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
 		- [Description](#description-3)
 		- [References](#references-3)
 		- [Steps](#steps-2)
+	- [Fish Shell](#fish-shell)
+		- [References](#references-4)
+		- [Notes](#notes)
 	- [Default Application](#default-application)
 	- [Plasma Discover Usage](#plasma-discover-usage)
 	- [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
@@ -33,7 +36,7 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
 	- [Custom Game Emulation Configurations](#custom-game-emulation-configurations)
 	- [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
 	- [Wake on LAN or Wireless](#wake-on-lan-or-wireless)
-		- [References](#references-4)
+		- [References](#references-5)
 	- [Make Flatpak Apps Respect KDE Theme](#make-flatpak-apps-respect-kde-theme)
 
 ## References
@@ -144,6 +147,25 @@ This details how to update and maintain a Bazzite system.
 	> This rebase is for the `bazzite-deck` image (i.e. for Steam Deck/HTPC devices). Replace the image name with the appropriate Bazzite image of your choosing.
 
 3. Reboot the system after the update or rebase is complete.
+
+---
+
+## Fish Shell
+
+This details on how to make Fish the default shell for the user, and setting an ideal configuration or profile for the Fish shell.
+
+### References
+
+- [Fish Make Default](../topics/fish.md#make-default)
+- [Fish Configuration](../topics/fish.md#configuration)
+
+### Notes
+
+- Since Bazzite is immutable, some of the dependencies required for the recommended configuration that were not preinstalled must either be installed manually (i.e. by downloading and installing their binary release from their source) or through [Distrobox](../topics/distrobox.md#software-installation) using an Arch Linux based container with [`yay`](../topics/yay.md#installation) installed.
+
+- Opting for `podman` over `docker` as the default container runtime is highly recommended for immutable systems due to its rootless nature.
+
+- In your Fish `config.fish` file, you may comment the entire `# Package manager` block since it does not apply for the Bazzite system.
 
 ---
 

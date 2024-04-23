@@ -16,11 +16,14 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 		- [Remote Access](#remote-access)
 		- [Recommended Software Installation](#recommended-software-installation)
 		- [Default Application](#default-application)
+	- [Fish Shell](#fish-shell)
+		- [References](#references-1)
+		- [Notes](#notes)
 	- [Add Flathub Repository](#add-flathub-repository)
 	- [ProtonUp-Qt](#protonup-qt)
-		- [References](#references-1)
-	- [CryoUtilities](#cryoutilities)
 		- [References](#references-2)
+	- [CryoUtilities](#cryoutilities)
+		- [References](#references-3)
 	- [CryoUtilities Undo Sync Game Data](#cryoutilities-undo-sync-game-data)
 	- [EmuDeck](#emudeck)
 	- [Custom Game Emulation Configurations](#custom-game-emulation-configurations)
@@ -31,14 +34,14 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 	- [Fixing DRM issues with Google Chrome](#fixing-drm-issues-with-google-chrome)
 	- [Install Git LFS](#install-git-lfs)
 	- [Better Fonts](#better-fonts)
-		- [References](#references-3)
+		- [References](#references-4)
 	- [Convert XCI Switch Games to NSP](#convert-xci-switch-games-to-nsp)
 	- [Wake on LAN or Wireless](#wake-on-lan-or-wireless)
-		- [References](#references-4)
+		- [References](#references-5)
 	- [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
 	- [Plasma Desktop Theme Customisations](#plasma-desktop-theme-customisations)
 	- [Distrobox Installation and Usage](#distrobox-installation-and-usage)
-		- [References](#references-5)
+		- [References](#references-6)
 	- [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
 	- [Make Flatpak Apps Respect KDE Theme](#make-flatpak-apps-respect-kde-theme)
 	- [Link's Awakening DX HD](#links-awakening-dx-hd)
@@ -107,6 +110,25 @@ From Desktop mode, [install](../topics/flatpak.md#install) some essential Flatpa
 ### [Default Application](../topics/plasma-desktop.md#default-application)
 
 From Desktop mode, this details on how to configure default applications of various types on KDE Plasma.
+
+---
+
+## Fish Shell
+
+This details on how to make Fish the default shell for the user, and setting an ideal configuration or profile for the Fish shell.
+
+### References
+
+- [Fish Make Default](../topics/fish.md#make-default)
+- [Fish Configuration](../topics/fish.md#configuration)
+
+### Notes
+
+- Since SteamOS is immutable, some of the dependencies required for the recommended configuration that were not preinstalled must either be installed manually (i.e. by downloading and installing their binary release from their source) or through [Distrobox](../topics/distrobox.md#software-installation) using an Arch Linux based container with [`yay`](../topics/yay.md#installation) installed.
+
+- Opting for `podman` over `docker` as the default container runtime is highly recommended for immutable systems due to its rootless nature.
+
+- In your Fish `config.fish` file, you may comment the entire `# Package manager` block since it does not apply for the SteamOS system.
 
 ---
 
