@@ -67,11 +67,7 @@ This details how we can enable remote access into our system from other devices 
     inet 192.168.0.25/24 brd 192.168.0.255 scope global noprefixroute wlp4s0
     ```
 
-3. Ensure that the `openssh` package is installed. If not, install it using `yay`:
-
-    ```sh
-    yay -S openssh
-    ```
+3. Ensure that the `openssh` package is installed. If not, [install](yay.md#install) it using `yay`.
 
 4. Enable SSH access on our system:
 

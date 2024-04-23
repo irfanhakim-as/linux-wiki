@@ -118,11 +118,7 @@ This details how to enable WoL on our system.
     WantedBy=multi-user.target
     ```
 
-    **Alternatively**, install the `wol-systemd` package from the `AUR` using `yay`:
-
-    ```sh
-    yay -S wol-systemd
-    ```
+    **Alternatively**, [install](yay.md#install) the `wol-systemd` package from the `AUR` using `yay`.
 
     Lastly in either options, start and enable the `wol@` `systemd` service for the network interface (i.e. `enp7s0`):
 
@@ -143,11 +139,7 @@ This details how to trigger WoL on a system from another system.
 
 ### Steps
 
-1. Install the `wakeonlan` package from the `AUR` using `yay`:
-
-    ```sh
-    yay -S wakeonlan
-    ```
+1. [Install](yay.md#install) the `wakeonlan` package using `yay`.
 
     It is also available on `homebrew` for macOS:
 

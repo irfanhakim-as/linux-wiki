@@ -20,14 +20,10 @@ This details on how we can mount a remote directory using Samba.
 
 ## Steps
 
-1. Ensure that all necessary packages are installed, including `cifs-utils`, `samba`, and `smbclient`:
+1. Ensure that all necessary packages are [installed](yay.md#install), including `cifs-utils`, `samba`, and `smbclient`.
 
     > [!NOTE]  
     > Installing `samba` will also install other required packages such as `cifs-utils` and `smbclient` automatically.
-
-    ```sh
-    yay -S --needed samba
-    ```
 
 2. Create the directory that will be used as the mounting point (i.e. `/mnt/mynas`):
 

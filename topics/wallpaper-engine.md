@@ -33,11 +33,7 @@ This details the use of Wallpaper Engine wallpapers in KDE Plasma.
 
 1. Install [Wallpaper Engine](https://store.steampowered.com/app/431960/Wallpaper_Engine) on Steam with Remote Play.
 
-2. Install the `plasma5-wallpapers-wallpaper-engine` plugin using `yay`:
-
-    ```sh
-    yay -S plasma5-wallpapers-wallpaper-engine
-    ```
+2. [Install](yay.md#install) the `plasma5-wallpapers-wallpaper-engine` plugin using `yay`.
 
 3. Use and setup the plugin in the KDE Plasma's **Wallpaper Settings**:
 

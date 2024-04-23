@@ -155,11 +155,7 @@ This details how to trigger WoWLAN on a system from another system.
 
 ### Steps
 
-1. Install the `wakeonlan` package from the `AUR` using `yay`:
-
-    ```sh
-    yay -S wakeonlan
-    ```
+1. [Install](yay.md#install) the `wakeonlan` package using `yay`.
 
     It is also available on `homebrew` for macOS:
 

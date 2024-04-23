@@ -35,11 +35,7 @@ This guides how to install and setup the Plank dock.
 
 ### Steps
 
-1. Install the Plank dock.
-
-    ```sh
-    yay -S plank
-    ```
+1. [Install](yay.md#install) the **Plank** (`plank`) dock using `yay`.
 
 2. Configure the Plank dock:
 

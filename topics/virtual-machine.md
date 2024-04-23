@@ -34,12 +34,13 @@ This details how to setup Virt-manager, a software that allows creating and mana
 
 ### Steps
 
-1. Install `virt-manager` and its dependencies:
+1. [Install](yay.md#install) the `virt-manager` package and its dependencies using `yay`:
 
-    ```sh
-    yay -S virt-manager
-    yay -S qemu-desktop libvirt edk2-ovmf dnsmasq iptables-nft
-    ```
+   - `qemu-desktop`
+   - `libvirt`
+   - `edk2-ovmf`
+   - `dnsmasq`
+   - `iptables-nft`
 
 2. Start and enable the `libvirtd` service:
 

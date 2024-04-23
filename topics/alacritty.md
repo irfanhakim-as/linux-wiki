@@ -31,11 +31,7 @@ This installs and sets up Alacritty as the default terminal.
 
 ### Steps
 
-1. Install `alacritty`, `tmux`, and `wmctrl` using `yay`:
-
-    ```sh
-    yay -S alacritty tmux wmctrl
-    ```
+1. [Install](yay.md#install) `alacritty`, `tmux`, and `wmctrl` using `yay`.
 
 2. Set a custom shortcut to launch Alacritty:
 

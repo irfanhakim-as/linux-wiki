@@ -163,11 +163,7 @@ This details how we can install certain applications or libraries not present in
     distrobox enter arch -nw
     ```
 
-4. Install the application or library we desire. For example, we would like to install `unrar` using `yay` inside the container:
-
-    ```sh
-    yay -S unrar
-    ```
+4. Install the application or library we desire. For example, [install](yay.md#install) the `unrar` package using `yay` inside the container.
 
 5. Export the binary we had installed, `unrar` from the container so that we have access to it on our desktop:
 
@@ -179,11 +175,7 @@ This details how we can install certain applications or libraries not present in
 
 6. We could also do the same with a desktop application.
 
-    For example, install `notable` using `yay` inside the container:
-
-    ```sh
-    yay -S notable
-    ```
+    For example, [install](yay.md#install) the `notable` application using `yay` inside the container.
 
     Export the application, `notable`:
 

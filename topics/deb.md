@@ -39,11 +39,7 @@ This details how to install deb packages on Arch Linux based systems.
 > [!CAUTION]  
 > Installing deb packages in an Arch Linux based system is not recommended!
 
-1. Install the `debtap` package using `yay`:
-
-    ```sh
-    yay -S debtap
-    ```
+1. [Install](yay.md#install) the `debtap` package using `yay`.
 
 2. Update the `debtap` database:
 

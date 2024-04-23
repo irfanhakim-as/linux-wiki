@@ -319,11 +319,7 @@ This details how we can convert `.xci` Nintendo Switch games to `.nsp`.
 
 ### Steps
 
-1. Install `4nxci-git` from the `AUR` in your system or in an Arch Linux based [Distrobox](distrobox.md) container:
-
-    ```sh
-    yay -S 4nxci-git
-    ```
+1. [Install](yay.md#install) the `4nxci-git` package using `yay` in your system or in an Arch Linux based [Distrobox](distrobox.md) container.
 
 2. **(Optional)** Create a dedicated working directory for converting `.xci` games for ease of use:
 

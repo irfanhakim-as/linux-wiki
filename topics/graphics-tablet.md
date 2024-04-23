@@ -42,11 +42,7 @@ This briefs how to set up an XP-Pen drawing tablet on Linux and addresses an iss
 
 The XP-Pen drawing tablet works out of the box on Linux. However, the tablet's active area is mapped to the entire combination of screens, which is not ideal for multi-monitor setups. The following steps address this issue:
 
-1. Install the `xp-pen-tablet` package from the AUR using `yay`.
-
-    ```sh
-    yay -S xp-pen-tablet
-    ```
+1. [Install](yay.md#install) the `xp-pen-tablet` package using `yay`.
 
     > [!TIP]  
     > An alternative to the `xp-pen-tablet` driver is the `opentabletdriver` driver which is also available on the AUR. However, said driver has not been tested and might work differently.

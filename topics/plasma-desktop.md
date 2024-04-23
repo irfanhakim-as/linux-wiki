@@ -123,11 +123,7 @@ This details on some things that could be done to improve the experience of usin
 
 #### Show video thumbnails
 
-1. Install the `ffmpegthumbs` package using `yay`:
-
-    ```sh
-    yay -S ffmpegthumbs
-    ```
+1. [Install](yay.md#install) the `ffmpegthumbs` package using `yay`.
 
 2. Open **Dolphin**.
 
@@ -143,63 +139,35 @@ This details on some things that could be done to improve the experience of usin
 
 This allows the viewing and thumbnailing of HEIC images.
 
-1. Install the `kimageformats` package using `yay`:
-
-    ```sh
-    yay -S kimageformats
-    ```
+1. [Install](yay.md#install) the `kimageformats` package using `yay`.
 
 #### Enhancing Dolphin Functionality
 
-1. Install the `dolphin-plugins` package using `yay`:
+1. [Install](yay.md#install) the `dolphin-plugins` package using `yay`.
 
-    ```sh
-    yay -S dolphin-plugins
-    ```
-
-2. Install the `kio-gdrive` package using `yay` to add Google Drive directly into Dolphin:
-
-    ```sh
-    yay -S kio-gdrive
-    ```
+2. [Install](yay.md#install) the `kio-gdrive` package using `yay` to add Google Drive directly into Dolphin.
 
 3. Install several Dolphin Service Menus.
 
-    Create the `ServiceMenus` directory:
+   - Create the `ServiceMenus` directory:
 
-    ```sh
-    mkdir -p ~/.local/share/kservices5/ServiceMenus
-    ```
+      ```sh
+      mkdir -p ~/.local/share/kservices5/ServiceMenus
+      ```
 
-    Download and install [office2pdf](https://store.kde.org/p/1172774) to add Office documents conversion to PDF:
+   - Download and install [**office2pdf**](https://store.kde.org/p/1172774) to add Office documents conversion to PDF:
 
-    ```sh
-    cp office2pdf.desktop ~/.local/share/kservices5/ServiceMenus
-    ```
+      ```sh
+      cp office2pdf.desktop ~/.local/share/kservices5/ServiceMenus
+      ```
 
-    Download and install [KDE 5 Service Menu PDF](https://store.kde.org/p/1227799) using `yay` to add more PDF-related functionalities:
+   - [Install](yay.md#install) [**KDE 5 Service Menu PDF**](https://store.kde.org/p/1227799) (`kf5-servicemenus-pdf`) using `yay` to add more PDF-related functionalities.
 
-    ```sh
-    yay -S kf5-servicemenus-pdf
-    ```
+   - [Install](yay.md#install) [**Kompare Menu**](https://store.kde.org/p/1100884) (`kde-servicemenus-komparemenu`) using `yay` to add support for comparing different files.
 
-    Download and install [kompare_servicemenu](https://store.kde.org/p/1100884) using `yay` to add support for comparing different files:
+   - [Install](yay.md#install) [**KDE 5 Service Menu ReImage**](https://store.kde.org/p/1231579) (`kde-service-menu-reimage`) using `yay` to add support for extra image-related functionalities.
 
-    ```sh
-    yay -S kde-servicemenus-komparemenu
-    ```
-
-    Download and install [KDE 5 Service Menu ReImage](https://store.kde.org/p/1231579) using `yay` to add support for extra image-related functionalities:
-
-    ```sh
-    yay -S kde-service-menu-reimage
-    ```
-
-    You may need to install some dependencies for `kde-service-menu-reimage` such as `jhead` for converting PNG images to JPG:
-
-    ```sh
-    yay -S jhead
-    ```
+   - You may also need to [install](yay.md#install) some dependencies for **KDE 5 Service Menu ReImage** such as `jhead` for converting PNG images to JPG.
 
 4. Log out and log back into the desktop.
 
@@ -219,17 +187,9 @@ This makes Flatpak apps use Dolphin as the File Picker and not Nautilus (GTK).
    - `xdg-desktop-portal`
    - `xdg-desktop-portal-gtk`
 
-3. Install the `xdg-desktop-portal-kde` package using `yay`:
+3. [Install](yay.md#install) the `xdg-desktop-portal-kde` package using `yay`.
 
-    ```sh
-    yay -S xdg-desktop-portal-kde
-    ```
-
-4. Uninstall the `xdg-desktop-portal-gnome` package if it is installed:
-
-    ```sh
-    yay -Rns xdg-desktop-portal-gnome
-    ```
+4. [Uninstall](yay.md#uninstall) the `xdg-desktop-portal-gnome` package if it is installed.
 
 5. Reboot your system.
 
@@ -368,11 +328,7 @@ This details some customisation options for the desktop.
 
 ### Task Switcher
 
-1. Install the `kdeplasma-addons` package using `yay` to add more task switcher options:
-
-    ```sh
-    yay -S kdeplasma-addons
-    ```
+1. [Install](yay.md#install) the `kdeplasma-addons` package using `yay` to add more task switcher options.
 
 2. Launch the **System Settings** app.
 
@@ -600,11 +556,7 @@ This details some widgets we could add to our desktop for added functionality.
 
 #### Steps
 
-1. Install the `plasma5-applets-thermal-monitor` package using `yay`:
-
-    ```sh
-    yay -S plasma5-applets-thermal-monitor
-    ```
+1. [Install](yay.md#install) the `plasma5-applets-thermal-monitor` package using `yay`.
 
 2. Check for available sensors on your system:
 

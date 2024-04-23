@@ -39,11 +39,7 @@ This details how to setup and create a KDE Wallet and use it by default.
 
 ### Steps
 
-1. Install the `kwalletmanager` package using `yay` to easily configure our KDE Wallet(s):
-
-    ```sh
-    yay -S kwalletmanager
-    ```
+1. [Install](yay.md#install) the `kwalletmanager` package using `yay` to easily configure our KDE Wallet(s).
 
     This will add a **KDE Wallet** section to our **System Settings** application.
 

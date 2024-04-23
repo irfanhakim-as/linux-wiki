@@ -157,17 +157,9 @@ This details several configuration options for our desktop to use better looking
 
 1. Install an emoji font package using `yay`.
 
-    Install `ttf-twemoji` for Twitter emoji:
+   - [Install](yay.md#install) the `ttf-twemoji` package for the Twitter emoji.
 
-    ```sh
-    yay -S ttf-twemoji
-    ```
-
-    Alternatively, install `ttf-apple-emoji` for Apple emoji:
-
-    ```sh
-    yay -S ttf-apple-emoji
-    ```
+   - Alternatively, [install](yay.md#install) the `ttf-apple-emoji` package for the Apple emoji.
 
 2. Create the `fontconfig` directory if it's not available already:
 
@@ -277,11 +269,7 @@ This details how to install and set up Microsoft Windows fonts on Linux.
 
 ### Steps
 
-1. Install Windows 10 fonts:
-
-    ```sh
-    yay -S ttf-ms-win10-auto
-    ```
+1. [Install](yay.md#install) the `ttf-ms-win10-auto` package using `yay` to get Windows 10 fonts.
 
 2. Fix anti-aliasing issue with the Calibri font (looks pixelated by default).
 
@@ -321,11 +309,7 @@ This details how to install and set up Apple macOS fonts on Linux.
 
 ### Steps
 
-1. Install Apple fonts:
-
-    ```sh
-    yay -S apple-fonts
-    ```
+1. [Install](yay.md#install) the `apple-fonts` package using `yay` to get Apple fonts.
 
 2. Set our `fonts.conf` config to use Apple fonts.
 

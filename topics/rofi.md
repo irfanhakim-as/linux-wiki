@@ -35,11 +35,7 @@ This installs Rofi and sets it up as a Spotlight equivalent.
 
 ### Steps
 
-1. Install the `rofi` package using `yay`:
-
-    ```sh
-    yay -S rofi
-    ```
+1. [Install](yay.md#install) the `rofi` package using `yay`.
 
 2. Set a custom shortcut to launch Rofi:
 

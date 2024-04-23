@@ -56,11 +56,7 @@ This details how we can enable dual booting into Windows or another Linux instal
 
 ### Steps
 
-1. Install the `os-prober` package using `yay`:
-
-    ```sh
-    yay -S os-prober
-    ```
+1. [Install](yay.md#install) the `os-prober` package using `yay`.
 
 2. Update the GRUB config `/etc/default/grub`:
 

@@ -68,11 +68,7 @@ This details how we could configure our trackpad to behave more like it would on
 
 ### Steps
 
-1. Install the `touchegg` package using `yay`:
-
-    ```sh
-    yay -S touchegg
-    ```
+1. [Install](yay.md#install) the `touchegg` package using `yay`.
 
 2. Start and enable the `touchegg` service:
 

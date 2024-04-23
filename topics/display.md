@@ -26,11 +26,7 @@ This details how to add and use a colour profile with our monitor.
 
 ### Steps
 
-1. Install the `colord-kde` package using `yay`:
-
-    ```sh
-    yay -S colord-kde
-    ```
+1. [Install](yay.md#install) the `colord-kde` package using `yay`.
 
 2. Open the **System Settings** app.
 

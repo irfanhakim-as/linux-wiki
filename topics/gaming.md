@@ -40,37 +40,17 @@ This guide goes through setting up packages and configuration options that could
 
 ### Steps
 
-1. Install Steam:
+1. [Install](yay.md#install) **Steam** (`steam`) using `yay`.
 
-    ```sh
-    yay -S steam
-    ```
+2. [Install](yay.md#install) **Vulkan** (`vulkan-icd-loader lib32-vulkan-icd-loader`) using `yay`.
 
-2. Install Vulkan:
+3. [Install](yay.md#install) **Vulkan for NVIDIA** (`nvidia-utils lib32-nvidia-utils`) using `yay`.
 
-    ```sh
-    yay -S vulkan-icd-loader lib32-vulkan-icd-loader
-    ```
+4. [Install](yay.md#install) **GameMode** (`gamemode lib32-gamemode`) using `yay`.
 
-3. Install NVIDIA specific Vulkan:
+5. Install and configure [MangoHud](mangohud.md#setup).
 
-    ```sh
-    yay -S nvidia-utils lib32-nvidia-utils
-    ```
-
-4. Install GameMode:
-
-    ```sh
-    yay -S gamemode lib32-gamemode
-    ```
-
-5. Install and configure [MangoHud](./mangohud.md#setup).
-
-6. If a Ryzen CPU is in use (at least for Zen 3), `zenpower3` is needed to get CPU wattage readings:
-
-    ```sh
-    yay -S zenpower3-dkms
-    ```
+6. If a Ryzen CPU is in use (at least for Zen 3), [install](yay.md#install) the `zenpower3-dkms` package using `yay` to get CPU wattage readings.
 
 7. To enable GameMode and MangoHud in a Steam Game, add this to the game's **Launch Options** (in the game's Steam **Properties**):
 

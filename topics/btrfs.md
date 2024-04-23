@@ -38,23 +38,11 @@ Timeshift for Linux is an application that provides functionality similar to the
 
 ### Steps
 
-1. Install the `timeshift` package using `yay`:
+1. [Install](yay.md#install) the `timeshift` package using `yay`.
 
-    ```sh
-    yay -S timeshift
-    ```
+2. [Install](yay.md#install) the `timeshift-autosnap` package using `yay` to automatically create a snapshot every pre-upgrade.
 
-2. Install the `timeshift-autosnap` package to automatically create a snapshot every pre-upgrade:
-
-    ```sh
-    yay -S timeshift-autosnap
-    ```
-
-3. Install the `grub-btrfs` package to allow booting into snapshots through Grub:
-
-    ```sh
-    yay -S grub-btrfs
-    ```
+3. [Install](yay.md#install) the `grub-btrfs` package using `yay` to allow booting into snapshots through Grub.
 
 4. Complete the setup through the Timeshift wizard:
 
@@ -103,11 +91,7 @@ If you are using a Btrfs filesystem, it is recommended for you to "balance" your
 
 ### Steps
 
-1. Install the `btrfs-assistant` application using `yay`:
-
-    ```sh
-    yay -S btrfs-assistant
-    ```
+1. [Install](yay.md#install) the `btrfs-assistant` application using `yay`.
 
 2. Launch the `btrfs-assistant` application. You will be asked to authenticate (as it requires `root` permissions).
 

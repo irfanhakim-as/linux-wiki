@@ -37,17 +37,9 @@ This details how to install and setup Back In Time as a backup solution used wit
 
 ### Steps
 
-1. Install the `backintime` package using `yay`:
+1. [Install](yay.md#install) the `backintime` package using `yay`.
 
-    ```sh
-    yay -S backintime
-    ```
-
-2. Install the `encfs` package for enabling encryption:
-
-    ```sh
-    yay -S encfs
-    ```
+2. [Install](yay.md#install) the `encfs` package using `yay` for enabling encryption.
 
 3. Enable symlink following to our Samba share.
 

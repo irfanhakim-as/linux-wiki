@@ -34,7 +34,7 @@ This details on how to setup and configure Razer Peripherals.
 
 ### Steps
 
-1. Install the open-source driver, `openrazer-meta`, using `yay`:
+1. [Install](yay.md#install) the open-source driver, `openrazer-meta`, using `yay`.
 
 2. Add the current user to the `plugdev` group:
 
@@ -44,11 +44,7 @@ This details on how to setup and configure Razer Peripherals.
 
 3. Restart the system or log out and log back into the desktop.
 
-4. Install the graphical app, `polychromatic`, for using openrazer:
-
-    ```sh
-    yay -S polychromatic
-    ```
+4. [Install](yay.md#install) the graphical application, `polychromatic`, using `yay` to use `openrazer`.
 
 5. Setup and configure the mouse:
 
