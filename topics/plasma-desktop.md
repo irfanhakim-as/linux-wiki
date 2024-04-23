@@ -613,7 +613,7 @@ This details some widgets we could add to our desktop for added functionality.
     ```
 
     > [!NOTE]  
-    > Do note that some sensors may require additional packages to be installed (i.e. `zenpower3` for newer Ryzen CPUs).
+    > Do note that some sensors may require additional packages to be installed (i.e. `zenpower3-dkms` for newer Ryzen CPUs).
 
 3. Add the widget and configure the sources:
 
