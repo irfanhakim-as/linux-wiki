@@ -182,10 +182,10 @@ This details on how you can apply translation patches to your supported ROMs.
 2. If the game provides the _sum_ (i.e. `MD5`) of the ROM, you can check if it matches by running:
 
     ```sh
-    md5sum <my_rom_name>
+    md5sum <ROM_FILE>
     ```
 
-    Replace `<my_rom_name>` with the exact name of your ROM file.
+    Replace `<ROM_FILE>` with the exact name of your ROM file.
 
 3. Install a patching tool that is suitable for your translation patch file:
 
