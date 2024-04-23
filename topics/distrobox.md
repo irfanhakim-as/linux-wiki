@@ -48,7 +48,7 @@ This details how we can install and setup Distrobox.
 > [!IMPORTANT]  
 > Ensure the path to `~/.local/bin` is in your `${PATH}` environment variable.
 
-1. If your system does not already have a container runtime (i.e. Docker) set up, install [Podman](./podman.md#linux).
+1. If your system does not already have a container runtime (i.e. Docker) set up, install [Podman](podman.md#linux).
 
 2. Install `distrobox`:
 
