@@ -19,11 +19,10 @@ Yet Another Yogurt - An AUR Helper Written in Go.
     - [Steps](#steps)
   - [Usage](#usage)
     - [Description](#description-2)
-    - [Steps](#steps-1)
-      - [Install](#install)
-      - [Update](#update)
-      - [Uninstall](#uninstall)
-      - [Query](#query)
+    - [Install](#install)
+    - [Update](#update)
+    - [Uninstall](#uninstall)
+    - [Query](#query)
 
 ## References
 
@@ -99,16 +98,14 @@ This details how to install Yay, a very necessary tool for installing AUR packag
 
 ## Usage
 
+> [!NOTE]  
+> Replace `<package>` with the actual name of the package you wish to search, install, or update.
+
 ### Description
 
 This details how to use `yay` to search, install, update, or uninstall packages on Arch Linux.
 
-### Steps
-
-> [!NOTE]  
-> Replace `<package>` with the actual name of the package you wish to search, install, or update.
-
-#### Install
+### Install
 
 1. To install a package:
 
@@ -118,7 +115,7 @@ This details how to use `yay` to search, install, update, or uninstall packages 
 
     Add the `--noconfirm` flag to skip any prompts for input.
 
-#### Update
+### Update
 
 1. To update a package:
 
@@ -132,7 +129,7 @@ This details how to use `yay` to search, install, update, or uninstall packages 
     yay -Syu
     ```
 
-#### Uninstall
+### Uninstall
 
 1. To uninstall a package:
 
@@ -146,7 +143,7 @@ This details how to use `yay` to search, install, update, or uninstall packages 
     sudo pacman -Rns (pacman -Qtdq)
     ```
 
-#### Query
+### Query
 
 1. To search for a package:
 
