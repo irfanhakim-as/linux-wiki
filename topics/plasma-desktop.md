@@ -216,10 +216,8 @@ This makes Flatpak apps use Dolphin as the File Picker and not Nautilus (GTK).
 
 2. Make sure these packages are installed on your machine:
 
-    ```
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal
-    ```
+   - `xdg-desktop-portal`
+   - `xdg-desktop-portal-gtk`
 
 3. Install the `xdg-desktop-portal-kde` package using `yay`:
 
