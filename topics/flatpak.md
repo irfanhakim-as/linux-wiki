@@ -194,7 +194,7 @@ This details how to add permission overrides for Flatpaks using Flatseal.
 
 ### Steps
 
-1. Launch the **Flatseal** app. [Install](#install) [Flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal) if you haven't already.
+1. Launch the **Flatseal** app. [Install](#install) the **Flatseal** (`com.github.tchx84.Flatseal`) app as a Flatpak if you haven't already.
 
 2. Choose the Flatpak application you wish to add permission overrides for:
 

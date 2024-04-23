@@ -413,7 +413,7 @@ This details how to enable smooth scrolling in Mozilla applications including Fi
 > [!NOTE]  
 > This is intended for the Mozilla Firefox and Mozilla Thunderbird Flatpak and the X11 graphics platform.
 
-1. Launch the **Flatseal** application. [Install](flatpak.md#install) [Flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal) if you haven't already.
+1. Launch the **Flatseal** application. [Install](flatpak.md#install) the **Flatseal** (`com.github.tchx84.Flatseal`) app as a Flatpak if you haven't already.
 
 2. From the **Applications** list, select **org.mozilla.firefox**.
 

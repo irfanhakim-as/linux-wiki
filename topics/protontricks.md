@@ -33,7 +33,7 @@ This details how to install and setup Protontricks.
 
 ### Steps
 
-1. [Install](flatpak.md#install) the [Protontricks](https://flathub.org/apps/com.github.Matoking.protontricks) Flatpak (as a user).
+1. [Install](flatpak.md#install) the **Protontricks** (`com.github.Matoking.protontricks`) app as a Flatpak.
 
 2. By default, Protontricks will only have access to your Steam library.
 

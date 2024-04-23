@@ -31,7 +31,7 @@ This details the installation of ProtonUp-Qt and GE-Proton.
 
 ### Steps
 
-1. Launch the **Discover** app and install the [**ProtonUp-Qt**](https://flathub.org/apps/net.davidotek.pupgui2) package.
+1. [Install](flatpak.md#install) the **ProtonUp-Qt** (`net.davidotek.pupgui2`) app as a Flatpak.
 
 2. Launch the **ProtonUp-Qt** app.
 
