@@ -78,9 +78,9 @@ This guide goes through setting up packages and configuration options that could
     gamemoderun mangohud %command%
     ```
 
-8. Install [ProtonUp-Qt and GE-Proton](./protonup-qt.md#setup).
+8. Install [ProtonUp-Qt and GE-Proton](protonup-qt.md#setup).
 
-9. Install [Protontricks](./protontricks.md#installation).
+9. Install [Protontricks](protontricks.md#installation).
 
 10. Increase the maximum number of memory map areas a process may have, some modern games require more than the kernel's default of `65530`.
 
