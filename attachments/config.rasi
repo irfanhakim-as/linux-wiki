@@ -1,0 +1,23 @@
+configuration {
+    modes: "window,drun,ssh,combi,filebrowser";
+    font: "SauceCodePro Nerd Font Mono Medium 10";
+    combi-modes: "window,drun,ssh";
+    show-icons: false;
+    icon-theme: "Breeze";
+    window-thumbnail: false;
+    sidebar-mode: false;
+    terminal: "alacritty";
+    ssh-client: "ssh";
+    ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";
+    window {
+        display-name: "💻";
+    }
+    drun {
+        display-name: "📦";
+    }
+    ssh {
+        show-icons: false;
+        display-name: "👨‍💻";
+    }
+}
+@theme "~/.config/rofi/themes/dt-center.rasi"
