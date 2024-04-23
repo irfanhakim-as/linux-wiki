@@ -90,7 +90,7 @@ From Desktop mode, this details how we can enable remote access into our system 
 
 ### Recommended Software Installation
 
-From Desktop mode, launch the Discover application and [install](../topics/plasma-discover.md#software-installation-and-update) some essential apps (as user):
+From Desktop mode, [install](../topics/flatpak.md#install) some essential Flatpak apps for the current user (or system):
 
 - Firefox
 - Plex

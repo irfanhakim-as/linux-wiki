@@ -33,11 +33,7 @@ This details setting up GreenWithEnvy, a system utility for controlling NVIDIA G
 
 ### Steps
 
-1. Install GreenWithEnvy as a Flatpak:
-
-    ```sh
-    flatpak install --user com.leinardi.gwe
-    ```
+1. [Install](flatpak.md#install) the **GreenWithEnvy** (`com.leinardi.gwe`) app as a Flatpak.
 
 2. Set it to autostart hidden in the system tray:
 

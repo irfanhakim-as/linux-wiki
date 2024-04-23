@@ -44,7 +44,7 @@ This details how to install and set up OBS.
 
 ### Steps
 
-1. [Install](./plasma-discover.md#software-installation-and-update) **OBS Studio** (`com.obsproject.Studio`) as a Flatpak using Discover.
+1. [Install](flatpak.md#install) the **OBS Studio** (`com.obsproject.Studio`) app as a Flatpak.
 
 2. Launch the **OBS Studio** application.
 
@@ -173,7 +173,7 @@ This details how to capture and record Steam games using OBS.
 
 1. [Install](./yay.md#install) `obs-vkcapture-git` from the `AUR` using `yay`.
 
-2. Additionally, if you are using the Flatpak version of OBS, [install](./plasma-discover.md#software-installation-and-update) the `com.obsproject.Studio.Plugin.OBSVkCapture` OBS plugin Flatpak.
+2. Additionally, if you are using the Flatpak version of OBS, [install](flatpak.md#install) the `com.obsproject.Studio.Plugin.OBSVkCapture` OBS plugin Flatpak.
 
 3. Restart the system.
 

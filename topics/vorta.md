@@ -36,11 +36,7 @@ This installs Vorta as a Flatpak.
 
 ### Steps
 
-Install Vorta as a Flatpak:
-
-```sh
-flatpak install --user com.borgbase.Vorta
-```
+1. [Install](flatpak.md#install) the **Vorta** (`com.borgbase.Vorta`) app as a Flatpak.
 
 ---
 

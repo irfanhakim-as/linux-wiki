@@ -391,11 +391,7 @@ This details how we could configure our trackpad to behave more like it would on
     </touchégg>
     ```
 
-5. Install the Touché Flatpak from Flathub graphically through the [Discover](../topics/plasma-discover.md#software-installation-and-update) app or using the following command:
-
-    ```sh
-    flatpak install --user com.github.joseexposito.touche
-    ```
+5. [Install](flatpak.md#install) the **Touché** (`com.github.joseexposito.touche`) app as a Flatpak.
 
 6. To further configure the Touchégg gestures, you can do so graphically through the Touché app.
 
@@ -417,7 +413,7 @@ This details how to enable smooth scrolling in Mozilla applications including Fi
 > [!NOTE]  
 > This is intended for the Mozilla Firefox and Mozilla Thunderbird Flatpak and the X11 graphics platform.
 
-1. Launch the **Flatseal** application. [Install](./plasma-discover.md#software-installation-and-update) [Flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal) if you haven't already.
+1. Launch the **Flatseal** application. [Install](flatpak.md#install) [Flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal) if you haven't already.
 
 2. From the **Applications** list, select **org.mozilla.firefox**.
 

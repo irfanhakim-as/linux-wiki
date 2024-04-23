@@ -35,7 +35,7 @@ This details on how to install AppImage software using Gear Lever.
 
 1. Download the `AppImage` file of the software you want to install from the software's website directly. A list of apps in AppImage format can be found [here](https://appimage.github.io/apps).
 
-2. Launch the **Gear Lever** app. [Install](../topics/plasma-discover.md#software-installation-and-update) the `Gear Lever` app first if you haven't already.
+2. Launch the **Gear Lever** app. [Install](flatpak.md#install) the **Gear Lever** (`it.mijorus.gearlever`) app as a Flatpak first if you haven't already.
 
 3. Click the **+ Open** button on the top left corner of the app.
 

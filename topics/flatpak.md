@@ -89,7 +89,7 @@ This details how to use `flatpak` to search, install, update, or uninstall Flatp
 ### Steps
 
 > [!TIP]  
-> To install or update a package graphically, use the [Discover](plasma-discover.md#software-installation-and-update) app.
+> To install or update a package graphically, use the [Discover](plasma-discover.md#install) app.
 
 > [!NOTE]  
 > Replace `<package>` with the actual name of the package you wish to search, install, or update.
@@ -160,11 +160,7 @@ This solves the issue of (some) Flatpak apps not looking native in KDE, and defa
 
 ### Steps
 
-1. Install Breeze GTK theme as a Flatpak:
-
-    ```sh
-    flatpak install --user org.gtk.Gtk3theme.Breeze
-    ```
+1. [Install](#install) the Breeze GTK theme (`org.gtk.Gtk3theme.Breeze`) as a Flatpak.
 
 2. Override permissions to use the Breeze theme for both System and User Flatpaks:
 
@@ -198,7 +194,7 @@ This details how to add permission overrides for Flatpaks using Flatseal.
 
 ### Steps
 
-1. Launch the **Flatseal** app. [Install](./plasma-discover.md#software-installation-and-update) [Flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal) if you haven't already.
+1. Launch the **Flatseal** app. [Install](#install) [Flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal) if you haven't already.
 
 2. Choose the Flatpak application you wish to add permission overrides for:
 
@@ -303,7 +299,7 @@ This details how to migrate your configurations and data from _standard_ package
 > [!NOTE]  
 > This guide assumes that you have been using the standard package of Firefox, and intend to migrate to the Flatpak version without losing your configurations and data.
 
-1. [Install](./plasma-discover.md#software-installation-and-update) [Firefox](https://flathub.org/apps/details/org.mozilla.firefox) as a Flatpak if you haven't already.
+1. [Install](#install) **Firefox** (`org.mozilla.firefox`) as a Flatpak if you haven't already.
 
 2. Launch the **Firefox** Flatpak at least once so that a default (Firefox) profile gets created
 

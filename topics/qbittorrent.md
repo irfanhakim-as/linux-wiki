@@ -35,11 +35,7 @@ This guide details on how we could look for torrent files from qBittorrent direc
 
 ### Steps
 
-1. Install the qBittorrent app as a Flatpak via the [**Discover**](../topics/plasma-discover.md#software-installation-and-update) app or using the following command:
-
-    ```sh
-    flatpak install --user org.qbittorrent.qBittorrent
-    ```
+1. [Install](flatpak.md#install) the **qBittorrent** (`org.qbittorrent.qBittorrent`) app as a Flatpak.
 
 2. Install the Jackett service using a `bash` script.
 

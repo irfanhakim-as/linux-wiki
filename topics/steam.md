@@ -36,11 +36,7 @@ This details how to add non-Steam services based on Google Chrome, to Steam so i
 
 ### Steps
 
-1. Install Google Chrome as a Flatpak using the **Discover** app, or through the terminal:
-
-    ```sh
-    flatpak install --user com.google.Chrome
-    ```
+1. [Install](flatpak.md#install) the **Google Chrome** (`com.google.Chrome`) app as a Flatpak.
 
 2. In the **Application Launcher** (Start Menu), locate Google Chrome, right click on it and select **Add to Steam**.
 

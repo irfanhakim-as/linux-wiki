@@ -132,7 +132,7 @@ wget
 which
 ```
 
-[Flatpak](../topics/plasma-discover.md#software-installation-and-update) packages:
+[Flatpak](../topics/flatpak.md#install) packages:
 
 ```
 com.borgbase.Vorta

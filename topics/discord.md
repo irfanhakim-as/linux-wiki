@@ -36,11 +36,7 @@ The official Discord client does not support screen sharing with audio on Linux.
 
 ### Steps
 
-1. Install Vesktop as a Flatpak:
-
-    ```sh
-    flatpak install --user dev.vencord.Vesktop
-    ```
+1. [Install](flatpak.md#install) the **Vesktop** (`dev.vencord.Vesktop`) app as a Flatpak.
 
 2. Launch and use the Vesktop app as you normally would with the official Discord client.
 

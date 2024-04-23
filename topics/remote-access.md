@@ -106,7 +106,7 @@ This details how we can enable remote desktop into our system from other devices
 
 ### Steps
 
-1. Search and [install](../topics/plasma-discover.md#software-installation-and-update) the `AnyDesk` app using the **Discover** app.
+1. [Install](flatpak.md#install) the **AnyDesk** (`com.anydesk.Anydesk`) app as a Flatpak.
 
 2. Once installed, click the **Launch** button in the top right.
 
