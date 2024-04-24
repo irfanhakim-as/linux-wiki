@@ -64,17 +64,26 @@ This is a workaround for when Discord forces an update to a new version, before 
 
 1. Update Discord's `build_info.json` file.
 
-    If you are using the Flatpak version of the Discord client:
+   - If you are using the Flatpak version of the Discord client:
 
-    ```sh
-    sudo nano /var/lib/flatpak/app/com.discordapp.Discord/current/active/files/discord/resources/build_info.json
-    ```
+      ```sh
+      sudo nano /var/lib/flatpak/app/com.discordapp.Discord/current/active/files/discord/resources/build_info.json
+      ```
 
-    If you are using the Pacman (`yay`) version of the Discord client:
+      If you get an error stating that the directory does not exist, you might have installed the Discord Flatpak for the current user only (instead of the system). In that case, the correct path and command would be:
 
-    ```sh
-    sudo nano /opt/discord/resources/build_info.json
-    ```
+      ```sh
+      nano ~/.local/share/flatpak/app/com.discordapp.Discord/current/active/files/discord/resources/build_info.json
+      ```
+
+      > [!TIP]  
+      > App data for Flatpak apps installed for the whole system are stored in the `/var/lib/flatpak` directory, while app data for Flatpak apps installed only for the current user are stored in the `~/.local/share/flatpak` directory.
+
+   - If you are using the Pacman (`yay`) version of the Discord client:
+
+      ```sh
+      sudo nano /opt/discord/resources/build_info.json
+      ```
 
 2. Update the `version` number to the latest version Discord expects you to update to (i.e. `0.0.22`):
 
