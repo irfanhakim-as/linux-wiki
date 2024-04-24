@@ -15,8 +15,12 @@ This topic focuses on autostart applications.
   - [Add Application to Autostart](#add-application-to-autostart)
     - [Description](#description-1)
     - [Steps](#steps)
-  - [Silent Startup Configurations](#silent-startup-configurations)
+  - [Autostart as a Service](#autostart-as-a-service)
     - [Description](#description-2)
+    - [Start and Enable Service](#start-and-enable-service)
+    - [Stop and Disable Service](#stop-and-disable-service)
+  - [Silent Startup Configurations](#silent-startup-configurations)
+    - [Description](#description-3)
     - [Steam](#steam)
     - [GWE (Flatpak)](#gwe-flatpak)
     - [Anydesk](#anydesk)
@@ -53,6 +57,54 @@ This details how to add an application to autostart (on boot) and optionally con
    - Make your updates (i.e. Add a custom argument in **Application** > **Arguments**).
 
    - Click the **OK** button.
+
+---
+
+## Autostart as a Service
+
+### Description
+
+Some applications can be set to autostart as a service, this details how to do so.
+
+### Start and Enable Service
+
+1. First, identify the name of the service. In this example, we'll assume the name of the service is, `anydesk.service`.
+
+2. To start the service once, run:
+
+    ```sh
+    sudo systemctl start anydesk.service
+    ```
+
+3. To enable the service to start on boot, run:
+
+    ```sh
+    sudo systemctl enable anydesk.service
+    ```
+
+4. To make it simpler, you could start and enable the service on boot at once:
+
+    ```sh
+    sudo systemctl enable --now anydesk.service
+    ```
+
+    In any of the command examples, be sure to replace `anydesk.service` with the name of the service you wish to start or enable.
+
+### Stop and Disable Service
+
+1. If you wish to stop the running service, run:
+
+    ```sh
+    sudo systemctl stop anydesk.service
+    ```
+
+2. To disable the service from starting on boot, run:
+
+    ```sh
+    sudo systemctl disable anydesk.service
+    ```
+
+    Again, replace `anydesk.service` with the name of the service you wish to stop or disable.
 
 ---
 
