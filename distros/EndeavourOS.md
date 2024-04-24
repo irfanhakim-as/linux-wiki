@@ -47,20 +47,21 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [Wake on LAN or Wireless](#wake-on-lan-or-wireless)
 		- [References](#references-5)
 	- [Backing up with Vorta](#backing-up-with-vorta)
+		- [References](#references-6)
 	- [Thunderbird Configuration](#thunderbird-configuration)
 	- [Discord Troubleshooting](#discord-troubleshooting)
 	- [Migrating (Firefox) to Flatpak](#migrating-firefox-to-flatpak)
 	- [EmuDeck](#emudeck)
 	- [Recommended Global Flatpak Permissions](#recommended-global-flatpak-permissions)
 	- [Using a Touchpad](#using-a-touchpad)
-		- [References](#references-6)
-	- [Generate GPG Key and Use with Git](#generate-gpg-key-and-use-with-git)
 		- [References](#references-7)
+	- [Generate GPG Key and Use with Git](#generate-gpg-key-and-use-with-git)
+		- [References](#references-8)
 	- [Desktop Auto Login](#desktop-auto-login)
 	- [KDE Wallet](#kde-wallet)
-		- [References](#references-8)
-	- [Distrobox Installation and Usage](#distrobox-installation-and-usage)
 		- [References](#references-9)
+	- [Distrobox Installation and Usage](#distrobox-installation-and-usage)
+		- [References](#references-10)
 	- [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
 	- [VS Code Integration with Distrobox](#vs-code-integration-with-distrobox)
 	- [Deb Package Installation](#deb-package-installation)
@@ -71,7 +72,7 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [Miniconda Environments](#miniconda-environments)
 	- [XP-Pen](#xp-pen)
 	- [OBS Studio](#obs-studio)
-		- [References](#references-10)
+		- [References](#references-11)
 	- [Magewell Capture Device on OBS](#magewell-capture-device-on-obs)
 
 ## References
@@ -387,47 +388,14 @@ This details on how to enable, setup and use Wake on LAN (WoL) or Wake on Wirele
 
 ---
 
-## [Backing up with Vorta](../topics/vorta.md)
+## Backing up with Vorta
 
-This sets up Vorta as our home directory backup solution.
+This details installing and setting up Vorta to have it backup our personal files, and restoring them when needed.
 
-1. The **Repository** we'll be using is a secondary drive mounted to our system (i.e. `/mnt/data`):
+### References
 
-	```
-	/mnt/data/System/Backups/Snapshots/mycomputer
-	```
-
-	You can change this to any directories on any drives or Samba Share mountpoint you may have.
-
-2. The **Exclude Patterns** we'll be using are:
-
-    ```
-    *[Cc]ache*/*
-    *[Cc]aches*/*
-    */.thumbnails/*
-    */.local/share/[Tt]rash*
-    *.backup*
-    *~
-    *.dropbox*
-    /proc/*
-    /sys/*
-    /dev/*
-    /run/*
-    /etc/mtab
-    /var/cache/*
-    */lost+found/*
-    /tmp/*
-    /var/tmp/*
-    /var/backups/*
-    .Private
-	~/Downloads/Torrent/Downloads/*
-	~/Videos/Screen Recording/*
-	~/Videos/Handbrake/*
-    ```
-
-    Add any additional directories or files you wish to exclude from the backup.
-
-Everything else is set according to the referenced guide.
+- [Vorta Setup](../topics/vorta.md#setup)
+- [Vorta Usage](../topics/vorta.md#usage)
 
 ---
 

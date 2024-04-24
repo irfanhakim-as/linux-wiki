@@ -29,19 +29,21 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 	- [Custom Game Emulation Configurations](#custom-game-emulation-configurations)
 	- [Custom Emulator Configurations](#custom-emulator-configurations)
 	- [Backing up with Vorta](#backing-up-with-vorta)
+		- [References](#references-4)
+		- [Notes](#notes-1)
 	- [Add Non-Steam Services](#add-non-steam-services)
 	- [Applying Translation Patches to ROMs](#applying-translation-patches-to-roms)
 	- [Fixing DRM issues with Google Chrome](#fixing-drm-issues-with-google-chrome)
 	- [Install Git LFS](#install-git-lfs)
 	- [Better Fonts](#better-fonts)
-		- [References](#references-4)
+		- [References](#references-5)
 	- [Convert XCI Switch Games to NSP](#convert-xci-switch-games-to-nsp)
 	- [Wake on LAN or Wireless](#wake-on-lan-or-wireless)
-		- [References](#references-5)
+		- [References](#references-6)
 	- [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
 	- [Plasma Desktop Theme Customisations](#plasma-desktop-theme-customisations)
 	- [Distrobox Installation and Usage](#distrobox-installation-and-usage)
-		- [References](#references-6)
+		- [References](#references-7)
 	- [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
 	- [Make Flatpak Apps Respect KDE Theme](#make-flatpak-apps-respect-kde-theme)
 	- [Link's Awakening DX HD](#links-awakening-dx-hd)
@@ -184,39 +186,41 @@ This details on certain configuration options for several emulators.
 
 ---
 
-## [Backing up with Vorta](../topics/vorta.md)
+## Backing up with Vorta
 
-This backs up directories deemed to be important for our games using Vorta.
+This details installing and setting up Vorta to have it backup our personal files, and restoring them when needed.
 
-1. The **Repository** we'll be using is a Samba Share mountpoint:
+### References
 
-	```
-	/home/deck/mynas/System/Backups/Snapshots/steamdeck
-	```
+- [Vorta Setup](../topics/vorta.md#setup)
+- [Vorta Usage](../topics/vorta.md#usage)
 
-	You can change this to any directories on any drives you may have.
+### Notes
 
-2. These are our **Source Folders and Files** configuration for the Steam Deck:
+- These are our source folders and files to backup specific to the Steam Deck:
 
-	```
-	/home/deck/.config
-	/home/deck/.local/share/Steam/steamapps/common/Stardew Valley
-	/home/deck/.local/share/Steam/steamapps/compatdata
-	/home/deck/.var/app/io.github.shiiion.primehack/data/dolphin-emu/GC
-	/home/deck/.var/app/io.github.shiiion.primehack/data/dolphin-emu/StateSaves
-	/home/deck/.var/app/io.github.shiiion.primehack/data/dolphin-emu/Wii
-	/home/deck/.var/app/org.citra_emu.citra/data/citra-emu/sdmc
-	/home/deck/.var/app/org.citra_emu.citra/data/citra-emu/states
-	/home/deck/.var/app/org.DolphinEmu.dolphin-emu/data/dolphin-emu/GC
-	/home/deck/.var/app/org.DolphinEmu.dolphin-emu/data/dolphin-emu/StateSaves
-	/home/deck/.var/app/org.DolphinEmu.dolphin-emu/data/dolphin-emu/Wii
-	/home/deck/.var/app/org.libretro.RetroArch/config/retroarch/saves
-	/home/deck/.var/app/org.libretro.RetroArch/config/retroarch/states
-	/home/deck/.var/app/org.ppsspp.PPSSPP/config/ppsspp/PSP/PPSSPP_STATE
-	/home/deck/.var/app/org.ppsspp.PPSSPP/config/ppsspp/PSP/SAVEDATA
-	/home/deck/emudeck
-	/home/deck/homebrew
-	/home/deck/Pictures/Screenshots
+	```sh
+	~/.config
+	~/.local/share/Steam/steamapps/common/Stardew Valley
+	~/.local/share/Steam/steamapps/compatdata
+	~/.local/share/Steam/steamapps/userdata
+	~/.var/app/io.github.shiiion.primehack/data/dolphin-emu/GC
+	~/.var/app/io.github.shiiion.primehack/data/dolphin-emu/StateSaves
+	~/.var/app/io.github.shiiion.primehack/data/dolphin-emu/Wii
+	~/.var/app/org.citra_emu.citra/data/citra-emu/sdmc
+	~/.var/app/org.citra_emu.citra/data/citra-emu/states
+	~/.var/app/org.DolphinEmu.dolphin-emu/data/dolphin-emu/GC
+	~/.var/app/org.DolphinEmu.dolphin-emu/data/dolphin-emu/StateSaves
+	~/.var/app/org.DolphinEmu.dolphin-emu/data/dolphin-emu/Wii
+	~/.var/app/org.libretro.RetroArch/config/retroarch/saves
+	~/.var/app/org.libretro.RetroArch/config/retroarch/states
+	~/.var/app/org.ppsspp.PPSSPP/config/ppsspp/PSP/PPSSPP_STATE
+	~/.var/app/org.ppsspp.PPSSPP/config/ppsspp/PSP/SAVEDATA
+	~/Applications
+	~/emudeck
+	~/ES-DE
+	~/homebrew
+	~/Pictures/Screenshots
 	/run/media/mmcblk0p1/Emulation/roms/wiiu/mlc01/usr/save
 	/run/media/mmcblk0p1/Emulation/saves/duckstation
 	/run/media/mmcblk0p1/Emulation/saves/MAME
@@ -227,7 +231,7 @@ This backs up directories deemed to be important for our games using Vorta.
 	/run/media/mmcblk0p1/Emulation/storage/yuzu/nand/user/save
 	```
 
-Everything else is set according to the referenced guide.
+	This backs up some personal files and game-related files, including game saves and emulator configurations. Make necessary adjustments to the list based on your needs.
 
 ---
 

@@ -38,6 +38,9 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
 	- [Wake on LAN or Wireless](#wake-on-lan-or-wireless)
 		- [References](#references-5)
 	- [Make Flatpak Apps Respect KDE Theme](#make-flatpak-apps-respect-kde-theme)
+	- [Backing up with Vorta](#backing-up-with-vorta)
+		- [References](#references-6)
+		- [Notes](#notes-1)
 
 ## References
 
@@ -248,3 +251,52 @@ This details on how to enable, setup and use Wake on LAN (WoL) or Wake on Wirele
 ## [Make Flatpak Apps Respect KDE Theme](../topics/flatpak.md#respect-kde-theme)
 
 This solves the issue of (some) Flatpak apps not looking native in KDE, and defaulting to a GTK theme instead.
+
+---
+
+## Backing up with Vorta
+
+This details installing and setting up Vorta to have it backup our personal files, and restoring them when needed.
+
+### References
+
+- [Vorta Setup](../topics/vorta.md#setup)
+- [Vorta Usage](../topics/vorta.md#usage)
+
+### Notes
+
+- These are our source folders and files to backup specific to the Bazzite system:
+
+	```sh
+	~/.config
+	~/.local/share/Steam/steamapps/common/Stardew Valley
+	~/.local/share/Steam/steamapps/compatdata
+	~/.local/share/Steam/steamapps/userdata
+	~/.var/app/io.github.shiiion.primehack/data/dolphin-emu/GC
+	~/.var/app/io.github.shiiion.primehack/data/dolphin-emu/StateSaves
+	~/.var/app/io.github.shiiion.primehack/data/dolphin-emu/Wii
+	~/.var/app/org.citra_emu.citra/data/citra-emu/sdmc
+	~/.var/app/org.citra_emu.citra/data/citra-emu/states
+	~/.var/app/org.DolphinEmu.dolphin-emu/data/dolphin-emu/GC
+	~/.var/app/org.DolphinEmu.dolphin-emu/data/dolphin-emu/StateSaves
+	~/.var/app/org.DolphinEmu.dolphin-emu/data/dolphin-emu/Wii
+	~/.var/app/org.libretro.RetroArch/config/retroarch/saves
+	~/.var/app/org.libretro.RetroArch/config/retroarch/states
+	~/.var/app/org.ppsspp.PPSSPP/config/ppsspp/PSP/PPSSPP_STATE
+	~/.var/app/org.ppsspp.PPSSPP/config/ppsspp/PSP/SAVEDATA
+	~/Applications
+	~/emudeck
+	~/ES-DE
+	~/homebrew
+	~/Pictures/Screenshots
+	/run/media/mmcblk0p1/Emulation/roms/wiiu/mlc01/usr/save
+	/run/media/mmcblk0p1/Emulation/saves/duckstation
+	/run/media/mmcblk0p1/Emulation/saves/MAME
+	/run/media/mmcblk0p1/Emulation/saves/pcsx2
+	/run/media/mmcblk0p1/Emulation/saves/ryujinx
+	/run/media/mmcblk0p1/Emulation/saves/scummvm
+	/run/media/mmcblk0p1/Emulation/storage/rpcs3/dev_hdd0/home/00000001/savedata
+	/run/media/mmcblk0p1/Emulation/storage/yuzu/nand/user/save
+	```
+
+	This backs up some personal files and game-related files, including game saves and emulator configurations. Make necessary adjustments to the list based on your needs.
