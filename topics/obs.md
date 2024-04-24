@@ -230,6 +230,9 @@ This details how to capture and record Steam games using OBS.
 
 ## Separate Audio Tracks by Application
 
+> [!IMPORTANT]  
+> This guide requires PipeWire and WirePlumber to be installed and configured.
+
 ### Description
 
 This details how to separate audio tracks by application virtually in OBS using PipeWire.
@@ -239,9 +242,6 @@ This details how to separate audio tracks by application virtually in OBS using 
 - [obs-pipewire-audio-capture](https://github.com/dimtpap/obs-pipewire-audio-capture)
 
 ### Steps
-
-> [!IMPORTANT]  
-> This requires PipeWire and WirePlumber to be installed and configured.
 
 1. Download the latest release's `linux-pipewire-audio-{VERSION_NUMBER}.tar.gz` file from obs-pipewire-audio-capture's [Releases](https://github.com/dimtpap/obs-pipewire-audio-capture/releases) page.
 
