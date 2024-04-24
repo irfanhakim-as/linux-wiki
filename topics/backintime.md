@@ -1,11 +1,11 @@
 # Back In Time
 
+> [!IMPORTANT]  
+> This guide is **INCOMPLETE** and this software is not necessarily endorsed!
+
 ## Description
 
 It is an easy-to-use backup tool for files and folders. It runs on GNU Linux and provides a command line tool `backintime` and a Qt5 GUI `backintime-qt` both written in Python3.
-
-> [!IMPORTANT]  
-> This guide is **INCOMPLETE** and this software is not necessarily endorsed!
 
 ## Directory
 
