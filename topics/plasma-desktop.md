@@ -1,7 +1,7 @@
 # Plasma Desktop
 
 > [!NOTE]  
-> This topic mostly or entirely pertains to KDE Plasma version `5.27` and has not been updated for newer versions.
+> This topic mostly or entirely pertains to KDE Plasma version `5.27` and may not have been updated for newer versions.
 
 ## Description
 
