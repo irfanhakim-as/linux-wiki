@@ -25,10 +25,10 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [Balance Btrfs Volumes](#balance-btrfs-volumes)
 	- [GRUB Dual Booting](#grub-dual-booting)
 	- [GRUB Theme Customisation](#grub-theme-customisation)
-	- [Setup Docker](#setup-docker)
-	- [Setup Podman](#setup-podman)
-	- [Better Fonts](#better-fonts)
+	- [Container Runtime](#container-runtime)
 		- [References](#references-3)
+	- [Better Fonts](#better-fonts)
+		- [References](#references-4)
 	- [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
 	- [Default Application](#default-application)
 	- [Set Alacritty as Default Terminal](#set-alacritty-as-default-terminal)
@@ -45,7 +45,7 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [Wallpaper Engine Integration with KDE Plasma](#wallpaper-engine-integration-with-kde-plasma)
 	- [Razer Peripheral Support](#razer-peripheral-support)
 	- [Wake on LAN or Wireless](#wake-on-lan-or-wireless)
-		- [References](#references-4)
+		- [References](#references-5)
 	- [Backing up with Vorta](#backing-up-with-vorta)
 	- [Thunderbird Configuration](#thunderbird-configuration)
 	- [Discord Troubleshooting](#discord-troubleshooting)
@@ -53,14 +53,14 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [EmuDeck](#emudeck)
 	- [Recommended Global Flatpak Permissions](#recommended-global-flatpak-permissions)
 	- [Using a Touchpad](#using-a-touchpad)
-		- [References](#references-5)
-	- [Generate GPG Key and Use with Git](#generate-gpg-key-and-use-with-git)
 		- [References](#references-6)
+	- [Generate GPG Key and Use with Git](#generate-gpg-key-and-use-with-git)
+		- [References](#references-7)
 	- [Desktop Auto Login](#desktop-auto-login)
 	- [KDE Wallet](#kde-wallet)
-		- [References](#references-7)
-	- [Distrobox Installation and Usage](#distrobox-installation-and-usage)
 		- [References](#references-8)
+	- [Distrobox Installation and Usage](#distrobox-installation-and-usage)
+		- [References](#references-9)
 	- [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
 	- [VS Code Integration with Distrobox](#vs-code-integration-with-distrobox)
 	- [Deb Package Installation](#deb-package-installation)
@@ -71,7 +71,7 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [Miniconda Environments](#miniconda-environments)
 	- [XP-Pen](#xp-pen)
 	- [OBS Studio](#obs-studio)
-		- [References](#references-9)
+		- [References](#references-10)
 	- [Magewell Capture Device on OBS](#magewell-capture-device-on-obs)
 
 ## References
@@ -259,15 +259,14 @@ This details how to change the theme/appearance of the GRUB bootloader.
 
 ---
 
-## [Setup Docker](../topics/docker.md#setup)
+## Container Runtime
 
-This details how to install and set up Docker for use by `${USER}` without needing `sudo` (not rootless).
+This details how to install and set up Docker or Podman for use as the container runtime on our system.
 
----
+### References
 
-## [Setup Podman](../topics/podman.md#linux)
-
-This details the installation and setup of Podman on Linux as an alternative to Docker.
+- [Docker Setup](../topics/docker.md#setup)
+- [Podman Setup](../topics/podman.md#linux)
 
 ---
 
