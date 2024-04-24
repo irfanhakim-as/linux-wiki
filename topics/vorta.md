@@ -18,6 +18,12 @@ Vorta is a backup client for macOS and Linux desktops. It integrates the mighty 
     - [References](#references-1)
     - [Installation](#installation)
     - [Configuration](#configuration)
+  - [Usage](#usage)
+    - [Description](#description-2)
+    - [References](#references-2)
+    - [Create a Backup](#create-a-backup)
+    - [Mount an Archive](#mount-an-archive)
+    - [Restore Files](#restore-files)
 
 ## References
 
@@ -164,3 +170,59 @@ This details installing and setting up Vorta to have it backup our personal file
 
         - Automatically start Vorta at login: `Checked`.
         - Show main window of Vorta on launch: `Unchecked`.
+
+---
+
+## Usage
+
+### Description
+
+This details using Vorta to backup our files and restore them when needed.
+
+### References
+
+- [Using Vorta](https://vorta.borgbase.com/usage)
+
+### Create a Backup
+
+1. Launch the **Vorta** app.
+
+2. In the **Repository** tab, expand the **Repository** dropdown, and select the repository you wish to backup to.
+
+3. Click the **Start Backup** button to begin the backup process.
+
+4. Wait for the backup process to complete.
+
+### Mount an Archive
+
+1. Create a folder somewhere you wish to mount the archive to using your file browser or the following command:
+
+    ```sh
+    mkdir -p ~/vorta-mount
+    ```
+
+    In this example, the directory we have made as the mount point is `~/vorta-mount`.
+
+2. In the **Archives** tab, select the archive you wish to mount.
+
+3. Click the **Mount** button located on the right side of the app.
+
+4. In the newly opened file browser portal, select the folder you have prepared as the mount point, and click the **OK** button.
+
+5. Wait for the archive to be mounted to the folder you have selected.
+
+    The archive is ready once the app shows the message, `Mounted successfully.`.
+
+6. Once you are done with the archive, ensure that the mounted archive is selected in the **Archives** list, and click the **Unmount** button to safely unmount the archive.
+
+    The app will show the message, `Un-mounted successfully.` once the archive has been unmounted.
+
+### Restore Files
+
+1. [Mount](#mount-an-archive) the archive you wish to restore files from.
+
+2. Navigate to the mounted archive using your file browser.
+
+3. Copy any files or folders you wish to restore from the mounted archive to their destination on your system.
+
+4. Once you have restored all the files you need, unmount the archive.
