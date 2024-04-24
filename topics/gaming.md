@@ -64,23 +64,33 @@ This guide goes through setting up packages and configuration options that could
 
 10. Increase the maximum number of memory map areas a process may have, some modern games require more than the kernel's default of `65530`.
 
-    Check the current value:
+    - Check the current value:
 
-    ```sh
-    sysctl vm.max_map_count
-    ```
+        ```sh
+        sysctl vm.max_map_count
+        ```
 
-    Set a higher value with:
+    - Set a higher value with:
 
-    ```sh
-    sudo sysctl vm.max_map_count=2147483642
-    ```
+        ```sh
+        sudo sysctl vm.max_map_count=2147483642
+        ```
 
-    Make that increased value persistent across reboots by creating a `/etc/sysctl.d/99-max-map-count.conf` file with content:
+    - Make that increased value persistent across reboots by creating a `99-max-map-count.conf` configuration file:
 
-    ```conf
-    vm.max_map_count = 2147483642
-    ```
+        Create the file:
+
+        ```sh
+        sudo nano /etc/sysctl.d/99-max-map-count.conf
+        ```
+
+        Add the following value to the file:
+
+        ```conf
+        vm.max_map_count = 2147483642
+        ```
+
+        Save and exit the file.
 
 ---
 
