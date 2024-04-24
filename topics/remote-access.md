@@ -20,12 +20,12 @@ This details how we can enable remote access into our system from other devices 
 
 ## Remote Shell
 
+> [!IMPORTANT]  
+> This guide assumes that you are using KDE Plasma as your desktop environment.
+
 ### Description
 
 This details how we can enable remote access into our system from other devices in the same network via SSH.
-
-> [!IMPORTANT]  
-> This guide assumes that you are using KDE Plasma as your desktop environment.
 
 ### Steps
 
@@ -89,16 +89,22 @@ This details how we can enable remote access into our system from other devices 
     ssh-copy-id deck@192.168.0.25
     ```
 
+    If you have a specific SSH key you want to use (i.e. `~/.ssh/id_ed25519.pub`), you can specify it with the `-i` flag:
+
+    ```sh
+    ssh-copy-id -i ~/.ssh/id_ed25519.pub deck@192.168.0.25
+    ```
+
 ---
 
 ## Remote Desktop
 
+> [!WARNING]  
+> This method only works for the `X11` graphics platform, and not compatible with `Wayland` as of writing.
+
 ### Description
 
 This details how we can enable remote desktop into our system from other devices via AnyDesk.
-
-> [!WARNING]  
-> This method only works for the `X11` graphics platform, and not compatible with `Wayland` as of writing.
 
 ### Steps
 
