@@ -47,4 +47,10 @@ This installs and sets up Alacritty as the default terminal.
 
     - Click **Trigger** and add a **Shortcut** (i.e. <kbd>Ctrl + Alt + T</kbd>).
 
-    - Under **Action**, add the **Command**, `wmctrl -x -a "alacritty" || alacritty -e tmux`. This will launch Alacritty if it's not running, or switch to it if it is.
+    - Under **Action**, add the **Command**:
+
+      ```sh
+      wmctrl -x -a "alacritty" || alacritty -e tmux
+      ```
+
+      This will launch Alacritty if it's not running, or switch to it if it is.
