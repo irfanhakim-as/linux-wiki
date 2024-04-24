@@ -162,10 +162,17 @@ This solves the issue of (some) Flatpak apps not looking native in KDE, and defa
 
 1. [Install](#install) the Breeze GTK theme (`org.gtk.Gtk3theme.Breeze`) as a Flatpak.
 
-2. Override permissions to use the Breeze theme for both System and User Flatpaks:
+2. Override permissions to use the Breeze theme for Flatpak apps.
+
+    For system-installed Flatpaks:
 
     ```sh
     sudo flatpak override --system --filesystem=xdg-config/gtk-3.0:ro --filesystem=xdg-config/gtkrc-2.0:ro --filesystem=xdg-config/gtk-4.0:ro --filesystem=xdg-config/gtkrc:ro --env "GTK_THEME=Breeze"
+    ```
+
+    For user-installed Flatpaks:
+
+    ```sh
     flatpak override --user --filesystem=xdg-config/gtk-3.0:ro --filesystem=xdg-config/gtkrc-2.0:ro --filesystem=xdg-config/gtk-4.0:ro --filesystem=xdg-config/gtkrc:ro --env "GTK_THEME=Breeze"
     ```
 
