@@ -40,7 +40,7 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
       - [References](#references)
       - [Steps](#steps)
       - [Troubleshooting](#troubleshooting)
-  - [Default Application](#default-application)
+  - [Default Applications](#default-applications)
     - [Description](#description-4)
     - [Steps](#steps-1)
   - [Auto Login](#auto-login)
@@ -608,7 +608,7 @@ Fix the KDE Thermal Monitor issue requiring "Reload Temperature Sources" when `p
 
 ---
 
-## Default Application
+## Default Applications
 
 ### Description
 

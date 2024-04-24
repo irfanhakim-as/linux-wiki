@@ -30,7 +30,7 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [Better Fonts](#better-fonts)
 		- [References](#references-4)
 	- [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
-	- [Default Application](#default-application)
+	- [Default Applications](#default-applications)
 	- [Set Alacritty as Default Terminal](#set-alacritty-as-default-terminal)
 	- [Add Colour Profile to Monitor](#add-colour-profile-to-monitor)
 	- [Plasma Desktop Theme Customisations](#plasma-desktop-theme-customisations)
@@ -287,7 +287,7 @@ This details on some things that could be done to improve the experience of usin
 
 ---
 
-## [Default Application](../topics/plasma-desktop.md#default-application)
+## [Default Applications](../topics/plasma-desktop.md#default-applications)
 
 This details on how to configure default applications of various types on KDE Plasma.
 

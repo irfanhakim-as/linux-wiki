@@ -25,7 +25,7 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
 	- [Fish Shell](#fish-shell)
 		- [References](#references-4)
 		- [Notes](#notes)
-	- [Default Application](#default-application)
+	- [Default Applications](#default-applications)
 	- [Plasma Discover Usage](#plasma-discover-usage)
 	- [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
 	- [Plasma Desktop Theme Customisations](#plasma-desktop-theme-customisations)
@@ -169,7 +169,7 @@ This details on how to make Fish the default shell for the user, and setting an 
 
 ---
 
-## [Default Application](../topics/plasma-desktop.md#default-application)
+## [Default Applications](../topics/plasma-desktop.md#default-applications)
 
 From Desktop mode, this details on how to configure default applications of various types on KDE Plasma.
 

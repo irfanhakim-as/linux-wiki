@@ -15,7 +15,7 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 		- [Create User Password](#create-user-password)
 		- [Remote Access](#remote-access)
 		- [Recommended Software Installation](#recommended-software-installation)
-		- [Default Application](#default-application)
+		- [Default Applications](#default-applications)
 	- [Fish Shell](#fish-shell)
 		- [References](#references-1)
 		- [Notes](#notes)
@@ -107,7 +107,7 @@ From Desktop mode, [install](../topics/flatpak.md#install) some essential Flatpa
 - LibreOffice
 - Signal Desktop
 
-### [Default Application](../topics/plasma-desktop.md#default-application)
+### [Default Applications](../topics/plasma-desktop.md#default-applications)
 
 From Desktop mode, this details on how to configure default applications of various types on KDE Plasma.
 
