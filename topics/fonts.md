@@ -367,7 +367,7 @@ This details how to install and set up Apple macOS fonts on Linux.
 
 This improves how fonts and texts are rendered to make them clearer and more legible. Note that this might break Apple fonts/emoji.
 
-> [!WARNING]  
+> [!CAUTION]  
 > This might break certain fonts including Apple fonts/emoji recommended by this wiki, more testing is needed!
 
 > [!NOTE]  
