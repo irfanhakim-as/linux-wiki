@@ -106,11 +106,7 @@ This details how to enable WoL on our system.
 
     **Alternatively**, [install](yay.md#install) the `wol-systemd` package from the `AUR` using `yay`.
 
-    Lastly in either options, start and enable the `wol@` `systemd` service for the network interface (i.e. `enp7s0`):
-
-    ```sh
-    sudo systemctl enable --now wol@enp7s0.service
-    ```
+    Lastly in either options, [start and enable](autostart.md#start-and-enable-service) the `wol@` `systemd` service for the network interface. Assuming the network interface is `enp7s0`, the service name would be `wol@enp7s0.service`.
 
 ---
 

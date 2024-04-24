@@ -60,11 +60,7 @@ Timeshift for Linux is an application that provides functionality similar to the
 
 5. Create the first snapshot by clicking the **Create** button.
 
-6. Start and enable the system's `cron` service (i.e. `cronie`) so that scheduled backups work:
-
-    ```sh
-    sudo systemctl enable --now cronie.service
-    ```
+6. [Start and Enable](autostart.md#start-and-enable-service) the system's `cron` service (i.e. `cronie.service`) so that scheduled backups work.
 
 7. Regenerate our Grub config so that `grub-btrfs` works as intended:
 

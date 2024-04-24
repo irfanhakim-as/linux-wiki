@@ -98,11 +98,7 @@ This details how to enable WoWLAN on our system.
 
     Copy the content of the sample [wowlan@.service](../attachments/wowlan@.service) file, paste it into the service file you created, and save it.
 
-    Then, start and enable the `wowlan@` service for the wireless interface (i.e. `phy0`):
-
-    ```sh
-    sudo systemctl enable --now wowlan@phy0.service
-    ```
+    Then, [start and enable](autostart.md#start-and-enable-service) the `wowlan@` service for the wireless interface. Assuming the wireless interface is `phy0`, the service name would be `wowlan@phy0.service`.
 
 4. You can use `iw` to get the MAC address of your wireless interface:
 

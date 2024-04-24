@@ -42,11 +42,7 @@ This details how to setup Virt-manager, a software that allows creating and mana
    - `dnsmasq`
    - `iptables-nft`
 
-2. Start and enable the `libvirtd` service:
-
-    ```sh
-    sudo systemctl enable --now libvirtd.service
-    ```
+2. [Start and Enable](autostart.md#start-and-enable-service) the `libvirtd.service` service.
 
 3. To not need `sudo` to run the software, add our user to the `libvirt` group:
 
@@ -76,19 +72,11 @@ This details how to setup Virt-manager, a software that allows creating and mana
 
 ### Troubleshooting
 
-- If Virt-Manager QEMU/KVM is stuck at connecting, restart the `libvirtd` service:
+- If Virt-Manager QEMU/KVM is stuck at connecting, [restart](autostart.md#status-and-restart-service) the `libvirtd.service` service.
 
-    ```sh
-    sudo systemctl restart libvirtd.service
-    ```
+- To find the cause of the issue, check the [status](autostart.md#status-and-restart-service) of the `libvirtd.service` service.
 
-- To find the cause of the issue, check the status of the `libvirtd` service:
-
-    ```sh
-    sudo systemctl status libvirtd.service
-    ```
-
-    More often than not, it's likely a configuration issue with a VM. Fixing the configuration should fix the issue.
+  More often than not, it's likely a configuration issue with a VM. Fixing the configuration should fix the issue.
 
 ---
 

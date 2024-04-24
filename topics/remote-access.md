@@ -69,11 +69,7 @@ This details how we can enable remote access into our system from other devices 
 
 3. Ensure that the `openssh` package is installed. If not, [install](yay.md#install) it using `yay`.
 
-4. Enable SSH access on our system:
-
-    ```sh
-    sudo systemctl enable --now sshd.service
-    ```
+4. Enable SSH access on our system by [starting and enabling](autostart.md#start-and-enable-service) the `sshd.service` service.
 
 5. Try accessing our system from another device (assuming our user is `deck` and its static IPv4 address is `192.168.0.25`):
 

@@ -45,11 +45,7 @@ This details how to install and set up Docker for use by `${USER}` without needi
     sudo usermod -aG docker ${USER}
     ```
 
-3. Start and enable the `docker` service:
-
-    ```sh
-    sudo systemctl enable --now docker
-    ```
+3. [Start and Enable](autostart.md#start-and-enable-service) the `docker.service` service.
 
 ### Troubleshooting
 
@@ -75,8 +71,4 @@ This details how to install and set up Docker for use by `${USER}` without needi
     }
     ```
 
-3. Restart the docker service accordingly
-
-    ```sh
-    sudo systemctl restart docker
-    ```
+3. [Restart](autostart.md#status-and-restart-service) the `docker.service` service accordingly.

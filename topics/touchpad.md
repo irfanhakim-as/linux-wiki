@@ -70,11 +70,7 @@ This details how we could configure our trackpad to behave more like it would on
 
 1. [Install](yay.md#install) the `touchegg` package using `yay`.
 
-2. Start and enable the `touchegg` service:
-
-    ```sh
-    sudo systemctl enable --now touchegg.service
-    ```
+2. [Start and Enable](autostart.md#start-and-enable-service) the `touchegg.service` service.
 
 3. Restart the system or run the `touchegg` command manually i.e. through **KRunner** for the first time.
 

@@ -32,11 +32,7 @@ This details how to enable Bluetooth on our system.
 
 ### Steps
 
-Start and enable bluetooth
-
-```sh
-sudo systemctl enable --now bluetooth
-```
+1. [Start and Enable](autostart.md#start-and-enable-service) the `bluetooth.service` service.
 
 ---
 
