@@ -270,7 +270,7 @@ This adds shortcuts that would make managing and moving application windows simi
 
 ### Description
 
-This details some customisation options for the desktop.
+This details some customisation options for the Plasma desktop.
 
 > [!NOTE]  
 > Feel free to skip parts of this section that you do not wish to implement.

@@ -307,7 +307,7 @@ This details how to add and use a colour profile with our monitor.
 
 ## [Plasma Desktop Theme Customisations](../topics/plasma-desktop.md#theme-customisations)
 
-This adds more task switchers to KDE settings, including thumbnails/thumbnails grid
+This details some customisation options for the Plasma desktop.
 
 ---
 
