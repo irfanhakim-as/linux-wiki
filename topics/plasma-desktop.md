@@ -268,12 +268,12 @@ This adds shortcuts that would make managing and moving application windows simi
 
 ## Theme Customisations
 
+> [!NOTE]  
+> Feel free to skip parts of this section that you do not wish to implement.
+
 ### Description
 
 This details some customisation options for the Plasma desktop.
-
-> [!NOTE]  
-> Feel free to skip parts of this section that you do not wish to implement.
 
 ### Floating "Dock"
 
