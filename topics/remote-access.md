@@ -118,4 +118,4 @@ This details how we can enable remote desktop into our system from other devices
 
 8.  Close the **Settings** tab and take note of your system's AnyDesk address under **Your Address**. You can now remote into your system from other devices using the AnyDesk app using this address and the password you had set.
 
-9.  Set the AnyDesk app to [autostart](../topics/autostart.md#add-application-to-autostart) each time you boot into the desktop.
+9.  Set the AnyDesk app to [autostart](autostart.md#add-application-to-autostart) each time you boot into the desktop.
