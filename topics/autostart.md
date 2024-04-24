@@ -19,6 +19,7 @@ This topic focuses on autostart applications.
     - [Description](#description-2)
     - [Start and Enable Service](#start-and-enable-service)
     - [Stop and Disable Service](#stop-and-disable-service)
+    - [Status and Restart Service](#status-and-restart-service)
   - [Silent Startup Configurations](#silent-startup-configurations)
     - [Description](#description-3)
     - [Steam](#steam)
@@ -105,6 +106,22 @@ Some applications can be set to autostart as a service, this details how to do s
     ```
 
     Again, replace `anydesk.service` with the name of the service you wish to stop or disable.
+
+### Status and Restart Service
+
+1. To check the status of the service, run:
+
+    ```sh
+    sudo systemctl status anydesk.service
+    ```
+
+2. To restart the service, run:
+
+    ```sh
+    sudo systemctl restart anydesk.service
+    ```
+
+    Replace `anydesk.service` with the name of the service you wish to check or restart.
 
 ---
 
