@@ -42,6 +42,9 @@ sudo systemctl enable --now bluetooth
 
 ## Dual-Boot Bluetooth
 
+> [!WARNING]  
+> This guide is **INCOMPLETE**!
+
 ### Description
 
 This details how to fix issues with using Bluetooth devices in a dual-boot setup.
