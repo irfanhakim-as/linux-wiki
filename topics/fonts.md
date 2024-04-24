@@ -175,8 +175,8 @@ This details several configuration options for our desktop to use better looking
 
 3. Update or create a new `fonts.conf` file in the `fontconfig` directory:
 
-    > [!IMPORTANT]
-    > Backup the existing `fonts.conf` file if any.
+    > [!IMPORTANT]  
+    > Backup the existing `fonts.conf` file as a new file i.e. `fonts.conf.bak` if any.
 
     ```sh
     nano ~/.config/fontconfig/fonts.conf
@@ -323,6 +323,9 @@ This details how to install and set up Apple macOS fonts on Linux.
 2. Set our `fonts.conf` config to use Apple fonts.
 
     Create or update the `fonts.conf` file in the `fontconfig` directory:
+
+    > [!IMPORTANT]  
+    > Backup the existing `fonts.conf` file as a new file i.e. `fonts.conf.bak` if any.
 
     ```sh
     nano ~/.config/fontconfig/fonts.conf
