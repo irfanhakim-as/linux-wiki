@@ -12,10 +12,11 @@ OBS (Open Broadcaster Software) is free and open source software for video recor
   - [References](#references)
   - [Setup](#setup)
     - [Description](#description-1)
-    - [Steps](#steps)
+    - [Installation](#installation)
+    - [Configuration](#configuration)
   - [Add a Source](#add-a-source)
     - [Description](#description-2)
-    - [Steps](#steps-1)
+    - [Steps](#steps)
   - [Capturing Steam Games](#capturing-steam-games)
     - [Description](#description-3)
     - [References](#references-1)
@@ -24,11 +25,11 @@ OBS (Open Broadcaster Software) is free and open source software for video recor
   - [Separate Audio Tracks by Application](#separate-audio-tracks-by-application)
     - [Description](#description-4)
     - [References](#references-2)
-    - [Steps](#steps-2)
+    - [Steps](#steps-1)
   - [Magewell USB Capture HDMI 4K Plus](#magewell-usb-capture-hdmi-4k-plus)
     - [Description](#description-5)
     - [References](#references-3)
-    - [Steps](#steps-3)
+    - [Steps](#steps-2)
 
 ## References
 
@@ -42,22 +43,24 @@ OBS (Open Broadcaster Software) is free and open source software for video recor
 
 This details how to install and set up OBS.
 
-### Steps
+### Installation
 
 1. [Install](flatpak.md#install) the **OBS Studio** (`com.obsproject.Studio`) app as a Flatpak.
 
-2. Launch the **OBS Studio** application.
+### Configuration
 
-3. Start and complete the initial setup wizard.
+1. Launch the **OBS Studio** application.
 
-4. Click the **Settings** button in the bottom right corner.
+2. Start and complete the initial setup wizard.
 
-5. In the **General** page, locate the **System Tray** section and configure the following:
+3. Click the **Settings** button in the bottom right corner.
+
+4. In the **General** page, locate the **System Tray** section and configure the following:
    
    - [x] Enable
    - [x] Minimize to system tray when started
 
-6. In the **Output** page, configure the following:
+5. In the **Output** page, configure the following:
 
    - **Streaming**:
      - Output Mode: `Advanced`
@@ -105,18 +108,18 @@ This details how to install and set up OBS.
      - Enable Replay Buffer: `Enabled`
      - Maximum Replay Time: `30s`
 
-7. In the **Video** page, configure the following:
+6. In the **Video** page, configure the following:
 
    - Base (Canvas) Resolution: `1920x1080` (Change to your monitor's resolution)
    - Output (Scaled) Resolution: `1920x1080` (Change to your monitor's resolution)
    - Common FPS Values: `60`
 
-8. In the **Hotkeys** page, configure the following:
+7. In the **Hotkeys** page, configure the following:
 
    - Start Replay Buffer: <kbd>Control + Shift + S</kbd>
    - Save Replay: <kbd>Home</kbd>
 
-9. In the **Advanced** page, configure the following:
+8. In the **Advanced** page, configure the following:
 
    - **Video**:
      - Color Format: `NV12`
@@ -132,7 +135,7 @@ This details how to install and set up OBS.
      - Replay Buffer Filename Prefix: `Replay`
      - Replay Buffer Filename Suffix: (Leave blank)
 
-10. Click the **Apply** button in the bottom right corner and then click **OK**.
+9.  Click the **Apply** button in the bottom right corner and then click **OK**.
 
 ---
 
