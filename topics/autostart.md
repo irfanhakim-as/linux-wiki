@@ -133,17 +133,15 @@ This details known configurations for certain applications on how to have them a
 
 ### Steam
 
-- Silent flag: `-silent`
-
 - Argument:
 
     ```sh
     -silent %U
     ```
 
-### GWE (Flatpak)
+    Silent flag: `-silent`
 
-- Silent flag: `--hide-window`
+### GWE (Flatpak)
 
 - Argument:
 
@@ -151,17 +149,13 @@ This details known configurations for certain applications on how to have them a
     run --branch=stable --arch=x86_64 --command=/app/bin/gwe --file-forwarding com.leinardi.gwe --hide-window @@u %U @@
     ```
 
+    Silent flag: `--hide-window`
+
 ### Anydesk
 
-Start and enable the `anydesk` service:
-
-```sh
-sudo systemctl enable --now anydesk
-```
+- [Start and Enable](#start-and-enable-service) the `anydesk.service` service:
 
 ### Discord (Flatpak)
-
-- Silent flag: `--start-minimized`
 
 - Argument:
 
@@ -169,9 +163,9 @@ sudo systemctl enable --now anydesk
     run --branch=stable --arch=x86_64 --command=discord com.discordapp.Discord --start-minimized
     ```
 
-### Signal (Flatpak)
+    Silent flag: `--start-minimized`
 
-- Silent flag: `--use-tray-icon` and `--start-in-tray`
+### Signal (Flatpak)
 
 - Argument:
 
@@ -179,12 +173,14 @@ sudo systemctl enable --now anydesk
     run --branch=stable --arch=x86_64 --command=signal-desktop --file-forwarding org.signal.Signal --use-tray-icon --start-in-tray @@u %U @@
     ```
 
-### Vorta (Flatpak)
+    Silent flag: `--use-tray-icon` and `--start-in-tray`
 
-- Silent flag: `--daemonize`
+### Vorta (Flatpak)
 
 - Argument:
 
     ```sh
     run com.borgbase.Vorta --daemonize
     ```
+
+    Silent flag: `--daemonize`
