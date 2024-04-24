@@ -123,12 +123,12 @@ This guide details on how use `pip` to perform several operations including inst
 
 ## Miniconda Environments
 
+> [!IMPORTANT]  
+> A portion of this guide assumes you are using the [**Fish**](fish.md) shell. If you are using a different shell, make any required adjustments accordingly.
+
 ### Description
 
 This guide details on how we could install, setup, and use Conda to create `python` environments of various `python` versions.
-
-> [!IMPORTANT]  
-> A portion of this guide assumes you are using the [**Fish**](fish.md) shell. If you are using a different shell, make any required adjustments accordingly.
 
 ### References
 

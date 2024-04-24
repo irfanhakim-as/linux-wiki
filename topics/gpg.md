@@ -62,15 +62,15 @@ This details how to generate a GPG key.
 
 ## Sign Git Commits
 
+> [!IMPORTANT]  
+> A portion of this guide assumes you are using the [**Fish**](fish.md) shell. If you are using a different shell, make any required adjustments accordingly.
+
+> [!NOTE]  
+> This guide assumes that you have already generated a GPG key. If you have not, please refer to the [Generate GPG Key](#generate-gpg-key) section.
+
 ### Description
 
 This details how we can enforce automatic signing for all our commits and tags in Git and GitHub/GitLab.
-
-> [!IMPORTANT]  
-> This guide assumes that you have already generated a GPG key. If you have not, please refer to the [Generate GPG Key](#generate-gpg-key) section.
-
-> [!IMPORTANT]  
-> A portion of this guide assumes you are using the [**Fish**](fish.md) shell. If you are using a different shell, make any required adjustments accordingly.
 
 ### References
 
