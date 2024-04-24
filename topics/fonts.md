@@ -75,19 +75,25 @@ This details several configuration options for our desktop to use better looking
 
 ### Steps
 
-1. Create a backup the original fontconfig `fonts.conf` (if any) to somewhere safe (i.e. `~/Backups`):
+1. Create the `fontconfig` directory if it's not available already:
 
     ```sh
-    cp ~/.config/fontconfig/fonts.conf ~/Backups/fonts.conf.bak
+    mkdir -p ~/.config/fontconfig
     ```
 
-2. Create a new `fonts.conf` file:
+2. Create a backup of the original fonts config, `fonts.conf` (if any):
+
+    ```sh
+    cp ~/.config/fontconfig/fonts.conf ~/.config/fontconfig/fonts.conf.bak
+    ```
+
+3. Create a new `fonts.conf` file:
 
     ```sh
     nano ~/.config/fontconfig/fonts.conf
     ```
 
-    The content of the new `fonts.conf` file:
+    Add the following content to the new `fonts.conf` file:
 
     ```conf
     <?xml version='1.0'?>
@@ -129,7 +135,7 @@ This details several configuration options for our desktop to use better looking
     </fontconfig>
     ```
 
-3. Edit the fonts used in the **System Settings** app under **Appearance** > **Fonts**:
+4. Edit the fonts used in the **System Settings** app under **Appearance** > **Fonts**:
 
     - General: `SF Pro Text 12pt`
     - Fixed width: `SF Mono Powerline 12pt`
@@ -138,9 +144,9 @@ This details several configuration options for our desktop to use better looking
     - Menu: `SF Pro Display 12pt`
     - Window title: `SF Pro Display 12pt`
 
-    You may adjust the font sizes to your liking.
+    You may adjust the font choices and sizes to your liking.
 
-4. Restart your system for the changes to take effect.
+5. Restart your system for the changes to take effect.
 
 ---
 
