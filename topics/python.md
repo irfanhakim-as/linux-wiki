@@ -127,8 +127,8 @@ This guide details on how use `pip` to perform several operations including inst
 
 This guide details on how we could install, setup, and use Conda to create `python` environments of various `python` versions.
 
-> [!NOTE]  
-> Parts of this guide assumes that you are using the `fish` shell.
+> [!IMPORTANT]  
+> A portion of this guide assumes you are using the [**Fish**](fish.md) shell. If you are using a different shell, make any required adjustments accordingly.
 
 ### References
 

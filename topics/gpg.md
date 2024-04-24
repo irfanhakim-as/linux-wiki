@@ -69,8 +69,8 @@ This details how we can enforce automatic signing for all our commits and tags i
 > [!IMPORTANT]  
 > This guide assumes that you have already generated a GPG key. If you have not, please refer to the [Generate GPG Key](#generate-gpg-key) section.
 
-> [!NOTE]
-> Part of this guide assumes that you are using `fish` as your default shell.
+> [!IMPORTANT]  
+> A portion of this guide assumes you are using the [**Fish**](fish.md) shell. If you are using a different shell, make any required adjustments accordingly.
 
 ### References
 

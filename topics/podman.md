@@ -74,7 +74,7 @@ This details the installation and setup of Podman on Linux and macOS as an alter
 ### macOS
 
 > [!IMPORTANT]  
-> A small portion of this guide assumes you are using the Fish shell. If you are using a different shell, adjust the commands accordingly.
+> A portion of this guide assumes you are using the [**Fish**](fish.md) shell. If you are using a different shell, make any required adjustments accordingly.
 
 1. Install `podman` using Homebrew:
 
