@@ -23,15 +23,12 @@ A graphics tablet (also known as a digitiser, digital graphic tablet, pen tablet
 
 ## XP-Pen
 
+> [!NOTE]  
+> This guide was written based on tests done using an XP-Pen Star G640 drawing tablet on an Arch Linux based desktop running on the X11 graphics platform.
+
 ### Description
 
 This briefs how to set up an XP-Pen drawing tablet on Linux and addresses an issue with using it on a multi-monitor setup.
-
-> [!IMPORTANT]  
-> This guide is intended for Arch Linux based distributions.
-
-> [!NOTE]  
-> This guide was written based on tests done using an XP-Pen Star G640 drawing tablet on an Arch Linux based desktop on X11.
 
 ### References
 
