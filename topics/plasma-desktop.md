@@ -42,11 +42,12 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
       - [Troubleshooting](#troubleshooting)
   - [Default Applications](#default-applications)
     - [Description](#description-4)
-    - [Steps](#steps-1)
+    - [Application Types](#application-types)
+    - [File Types](#file-types)
   - [Auto Login](#auto-login)
     - [Description](#description-5)
     - [References](#references-1)
-    - [Steps](#steps-2)
+    - [Steps](#steps-1)
 
 ---
 
@@ -614,7 +615,9 @@ Fix the KDE Thermal Monitor issue requiring "Reload Temperature Sources" when `p
 
 This details on how to configure default applications of various types on KDE Plasma.
 
-### Steps
+### Application Types
+
+This section details how to configure the default application for certain types of applications.
 
 1. Open the **System Settings** app.
 
@@ -634,6 +637,26 @@ This details on how to configure default applications of various types on KDE Pl
 5. To configure the default application for a certain type, click its corresponding dropdown and select the application you wish to use accordingly.
 
 6. Click the **Apply** button to save your changes.
+
+### File Types
+
+This section details how to configure the default application to open certain file types.
+
+1. Launch the **Dolphin** file manager.
+
+2. Select and right click a file of the type you wish to configure i.e. a `.mkv` file.
+
+3. From the context menu, hover over the **Open With** option, and select the **Other Application...** option.
+
+4. Search and locate the application you wish to use to open the file type i.e. `VLC media player`.
+
+5. Select the application and check the **Remember application association for all files of type "`X`"** box.
+
+    `X` here represents the file type you are configuring i.e. `Matroska Video` for `.mkv` files.
+
+6. Click the **OK** button.
+
+    Now, all files of the type you configured will open with the selected application.
 
 ---
 
