@@ -380,8 +380,10 @@ This details on how to enable, setup and use Wake on LAN (WoL) or Wake on Wirele
 
 ### References
 
-- [Wake on LAN](../topics/wol.md)
-- [Wake on Wireless](../topics/wowlan.md)
+- [Enable Wake on LAN](../topics/wol.md#enable-wake-on-lan)
+- [Trigger a Wake on LAN](../topics/wol.md#trigger-a-wake-on-lan)
+- [Enable Wake on Wireless](../topics/wowlan.md#enable-wake-on-wireless)
+- [Trigger a Wake on Wireless](../topics/wowlan.md#trigger-a-wake-on-wireless)
 
 ---
 
