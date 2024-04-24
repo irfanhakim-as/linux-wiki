@@ -17,12 +17,12 @@ This details configuration options pertaining display.
 
 ## Add Colour Profile
 
+> [!IMPORTANT]  
+> This guide assumes that you are using KDE Plasma as your desktop environment.
+
 ### Description
 
 This details how to add and use a colour profile with our monitor.
-
-> [!IMPORTANT]  
-> This guide assumes that you are using KDE Plasma as your desktop environment.
 
 ### Steps
 
