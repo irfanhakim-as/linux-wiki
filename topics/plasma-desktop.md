@@ -52,12 +52,12 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
 
 ## Quality of Life Improvements
 
+> [!NOTE]  
+> Feel free to skip parts of this section that you do not wish to implement.
+
 ### Description
 
 This details on some things that could be done to improve the experience of using the desktop.
-
-> [!NOTE]  
-> Feel free to skip parts of this section that you do not wish to implement.
 
 ### Workspace Behaviour
 
