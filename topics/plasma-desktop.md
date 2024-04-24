@@ -1,5 +1,8 @@
 # Plasma Desktop
 
+> [!NOTE]  
+> This topic mostly or entirely pertains to KDE Plasma version `5.27` and has not been updated for newer versions.
+
 ## Description
 
 This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE.
