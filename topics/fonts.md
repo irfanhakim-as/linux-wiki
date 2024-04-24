@@ -152,12 +152,12 @@ This details several configuration options for our desktop to use better looking
 
 ## Emoji Support
 
+> [!IMPORTANT]  
+> This guide is redundant and **NOT** needed if you have completed the [Installation](#installation) and [Configuration](#configuration) sections.
+
 ### Description
 
 This details several configuration options for our desktop to use better looking fonts we have installed.
-
-> [!IMPORTANT]
-> This guide is redundant and **NOT** needed if you have completed the [Installation](#installation) and [Configuration](#configuration) sections.
 
 ### Steps
 
@@ -266,12 +266,12 @@ This details several configuration options for our desktop to use better looking
 
 ## Microsoft Fonts Support
 
+> [!IMPORTANT]  
+> This guide is redundant and **NOT** needed if you have completed the [Installation](#installation) and [Configuration](#configuration) sections.
+
 ### Description
 
 This details how to install and set up Microsoft Windows fonts on Linux.
-
-> [!IMPORTANT]
-> This guide is redundant and **NOT** needed if you have completed the [Installation](#installation) and [Configuration](#configuration) sections.
 
 ### Steps
 
@@ -280,6 +280,9 @@ This details how to install and set up Microsoft Windows fonts on Linux.
 2. Fix anti-aliasing issue with the Calibri font (looks pixelated by default).
 
     Create or update the `fonts.conf` file in the `fontconfig` directory:
+
+    > [!IMPORTANT]  
+    > Backup the existing `fonts.conf` file as a new file i.e. `fonts.conf.bak` if any.
 
     ```sh
     nano ~/.config/fontconfig/fonts.conf
@@ -301,12 +304,12 @@ This details how to install and set up Microsoft Windows fonts on Linux.
 
 ## Apple Fonts Support
 
+> [!IMPORTANT]  
+> This guide is redundant and **NOT** needed if you have completed the [Installation](#installation) and [Configuration](#configuration) sections.
+
 ### Description
 
 This details how to install and set up Apple macOS fonts on Linux.
-
-> [!IMPORTANT]
-> This guide is redundant and **NOT** needed if you have completed the [Installation](#installation) and [Configuration](#configuration) sections.
 
 ### References
 
