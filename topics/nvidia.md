@@ -45,6 +45,8 @@ This details setting up GreenWithEnvy, a system utility for controlling NVIDIA G
         run --branch=stable --arch=x86_64 --command=/app/bin/gwe --file-forwarding com.leinardi.gwe --hide-window @@u %U @@
         ```
 
+        The `--hide-window` flag hides the main window on startup.
+
 3. Configure a custom fan profile:
 
     - In the **Fan profile** section, expand the dropdown (currently defaults to **Auto**) and select **Custom**.
