@@ -33,7 +33,9 @@ This installs and sets up Alacritty as the default terminal.
 
 1. [Install](yay.md#install) `alacritty`, `tmux`, and `wmctrl` using `yay`.
 
-2. Set a custom shortcut to launch Alacritty:
+2. Set Alacritty as the [default Terminal emulator](plasma-desktop.md#application-types).
+
+3. Set a custom shortcut to launch Alacritty:
 
     > [!IMPORTANT]  
     > This step may not work or be applicable if you are using `Wayland` instead of `X11` as your graphics platform.
