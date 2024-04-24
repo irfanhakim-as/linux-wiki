@@ -1,6 +1,6 @@
 # Back In Time
 
-> [!IMPORTANT]  
+> [!WARNING]  
 > This guide is **INCOMPLETE** and this software is not necessarily endorsed!
 
 ## Description
