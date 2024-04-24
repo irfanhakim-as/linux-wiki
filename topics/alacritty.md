@@ -35,6 +35,9 @@ This installs and sets up Alacritty as the default terminal.
 
 2. Set a custom shortcut to launch Alacritty:
 
+    > [!IMPORTANT]  
+    > This step may not work or be applicable if you are using `Wayland` instead of `X11` as your graphics platform.
+
     - Open the **System Settings** app.
 
     - Click **Shortcuts**.
