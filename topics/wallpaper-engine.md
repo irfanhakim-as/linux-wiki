@@ -1,11 +1,11 @@
 # Wallpaper Engine
 
+> [!IMPORTANT]  
+> This guide requires KDE Plasma as the desktop environment.
+
 ## Description
 
 Wallpaper Engine is an application for Windows with a companion app on Android which allows users to use and create animated and interactive wallpapers.
-
-> [!IMPORTANT]  
-> This guide requires KDE Plasma as the desktop environment.
 
 ## Directory
 
