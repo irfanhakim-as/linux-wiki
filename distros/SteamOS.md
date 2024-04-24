@@ -28,9 +28,11 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 	- [EmuDeck](#emudeck)
 	- [Custom Game Emulation Configurations](#custom-game-emulation-configurations)
 	- [Custom Emulator Configurations](#custom-emulator-configurations)
+	- [Mounting Remote Directory](#mounting-remote-directory)
+		- [Notes](#notes-1)
 	- [Backing up with Vorta](#backing-up-with-vorta)
 		- [References](#references-4)
-		- [Notes](#notes-1)
+		- [Notes](#notes-2)
 	- [Add Non-Steam Services](#add-non-steam-services)
 	- [Applying Translation Patches to ROMs](#applying-translation-patches-to-roms)
 	- [Fixing DRM issues with Google Chrome](#fixing-drm-issues-with-google-chrome)
@@ -183,6 +185,16 @@ This details on certain configuration options or fixes for several games of vari
 ## [Custom Emulator Configurations](../topics/emulation.md#custom-emulator-configurations)
 
 This details on certain configuration options for several emulators.
+
+---
+
+## [Mounting Remote Directory](../topics/samba.md#mounting-remote-directory)
+
+This details how to mount a remote directory to our local machine using Samba.
+
+### Notes
+
+- It's _potentially_ recommended to use a path within our user directory as the mounting point for the remote directory to avoid potential issues with the system's immutability. If you still wish to mount it outside of the user directory, be sure to only mount it from within `/mnt`.
 
 ---
 

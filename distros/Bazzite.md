@@ -30,6 +30,7 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
 	- [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
 	- [Plasma Desktop Theme Customisations](#plasma-desktop-theme-customisations)
 	- [Mounting Remote Directory](#mounting-remote-directory)
+		- [Notes](#notes-1)
 	- [Remote Access](#remote-access)
 	- [EmuDeck](#emudeck)
 	- [Custom Emulator Configurations](#custom-emulator-configurations)
@@ -40,7 +41,7 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
 	- [Make Flatpak Apps Respect KDE Theme](#make-flatpak-apps-respect-kde-theme)
 	- [Backing up with Vorta](#backing-up-with-vorta)
 		- [References](#references-6)
-		- [Notes](#notes-1)
+		- [Notes](#notes-2)
 
 ## References
 
@@ -196,12 +197,13 @@ This details some customisation options for the Plasma desktop.
 
 ---
 
-## [Mounting Remote Directory](../topics/mounting-remote-dir.md)
+## [Mounting Remote Directory](../topics/samba.md#mounting-remote-directory)
 
-This details on how we can mount a remote directory, should we want to.
+This details how to mount a remote directory to our local machine using Samba.
 
-> [!NOTE]  
-> It's recommended to replace the mounting point in the referenced guide with a directory in our home folder (i.e. `/home/deck/mynas`) to avoid potential issues with Bazzite's immutability.
+### Notes
+
+- It's _potentially_ recommended to use a path within our user directory as the mounting point for the remote directory to avoid potential issues with the system's immutability. If you still wish to mount it outside of the user directory, be sure to only mount it from within `/mnt`.
 
 ---
 

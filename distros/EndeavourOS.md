@@ -68,6 +68,7 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [Discover Torrents using qBittorrent](#discover-torrents-using-qbittorrent)
 	- [Cloning a Disk](#cloning-a-disk)
 	- [Mounting a Secondary Internal Disk](#mounting-a-secondary-internal-disk)
+	- [Mounting Remote Directory](#mounting-remote-directory)
 	- [Fix Kwallet Error in Visual Studio Code](#fix-kwallet-error-in-visual-studio-code)
 	- [Miniconda Environments](#miniconda-environments)
 	- [XP-Pen](#xp-pen)
@@ -513,6 +514,12 @@ This guide details on how we could clone a disk using KDE Partition Manager.
 ## [Mounting a Secondary Internal Disk](../topics/partitionmanager.md#mounting-a-secondary-internal-disk)
 
 This details how we could add a secondary internal drive to our computer.
+
+---
+
+## [Mounting Remote Directory](../topics/samba.md#mounting-remote-directory)
+
+This details how to mount a remote directory to our local machine using Samba.
 
 ---
 
