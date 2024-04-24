@@ -1,16 +1,23 @@
-# Mounting Remote Directory
+# Samba
 
 ## Description
 
-This details on how we can mount a remote directory using Samba.
+Samba is a free software re-implementation of the SMB networking protocol, and was originally developed by Andrew Tridgell.
 
 ## Directory
 
-- [Mounting Remote Directory](#mounting-remote-directory)
+- [Samba](#samba)
   - [Description](#description)
   - [Directory](#directory)
   - [References](#references)
-  - [Steps](#steps)
+  - [Mounting Remote Directory](#mounting-remote-directory)
+    - [Description](#description-1)
+    - [References](#references-1)
+    - [Steps](#steps)
+  - [Unmounting a Mounted Directory](#unmounting-a-mounted-directory)
+    - [Description](#description-2)
+    - [References](#references-2)
+    - [Steps](#steps-1)
 
 ## References
 
@@ -18,7 +25,17 @@ This details on how we can mount a remote directory using Samba.
 
 ---
 
-## Steps
+## Mounting Remote Directory
+
+### Description
+
+This details how to mount a remote directory to our local machine using Samba.
+
+### References
+
+- [Automatic mounting: As mount entry](https://wiki.archlinux.org/title/samba#As_mount_entry)
+
+### Steps
 
 1. Ensure that all necessary packages are [installed](yay.md#install), including `cifs-utils`, `samba`, and `smbclient`.
 
@@ -77,7 +94,7 @@ This details on how we can mount a remote directory using Samba.
 
     ```sh
     # example.org
-    //mynas/mydir                      /mnt/mynas    cifs    _netdev,nofail,mfsymlinks,credentials=/home/deck/.config/smb/.smbcreds,vers=3.0,uid=1000,gid=1000,iocharset=utf8   0 0
+    //mynas/mydir    /mnt/mynas    cifs    _netdev,nofail,mfsymlinks,credentials=/home/deck/.config/smb/.smbcreds,vers=3.0,uid=1000,gid=1000,iocharset=utf8    0 0
     ```
 
     > [!IMPORTANT]  
@@ -94,3 +111,49 @@ This details on how we can mount a remote directory using Samba.
     ```sh
     sudo mount /mnt/mynas
     ```
+
+---
+
+## Unmounting a Mounted Directory
+
+### Description
+
+This details how to mount a remote directory to our local machine using Samba.
+
+### References
+
+- [Automatic mounting: As mount entry](https://wiki.archlinux.org/title/samba#As_mount_entry)
+
+### Steps
+
+1. Unmount the remote directory from our local machine:
+
+    ```sh
+    sudo umount /mnt/mynas
+    ```
+
+    > [!IMPORTANT]  
+    > This example assumes that the remote directory is mounted at `/mnt/mynas`. Update the path accordingly.
+
+    If you receive an error message such as the target being busy, you can use the following command to force the unmount:
+
+    ```sh
+    sudo umount -l /mnt/mynas
+    ```
+
+    The `-l` flag stands for `lazy` and will force the detachment of the mount point.
+
+2. If the previously mounted directory has been added as a mount entry in the `/etc/fstab` file, you can remove it by editing the file:
+
+    ```sh
+    sudo nano /etc/fstab
+    ```
+
+    Remove the line that corresponds to the mount point you wish to remove by deleting or commenting it out. For example:
+
+    ```sh
+    # example.org
+    # //mynas/mydir    /mnt/mynas    cifs    _netdev,nofail,mfsymlinks,credentials=/home/deck/.config/smb/.smbcreds,vers=3.0,uid=1000,gid=1000,iocharset=utf8    0 0
+    ```
+
+    Save the file and exit the editor. This will prevent the mount point from being automatically mounted from the next boot.
