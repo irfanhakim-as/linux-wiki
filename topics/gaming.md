@@ -124,7 +124,7 @@ A few games however, *seems* to perform worse with GameMode, if that is the case
     ```
 
     > [!NOTE]  
-    > Adding `VKD3D_CONFIG=no_upload_hvv` may/not improve game performance on NVIDIA GPUs.
+    > Adding `VKD3D_CONFIG=no_upload_hvv` may or may not improve gaming performance on NVIDIA GPUs.
 
 - Fix controller issues with these steps in the **Steam** app:
 
