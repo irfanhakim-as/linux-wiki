@@ -173,7 +173,7 @@ This details several configuration options for our desktop to use better looking
     mkdir -p ~/.config/fontconfig
     ```
 
-3. Update or create a new `fonts.conf` file in the `fontconfig` directory.
+3. Update or create a new `fonts.conf` file in the `fontconfig` directory:
 
     > [!IMPORTANT]
     > Backup the existing `fonts.conf` file if any.
@@ -218,7 +218,7 @@ This details several configuration options for our desktop to use better looking
     </fontconfig>
     ```
 
-    Alternatively, this is a sample `fonts.conf` configuration for Apple emoji:
+    Alternatively, this is a sample `fonts.conf` configuration for Apple emoji instead:
 
     ```conf
     <?xml version='1.0'?>
