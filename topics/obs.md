@@ -39,6 +39,9 @@ OBS (Open Broadcaster Software) is free and open source software for video recor
 
 ## Setup
 
+> [!IMPORTANT]  
+> A portion of this guide assumes that you are using an NVIDIA GPU. If this is not the case, make any required adjustments accordingly.
+
 ### Description
 
 This details how to install and set up OBS.
