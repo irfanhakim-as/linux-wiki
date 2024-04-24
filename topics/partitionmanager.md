@@ -152,11 +152,7 @@ This guide details on how we could clone a disk using KDE Partition Manager.
       sudo cp /boot/grub/grub.cfg /boot/grub/grub.cfg.bak
       ```
 
-   - Now we can generate a new GRUB config to override the old, outdated one:
-
-      ```sh
-      sudo grub-mkconfig -o /boot/grub/grub.cfg
-      ```
+   - Now we can [regenerate a new GRUB config](grub.md#generate-grub-config) to override the old, outdated one.
 
    - Restart your PC to confirm that the new GRUB config works, and your brand new drive and cloned desktop should be all set.
 

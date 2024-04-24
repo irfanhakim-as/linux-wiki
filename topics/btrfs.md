@@ -62,11 +62,7 @@ Timeshift for Linux is an application that provides functionality similar to the
 
 6. [Start and Enable](autostart.md#start-and-enable-service) the system's `cron` service (i.e. `cronie.service`) so that scheduled backups work.
 
-7. Regenerate our Grub config so that `grub-btrfs` works as intended:
-
-    ```sh
-    sudo grub-mkconfig -o /boot/grub/grub.cfg
-    ```
+7. [Regenerate a new GRUB config](grub.md#generate-grub-config) so that `grub-btrfs` works as intended.
 
 ### Notes
 
