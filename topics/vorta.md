@@ -1,5 +1,8 @@
 # Vorta
 
+> [!NOTE]  
+> This topic mostly or entirely pertains to Vorta version `0.9` and may not have been updated for newer versions.
+
 ## Description
 
 Vorta is a backup client for macOS and Linux desktops. It integrates the mighty BorgBackup with your desktop environment to protect your data from disk failure, ransomware and theft.
@@ -10,13 +13,11 @@ Vorta is a backup client for macOS and Linux desktops. It integrates the mighty 
   - [Description](#description)
   - [Directory](#directory)
   - [References](#references)
-  - [Installation](#installation)
+  - [Setup](#setup)
     - [Description](#description-1)
     - [References](#references-1)
-    - [Steps](#steps)
-  - [Setup](#setup)
-    - [Description](#description-2)
-    - [Steps](#steps-1)
+    - [Installation](#installation)
+    - [Configuration](#configuration)
 
 ## References
 
@@ -24,90 +25,142 @@ Vorta is a backup client for macOS and Linux desktops. It integrates the mighty 
 
 ---
 
-## Installation
+## Setup
 
 ### Description
 
-This installs Vorta as a Flatpak.
+This details installing and setting up Vorta to have it backup our personal files.
 
 ### References
 
 - [Flathub - Vorta](https://flathub.org/apps/com.borgbase.Vorta)
 
-### Steps
+### Installation
 
 1. [Install](flatpak.md#install) the **Vorta** (`com.borgbase.Vorta`) app as a Flatpak.
 
----
+### Configuration
 
-## Setup
+1. Launch the **Vorta** app.
 
-### Description
+2. Set the repository to store our backups.
 
-This sets up Vorta to its ideal configurations.
+    - Click on the **Repository** tab.
 
-### Steps
+    - Click the **+** button and select the **New Repository...** option.
 
-1. Set the **Repository**. In this example we'll use a Samba Share mountpoint as the Vorta repository, but this can also be set to any directory on any drives in your system:
+    - In the **Add New Repository** window:
 
-    ```
-    /mnt/mynas/System/Backups/Snapshots/mycomputer
-    ```
+      - Fill in the following fields in the **General** tab:
 
-2. Set backup **Source Folders and Files** to our home directory:
+        - **Repository URL**: Add in the full path to where you wish to store your backups.
+        - **Repository Name**: Add a descriptive name for the repository.
+        - **Enter passphrase**: Add a secure passphrase to encrypt the repository.
+        - **Confirm passphrase**: Confirm the passphrase provided.
 
-    ```
-    /home/${USER}
-    ```
+      - In the **Advanced** tab:
 
-    Replace `${USER}` with your actual username.
+        - **SSH Key**: Select an SSH key if you require using SSH to access the repository.
+        - **Encryption**: Leave as default.
+        - **Extra Borg Arguments**: Leave as default.
 
-3. Set **Exclude Patterns**:
+      - Click the **Add** button to finish adding the repository.
 
-    ```
-    *[Cc]ache*/*
-    *[Cc]aches*/*
-    */.thumbnails/*
-    */.local/share/[Tt]rash*
-    *.backup*
-    *~
-    *.dropbox*
-    /proc/*
-    /sys/*
-    /dev/*
-    /run/*
-    /etc/mtab
-    /var/cache/*
-    */lost+found/*
-    /tmp/*
-    /var/tmp/*
-    /var/backups/*
-    .Private
-    ```
+3. Set our source folders and files to backup.
 
-    Add any additional directories or files you wish to exclude from the backup (i.e. `~/Videos/Handbrake/*`).
+    - Click on the **Sources** tab.
 
-4. Set **Exclude if Present**:
+    - Click the **+** button and select the **Files** or **Folders** option.
 
-    ```
-    .nobackup
-    ```
+    - Use the file browser portal to navigate and select the files or folders you wish to backup.
 
-5. Configure **Schedule**:
+        > [!TIP]  
+        > For the best protection, add your home directory as the sole source to have all your personal files backed up.
 
-    ```
-    ✅ Backup periodically every 3 hours
-    ✅ Run missed backups on startup or wakeup
-    ✅ Prune after each backup
-    ✅ Validate repo data on a 2-week interval
-    ```
+    - Click the **Open** or **OK** button each time you have selected a file or folder to add them to the backup list.
 
-6. Leave **Archives/Prune** options as default.
+4. Manage things to exclude from the backup.
 
-7. Leave **Misc** by default except these:
+    - In the same **Sources** tab, click the **Manage Excluded Items...** button.
 
-    ```
-    ✅ Notify about successful background tasks
-    ✅ Automatically start Vorta at login
-    ❎ Open main window on startup
-    ```
+    - In the **Add patterns to exclude** window, click the **Raw** tab.
+
+    - In the provided field, paste the following patterns to exclude:
+
+        ```sh
+        *[Cc]ache*/*
+        *[Cc]aches*/*
+        */.thumbnails/*
+        */.local/share/[Tt]rash*
+        *.backup*
+        *~
+        *.dropbox*
+        /proc/*
+        /sys/*
+        /dev/*
+        /run/*
+        /etc/mtab
+        /var/cache/*
+        */lost+found/*
+        /tmp/*
+        /var/tmp/*
+        /var/backups/*
+        .Private
+        ```
+
+        You may also add any other patterns or paths you wish to exclude from the backup to this list, one per line.
+
+    - Click the **Close** button to finalise the exclusion list.
+
+5. Set the backup schedule.
+
+    - Click on the **Schedule** tab.
+
+    - Expand the **Schedule** section and configure the following:
+
+        - **Backup schedule**:
+
+          - Manual only: `Unchecked`.
+          - Backup periodically: `Checked`.
+            - Interval: `3 Hours`.
+          - Backup daily: `Unchecked`.
+            - Time: `Empty`.
+
+        - **Autopruning**:
+
+          - Prune after each backup: `Checked`.
+
+        - **Validation**:
+
+          - Validate repository data: `Checked`.
+            - Interval: `2 Weeks`.
+
+        - **Missed backups**:
+
+          - Run missed backups on startup or wakeup: `Checked`.
+
+6. Configure the rest of the application settings.
+
+    - Click on the **Settings/About** button.
+
+    - Navigate to the **Settings** tab and configure the following:
+
+      - **Information**:
+
+        - Get statistics of file/folder when added: `Checked`.
+        - Use the same unit of measurement for archive sizes: `Unchecked`.
+
+      - **Notifications**:
+
+        - Display notifications when background tasks fail: `Checked`.
+        - Notify about successful background tasks: `Checked`.
+
+      - **Security**:
+
+        - Store repository passwords in system keychain, if available: `Checked`.
+        - Try to replace file permissions when mounting an archive: `Unchecked`.
+
+      - **Startup**:
+
+        - Automatically start Vorta at login: `Checked`.
+        - Show main window of Vorta on launch: `Unchecked`.
