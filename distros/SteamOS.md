@@ -49,6 +49,7 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
 	- [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
 	- [Make Flatpak Apps Respect KDE Theme](#make-flatpak-apps-respect-kde-theme)
 	- [Link's Awakening DX HD](#links-awakening-dx-hd)
+	- [KDE Connect](#kde-connect)
 
 ## References
 
@@ -342,3 +343,9 @@ This solves the issue of (some) Flatpak apps not looking native in KDE, and defa
 ## [Link's Awakening DX HD](../topics/gaming.md#links-awakening-dx-hd)
 
 This details how to install and run the Link's Awakening DX HD _port_.
+
+---
+
+## [KDE Connect](../topics/kde-connect.md#setup)
+
+This details installing and setting up KDE Connect on your system as a means to share files and other data wirelessly between devices on the same network.

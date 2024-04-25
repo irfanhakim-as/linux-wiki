@@ -42,6 +42,7 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
 	- [Backing up with Vorta](#backing-up-with-vorta)
 		- [References](#references-6)
 		- [Notes](#notes-2)
+	- [KDE Connect](#kde-connect)
 
 ## References
 
@@ -302,3 +303,9 @@ This details installing and setting up Vorta to have it backup our personal file
 	```
 
 	This backs up some personal files and game-related files, including game saves and emulator configurations. Make necessary adjustments to the list based on your needs.
+
+---
+
+## [KDE Connect](../topics/kde-connect.md#setup)
+
+This details installing and setting up KDE Connect on your system as a means to share files and other data wirelessly between devices on the same network.

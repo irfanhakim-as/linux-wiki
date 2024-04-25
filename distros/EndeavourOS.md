@@ -75,6 +75,7 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 	- [OBS Studio](#obs-studio)
 		- [References](#references-11)
 	- [Magewell Capture Device on OBS](#magewell-capture-device-on-obs)
+	- [KDE Connect](#kde-connect)
 
 ## References
 
@@ -556,3 +557,9 @@ This details how to install and set up OBS Studio for recording of all purposes 
 ## [Magewell Capture Device on OBS](../topics/obs.md#magewell-usb-capture-hdmi-4k-plus)
 
 This details the recommended configuration for the Magewell USB Capture HDMI 4K Plus on OBS.
+
+---
+
+## [KDE Connect](../topics/kde-connect.md#setup)
+
+This details installing and setting up KDE Connect on your system as a means to share files and other data wirelessly between devices on the same network.
