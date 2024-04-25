@@ -543,7 +543,7 @@ This briefs how to set up an XP-Pen drawing tablet on Linux and addresses an iss
 
 ## OBS Studio
 
-This details how to set up and configure OBS Studio for recording of all purposes including gaming and have separate audio tracks for each application.
+This details how to install and set up OBS Studio for recording of all purposes including gaming and have separate audio tracks for each application.
 
 ### References
 
