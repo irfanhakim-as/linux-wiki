@@ -44,7 +44,7 @@ This details how to set SearXNG as the default search engine on Firefox.
 
 5. Expand the **HTTP Method** dropdown and select `GET`.
 
-    > [!TIP]  
+    > [!INFO]  
     > Using **GET** requests is recommended to fix `Document Expired` errors when going back to results.
 
 6. Click the **Save** button to save your changes.
