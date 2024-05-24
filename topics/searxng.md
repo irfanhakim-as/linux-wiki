@@ -51,6 +51,9 @@ This details how to set SearXNG as the default search engine on Firefox.
 
 7. Back on the instance's page, right click the address bar and select the **Add "SearXNG"** context menu option.
 
+    > [!TIP]  
+    > In this or any of the following steps, the **SearXNG** name may be different depending on the name of the instance.
+
 8. Navigate to Firefox's **Settings** page by pressing <kbd>Ctrl + ,</kbd> on a PC or <kbd>Cmd + ,</kbd> on a Mac.
 
 9. Type in `Search Engine` in the Settings' **Find in Settings** search bar.
