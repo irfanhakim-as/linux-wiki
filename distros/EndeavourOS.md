@@ -76,6 +76,8 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
 		- [References](#references-11)
 	- [Magewell Capture Device on OBS](#magewell-capture-device-on-obs)
 	- [KDE Connect](#kde-connect)
+	- [SearXNG](#searxng)
+		- [References](#references-12)
 
 ## References
 
@@ -563,3 +565,13 @@ This details the recommended configuration for the Magewell USB Capture HDMI 4K 
 ## [KDE Connect](../topics/kde-connect.md#setup)
 
 This details installing and setting up KDE Connect on your system as a means to share files and other data wirelessly between devices on the same network.
+
+---
+
+## SearXNG
+
+This details how to set SearXNG as the default search engine on Firefox.
+
+### References
+
+- [Set as Default Engine on Firefox](../topics/searxng.md#set-as-default-engine-on-firefox)
