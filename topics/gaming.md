@@ -166,12 +166,12 @@ A few games however, *seems* to perform worse with GameMode, if that is the case
 
 ## Link's Awakening DX HD
 
+> [!NOTE]  
+> Parts of this guide assumes that you are using the KDE Plasma desktop environment.
+
 ### Description
 
 This details how to install and run the Link's Awakening DX HD _port_.
-
-> [!NOTE]  
-> Parts of this guide assumes that you are using the KDE Plasma desktop environment.
 
 ### References
 
