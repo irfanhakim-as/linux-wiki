@@ -79,6 +79,7 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
   - [SearXNG](#searxng)
     - [References](#references-12)
   - [Link's Awakening DX HD](#links-awakening-dx-hd)
+  - [Ocarina of Time](#ocarina-of-time)
 
 ## References
 
@@ -582,3 +583,9 @@ This details how to set SearXNG as the default search engine on Firefox.
 ## [Link's Awakening DX HD](../topics/gaming.md#links-awakening-dx-hd)
 
 This details how to install and run the Link's Awakening DX HD _port_.
+
+---
+
+## [Ocarina of Time](../topics/gaming.md#ocarina-of-time)
+
+This details how to install and run the Ocarina of Time PC _port_, Ship of Harkinian.
