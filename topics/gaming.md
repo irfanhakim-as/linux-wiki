@@ -24,6 +24,10 @@ This details all matters pertaining PC gaming.
     - [Description](#description-3)
     - [References](#references-2)
     - [Steps](#steps-1)
+  - [Ocarina of Time](#ocarina-of-time)
+    - [Description](#description-4)
+    - [References](#references-3)
+    - [Steps](#steps-2)
 
 ---
 
@@ -256,6 +260,109 @@ This details how to install and run the Link's Awakening DX HD _port_.
 21. When prompted to install the `.NET` **Windows Desktop Runtime**, click the **Install** button.
 
 22. Once the installation is done, you may delete the downloaded `.NET` installer file and launch the game from Steam.
+
+    > [!NOTE]  
+    > You may also make optional aesthetic changes to the game on Steam such as adding custom artwork (i.e. using [SteamGridDB](./decky-loader.md#plugin-installation) on a SteamOS based distro).
+
+## Ocarina of Time
+
+> [!NOTE]  
+> Parts of this guide assumes that you are using the KDE Plasma desktop environment.
+
+> [!IMPORTANT]  
+> You will need the original ROM file to run the game, source them legally prior to following this guide.
+
+### Description
+
+This details how to install and run the Ocarina of Time PC _port_, Ship of Harkinian.
+
+### References
+
+- [Ship of Harkinian](https://www.shipofharkinian.com)
+- [Shipwright](https://github.com/HarbourMasters/Shipwright)
+- [How to Set Up Zelda: Ocarina of Time PC Port on Steam Deck](https://steamdeckhq.com/tips-and-guides/how-to-set-up-zelda-ocarina-of-time-pc-port-on-steam-deck)
+
+### Steps
+
+1. Visit the Ship of Harkinian latest [releases](https://github.com/HarbourMasters/Shipwright/releases/latest) page on a web browser.
+
+2. Click and download the **SoH-MacReady-Foxtrot-Linux-Performance.zip** file from the list of **Assets**.
+
+3. Unzip the downloaded file:
+
+   - Launch the **Dolphin** application.
+
+   - Navigate to where the game's zip file was downloaded to i.e. the **Downloads** directory.
+
+   - Select and right click the zip file.
+
+   - Hover over the **Extract** section, and select the **Extract archive here, autodetect subfolder** option.
+
+4. Delete the zip file as it is no longer needed.
+
+5. Move the extracted game folder (i.e. **SoH-MacReady-Foxtrot-Linux-Performance**) to a suitable directory (i.e. `~/Games`).
+
+    Create the destination directory beforehand if it does not yet exist:
+
+    ```sh
+    mkdir -p ~/Games
+    ```
+
+6. Copy your legally obtained copy of the original **Ocarina of Time** ROM file (in a compatible format i.e. `.z64`) to the **SoH-MacReady-Foxtrot-Linux-Performance** folder.
+
+    You should check the `SHA1` hash of the original ROM file to check that it is compatible with Ship of Harkinian:
+
+    ```sh
+    sha1sum <ROM_FILE>
+    ```
+
+    and verify that the `SHA1` hash matches with one of the ROM files listed in Ship of Harkinian's [list](https://raw.githubusercontent.com/HarbourMasters/Shipwright/develop/docs/supportedHashes.json).
+
+    > [!NOTE]  
+    > In our example, our ROM file has a `SHA1` sum of `cfbb98d392e4a9d39da8285d10cbef3974c2f012`.
+
+7. Double click the **soh.appimage** file in the **SoH-MacReady-Foxtrot-Linux-Performance** folder to run it once for it to generate the necessary files.
+
+    > [!WARNING]  
+    > If you receive an error message stating `For Security reasons, launching executables is not allowed in this context` on the **Dolphin** app, follow the steps below to resolve it.
+
+    To resolve the aforementioned error:
+
+    - Click Dolphin's **Hamburger** menu.
+    - Hover over the **Configure** section and select the **Configure Dolphin...** option.
+    - In the **General** view, click the **Confirmations** tab.
+    - Set the **When opening an executable file** option to `Always ask`.
+    - Click the **Apply** button and **OK** to save your changes.
+    - Retry running the **soh.appimage** file.
+    - When prompted by Dolphin, click the **Execute** button, and then again click the **Continue** button.
+
+8. Once the game has finished generating the necessary `OTR` files and the game has been launched in a new window, close the game by clicking the **X** button in the top right corner of the window.
+
+9.  Right click the **soh.appimage** file and select the **Add to Steam** context menu option.
+
+    > [!TIP]  
+    > The **Add to Steam** context menu option may be under the **Actions** section in the right click context menu.
+
+    > [!NOTE]  
+    > If the **Add to Steam** context menu option is not available to you (i.e. on non-SteamOS distros), you will need to add the `.appimage` file to Steam manually.
+
+10. Launch the **Steam** application.
+
+11. Find the **soh.appimage** application from the **Library** section.
+
+12. Select and right click the application.
+
+13. Click the **Properties** context menu option.
+
+14. In the newly opened **Properties** window:
+
+    - Navigate to the **Shortcut** section.
+
+    - Update the name of the application to `The Legend of Zelda: Ocarina of Time`.
+
+15. Close the **Properties** window.
+
+16. You have now completed the installation and may launch the game from Steam.
 
     > [!NOTE]  
     > You may also make optional aesthetic changes to the game on Steam such as adding custom artwork (i.e. using [SteamGridDB](./decky-loader.md#plugin-installation) on a SteamOS based distro).
