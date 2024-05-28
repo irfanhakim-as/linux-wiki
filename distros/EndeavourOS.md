@@ -80,6 +80,7 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
     - [References](#references-12)
   - [Link's Awakening DX HD](#links-awakening-dx-hd)
   - [Ocarina of Time](#ocarina-of-time)
+  - [Connecting to WireGuard](#connecting-to-wireguard)
 
 ## References
 
@@ -589,3 +590,9 @@ This details how to install and run the Link's Awakening DX HD _port_.
 ## [Ocarina of Time](../topics/gaming.md#ocarina-of-time)
 
 This details how to install and run the Ocarina of Time PC _port_, Ship of Harkinian.
+
+---
+
+## [Connecting to WireGuard](../topics/wireguard.md#linux)
+
+This guide details how to connect to an existing WireGuard VPN on Linux.
