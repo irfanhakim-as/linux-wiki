@@ -61,7 +61,7 @@ This guide details how to connect to an existing WireGuard VPN on various platfo
 ### macOS
 
 > [!NOTE]  
-> The steps to connect to an existing WireGuard VPN on macOS should be similar to [iOS](#ios), but due to a longlasting issue the macOS version of the WireGuard app suffers from, we recommend the folowing steps instead.
+> The steps to connect to an existing WireGuard VPN on macOS should be similar to [iOS](#ios), but due to a longstanding issue the macOS version of the WireGuard app suffers from, we recommend the folowing steps instead.
 
 1. Install the `wireguard-tools` and `wireguard-go` packages using [Homebrew](https://brew.sh):
 
@@ -119,7 +119,7 @@ This guide details how to connect to an existing WireGuard VPN on various platfo
 
 3. Launch the **WireGuard** app.
 
-4. Click the **+** button in the top right corner.
+4. Press the **+** button in the top right corner.
 
 5. In the **Add a new WireGuard tunnel** menu, select the **Create from file or archive** option.
 
