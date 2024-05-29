@@ -51,6 +51,7 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
   - [Link's Awakening DX HD](#links-awakening-dx-hd)
   - [KDE Connect](#kde-connect)
   - [Ocarina of Time](#ocarina-of-time)
+  - [Majora's Mask](#majoras-mask)
 
 ## References
 
@@ -356,3 +357,9 @@ This details installing and setting up KDE Connect on your system as a means to 
 ## [Ocarina of Time](../topics/gaming.md#ocarina-of-time)
 
 This details how to install and run the Ocarina of Time PC _port_, Ship of Harkinian.
+
+---
+
+## [Majora's Mask](../topics/gaming.md#ocarina-of-time)
+
+This details how to install and run the Majora's Mask PC _port_, 2 Ship 2 Harkinian.

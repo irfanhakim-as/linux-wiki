@@ -80,6 +80,7 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
     - [References](#references-12)
   - [Link's Awakening DX HD](#links-awakening-dx-hd)
   - [Ocarina of Time](#ocarina-of-time)
+  - [Majora's Mask](#majoras-mask)
   - [Connecting to WireGuard](#connecting-to-wireguard)
 
 ## References
@@ -590,6 +591,12 @@ This details how to install and run the Link's Awakening DX HD _port_.
 ## [Ocarina of Time](../topics/gaming.md#ocarina-of-time)
 
 This details how to install and run the Ocarina of Time PC _port_, Ship of Harkinian.
+
+---
+
+## [Majora's Mask](../topics/gaming.md#ocarina-of-time)
+
+This details how to install and run the Majora's Mask PC _port_, 2 Ship 2 Harkinian.
 
 ---
 
