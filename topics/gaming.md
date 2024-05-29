@@ -28,6 +28,10 @@ This details all matters pertaining PC gaming.
     - [Description](#description-4)
     - [References](#references-3)
     - [Steps](#steps-2)
+  - [Majora's Mask](#majoras-mask)
+    - [Description](#description-5)
+    - [References](#references-4)
+    - [Steps](#steps-3)
 
 ---
 
@@ -361,6 +365,109 @@ This details how to install and run the Ocarina of Time PC _port_, Ship of Harki
     - Navigate to the **Shortcut** section.
 
     - Update the name of the application to `The Legend of Zelda: Ocarina of Time`.
+
+15. Close the **Properties** window.
+
+16. You have now completed the installation and may launch the game from Steam.
+
+    > [!NOTE]  
+    > You may also make optional aesthetic changes to the game on Steam such as adding custom artwork (i.e. using [SteamGridDB](./decky-loader.md#plugin-installation) on a SteamOS based distro).
+
+---
+
+## Majora's Mask
+
+> [!NOTE]  
+> Parts of this guide assumes that you are using the KDE Plasma desktop environment.
+
+> [!IMPORTANT]  
+> You will need the original ROM file to run the game, source them legally prior to following this guide.
+
+### Description
+
+This details how to install and run the Majora's Mask PC _port_, 2 Ship 2 Harkinian.
+
+### References
+
+- [2 Ship 2 Harkinian](https://github.com/HarbourMasters/2ship2harkinian)
+
+### Steps
+
+1. Visit the 2 Ship 2 Harkinian latest [releases](https://github.com/HarbourMasters/2ship2harkinian/releases/latest) page on a web browser.
+
+2. Click and download the **2Ship-Rika-Alfa-Linux.zip** file from the list of **Assets**.
+
+3. Unzip the downloaded file:
+
+   - Launch the **Dolphin** application.
+
+   - Navigate to where the game's zip file was downloaded to i.e. the **Downloads** directory.
+
+   - Select and right click the zip file.
+
+   - Hover over the **Extract** section, and select the **Extract archive here, autodetect subfolder** option.
+
+4. Delete the zip file as it is no longer needed.
+
+5. Move the extracted game folder (i.e. **2Ship-Rika-Alfa-Linux**) to a suitable directory (i.e. `~/Games`).
+
+    Create the destination directory beforehand if it does not yet exist:
+
+    ```sh
+    mkdir -p ~/Games
+    ```
+
+6. Copy your legally obtained copy of the original **Majora's Mask** ROM file (in a compatible format i.e. `.z64`) to the **2Ship-Rika-Alfa-Linux** folder.
+
+    You should check the `MD5` hash of the original ROM file to check that it is compatible with 2 Ship 2 Harkinian:
+
+    ```sh
+    md5sum <ROM_FILE>
+    ```
+
+    and verify that the `MD5` hash matches with a compatible ROM file.
+
+    > [!NOTE]  
+    > In our example, our ROM file has a `MD5` sum of `2a0a8acb61538235bc1094d297fb6556`.
+
+7. Double click the **2ship.appimage** file in the **2Ship-Rika-Alfa-Linux** folder to run it once for it to generate the necessary files.
+
+    > [!WARNING]  
+    > If you receive an error message stating `For Security reasons, launching executables is not allowed in this context` on the **Dolphin** app, follow the steps below to resolve it.
+
+    To resolve the aforementioned error:
+
+    - Click Dolphin's **Hamburger** menu.
+    - Hover over the **Configure** section and select the **Configure Dolphin...** option.
+    - In the **General** view, click the **Confirmations** tab.
+    - Set the **When opening an executable file** option to `Always ask`.
+    - Click the **Apply** button and **OK** to save your changes.
+    - Retry running the **2ship.appimage** file.
+    - When prompted by Dolphin, click the **Execute** button, and then again click the **Continue** button.
+
+8. Once the game has finished generating the necessary `OTR` files and the game has been launched in a new window, close the game by clicking the **X** button in the top right corner of the window.
+
+9.  Right click the **2ship.appimage** file and select the **Add to Steam** context menu option.
+
+    > [!TIP]  
+    > The **Add to Steam** context menu option may be under the **Actions** section in the right click context menu.
+
+    > [!NOTE]  
+    > If the **Add to Steam** context menu option is not available to you (i.e. on non-SteamOS distros), you will need to add the `.appimage` file to Steam manually.
+
+10. Launch the **Steam** application.
+
+11. Find the **2ship.appimage** application from the **Library** section.
+
+12. Select and right click the application.
+
+13. Click the **Properties** context menu option.
+
+14. In the newly opened **Properties** window:
+
+    - Navigate to the **Shortcut** section.
+
+    - Update the name of the application to `The Legend of Zelda: Majora's Mask`.
 
 15. Close the **Properties** window.
 
