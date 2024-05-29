@@ -264,6 +264,8 @@ This details how to install and run the Link's Awakening DX HD _port_.
     > [!NOTE]  
     > You may also make optional aesthetic changes to the game on Steam such as adding custom artwork (i.e. using [SteamGridDB](./decky-loader.md#plugin-installation) on a SteamOS based distro).
 
+---
+
 ## Ocarina of Time
 
 > [!NOTE]  
