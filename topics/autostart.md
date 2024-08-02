@@ -24,7 +24,7 @@ This topic focuses on autostart applications.
     - [Description](#description-3)
     - [Steam](#steam)
     - [GWE (Flatpak)](#gwe-flatpak)
-    - [Anydesk](#anydesk)
+    - [AnyDesk (Flatpak)](#anydesk-flatpak)
     - [Discord (Flatpak)](#discord-flatpak)
     - [Signal (Flatpak)](#signal-flatpak)
     - [Vorta (Flatpak)](#vorta-flatpak)
@@ -151,9 +151,15 @@ This details known configurations for certain applications on how to have them a
 
     Silent flag: `--hide-window`
 
-### Anydesk
+### AnyDesk (Flatpak)
 
-- [Start and Enable](#start-and-enable-service) the `anydesk.service` service:
+- Argument:
+
+    ```sh
+    run --branch=stable --arch=x86_64 --command=anydesk --file-forwarding com.anydesk.Anydesk --tray @@u %u @@
+    ```
+
+    Silent flag: `--tray`
 
 ### Discord (Flatpak)
 

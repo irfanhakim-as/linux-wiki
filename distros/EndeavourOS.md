@@ -125,7 +125,6 @@ game-devices-udev
 htop
 python-eduvpn-client
 openvpn
-anydesk-bin
 helm
 notable-insiders-bin
 firefox-developer-edition
@@ -146,6 +145,7 @@ which
 [Flatpak](../topics/flatpak.md#install) packages:
 
 ```
+com.anydesk.Anydesk
 com.borgbase.Vorta
 com.calibre_ebook.calibre
 com.discordapp.Discord
