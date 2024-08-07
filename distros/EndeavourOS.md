@@ -32,7 +32,8 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
   - [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
   - [Default Applications](#default-applications)
   - [Set Alacritty as Default Terminal](#set-alacritty-as-default-terminal)
-  - [Add Colour Profile to Monitor](#add-colour-profile-to-monitor)
+  - [Display Configuration](#display-configuration)
+    - [References](#references-5)
   - [Plasma Desktop Theme Customisations](#plasma-desktop-theme-customisations)
   - [Plank Dock](#plank-dock)
   - [Gaming Setup](#gaming-setup)
@@ -45,23 +46,23 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
   - [Wallpaper Engine Integration with KDE Plasma](#wallpaper-engine-integration-with-kde-plasma)
   - [Razer Peripheral Support](#razer-peripheral-support)
   - [Wake on LAN or Wireless](#wake-on-lan-or-wireless)
-    - [References](#references-5)
-  - [Backing up with Vorta](#backing-up-with-vorta)
     - [References](#references-6)
+  - [Backing up with Vorta](#backing-up-with-vorta)
+    - [References](#references-7)
   - [Thunderbird Configuration](#thunderbird-configuration)
   - [Discord Troubleshooting](#discord-troubleshooting)
   - [Migrating (Firefox) to Flatpak](#migrating-firefox-to-flatpak)
   - [EmuDeck](#emudeck)
   - [Recommended Global Flatpak Permissions](#recommended-global-flatpak-permissions)
   - [Using a Touchpad](#using-a-touchpad)
-    - [References](#references-7)
-  - [Generate GPG Key and Use with Git](#generate-gpg-key-and-use-with-git)
     - [References](#references-8)
+  - [Generate GPG Key and Use with Git](#generate-gpg-key-and-use-with-git)
+    - [References](#references-9)
   - [Desktop Auto Login](#desktop-auto-login)
   - [KDE Wallet](#kde-wallet)
-    - [References](#references-9)
-  - [Distrobox Installation and Usage](#distrobox-installation-and-usage)
     - [References](#references-10)
+  - [Distrobox Installation and Usage](#distrobox-installation-and-usage)
+    - [References](#references-11)
   - [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
   - [VS Code Integration with Distrobox](#vs-code-integration-with-distrobox)
   - [Deb Package Installation](#deb-package-installation)
@@ -73,17 +74,17 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
   - [Miniconda Environments](#miniconda-environments)
   - [XP-Pen](#xp-pen)
   - [OBS Studio](#obs-studio)
-    - [References](#references-11)
+    - [References](#references-12)
   - [Magewell Capture Device on OBS](#magewell-capture-device-on-obs)
   - [KDE Connect](#kde-connect)
   - [SearXNG](#searxng)
-    - [References](#references-12)
+    - [References](#references-13)
   - [Link's Awakening DX HD](#links-awakening-dx-hd)
   - [Ocarina of Time](#ocarina-of-time)
   - [Majora's Mask](#majoras-mask)
   - [Connecting to WireGuard](#connecting-to-wireguard)
   - [Wayland](#wayland)
-    - [References](#references-13)
+    - [References](#references-14)
 
 ## References
 
@@ -310,9 +311,14 @@ This installs and sets up Alacritty as the default terminal.
 
 ---
 
-## [Add Colour Profile to Monitor](../topics/display.md#add-colour-profile)
+## Display Configuration
 
-This details how to add and use a colour profile with our monitor.
+This details several configuration options for connected displays on our system.
+
+### References
+
+- [Add Colour Profile](../topics/display.md#add-colour-profile)
+- [Screen Brightness Adjustment](../topics/display.md#screen-brightness-adjustment)
 
 ---
 
