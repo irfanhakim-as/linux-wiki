@@ -59,7 +59,7 @@ This details how to fix a bug where keys are unexpectedly activating in the last
 ## Identifying Apps Running Xwayland
 
 > [!IMPORTANT]  
-> This guide assumes that you are using the KDE Plasma desktop environment on Wayland.
+> This guide assumes that your system runs on Wayland.
 
 ### Description
 
