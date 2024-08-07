@@ -459,10 +459,11 @@ This details on how to configure and use a trackpad such as the Apple Magic Trac
 
 ## Generate GPG Key and Use with Git
 
-This details how to generate a GPG key and enforce automatic signing for all our commits and tags in Git and GitHub/GitLab.
+This details how to setup GPG, generate a GPG key, and enforce automatic signing for all our commits and tags in Git and GitHub/GitLab.
 
 ### References
 
+- [Setup](../topics/gpg.md#setup)
 - [Generate GPG Key](../topics/gpg.md#generate-gpg-key)
 - [Sign Git Commits](../topics/gpg.md#sign-git-commits)
 
