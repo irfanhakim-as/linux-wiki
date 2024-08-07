@@ -465,7 +465,8 @@ This details some customisation options for the Plasma desktop.
      - Leave the rest as default and click the **OK** button.
    - **Digital Clock**:
      - **Appearance**:
-       - Information - Show date: `Always beside time`.
+       - Information:
+         - Show date: `Always beside time`.
        - Show seconds: `Only in the tooltip`.
        - Show time zone: `Only when different from local time zone`.
        - Display time zone as: `Code`.
