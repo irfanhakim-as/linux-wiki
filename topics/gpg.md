@@ -170,3 +170,31 @@ This details how we can enforce automatic signing for all our commits and tags i
     ```sh
     source ~/.config/fish/config.fish
     ```
+
+---
+
+## Update Config
+
+### Description
+
+This details how to update the GnuPG agent configuration.
+
+### References
+
+- [GnuPG Configuration](https://wiki.archlinux.org/title/GnuPG#Configuration_2)
+
+### Steps
+
+1. Create or update an existing `gpg-agent.conf` config file:
+
+    ```sh
+    nano ~/.gnupg/gpg-agent.conf
+    ```
+
+2. Write and save any necessary changes to the config file.
+
+3. Reload the updated config:
+
+    ```sh
+    gpg-connect-agent reloadagent /bye
+    ```
