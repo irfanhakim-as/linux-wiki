@@ -243,22 +243,43 @@ This makes Flatpak apps use Dolphin as the File Picker and not Nautilus (GTK).
 
 1. Launch Spectacle.
 
-2. Click **Configure** and you should be in the **General** tab.
+2. Click **Configure Spectacle...** which should launch the **Configure** window.
 
-3. For the **When launching Spectacle** option, set it to **Do not take a screenshot automatically**.
+3. Configure the following settings:
 
-4. For the **After taking a screenshot** option, check the **Save file to default folder** box and set the dropdown value to **Copy image to clipboard**.
+   - **General**:
+     - When launching Spectacle: `Do not take a screenshot automatically`.
+     - After taking a screenshot:
+       - Save file to default folder: `Enabled`.
+       - `Copy image to clipboard`.
+     - While Spectacle is running:
+       - Press screenshot key to: `Take a new Screenshot`.
+     - Rectangular Region Selection:
+       - General:
+         - Use light background: `Disabled`.
+         - Accept on click-and-release: `Enabled`.
+         - Show capture instructions: `Disabled`.
+       - Show magnifier: `While holding Shift`.
+       - Remember selected area: `Never`.
 
-5. For the **Rectangular Region Selection** option, check the **Accept on click-and-release** box, and uncheck the **Show capture instructions** box.
+   - **Image Saving**:
+     - Save Location: `~/Pictures/Screenshots/Desktop` (create the folder beforehand).
+     - Compression Quality: `90%`.
+     - Filename:
+       - `Screenshot_<yyyy><MM><dd>_<HH><mm><ss>`, `PNG` (Plasma 6).
+       - `Screenshot_%Y%M%D_%H%m%S`, `PNG` (Plasma 5).
 
-6. Head to the **Save** tab and change the **Save Location** to `~/Pictures/Screenshots/Desktop` (create the folder beforehand).
+   - **Video Saving**:
+     - Save Location: `~/Videos/Screencasts` (create the folder beforehand).
+     - Filename: `Screencast_<yyyy><MM><dd>_<HH><mm><ss>`, `MP4/H.264`.
 
-7. Head to the **Shortcuts** tab and add custom keybindings for:
+4. Head to the **Shortcuts** tab and add custom keybindings for:
+
 	- **Capture Active Window**: <kbd>Alt + Shift + 5</kbd>
 	- **Capture Current Monitor**: <kbd>Alt + Shift + 3</kbd>
 	- **Capture Rectangular Region**: <kbd>Alt + Shift + 4</kbd>
 
-8. Click **Apply** then **OK**.
+5.  Click **Apply** then **OK**.
 
 ### Spectacle-like Window Management
 
