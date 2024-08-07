@@ -410,7 +410,7 @@ This details some customisation options for the Plasma desktop.
 
      - `Application Launcher`.
      - `Window Title Applet` (Requires a download).
-     - `Global Menu` (added by default).
+     - `Global Menu` (Added by default).
      - `Better inline clock` (Requires a download).
      - `System Tray`.
      - `Peek at Desktop`.
