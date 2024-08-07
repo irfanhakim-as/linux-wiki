@@ -443,12 +443,24 @@ This details some customisation options for the Plasma desktop.
 
    - **Window Title**:
      - **Appearance**:
-       - Icon - Show when available: `Disabled`.
-       - Font - Bold: `Disabled`.
+       - Label style: `Application`.
+       - Icon:
+         - Show when available: `Disabled`.
+       - Font:
+         - Bold: `Disabled`.
+         - Italic: `Disabled`.
+         - First letters capital: `Enabled`.
+       - Length: `Based on contents`.
        - Click the **Apply** button.
      - **Behavior**:
-       - Placeholder - Show activity information: `Disabled`.
-       - Placeholder (text) - Add the name of your system (i.e. `Arch`).
+       - Filters:
+         - Show only window information from current screen: `Disabled`.
+         - Show only when maximized: `Disabled`.
+       - Mouse:
+         - Show tooltip on hover: `Enabled`.
+         - Scroll to cycle and minimize through your tasks: `Enabled`.
+       - Placeholder:
+         - Show activity information: `Enabled`.
        - Click the **Apply** button.
      - Leave the rest as default and click the **OK** button.
    - **Digital Clock**:
