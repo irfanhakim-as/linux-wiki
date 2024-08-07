@@ -78,3 +78,9 @@ This details how to identify apps running using Xwayland on Wayland.
     ```sh
     xlsclients -l
     ```
+
+    **Alternatively**, KDE Plasma Desktop (or Kwin) users on Wayland could use the following command instead without requiring the `xorg-xlsclients` package:
+
+    ```sh
+    qdbus6 org.kde.KWin /KWin org.kde.KWin.showDebugConsole
+    ```
