@@ -12,6 +12,11 @@ This details configuration options pertaining display.
   - [Add Colour Profile](#add-colour-profile)
     - [Description](#description-1)
     - [Steps](#steps)
+  - [Screen Brightness Adjustment](#screen-brightness-adjustment)
+    - [Description](#description-2)
+    - [References](#references)
+    - [Single Screen](#single-screen)
+    - [Multiple Screens](#multiple-screens)
 
 ---
 
@@ -41,3 +46,41 @@ This details how to add and use a colour profile with our monitor.
 7. You may or may not click the **Install System Wide** button.
 
 8. Restart your device.
+
+---
+
+## Screen Brightness Adjustment
+
+> [!IMPORTANT]  
+> This guide assumes that you are using KDE Plasma 6 as your desktop environment.
+
+### Description
+
+This details how to adjust the brightness of your connected screen(s) on KDE Plasma.
+
+### References
+
+- [Alt tab problem with Fedora KDE](https://discuss.kde.org/t/alt-tab-problem-with-fedora-kde/17280/1)
+
+### Single Screen
+
+> [!NOTE]  
+> KDE Plasma 6 has built-in support for adjusting the brightness of multiple screens by default - however, it is not possible to adjust the brightness of each screen individually.
+
+1. On the desktop's **System Tray**, click the **Brightness and Color** Applet.
+
+2. Adjust the **Display Brightness** slider accordingly.
+
+    This adjusts the brightness of all connected screens to the specified level.
+
+### Multiple Screens
+
+1. [Install](yay.md#install) the `ddcutil` package (should come preinstalled by default in most cases) **OR** the `ddcutil-service` package (recommended alternative) using `yay`.
+
+2. [Install](yay.md#install) the `vdu_controls` package using `yay`.
+
+3. Launch the **VDU Controls** application.
+
+4. Adjust the **Brightness** slider for each connected screen accordingly.
+
+5. Close the application once you're done.
