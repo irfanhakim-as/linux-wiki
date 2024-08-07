@@ -25,6 +25,33 @@ GnuPG is a complete and free implementation of the OpenPGP standard as defined b
 
 ---
 
+## Setup
+
+### Description
+
+This details how to install and setup GnuPG and Pinentry.
+
+### References
+
+- [GnuPG Installation](https://wiki.archlinux.org/title/GnuPG#Installation)
+- [GnuPG Pinentry](https://wiki.archlinux.org/title/GnuPG#pinentry)
+
+### Steps
+
+1. [Install](yay.md#install) the `gnupg` package (should come preinstalled by default in most cases) using `yay`.
+
+2. [Install](yay.md#install) the `pinentry` package (should come preinstalled by default in most cases) using `yay`.
+
+    **Alternatively**, if you are using the KDE Plasma Desktop (or KDE Wallet), you may instead [install](yay.md#install) the `kwalletcli` package.
+
+3. If you wish to use `pinentry-kwallet` (acquired from the `kwalletcli` package) as your Pinentry programme (instead of something like `pinentry-qt`), you will need to [configure the GPG agent configuration file](#update-config) with the following line:
+
+    ```conf
+    pinentry-program /usr/bin/pinentry-kwallet
+    ```
+
+---
+
 ## Generate GPG Key
 
 ### Description
