@@ -75,7 +75,9 @@ This details how to adjust the brightness of your connected screen(s) on KDE Pla
 
 ### Multiple Screens
 
-1. [Install](yay.md#install) the `ddcutil` package (should come preinstalled by default in most cases) **OR** the `ddcutil-service` package (recommended alternative) using `yay`.
+1. [Install](yay.md#install) the `ddcutil` package (should come preinstalled by default in most cases) using `yay`.
+
+    **Alternatively**, you may instead [install](yay.md#install) the `ddcutil-service` package (recommended alternative).
 
 2. [Install](yay.md#install) the `vdu_controls` package using `yay`.
 
