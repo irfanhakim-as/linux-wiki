@@ -82,6 +82,8 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
   - [Ocarina of Time](#ocarina-of-time)
   - [Majora's Mask](#majoras-mask)
   - [Connecting to WireGuard](#connecting-to-wireguard)
+  - [Wayland](#wayland)
+    - [References](#references-13)
 
 ## References
 
@@ -603,3 +605,13 @@ This details how to install and run the Majora's Mask PC _port_, 2 Ship 2 Harkin
 ## [Connecting to WireGuard](../topics/wireguard.md#linux)
 
 This guide details how to connect to an existing WireGuard VPN on Linux.
+
+---
+
+## Wayland
+
+This details specific configurations and fixes for systems running on Wayland.
+
+### References
+
+- [Fix Keys Activating When Switching Tasks](../topics/wayland.md#fix-keys-activating-when-switching-tasks)

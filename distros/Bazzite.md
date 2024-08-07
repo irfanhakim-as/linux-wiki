@@ -46,6 +46,8 @@ Bazzite is an OCI image that serves as an alternative operating system for the [
   - [Link's Awakening DX HD](#links-awakening-dx-hd)
   - [Ocarina of Time](#ocarina-of-time)
   - [Majora's Mask](#majoras-mask)
+  - [Wayland](#wayland)
+    - [References](#references-7)
 
 ## References
 
@@ -330,3 +332,13 @@ This details how to install and run the Ocarina of Time PC _port_, Ship of Harki
 ## [Majora's Mask](../topics/gaming.md#ocarina-of-time)
 
 This details how to install and run the Majora's Mask PC _port_, 2 Ship 2 Harkinian.
+
+---
+
+## Wayland
+
+This details specific configurations and fixes for systems running on Wayland.
+
+### References
+
+- [Fix Keys Activating When Switching Tasks](../topics/wayland.md#fix-keys-activating-when-switching-tasks)
