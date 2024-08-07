@@ -337,7 +337,7 @@ This details how to install and run the Majora's Mask PC _port_, 2 Ship 2 Harkin
 
 ## Wayland
 
-This details specific configurations and fixes for systems running on Wayland.
+This details specific configurations, fixes, and tips for systems running on Wayland.
 
 ### References
 

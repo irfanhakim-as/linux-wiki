@@ -617,7 +617,7 @@ This guide details how to connect to an existing WireGuard VPN on Linux.
 
 ## Wayland
 
-This details specific configurations and fixes for systems running on Wayland.
+This details specific configurations, fixes, and tips for systems running on Wayland.
 
 ### References
 
