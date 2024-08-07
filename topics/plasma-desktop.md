@@ -21,6 +21,7 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
       - [Configure Dolphin options](#configure-dolphin-options)
       - [Show additional info and panel](#show-additional-info-and-panel)
       - [Show video thumbnails](#show-video-thumbnails)
+      - [Show thumbnails on remote mounts](#show-thumbnails-on-remote-mounts)
       - [Enable HEIC Images Support](#enable-heic-images-support)
       - [Enhancing Dolphin Functionality](#enhancing-dolphin-functionality)
       - [Make Flatpak Apps Use KDE File Picker](#make-flatpak-apps-use-kde-file-picker)
@@ -138,6 +139,21 @@ This details on some things that could be done to improve the experience of usin
 5. Tick the **Video Files (ffmpegthumbs)** option.
 
 6. Click **Apply** and **OK**.
+
+#### Show thumbnails on remote mounts
+
+> [!NOTE]  
+> This setting may only be required on KDE Plasma 6.
+
+1. Open **Dolphin**.
+
+2. Enter the **Configure Dolphin** menu (<kbd>Ctrl + Shift + ,</kbd>).
+
+3. In the **Interface** section, click the **Previews** tab.
+
+4. Update the **Skip previews for remote files above** setting to a high enough size limit i.e. `5120 MiB`.
+
+5. Click **Apply** and **OK**.
 
 #### Enable HEIC Images Support
 
