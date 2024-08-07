@@ -622,3 +622,4 @@ This details specific configurations, fixes, and tips for systems running on Way
 ### References
 
 - [Fix Keys Activating When Switching Tasks](../topics/wayland.md#fix-keys-activating-when-switching-tasks)
+- [Identifying Apps Running Xwayland](../topics/wayland.md#identifying-apps-running-xwayland)
