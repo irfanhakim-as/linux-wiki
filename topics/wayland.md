@@ -14,6 +14,10 @@ Wayland is a replacement for the X11 window system protocol and architecture wit
     - [Description](#description-1)
     - [References](#references-1)
     - [Steps](#steps)
+  - [Identifying Apps Running Xwayland](#identifying-apps-running-xwayland)
+    - [Description](#description-2)
+    - [References](#references-2)
+    - [Steps](#steps-1)
 
 ## References
 
@@ -49,3 +53,28 @@ This details how to fix a bug where keys are unexpectedly activating in the last
     - Allow legacy X11 apps to read keystrokes typed in all apps: `Never`
 
 5. Click the **Apply** button.
+
+---
+
+## Identifying Apps Running Xwayland
+
+> [!IMPORTANT]  
+> This guide assumes that you are using the KDE Plasma desktop environment on Wayland.
+
+### Description
+
+This details how to identify apps running using Xwayland on Wayland.
+
+### References
+
+- [Detect Xwayland applications visually](https://wiki.archlinux.org/title/Wayland#Detect_Xwayland_applications_visually)
+
+### Steps
+
+1. [Install](yay.md#install) the `xorg-xlsclients` package using `yay`.
+
+2. Run the following command to list down all applications running via Xwayland:
+
+    ```sh
+    xlsclients -l
+    ```
