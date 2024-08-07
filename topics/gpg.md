@@ -198,3 +198,47 @@ This details how to update the GnuPG agent configuration.
     ```sh
     gpg-connect-agent reloadagent /bye
     ```
+
+---
+
+## Update GPG Key Passphrase
+
+### Description
+
+This details how to update the passphrase of a GPG key.
+
+### References
+
+- [GPG Change Passphrase Secret Key Password Command](https://www.cyberciti.biz/faq/linux-unix-gpg-change-passphrase-command)
+
+### Steps
+
+1. List our GPG keys:
+
+    ```sh
+    gpg --list-secret-keys --keyid-format long
+    ```
+
+2. From this output, locate our GPG key and take note of the value of the second column from the row that has `sec` in the first column:
+
+    ```
+    sec   ed25519/1H89FHO4MGAJTJ9Z
+    ```
+
+3. Copy the value trailing the `/` (i.e. `1H89FHO4MGAJTJ9Z`), and edit the GPG key using the following command:
+
+    ```sh
+    gpg --edit-key 1H89FHO4MGAJTJ9Z
+    ```
+
+4. In the `gpg>` prompt, enter the `passwd` subcommand to change the passphrase:
+
+    ```sh
+    passwd
+    ```
+
+5. Enter the current passphrase of the GPG key when prompted.
+
+6. Enter the new passphrase and confirm it when prompted.
+
+    You **may** need to enter the `save` command in the `gpg>` prompt to save changes made to the GPG key.
