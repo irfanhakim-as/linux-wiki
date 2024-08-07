@@ -411,7 +411,7 @@ This details some customisation options for the Plasma desktop.
      - `Application Launcher`.
      - `Window Title` (Requires a download).
      - `Global Menu` (Added by default).
-     - `Better inline clock` (Requires a download).
+     - `Digital Clock`.
      - `System Tray`.
      - `Peek at Desktop`.
 
@@ -434,7 +434,7 @@ This details some customisation options for the Plasma desktop.
    - `Window Title`.
    - `Global Menu`.
    - Add a `Panel Spacer` by clicking the **Add Spacer** button.
-   - `Better inline clock`.
+   - `Digital Clock`.
    - Add a `Panel Spacer` by clicking the **Add Spacer** button.
    - `System Tray`.
    - `Peek at Desktop`.
@@ -451,14 +451,18 @@ This details some customisation options for the Plasma desktop.
        - Placeholder (text) - Add the name of your system (i.e. `Arch`).
        - Click the **Apply** button.
      - Leave the rest as default and click the **OK** button.
-   - **Better inline clock**:
+   - **Digital Clock**:
      - **Appearance**:
-       - Information - Show Separator: `Disabled`.
-       - Information - Use 24-hour Clock: `Disabled`.
-       - Information - Use fixed font size: `Enabled`.
-       - Font Size: `16`.
-       - Date format: `Qt Date`.
-       - Spacing: Add some spacing using the provided slider as you see fit.
+       - Information - Show date: `Always beside time`.
+       - Show seconds: `Only in the tooltip`.
+       - Show time zone: `Only when different from local time zone`.
+       - Display time zone as: `Code`.
+       - Time display: `12-Hour`.
+       - Date format: `Long Date`.
+       - Text display: `Manual`.
+         - Font Family: `SF Pro Display`.
+         - Font Style: `Regular`.
+         - Font Size: `12`.
        - Click the **Apply** button.
      - Leave the rest as default and click the **OK** button.
    - [**System Tray**](#cleaner-system-tray).
