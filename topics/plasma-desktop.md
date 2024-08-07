@@ -424,6 +424,10 @@ This details some customisation options for the Plasma desktop.
         - If prompted to **Pick Your Installation Option**, click the desired downloadable item's corresponding **Install** button.
         - Close the **Download New Plasma Widgets** window after you've finished downloading all the widgets you need.
 
+        **Alternatively**, some of the widgets could be [installed](./yay.md#install) using `yay` directly:
+
+        - Window Title: `plasma6-applets-window-title`
+
 6. Position the widgets by clicking and dragging them like so on the Menu Bar in this order (from left to right):
 
    - `Application Launcher`.
