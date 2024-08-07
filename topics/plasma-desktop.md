@@ -399,13 +399,13 @@ This details some customisation options for the Plasma desktop.
 5. Add Widgets to the Menu Bar:
 
    - Click the **Add Widgets...** button.
-   
+
    - Search for the widget in the provided search bar from the **Widgets** panel.
-   
+
    - Locate the widget and click and drag it to the Menu Bar.
-   
+
    - Release the widget to add it to the Menu Bar.
-   
+
    - Do so for each of the following widgets:
 
      - `Application Launcher`.
@@ -416,7 +416,7 @@ This details some customisation options for the Plasma desktop.
      - `Peek at Desktop`.
 
         For widgets that require a download, download them by:
-        
+
         - Clicking the **Get New Widgets...** button.
         - Select the **Download New Plasma Widgets** option.
         - Use the provided search bar to search for the widget by their name.
