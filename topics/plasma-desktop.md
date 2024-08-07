@@ -409,7 +409,7 @@ This details some customisation options for the Plasma desktop.
    - Do so for each of the following widgets:
 
      - `Application Launcher`.
-     - `Window Title` (Requires a download).
+     - `Window Title` by "dhruv8sh" (Requires a download).
      - `Global Menu` (Added by default).
      - `Digital Clock`.
      - `System Tray`.
