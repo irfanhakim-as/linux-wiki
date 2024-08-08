@@ -104,17 +104,17 @@ This details on some things that could be done to improve the experience of usin
 
 2. Hover over **Configure**, and select **Configure Dolphin**.
 
-3. Click the **General** section, then click the **Confirmations** tab.
+3. Click the **Interface** section, then click the **Confirmations** tab.
 
 4. Uncheck the **Closing windows with multiple tabs** option.
 
-5. Click the **Startup** section, and select the second option under **Show on startup**.
+5. Navigate to the **Folders & Tabs** tab and select the second radio button under **Show on startup**.
 
-6. Click the inline **Folder** icon button, then click the **Downloads** folder.
+6. Click the inline **Folder** icon button, then select your user's **Downloads** folder.
 
 7. Click **OK**, this will set the Downloads folder as the default folder upon launch.
 
-8. In the same Startup section, select the **Show full path inside location bar** option under **General**.
+8. In the **Status & Location bars** tab, enable the **Show full path inside location bar** option.
 
 9. Once all changes have been made, click **Apply** then **OK**.
 
@@ -134,9 +134,9 @@ This details on some things that could be done to improve the experience of usin
 
 3. Enter the **Configure Dolphin** menu (<kbd>Ctrl + Shift + ,</kbd>).
 
-4. In the **General** section, click the **Previews** tab.
+4. In the **Interface** section, click the **Previews** tab.
 
-5. Tick the **Video Files (ffmpegthumbs)** option.
+5. Check the **Video Files (ffmpegthumbs)** option.
 
 6. Click **Apply** and **OK**.
 
