@@ -18,6 +18,9 @@ Wayland is a replacement for the X11 window system protocol and architecture wit
     - [Description](#description-2)
     - [References](#references-2)
     - [Steps](#steps-1)
+  - [Fix Firefox Crashes](#fix-firefox-crashes)
+    - [Description](#description-3)
+    - [Steps](#steps-2)
 
 ## References
 
@@ -84,3 +87,35 @@ This details how to identify apps running using Xwayland on Wayland.
     ```sh
     qdbus6 org.kde.KWin /KWin org.kde.KWin.showDebugConsole
     ```
+
+---
+
+## Fix Firefox Crashes
+
+> [!IMPORTANT]  
+> This bug at the moment seems to affect Firefox 129.0 on a Wayland system with NVIDIA hardware. Follow this guide only if it affects your system.
+
+### Description
+
+This details how to work around a bug where Firefox keeps crashing on a Wayland system with NVIDIA hardware.
+
+### Steps
+
+1. Launch the **Firefox** application.
+
+2. Click the **Hamburger** menu found on the top right of the window.
+
+3. Click the **Settings** menu item.
+
+4. In the **Find in Settings** search bar, search for `hardware acceleration`.
+
+5. Under **Performance**, configure the following settings:
+
+   - Use recommended performance settings: `Disabled`
+
+   - Use hardware acceleration when available: `Disabled`
+
+    > [!NOTE]  
+    > These settings should be re-enabled after an actual fix has been released for performance gains.
+
+6. Restart the **Firefox** application.
