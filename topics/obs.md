@@ -266,7 +266,7 @@ This details how to separate audio tracks by application virtually in OBS using 
     mkdir -p ~/.config/obs-studio/plugins
     ```
 
-3. Extract the downloaded `linux-pipewire-audio-<version-number>.tar.gz` archive:
+3. Extract the downloaded `linux-pipewire-audio-<version-number>.tar.gz` archive into the OBS plugins directory:
 
     ```sh
     tar -C "<plugins-path>" -xzf "~/Downloads/linux-pipewire-audio-<version-number>.tar.gz"
