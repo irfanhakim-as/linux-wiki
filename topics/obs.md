@@ -244,27 +244,30 @@ This details how to separate audio tracks by application virtually in OBS using 
 ### References
 
 - [obs-pipewire-audio-capture](https://github.com/dimtpap/obs-pipewire-audio-capture)
+- [Binary installation](https://github.com/dimtpap/obs-pipewire-audio-capture?tab=readme-ov-file#binary-installation)
 
 ### Installation
 
 > [!NOTE]  
 > If you are using the native (non-Flatpak) version of OBS, you could potentially [install](./yay.md#install) the `obs-pipewire-audio-capture` package using `yay` and skip this section.
 
-1. Download the latest release's `linux-pipewire-audio-<version-number>.tar.gz` file from obs-pipewire-audio-capture's [Releases](https://github.com/dimtpap/obs-pipewire-audio-capture/releases/latest) page.
+1. Download the latest release's `linux-pipewire-audio-<version-number>.tar.gz` file from obs-pipewire-audio-capture's [Releases](https://github.com/dimtpap/obs-pipewire-audio-capture/releases/latest) page. If you are using the Flatpak version of OBS, download the file with `-flatpak` in the filename.
 
 2. Create a `plugins` folder for OBS.
 
-    If you are using the Flatpak version of OBS:
+   - The plugins path will differ depending on the version of OBS you are using:
 
-    ```sh
-    mkdir -p ~/.var/app/com.obsproject.Studio/config/obs-studio/plugins
-    ```
+     - Flatpak version: `~/.var/app/com.obsproject.Studio/config/obs-studio/plugins`
+     - Native version: `~/.config/obs-studio/plugins`
 
-    **Alternatively**, if you are using the native version of OBS:
+   - Create the plugins folder according to the version of OBS you are using if it does not exist:
 
-    ```sh
-    mkdir -p ~/.config/obs-studio/plugins
-    ```
+        ```sh
+        mkdir -p <plugins-path>
+        ```
+
+        > [!TIP]  
+        > Replace `<plugins-path>` with the path to the OBS plugins directory.
 
 3. Extract the downloaded `linux-pipewire-audio-<version-number>.tar.gz` archive into the OBS plugins directory:
 
@@ -272,7 +275,8 @@ This details how to separate audio tracks by application virtually in OBS using 
     tar -C "<plugins-path>" -xzf "~/Downloads/linux-pipewire-audio-<version-number>.tar.gz"
     ```
 
-    Replace `<plugins-path>` with the path to the OBS plugins directory, and `<version-number>` with the version number of the downloaded release (i.e. `1.1.3`).
+    > [!TIP]  
+    > In addition to replacing `<plugins-path>`, you should replace `<version-number>` with the version number of the downloaded release (i.e. `1.1.3`).
 
 4. Restart the system.
 
