@@ -254,13 +254,13 @@ This details how to separate audio tracks by application virtually in OBS using 
 
 2. Create a `plugins` folder for OBS.
 
-    For the Flatpak version of OBS:
+    If you are using the Flatpak version of OBS:
 
     ```sh
     mkdir -p ~/.var/app/com.obsproject.Studio/config/obs-studio/plugins
     ```
 
-    For the non-Flatpak version of OBS:
+    **Alternatively**, if you are using the native version of OBS:
 
     ```sh
     mkdir -p ~/.config/obs-studio/plugins
