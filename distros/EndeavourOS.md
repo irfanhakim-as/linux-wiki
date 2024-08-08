@@ -624,3 +624,4 @@ This details specific configurations, fixes, and tips for systems running on Way
 - [Fix Keys Activating When Switching Tasks](../topics/wayland.md#fix-keys-activating-when-switching-tasks)
 - [Identifying Apps Running Xwayland](../topics/wayland.md#identifying-apps-running-xwayland)
 - [Fix Firefox Crashes](../topics/wayland.md#fix-firefox-crashes)
+- [Fix Picture in Picture](../topics/wayland.md#fix-picture-in-picture)
