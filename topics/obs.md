@@ -250,7 +250,7 @@ This details how to separate audio tracks by application virtually in OBS using 
 > [!NOTE]  
 > If you are using the native (non-Flatpak) version of OBS, you could potentially [install](./yay.md#install) the `obs-pipewire-audio-capture` package using `yay` and skip this section.
 
-1. Download the latest release's `linux-pipewire-audio-<version-number>.tar.gz` file from obs-pipewire-audio-capture's [Releases](https://github.com/dimtpap/obs-pipewire-audio-capture/releases) page.
+1. Download the latest release's `linux-pipewire-audio-<version-number>.tar.gz` file from obs-pipewire-audio-capture's [Releases](https://github.com/dimtpap/obs-pipewire-audio-capture/releases/latest) page.
 
 2. Create a `plugins` folder for OBS.
 
