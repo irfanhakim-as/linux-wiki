@@ -21,6 +21,10 @@ Wayland is a replacement for the X11 window system protocol and architecture wit
   - [Fix Firefox Crashes](#fix-firefox-crashes)
     - [Description](#description-3)
     - [Steps](#steps-2)
+  - [Fix Picture in Picture](#fix-picture-in-picture)
+    - [Description](#description-4)
+    - [References](#references-3)
+    - [Steps](#steps-3)
 
 ## References
 
@@ -119,3 +123,38 @@ This details how to work around a bug where Firefox keeps crashing on a Wayland 
     > These settings should be re-enabled after an actual fix has been released for performance gains.
 
 6. Restart the **Firefox** application.
+
+---
+
+## Fix Picture in Picture
+
+> [!IMPORTANT]  
+> This guide assumes that you are using the KDE Plasma desktop environment on Wayland.
+
+### Description
+
+The Picture in Picture (PiP) feature currently has issues where its window would not remember its last position and it would not be pinned on top of other windows by default. This details how to work around the latter bug.
+
+### References
+
+- [Firefox Wayland PiP workaround or How I Learned to Stop Clicking Keep Above and Love Window Rules](https://www.reddit.com/r/kde/comments/osjt3p/firefox_wayland_pip_workaround_or_how_i_learned)
+
+### Steps
+
+1. In a supported application i.e. Firefox, play a video in **PiP** mode.
+
+2. Right click the **PiP** window to get the context menu.
+
+3. In the context menu, hover over the **More Actions** menu item and select the **Configure Special Window Settings...** option.
+
+4. In the newly opened **Window Rules** window, click the **Add Property...** button.
+
+5. Select the **Window title** option.
+
+6. From the new **Window title** line, expand the dropdown which defaults to `Unimportant` and select the `Exact Match` option.
+
+7. Click the **Add Property...** button again and now select the **Keep above other windows** option.
+
+8. Leave the new **Keep above other windows** line as default, `Apply Initially` and `Yes`.
+
+9. Click the **Apply** button and then **OK**.
