@@ -25,11 +25,12 @@ OBS (Open Broadcaster Software) is free and open source software for video recor
   - [Separate Audio Tracks by Application](#separate-audio-tracks-by-application)
     - [Description](#description-4)
     - [References](#references-2)
-    - [Steps](#steps-1)
+    - [Installation](#installation-1)
+    - [Usage](#usage)
   - [Magewell USB Capture HDMI 4K Plus](#magewell-usb-capture-hdmi-4k-plus)
     - [Description](#description-5)
     - [References](#references-3)
-    - [Steps](#steps-2)
+    - [Steps](#steps-1)
 
 ## References
 
@@ -244,7 +245,7 @@ This details how to separate audio tracks by application virtually in OBS using 
 
 - [obs-pipewire-audio-capture](https://github.com/dimtpap/obs-pipewire-audio-capture)
 
-### Steps
+### Installation
 
 1. Download the latest release's `linux-pipewire-audio-{VERSION_NUMBER}.tar.gz` file from obs-pipewire-audio-capture's [Releases](https://github.com/dimtpap/obs-pipewire-audio-capture/releases) page.
 
@@ -272,11 +273,13 @@ This details how to separate audio tracks by application virtually in OBS using 
 
 4. Restart the system.
 
-5. Launch the **OBS Studio** application.
+### Usage
 
-6. [Add a source](#add-a-source) of type, `Application Audio Capture (PipeWire)`, and the name of the application you wish to add a separate audio track for, i.e. `Discord`.
+1. Launch the **OBS Studio** application.
 
-7. In the source's **Properties**, configure as follows:
+2. [Add a source](#add-a-source) of type, `Application Audio Capture (PipeWire)`, and the name of the application you wish to add a separate audio track for, i.e. `Discord`.
+
+3. In the source's **Properties**, configure as follows:
 
    - Match Priority: `Match by binary name, fallback to app name`
 
@@ -285,9 +288,9 @@ This details how to separate audio tracks by application virtually in OBS using 
       > [!NOTE]  
       > If the desired application is not listed, try launching the application and then collapse/reopen the dropdown.
 
-8. Click the **OK** button.
+4. Click the **OK** button.
 
-9. Now in the **Audio Mixer** section, you can enable said application's audio track and mute the other tracks by toggling the **Speaker** icon for each track.
+5. Now in the **Audio Mixer** section, you can enable said application's audio track and mute the other tracks by toggling the **Speaker** icon for each track.
 
 ---
 
