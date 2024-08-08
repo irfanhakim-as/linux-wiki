@@ -247,7 +247,7 @@ This details how to separate audio tracks by application virtually in OBS using 
 
 ### Installation
 
-1. Download the latest release's `linux-pipewire-audio-{VERSION_NUMBER}.tar.gz` file from obs-pipewire-audio-capture's [Releases](https://github.com/dimtpap/obs-pipewire-audio-capture/releases) page.
+1. Download the latest release's `linux-pipewire-audio-<version-number>.tar.gz` file from obs-pipewire-audio-capture's [Releases](https://github.com/dimtpap/obs-pipewire-audio-capture/releases) page.
 
 2. Create a `plugins` folder for OBS.
 
@@ -263,13 +263,13 @@ This details how to separate audio tracks by application virtually in OBS using 
     mkdir -p ~/.config/obs-studio/plugins
     ```
 
-3. Extract the downloaded `linux-pipewire-audio-{VERSION_NUMBER}.tar.gz` archive:
+3. Extract the downloaded `linux-pipewire-audio-<version-number>.tar.gz` archive:
 
     ```sh
-    tar -C "${PLUGINS_DIRECTORY}" -xzf "~/Downloads/linux-pipewire-audio-${VERSION_NUMBER}.tar.gz"
+    tar -C "<plugins-path>" -xzf "~/Downloads/linux-pipewire-audio-<version-number>.tar.gz"
     ```
 
-    Replace `${PLUGINS_DIRECTORY}` with the path to the OBS plugins directory, and `${VERSION_NUMBER}` with the version number of the downloaded release (i.e. `1.1.3`).
+    Replace `<plugins-path>` with the path to the OBS plugins directory, and `<version-number>` with the version number of the downloaded release (i.e. `1.1.3`).
 
 4. Restart the system.
 
