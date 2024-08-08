@@ -60,7 +60,7 @@ This details how to install and set up OBS.
 3. Click the **Settings** button in the bottom right corner.
 
 4. In the **General** page, locate the **System Tray** section and configure the following:
-   
+
    - [x] Enable
    - [x] Minimize to system tray when started
 
