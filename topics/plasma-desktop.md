@@ -172,13 +172,13 @@ This allows the viewing and thumbnailing of HEIC images.
    - Create the `ServiceMenus` directory:
 
       ```sh
-      mkdir -p ~/.local/share/kservices5/ServiceMenus
+      mkdir -p ~/.local/share/kio/servicemenus
       ```
 
    - Download and install [**office2pdf**](https://store.kde.org/p/1172774) to add Office documents conversion to PDF:
 
       ```sh
-      cp office2pdf.desktop ~/.local/share/kservices5/ServiceMenus
+      cp office2pdf.desktop ~/.local/share/kio/servicemenus
       ```
 
    - [Install](yay.md#install) the `kf5-servicemenus-pdf` ([**KDE 5 Service Menu PDF**](https://store.kde.org/p/1227799)) package using `yay` to add more PDF-related functionalities.
