@@ -181,13 +181,13 @@ This allows the viewing and thumbnailing of HEIC images.
       cp office2pdf.desktop ~/.local/share/kservices5/ServiceMenus
       ```
 
-   - [Install](yay.md#install) [**KDE 5 Service Menu PDF**](https://store.kde.org/p/1227799) (`kf5-servicemenus-pdf`) using `yay` to add more PDF-related functionalities.
+   - [Install](yay.md#install) the `kf5-servicemenus-pdf` ([**KDE 5 Service Menu PDF**](https://store.kde.org/p/1227799)) package using `yay` to add more PDF-related functionalities.
 
-   - [Install](yay.md#install) [**Kompare Menu**](https://store.kde.org/p/1100884) (`kde-servicemenus-komparemenu`) using `yay` to add support for comparing different files.
+   - [Install](yay.md#install) the `kde-servicemenus-komparemenu` ([**Kompare Menu**](https://store.kde.org/p/1100884)) package using `yay` to add support for comparing different files.
 
-   - [Install](yay.md#install) [**KDE 5 Service Menu ReImage**](https://store.kde.org/p/1231579) (`kde-service-menu-reimage`) using `yay` to add support for extra image-related functionalities.
+   - [Install](yay.md#install) the `kde-service-menu-reimage` ([**KDE 5 Service Menu ReImage**](https://store.kde.org/p/1231579)) package using `yay` to add support for extra image-related functionalities.
 
-   - You may also need to [install](yay.md#install) some dependencies for **KDE 5 Service Menu ReImage** such as `jhead` for converting PNG images to JPG.
+   - You may also need to [install](yay.md#install) some optional dependencies for **KDE 5 Service Menu ReImage** such as `jhead` for converting PNG images to JPG.
 
 4. Log out and log back into the desktop.
 
