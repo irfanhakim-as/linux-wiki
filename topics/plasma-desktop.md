@@ -275,6 +275,9 @@ This makes Flatpak apps use Dolphin as the File Picker and not Nautilus (GTK).
 
 4. Head to the **Shortcuts** tab and add custom keybindings for:
 
+    > [!IMPORTANT]  
+    > Skip this redundant and breaking step if you intend to use [Toshy](./toshy.md#kde-spectacle).
+
 	- **Capture Active Window**: <kbd>Alt + Shift + 5</kbd>
 	- **Capture Current Monitor**: <kbd>Alt + Shift + 3</kbd>
 	- **Capture Rectangular Region**: <kbd>Alt + Shift + 4</kbd>
