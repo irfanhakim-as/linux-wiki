@@ -85,6 +85,8 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
   - [Connecting to WireGuard](#connecting-to-wireguard)
   - [Wayland](#wayland)
     - [References](#references-14)
+  - [Toshy](#toshy)
+    - [References](#references-15)
 
 ## References
 
@@ -625,3 +627,15 @@ This details specific configurations, fixes, and tips for systems running on Way
 - [Identifying Apps Running Xwayland](../topics/wayland.md#identifying-apps-running-xwayland)
 - [Fix Firefox Crashes](../topics/wayland.md#fix-firefox-crashes)
 - [Fix Picture in Picture](../topics/wayland.md#fix-picture-in-picture)
+
+---
+
+## Toshy
+
+This details the setup and configuration of Toshy for the purpose of matching the behavior of keyboard shortcuts in macOS on Linux.
+
+### References
+
+- [Setup](../topics/toshy.md#setup)
+- [Configuration](../topics/toshy.md#configuration)
+- [Additional Workarounds](../topics/toshy.md#additional-workarounds)
