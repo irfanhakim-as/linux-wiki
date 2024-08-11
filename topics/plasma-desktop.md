@@ -498,7 +498,7 @@ This details some customisation options for the Plasma desktop.
          - Show only when maximized: `Disabled`.
        - Mouse:
          - Show tooltip on hover: `Enabled`.
-         - Scroll to cycle and minimize through your tasks: `Enabled`.
+         - Scroll to cycle and minimize through your tasks: `Disabled`.
        - Placeholder:
          - Show activity information: `Enabled`.
        - Click the **Apply** button.
