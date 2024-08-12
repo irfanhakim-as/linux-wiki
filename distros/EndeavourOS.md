@@ -181,6 +181,7 @@ org.audacityteam.Audacity
 org.bunkus.mkvtoolnix-gui
 org.filezillaproject.Filezilla
 org.gimp.GIMP
+org.gnome.Cheese
 org.inkscape.Inkscape
 org.kde.audiotube
 org.kde.filelight
