@@ -16,15 +16,7 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
     - [Description](#description-1)
     - [Workspace Behaviour](#workspace-behaviour)
     - [Dolphin](#dolphin)
-      - [Show hidden files](#show-hidden-files)
-      - [Add Refresh button](#add-refresh-button)
-      - [Configure Dolphin options](#configure-dolphin-options)
-      - [Show additional info and panel](#show-additional-info-and-panel)
-      - [Show video thumbnails](#show-video-thumbnails)
-      - [Show thumbnails on remote mounts](#show-thumbnails-on-remote-mounts)
-      - [Enable HEIC Images Support](#enable-heic-images-support)
-      - [Enhancing Dolphin Functionality](#enhancing-dolphin-functionality)
-      - [Make Flatpak Apps Use KDE File Picker](#make-flatpak-apps-use-kde-file-picker)
+      - [References](#references)
     - [KRunner](#krunner)
       - [Center KRunner by Default](#center-krunner-by-default)
       - [Adding Additional Plugins](#adding-additional-plugins)
@@ -41,7 +33,7 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
   - [Widgets](#widgets)
     - [Description](#description-3)
     - [KDE Thermal Monitor](#kde-thermal-monitor)
-      - [References](#references)
+      - [References](#references-1)
       - [Steps](#steps)
       - [Troubleshooting](#troubleshooting)
   - [Default Applications](#default-applications)
@@ -50,7 +42,7 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
     - [File Types](#file-types)
   - [Auto Login](#auto-login)
     - [Description](#description-5)
-    - [References](#references-1)
+    - [References](#references-2)
     - [Steps](#steps-1)
 
 ---
@@ -80,136 +72,13 @@ This details on some things that could be done to improve the experience of usin
 
 ### Dolphin
 
-#### Show hidden files
+This details configuration steps for enhancing the Dolphin file manager's experience and functionality.
 
-1. In the Dolphin app, click the **Hamburger** menu.
+#### References
 
-2. Enable **Show Hidden Files**.
-
-#### Add Refresh button
-
-1. In the Dolphin app, click the **Hamburger** menu.
-
-2. Hover over **Configure**, and select **Configure Toolbars**.
-
-3. Search for **Refresh** in the **Filter** box under **Available actions**.
-
-4. Select the Refresh action and drag it to the **Current actions** list right before/above the **Split** action.
-
-5. Click **Apply** and **OK**.
-
-#### Configure Dolphin options
-
-1. In the Dolphin app, click the **Hamburger** menu.
-
-2. Hover over **Configure**, and select **Configure Dolphin**.
-
-3. Click the **Interface** section, then click the **Confirmations** tab.
-
-4. Uncheck the **Closing windows with multiple tabs** option.
-
-5. Navigate to the **Folders & Tabs** tab and select the second radio button under **Show on startup**.
-
-6. Click the inline **Folder** icon button, then select your user's **Downloads** folder.
-
-7. Click **OK**, this will set the Downloads folder as the default folder upon launch.
-
-8. In the **Status & Location bars** tab, enable the **Show full path inside location bar** option.
-
-9. Once all changes have been made, click **Apply** then **OK**.
-
-#### Show additional info and panel
-
-1. In the Dolphin app, click the **Hamburger** menu.
-
-2. Hover over **Show Additional Information**, and select **Size**.
-
-3. Now from the Hamburger menu, hover over **Show Panels**, and select **Information**.
-
-#### Show video thumbnails
-
-1. [Install](yay.md#install) the `ffmpegthumbs` package using `yay`.
-
-2. Open **Dolphin**.
-
-3. Enter the **Configure Dolphin** menu (<kbd>Ctrl + Shift + ,</kbd>).
-
-4. In the **Interface** section, click the **Previews** tab.
-
-5. Check the **Video Files (ffmpegthumbs)** option.
-
-6. Click **Apply** and **OK**.
-
-#### Show thumbnails on remote mounts
-
-> [!NOTE]  
-> This setting may only be required on KDE Plasma 6.
-
-1. Open **Dolphin**.
-
-2. Enter the **Configure Dolphin** menu (<kbd>Ctrl + Shift + ,</kbd>).
-
-3. In the **Interface** section, click the **Previews** tab.
-
-4. Update the **Skip previews for remote files above** setting to a high enough size limit i.e. `5120 MiB`.
-
-5. Click **Apply** and **OK**.
-
-#### Enable HEIC Images Support
-
-This allows the viewing and thumbnailing of HEIC images.
-
-1. [Install](yay.md#install) the `kimageformats` package using `yay`.
-
-#### Enhancing Dolphin Functionality
-
-1. [Install](yay.md#install) the `dolphin-plugins` package using `yay` to add version control and Dropbox support.
-
-2. [Install](yay.md#install) the `kio-gdrive` package using `yay` to add Google Drive directly into Dolphin.
-
-3. Install several Dolphin Service Menus.
-
-   - Create the `ServiceMenus` directory:
-
-      ```sh
-      mkdir -p ~/.local/share/kio/servicemenus
-      ```
-
-   - Download and install [**office2pdf**](https://store.kde.org/p/1172774) to add Office documents conversion to PDF:
-
-      ```sh
-      cp office2pdf.desktop ~/.local/share/kio/servicemenus
-      ```
-
-   - [Install](yay.md#install) the `kf5-servicemenus-pdf` ([**KDE 5 Service Menu PDF**](https://store.kde.org/p/1227799)) package using `yay` to add more PDF-related functionalities.
-
-   - [Install](yay.md#install) the `kde-service-menu-reimage` ([**KDE 5 Service Menu ReImage**](https://store.kde.org/p/1231579)) package using `yay` to add support for extra image-related functionalities.
-
-   - You may also need to [install](yay.md#install) some optional dependencies for **KDE 5 Service Menu ReImage** such as `jhead` for converting PNG images to JPG.
-
-4. Log out and log back into the desktop.
-
-#### Make Flatpak Apps Use KDE File Picker
-
-This makes Flatpak apps use Dolphin as the File Picker and not Nautilus (GTK).
-
-1. Add these variables to `/etc/environment` *(might not be needed)*:
-
-    ```sh
-    GTK_USE_PORTAL=1
-    XDG_CURRENT_DESKTOP=KDE
-    ```
-
-2. Make sure these packages are installed on your machine:
-
-   - `xdg-desktop-portal`
-   - `xdg-desktop-portal-gtk`
-
-3. [Install](yay.md#install) the `xdg-desktop-portal-kde` package using `yay`.
-
-4. [Uninstall](yay.md#uninstall) the `xdg-desktop-portal-gnome` package if it is installed.
-
-5. Reboot your system.
+- [Configuration Options](./dolphin.md#configuration-options)
+- [Enhancing Dolphin Functionality](./dolphin.md#enhancing-dolphin-functionality)
+- [Make Flatpak Apps Use KDE File Picker](./dolphin.md#make-flatpak-apps-use-kde-file-picker)
 
 ### KRunner
 
