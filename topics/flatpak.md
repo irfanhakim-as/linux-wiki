@@ -182,11 +182,11 @@ This solves the issue of (some) Flatpak apps not looking native in KDE, and defa
 
 ### Description
 
-This makes Flatpak apps use Dolphin as the File Picker and not Nautilus (GTK).
+This makes Flatpak apps use Dolphin as the system file picker and not any others such as Nautilus (GTK).
 
 ### References
 
-- [Make Flatpak Apps Use KDE File Picker](plasma-desktop.md#make-flatpak-apps-use-kde-file-picker)
+- [Make Flatpak Apps Use KDE File Picker](dolphin.md#make-flatpak-apps-use-kde-file-picker)
 
 ---
 
