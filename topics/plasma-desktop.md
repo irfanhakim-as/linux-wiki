@@ -163,7 +163,7 @@ This allows the viewing and thumbnailing of HEIC images.
 
 #### Enhancing Dolphin Functionality
 
-1. [Install](yay.md#install) the `dolphin-plugins` package using `yay`.
+1. [Install](yay.md#install) the `dolphin-plugins` package using `yay` to add version control and Dropbox support.
 
 2. [Install](yay.md#install) the `kio-gdrive` package using `yay` to add Google Drive directly into Dolphin.
 
