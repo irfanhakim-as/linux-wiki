@@ -253,6 +253,9 @@ This details some customisation options for the Plasma desktop.
 
 7. Under the **Shortcuts** section, configure as follows:
 
+    > [!IMPORTANT]  
+    > Skip this redundant and breaking step if you intend to use [Toshy](./toshy.md#task-switcher).
+
     - All windows:
 
       - Forward: <kbd>Alt + Tab</kbd>
