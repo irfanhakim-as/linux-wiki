@@ -20,6 +20,7 @@ Toshy is a config file for the `xwaykeyz` Python-based keymapper for Linux along
     - [References](#references-2)
     - [Steps](#steps-1)
     - [Modifier and Click Combination](#modifier-and-click-combination)
+    - [Task Switcher](#task-switcher)
     - [Emoji Picker](#emoji-picker)
     - [KDE Spectacle](#kde-spectacle)
   - [Additional Workarounds](#additional-workarounds)
@@ -145,6 +146,38 @@ If <kbd>Modifier + Click</kbd> (i.e. <kbd>Cmd + Click</kbd>) isn't working relia
     ```py
     suspend             = 0.1,        # default: 1 sec, try 0.1 sec for touchpads/trackpads
     ```
+
+### Task Switcher
+
+> [!IMPORTANT]  
+> This part of the section assumes that you are using the KDE Plasma desktop environment.
+
+To mimic a more macOS-like experience while switching apps using the Task Switcher, add the following configuration:
+
+1. In the Toshy config file, search for the `user_apps` slice.
+
+2. Within the start and end of the `user_apps` slice, add the following:
+
+    ```py
+    if DESKTOP_ENV == 'kde':
+        keymap("User overrides: KDE Task Switcher", {
+            C("RC-Grave"):              C("Alt-Shift-Tab"),             # Switch apps in reverse order
+        }, when = lambda ctx:
+            cnfg.screen_has_focus and
+            matchProps(not_clas=remoteStr)(ctx)
+        )
+    ```
+
+    In this example, these values are assumed:
+
+    - Desktop environment: `kde`
+
+        > [!TIP]  
+        > The `if` condition can be removed if you wish for the configuration to apply to all desktop environments.
+
+    - Key (combination) to switch apps in reverse order: `RC-Grave` (<kbd>Cmd + `</kbd>)
+
+    Update these values accordingly.
 
 ### Emoji Picker
 
