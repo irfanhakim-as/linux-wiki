@@ -25,7 +25,7 @@ Toshy is a config file for the `xwaykeyz` Python-based keymapper for Linux along
   - [Additional Workarounds](#additional-workarounds)
     - [Description](#description-3)
     - [References](#references-3)
-    - [Firefox](#firefox)
+    - [Firefox Menu Stealing Focus](#firefox-menu-stealing-focus)
 
 ## References
 
