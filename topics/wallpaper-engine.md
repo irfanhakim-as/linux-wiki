@@ -33,24 +33,32 @@ This details the use of Wallpaper Engine wallpapers in KDE Plasma.
 
 1. Install [Wallpaper Engine](https://store.steampowered.com/app/431960/Wallpaper_Engine) on **Steam** with Remote Play.
 
-2. [Install](yay.md#install) the `plasma5-wallpapers-wallpaper-engine` plugin using `yay`.
+2. [Install](yay.md#install) the `plasma6-wallpapers-wallpaper-engine-git` plugin using `yay`.
 
-3. Use and setup the plugin in the KDE Plasma's **Wallpaper Settings**:
+3. [Install](yay.md#install) the `mpv` package using `yay` if you don't have it installed already.
+
+4. Use and setup the plugin in KDE Plasma's **Wallpaper Settings**:
 
    - Right click on the desktop.
 
-   - Click **Configure Desktop and Wallpaper**.
+   - Click **Desktop and Wallpaper**.
 
    - In the **Wallpaper** section, change the **Wallpaper type** to `Wallpaper Engine for Kde`.
 
-   - Click the **Library** button.
+   - From the **Wallpapers** tab, click the **Library** button.
 
-   - Set the library to the Steam path (i.e. `~/.local/share/Steam`).
+   - Set the full path to Steam (i.e. `~/.local/share/Steam`).
 
-   - Within the **Wallpaper** section, click the **Settings** tab.
+   - Still from within the **Wallpaper** section, navigate to the **Settings** tab.
 
-   - Change the **Video Backend** to `Mpv`.
+   - Set the **Video Backend** to `Mpv`.
 
-   - Go back to the Wallpapers tab and choose a wallpaper (subscribe for more wallpapers through the [Wallpaper Engine Steam Workshop](https://steamcommunity.com/workshop/about/?appid=431960)).
+        > [!TIP]  
+        > You may also make any other necessary changes to your selected wallpaper in this tab.
+
+   - Go back to the Wallpapers tab and choose a wallpaper.
+
+        > [!TIP]  
+        > You can subscribe to more wallpapers from the [Wallpaper Engine Steam Workshop](https://steamcommunity.com/workshop/browse/?appid=431960).
 
    - Click **Apply** and **OK**.
