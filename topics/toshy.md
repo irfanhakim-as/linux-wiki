@@ -27,6 +27,7 @@ Toshy is a config file for the `xwaykeyz` Python-based keymapper for Linux along
     - [Description](#description-3)
     - [References](#references-3)
     - [Firefox Menu Stealing Focus](#firefox-menu-stealing-focus)
+    - [Thunderbird Menu Stealing Focus](#thunderbird-menu-stealing-focus)
 
 ## References
 
@@ -363,3 +364,21 @@ By default, hitting the <kbd>Alt</kbd> or <kbd>Opt</kbd> key will cause Firefox 
 5. In the **ui.key.menuAccessKeyFocuses** entry, double click its default value, `true` to update it to `false`.
 
 6. Restart the application.
+
+### Thunderbird Menu Stealing Focus
+
+By default, hitting the <kbd>Alt</kbd> or <kbd>Opt</kbd> key will cause Thunderbird to steal focus. This can be fixed with a simple configuration on Thunderbird:
+
+1. Launch the **Thunderbird** application.
+
+2. Click the **Hamburger** menu located in the top right corner.
+
+3. Click the **Settings** option.
+
+4. Scroll to the very bottom of the Settings page and click the **Config Editor...** button.
+
+5. In the provided **Search bar**, search for the setting, `ui.key.menuAccessKeyFocuses`.
+
+6. In the **ui.key.menuAccessKeyFocuses** entry, double click its default value, `true` to update it to `false`.
+
+7. Restart the application.
