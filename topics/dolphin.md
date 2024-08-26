@@ -162,6 +162,9 @@ Dolphin service menus add additional features directly to Dolphin's context menu
 
 2. Install the following recommended service menus accordingly:
 
+    > [!WARNING]  
+    > These service menus are not guaranteed to work on KDE Plasma 6.
+
    - [**office2pdf**](https://store.kde.org/p/1172774) to add Office documents conversion to PDF:
 
      - Manual installation:
