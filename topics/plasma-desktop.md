@@ -187,21 +187,22 @@ This details some customisation options for the Plasma desktop.
 
 ### Floating "Dock"
 
-1. Right click the taskbar on our desktop.
+1. Right click the default **Taskbar** (Panel/Dock).
 
-2. Click **Enter Edit Mode**.
+2. Click the **Show Panel Configuration** option.
 
-3. Click **More Options...**.
+3. Set the following options:
 
-4. Select the **Floating Panel** checkbox.
+   - Position: `Bottom`
+   - Alignment: `Center`
+   - Width: `Fit content`
+   - Visibility: `Always visible`
+   - Opacity: `Adaptive`
+   - Style: `Floating`
 
-5. Increase **Panel height** if you wish.
+4. Adjust the **Panel Height** as you wish.
 
-6. Set the **Panel Alignment** to **Center**.
-
-7. Decrease the width of the panel to as short as possible using the arrows.
-
-8. Exit Edit Mode.
+5. Click the **Done** button.
 
 ### Cleaner System Tray
 
