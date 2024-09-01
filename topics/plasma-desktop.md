@@ -24,7 +24,7 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
     - [Spectacle-like Window Management](#spectacle-like-window-management)
   - [Theme Customisations](#theme-customisations)
     - [Description](#description-2)
-    - [Floating "Dock"](#floating-dock)
+    - [Floating Dock](#floating-dock)
     - [Cleaner System Tray](#cleaner-system-tray)
     - [Task Switcher](#task-switcher)
     - [Prettier Icons](#prettier-icons)
@@ -183,9 +183,9 @@ This adds shortcuts that would make managing and moving application windows simi
 
 ### Description
 
-This details some customisation options for the Plasma desktop.
+This details some customisation options for the Plasma Desktop.
 
-### Floating "Dock"
+### Floating Dock
 
 1. Right click the default **Taskbar** (Panel/Dock).
 
