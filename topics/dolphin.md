@@ -177,9 +177,9 @@ Dolphin service menus add additional features directly to Dolphin's context menu
 
      - [Install](yay.md#install) the `kf5-servicemenus-pdf` package using `yay`.
 
-   - [**KDE 5 Service Menu ReImage**](https://store.kde.org/p/1231579) to add support for extra image-related functionalities:
+   - [**KDE 6 Service Menu ReImage**](https://store.kde.org/p/2196940) to add support for extra image-related functionalities:
 
-     - [Install](yay.md#install) the `kde-service-menu-reimage` package using `yay`.
+     - [Install](yay.md#install) the `kf6-servicemenus-reimage` package using `yay`.
      - You may also need to [install](yay.md#install) some optional dependencies such as `jhead` for converting PNG images to JPG.
 
 ---
