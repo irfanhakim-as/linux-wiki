@@ -362,6 +362,9 @@ This details some customisation options for the Plasma Desktop.
          - Italic: `Disabled`.
          - First letters capital: `Enabled`.
        - Length: `Based on contents`.
+       - Spacing: `4`.
+       - Left margin: `4`.
+       - Right margin: `4`.
        - Click the **Apply** button.
      - **Behavior**:
        - Filters:
