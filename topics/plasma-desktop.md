@@ -495,7 +495,7 @@ This details some widgets we could add to our desktop for added functionality.
 
 #### Steps
 
-1. [Install](yay.md#install) the `plasma5-applets-thermal-monitor` package using `yay`.
+1. [Install](yay.md#install) the `plasma6-applets-thermal-monitor-git` package using `yay`.
 
 2. Check for available sensors on your system:
 
@@ -508,30 +508,36 @@ This details some widgets we could add to our desktop for added functionality.
 
 3. Add the widget and configure the sources:
 
-   - Add the widget to the menu/task bar.
+   - Add the **Thermal Monitor** widget to the menu/taskbar.
 
-   - Right click the widget and click **Configure Thermal Monitor**.
+   - Right click the widget and click the **Configure Thermal Monitor...** option.
 
-   - Add each source to the **Resources** list by hitting the **+** button.
+   - From the newly opened **Thermal Monitor Settings** window, configure the following:
 
-   - Choose a **Source**.
+     - In the **Sensors** section, add each source you wish to have monitored:
 
-   - Select **Show alias** and add a label to the source (i.e. `CPU`, `GPU`, `SSD`).
+       - Click the **Add Sensor...** button.
+       - Click the corresponding **+** button on each source you wish added.
+       - Click the **X** button from the **Add Sensor** window when you're done adding all sources.
+       - For each sensor, click their corresponding **Pencil** (Edit) button and add a sensible **Name** (label) to it.
 
-   - Click the **OK** button.
+            > [!TIP]  
+            > Sample sources: `lmsensors/zenpower-pci-00c3/temp1` (CPU), `gpu/gpu0/temperature` (GPU), `lmsensors/nvme-pci-0100/temp1` (SSD)
 
-   - Do these for all your relevant sources. For example:
-     - CPU: `zenpower-pci-00c3/Tdie`
-     - GPU: `nvidia-smi`
-     - SSD: `nvme-pci-0500/Composite`
+       - Once done, click the **Apply** button.
 
-   - Click the **Apply** button.
+     - In the **Appearance** section, configure the following options:
 
-   - Click the **Appearance** section.
+       - Temperature:
+         - Show unit: `Enabled`
+         - Enable danger color: `Enabled`
+         - Warning threshold: `75c`
+         - Meltdown threshold: `90c`
+       - Primary label: `Temperature`
+       - Font scale: `1.0`
+       - Once done, click the **Apply** button.
 
-   - Adjust the **Alias font size** and other settings accordingly.
-
-   - Click **Apply** and **OK**.
+     - Click the **OK** button to save all changes.
 
 #### Troubleshooting
 
