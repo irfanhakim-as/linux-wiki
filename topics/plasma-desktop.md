@@ -541,6 +541,9 @@ This details some widgets we could add to our desktop for added functionality.
 
 #### Troubleshooting
 
+> [!WARNING]  
+> This fix was for an older version of the Thermal Monitor widget on KDE Plasma 5
+
 Fix the KDE Thermal Monitor issue requiring "Reload Temperature Sources" when `plasmashell` is restarted:
 
 - Edit the `~/.local/share/plasma/plasmoids/org.kde.thermalMonitor/contents/ui/main.qml` file:
