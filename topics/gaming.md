@@ -20,6 +20,7 @@ This details all matters pertaining PC gaming.
     - [Elden Ring](#elden-ring)
     - [Eastward](#eastward)
     - [Witcher 3 and Cyberpunk 2077](#witcher-3-and-cyberpunk-2077)
+    - [Skyrim Special Edition](#skyrim-special-edition)
   - [Link's Awakening DX HD](#links-awakening-dx-hd)
     - [Description](#description-3)
     - [References](#references-2)
@@ -169,6 +170,38 @@ A few games however, *seems* to perform worse with GameMode, if that is the case
     ```json
     "fallback": "DirectX 11"
     ```
+
+### Skyrim Special Edition
+
+Skip the Skyrim Intro video when launching the game:
+
+1. Edit the `Skyrim.ini` file:
+
+    ```sh
+    nano ~/.local/share/Steam/steamapps/compatdata/489830/pfx/drive_c/users/steamuser/Documents/My Games/Skyrim Special Edition/Skyrim.ini
+    ```
+
+    > [!TIP]  
+    > Replace `~/.local/share/Steam/steamapps` with the actual path to your Steam installation if it's not in the default location.
+
+2. Locate the `[General]` section in the `ini` file and add the following line to the end of it:
+
+    ```ini
+    sIntroSequence=
+    ```
+
+    The following is a sample of the entirety of the `[General]` section:
+
+    ```ini
+    [General]
+    sLanguage=ENGLISH
+    sTestFile1=Dawnguard.esm
+    sTestFile2=HearthFires.esm
+    sTestFile3=Dragonborn.esm
+    sIntroSequence=
+    ```
+
+3. Save and exit the `Skyrim.ini` file.
 
 ---
 
