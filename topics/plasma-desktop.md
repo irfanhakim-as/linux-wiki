@@ -485,7 +485,7 @@ This details some customisation options for the Plasma Desktop.
 
 ### Description
 
-This details some widgets we could add to our desktop for added functionality.
+This details some additional widgets we could add to our desktop for added functionality.
 
 ### KDE Thermal Monitor
 
