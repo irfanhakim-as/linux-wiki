@@ -187,22 +187,24 @@ This details some customisation options for the Plasma Desktop.
 
 ### Floating Dock
 
-1. Right click the default **Taskbar** (Panel/Dock).
+1. Right click the **Default Panel** (Taskbar/Dock).
 
 2. Click the **Show Panel Configuration** option.
 
-3. Set the following options:
+3. In the **Panel Settings** panel, set the following options:
 
    - Position: `Bottom`
    - Alignment: `Center`
    - Width: `Fit content`
    - Visibility: `Always visible`
    - Opacity: `Adaptive`
-   - Style: `Floating`
+   - Style (Floating): `Enabled`
 
-4. Adjust the **Panel Height** as you wish.
+4. Adjust the **Panel Height** as you wish i.e. `64`.
 
-5. Click the **Done** button.
+5. If used with a [Menu Bar](#menu-bar), it is recommended to remove everything from the panel except the default **Icons-only Task Manager**.
+
+6. Click the **Done** button in the **Panel Settings** panel.
 
 ### Cleaner System Tray
 
@@ -271,43 +273,58 @@ This details some customisation options for the Plasma Desktop.
 
 ### Prettier Icons
 
-1. Launch the **System Settings** app.
+1. Launch the **System Settings** application.
 
-2. Expand the **Appearance** section.
+2. Click the **Colors & Themes** menu item under the **Appearance & Style** section.
 
-3. Get into the **Icons** page.
+3. Configure the **Icons**:
 
-4. Click the **Get New Icons...** button.
+   - Click the **Icons** menu item.
 
-5. Search for the `Mkos-Big-Sur` icon set and click the **Install** button.
+   - Click the **Get New...** button.
 
-6. Click the **Use** button to use the icon set and close the **Download New Icons** window.
+   - In the provided search bar, search for `Mkos-Big-Sur` and click the **Install** button.
 
-7. Get into the **Cursors** page.
+   - Close the **Download New Icons** window.
 
-8. Click the **Get New Cursors...** button.
+   - In the **Icons** page, select the **Mkos-Big-Sur-Night** (Dark) or **Mkos-Big-Sur** (Light) option and click the **Apply** button.
 
-9. Search for the `Bibata Modern Classic` cursor set and click the **Install** button.
+4. Configure the **Cursors**:
 
-10. Click the **Install** button next to the `Bibata-Modern-Classic.tar.xz` option.
+   - Click the **Cursors** menu item.
 
-11. Click the **Use** button to use the icon set and close the **Download New Cursors** window.
+   - Click the **Get New...** button.
+
+   - In the provided search bar, search for `Bibata Modern Classic` (Dark) or `Bibata Modern Ice` (Light) and click the **Install** button.
+
+   - When prompted to **Pick Your Installation Option**, click the corresponding **Install** button for:
+
+     - `Bibata-Modern-Classic.tar.xz` (Dark) or `Bibata-Modern-Ice.tar.xz` (Light).
+
+   - Close the **Download New Cursors** window.
+
+   - In the **Cursors** page, select the **Bibata-Modern-Classic** (Dark) or **Bibata-Modern-Ice** (Light) option and click the **Apply** button.
 
 ### Menu Bar
 
-1. Right click the desktop, hover over the **Add Panel** menu item, and select the **Application Menu Bar** option.
+1. Right click the desktop and click the **Enter Edit Mode** button.
 
-2. Right click the **Application Menu Bar** at the top and select the **Enter Edit Mode** option.
+2. Expand the **Add Panel** dropdown and select the **Application Menu Bar** option.
 
-3. Configure the **Panel height** accordingly i.e. `27` on a 1080p screen or `33` on a 1440p screen.
+3. Right click the **Application Menu Bar** and select the **Show Panel Configuration** option.
 
-4. Click the **More Options...** button and configure accordingly:
+4. In the **Panel Settings** panel, set the following options:
 
-   - Panel Alignment: `Center`.
-   - Visibility: `Always Visible`.
-   - Opacity: `Adaptive`.
+   - Position: `Top`
+   - Alignment: `Center`
+   - Width: `Fill width`
+   - Visibility: `Always visible`
+   - Opacity: `Adaptive`
+   - Style (Floating): `Disabled`
 
-5. Add Widgets to the Menu Bar:
+5. Adjust the **Panel Height** as you wish i.e. `32`.
+
+6. Add Widgets to the Menu Bar:
 
    - Click the **Add Widgets...** button.
 
@@ -339,7 +356,7 @@ This details some customisation options for the Plasma Desktop.
 
         - Window Title: `plasma6-applets-window-title`
 
-6. Position the widgets by clicking and dragging them like so on the Menu Bar in this order (from left to right):
+7. Position the widgets by clicking and dragging them like so on the Menu Bar in this order (from left to right):
 
    - `Application Launcher`.
    - `Window Title`.
@@ -350,7 +367,7 @@ This details some customisation options for the Plasma Desktop.
    - `System Tray`.
    - `Peek at Desktop`.
 
-7. Configure the widgets by right clicking each widget and selecting the **Configure...** option:
+8. Configure the widgets by right clicking each widget and selecting the **Configure...** option:
 
    - **Window Title**:
      - **Appearance**:
@@ -394,11 +411,13 @@ This details some customisation options for the Plasma Desktop.
      - Leave the rest as default and click the **OK** button.
    - [**System Tray**](#cleaner-system-tray).
 
+9. Click the **Done** button in the **Panel Settings** panel.
+
 ### macOS-like Desktop
 
 1. Launch the **System Settings** application.
 
-2. Click the **Appearance** section.
+2. Click the **Colors & Themes** menu item under the **Appearance & Style** section.
 
 3. Configure the **Application Style**:
 
@@ -421,61 +440,82 @@ This details some customisation options for the Plasma Desktop.
 
    - In the **GNOME/GTK Application Style** page, expand the **GTK theme** dropdown and select the `WhiteSur-Dark` (Dark) or `WhiteSur-Light` (Light) option.
 
+        > [!TIP]  
+        > Select the `-solid` variant if you are using an NVIDIA GPU.
+
    - Click the **Apply** button.
 
 4. Configure the **Plasma Style**:
 
    - Click the **Plasma Style** menu item.
-   - Click the **Get New Plasma Styles...** button.
-   - In the provided search bar, search for `Mkos-BigSur-plasma` and click the **Install** button.
+
+   - Click the **Get New...** button.
+
+   - In the provided search bar, search for `Apple-Dark Theme` (Dark) or `Mkos-BigSur-plasma` (Light) and click the **Install** button.
+
    - Close the **Download New Plasma Styles** window.
-   - In the **Plasma Style** page, select the **mkos-BigSur** option and click the **Apply** button.
+
+   - In the **Plasma Style** page, select the **AppleDark-ALL** (Dark) or **mkos-BigSur** (Light) option and click the **Apply** button.
 
 5. Configure the **Window Decorations**:
 
    - Click the **Window Decorations** menu item.
 
-   - Click the **Get New Window Decorations...** button.
+   - Click the **Get New...** button.
 
-   - In the provided search bar, search for `Mkos-BigSur-AuroraNight` (Dark) or `Mkos-BigSur-Aurora` (Light) and click the **Install** button.
+   - In the provided search bar, search for `Big Sur Night mkos` (Dark) or `Mkos-BigSur-Aurora` (Light) and click the **Install** button.
 
    - Close the **Download New Window Decorations** window.
 
-   - In the **Window Decorations** page, select the **Mkos-BigSur** option and click the **Apply** button.
+   - In the **Window Decorations** page, select the **Mkos-BigSur-Night** (Dark) or **Mkos-BigSur** (Light) option and click the **Apply** button.
+
+   - Configure the **Window Borders**:
+
+     - Expand the Window Borders dropdown to the right of the **Window Decorations** title.
+     - Select the `Theme's default (Normal Window Borders)` option.
+     - Click the **Apply** button.
 
    - Configure the **Titlebar Buttons**:
 
-     - Click the **Titlebar Buttons** tab.
+     - Click the **Configure Titlebar Buttons...** button.
      - Remove the **More actions for this window** button.
      - Remove the **On all desktops** button.
-     - Remove the **Context Help** button.
+     - Remove the **Context help** button.
      - Drag the **Close** button to the far left.
      - Drag the **Minimize** button to the right of the **Close** button.
      - Drag the **Maximize** button to the right of the **Minimize** button.
      - Click the **Apply** button.
 
-6. Configure the **Splash Screen** *(Optional)*:
+6. Configure macOS-like [**Icons** and **Cursors**](#prettier-icons).
+
+7. Configure the **Splash Screen** *(Optional)*:
 
    - Click the **Splash Screen** menu item.
 
    - In the **Splash Screen** page, select the **None** option and click the **Apply** button.
 
-7. Configure the **Login Screen**:
+8. Configure the **Login Screen**:
 
-    - From the **System Settings** application, click the **Startup and Shutdown** section.
-    - Click the **Login Screen (SDDM)** menu item.
-    - Click the **Get New SDDM Themes...** button.
-    - In the provided search bar, search for `Apple Sonoma V3` and click the **Install** button.
-    - Enter your user password when prompted.
-    - Close the **Download New Login Screen** window.
-    - In the **Login Screen (SDDM)** page, select the **Apple-Sonoma-V3** option and click the **Apply** button.
-    - Enter your user password once again when prompted.
+   - Click the **Login Screen (SDDM)** menu item.
 
-8. Add an [**Application Menu Bar**](#menu-bar) to the top of the screen.
+   - Click the **Get New...** button.
 
-9. Replace the default system taskbar with a [**Plank**](./plank.md#setup) dock.
+   - In the provided search bar, search for `Apple Sonoma V3` and click the **Install** button.
 
-10. Configure macOS-like [**Icons**](#prettier-icons).
+   - When prompted to authenticate, enter your user password and click **OK**.
+
+   - Close the **Download New Login Screen** window.
+
+   - In the **Login Screen (SDDM)** page, select the **Apple-Sonoma-V3** option and click the **Apply** button.
+
+   - When prompted to authenticate, enter your user password and click **OK**.
+
+9. Add an [**Application Menu Bar**](#menu-bar) to the top of the screen.
+
+10. Configure the **Default Panel** as a macOS-like [Dock](#floating-dock).
+
+    > [!NOTE]  
+    > It is no longer recommended to replace the default panel with a [**Plank**](./plank.md#setup) dock due to incompatibility with Wayland.
 
 11. [Install](./fonts.md#installation) and [Configure](./fonts.md#configuration) macOS-like **Fonts** (including Emojis).
 
