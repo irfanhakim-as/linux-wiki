@@ -1,11 +1,14 @@
 # Plank
 
-## Description
-
-Plank is meant to be the simplest dock on the planet. The goal is to provide just what a dock needs and absolutely nothing more.
+> [!WARNING]  
+> Plank is not supported on desktops running Wayland such as KDE Plasma 6.
 
 > [!NOTE]  
 > Certain parts of this guide assumes that you are using the KDE Plasma desktop environment.
+
+## Description
+
+Plank is meant to be the simplest dock on the planet. The goal is to provide just what a dock needs and absolutely nothing more.
 
 ## Directory
 
