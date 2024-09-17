@@ -209,7 +209,7 @@ This details some customisation options for the Plasma Desktop.
 
 6. **Optionally**, use the **Launchpad Plasma** widget as the desktop's default application launcher:
 
-   - [Install](#installing-a-widget) the **Launchpad Plasma** widget by **Ademir**.
+   - [Install](#installing-a-widget) the **Launchpad plasma 6** widget by **adhe**.
 
    - [Add](#adding-a-widget) the widget to the leftmost side of the panel.
 
