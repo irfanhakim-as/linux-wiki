@@ -362,7 +362,6 @@ This details some customisation options for the Plasma Desktop.
        - Spacing: `4`
        - Left margin: `4`
        - Right margin: `4`
-       - Click the **Apply** button
      - **Behavior**:
        - Filters:
          - Show only window information from current screen: `Disabled`
@@ -372,8 +371,8 @@ This details some customisation options for the Plasma Desktop.
          - Scroll to cycle and minimize through your tasks: `Disabled`
        - Placeholder:
          - Show activity information: `Enabled`
-       - Click the **Apply** button
-     - Leave the rest as default and click the **OK** button
+     - Leave the rest as default
+
    - **Digital Clock**:
      - **Appearance**:
        - Information:
@@ -387,8 +386,8 @@ This details some customisation options for the Plasma Desktop.
          - Font Family: `SF Pro Display`
          - Font Style: `Regular`
          - Font Size: `12`
-       - Click the **Apply** button
-     - Leave the rest as default and click the **OK** button
+     - Leave the rest as default
+
    - [**System Tray**](#cleaner-system-tray)
 
 9.  Click the **Done** button in the **Panel Settings** panel.
