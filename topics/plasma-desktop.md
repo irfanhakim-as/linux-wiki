@@ -15,6 +15,7 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
   - [Quality of Life Improvements](#quality-of-life-improvements)
     - [Description](#description-1)
     - [Workspace Behaviour](#workspace-behaviour)
+    - [Animation Speed](#animation-speed)
     - [Dolphin](#dolphin)
       - [References](#references)
     - [KRunner](#krunner)
@@ -72,6 +73,18 @@ This details on some things that could be done to improve the experience of usin
    - Clicking files or folders: `Selects them`
 
 5. Click the **Apply** button.
+
+### Animation Speed
+
+This details how to adjust the animation speed of the Plasma Desktop:
+
+1. Launch the **System Settings** application.
+
+2. Select the **General Behavior** menu item under the **Workspace** section.
+
+3. In the **General Behavior** page, adjust the **Animation speed** using the provided slider (i.e. increase by 1 step from the default).
+
+4. Click the **Apply** button.
 
 ### Dolphin
 
