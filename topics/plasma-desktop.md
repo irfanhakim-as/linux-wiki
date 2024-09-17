@@ -32,6 +32,9 @@ This topic focuses on the Plasma Desktop, a graphical desktop environment by KDE
     - [macOS-like Desktop](#macos-like-desktop)
   - [Widgets](#widgets)
     - [Description](#description-3)
+    - [Installing a Widget](#installing-a-widget)
+    - [Adding a Widget](#adding-a-widget)
+    - [Configuring a Widget](#configuring-a-widget)
     - [KDE Thermal Monitor](#kde-thermal-monitor)
       - [References](#references-1)
       - [Steps](#steps)
@@ -526,6 +529,41 @@ This details some customisation options for the Plasma Desktop.
 ### Description
 
 This details some additional widgets we could add to our desktop for added functionality.
+
+### Installing a Widget
+
+1. If the widget is available in your package manager, [install](./yay.md#install) the package using `yay` directly.
+
+2. **Alternatively**, install the widget through the KDE Plasma Desktop:
+
+   - Right click the desktop and select the **Enter Edit Mode** menu item.
+   - Click the **Get New Widgets...** button.
+   - Select the **Download New Plasma Widgets** option.
+   - Use the provided search bar to search for the widget by their name.
+   - Locate the widget and click its corresponding **Install** button.
+   - If prompted to **Pick Your Installation Option**, click the desired downloadable item's corresponding **Install** button.
+   - If prompted to authenticate, enter your user password and click **OK**.
+   - Close the **Download New Plasma Widgets** window after you've finished.
+
+### Adding a Widget
+
+1. If you wish to add a widget to the **Desktop**, right click the desktop and select the **Enter Edit Mode** menu item.
+
+2. If you wish to add a widget to a **Panel** (i.e. menu bar or dock), right click the panel and select the **Show Panel Configuration** menu item.
+
+3. Click the **Add Widgets...** button.
+
+4. Search for the widget in the provided search bar from the **Widgets** panel.
+
+5. Click and drag the widget to the desired position and release it to add it.
+
+### Configuring a Widget
+
+1. Right click the widget and select its **Configure...** menu item.
+
+2. Modify the widget's settings as desired in each section and click the **Apply** button to save the changes.
+
+3. Click the **OK** button once done to save all changes.
 
 ### KDE Thermal Monitor
 
