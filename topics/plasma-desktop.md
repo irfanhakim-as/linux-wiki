@@ -207,7 +207,22 @@ This details some customisation options for the Plasma Desktop.
 
 5. If used with a [Menu Bar](#menu-bar), it is recommended to remove everything from the panel except the default **Icons-only Task Manager**.
 
-6. Click the **Done** button in the **Panel Settings** panel.
+6. **Optionally**, use the **Launchpad Plasma** widget as the desktop's default application launcher:
+
+   - [Install](#installing-a-widget) the **Launchpad Plasma** widget by **Ademir**.
+
+   - [Add](#adding-a-widget) the widget to the leftmost side of the panel.
+
+   - [Configure](#configuring-a-widget) the widget like so:
+
+     - **General**:
+       - Icon: `app-launcher`
+       - Show application as: `Name only`
+       - Apps icon size: `Huge`
+       - Favs icon size: `Large`
+       - Favs icon size (Power/Restart/Logout/Lock icons): `Medium`
+
+7.  Click the **Done** button in the **Panel Settings** panel.
 
 ### Cleaner System Tray
 
@@ -329,7 +344,7 @@ This details some customisation options for the Plasma Desktop.
 
 6. [Add](#adding-a-widget) the following **Widgets** to the Menu Bar:
 
-   - **Application Launcher**
+   - **Application Launcher** or **Kpple Menu 6** by **chrtall** ([Requires installation](#installing-a-widget)) if using **Launchpad Plasma** in the [Dock](#floating-dock)
    - **Window Title** by **dhruv8sh** or `plasma6-applets-window-title` (AUR): [Requires installation](#installing-a-widget)
    - **Global Menu**
    - **Digital Clock**
@@ -338,7 +353,7 @@ This details some customisation options for the Plasma Desktop.
 
 7. Position the widgets by clicking and dragging them like so on the Menu Bar in this order (from left to right):
 
-   - **Application Launcher**
+   - **Application Launcher** or **Kpple Menu 6**
    - **Window Title**
    - **Global Menu**
    - **Panel Spacer** (Click the **Add Spacer** button)
