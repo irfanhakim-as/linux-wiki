@@ -351,44 +351,44 @@ This details some customisation options for the Plasma Desktop.
 
    - **Window Title**:
      - **Appearance**:
-       - Label style: `Application`.
+       - Label style: `Application`
        - Icon:
-         - Show when available: `Disabled`.
+         - Show when available: `Disabled`
        - Font:
-         - Bold: `Disabled`.
-         - Italic: `Disabled`.
-         - First letters capital: `Enabled`.
-       - Length: `Based on contents`.
-       - Spacing: `4`.
-       - Left margin: `4`.
-       - Right margin: `4`.
-       - Click the **Apply** button.
+         - Bold: `Disabled`
+         - Italic: `Disabled`
+         - First letters capital: `Enabled`
+       - Length: `Based on contents`
+       - Spacing: `4`
+       - Left margin: `4`
+       - Right margin: `4`
+       - Click the **Apply** button
      - **Behavior**:
        - Filters:
-         - Show only window information from current screen: `Disabled`.
-         - Show only when maximized: `Disabled`.
+         - Show only window information from current screen: `Disabled`
+         - Show only when maximized: `Disabled`
        - Mouse:
-         - Show tooltip on hover: `Enabled`.
-         - Scroll to cycle and minimize through your tasks: `Disabled`.
+         - Show tooltip on hover: `Enabled`
+         - Scroll to cycle and minimize through your tasks: `Disabled`
        - Placeholder:
-         - Show activity information: `Enabled`.
-       - Click the **Apply** button.
-     - Leave the rest as default and click the **OK** button.
+         - Show activity information: `Enabled`
+       - Click the **Apply** button
+     - Leave the rest as default and click the **OK** button
    - **Digital Clock**:
      - **Appearance**:
        - Information:
-         - Show date: `Always beside time`.
-       - Show seconds: `Only in the tooltip`.
-       - Show time zone: `Only when different from local time zone`.
-       - Display time zone as: `Code`.
-       - Time display: `12-Hour`.
-       - Date format: `Long Date`.
-       - Text display: `Manual`.
-         - Font Family: `SF Pro Display`.
-         - Font Style: `Regular`.
-         - Font Size: `12`.
-       - Click the **Apply** button.
-     - Leave the rest as default and click the **OK** button.
+         - Show date: `Always beside time`
+       - Show seconds: `Only in the tooltip`
+       - Show time zone: `Only when different from local time zone`
+       - Display time zone as: `Code`
+       - Time display: `12-Hour`
+       - Date format: `Long Date`
+       - Text display: `Manual`
+         - Font Family: `SF Pro Display`
+         - Font Style: `Regular`
+         - Font Size: `12`
+       - Click the **Apply** button
+     - Leave the rest as default and click the **OK** button
    - [**System Tray**](#cleaner-system-tray)
 
 9.  Click the **Done** button in the **Panel Settings** panel.
