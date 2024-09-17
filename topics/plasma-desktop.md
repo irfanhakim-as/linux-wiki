@@ -513,6 +513,18 @@ This details some customisation options for the Plasma Desktop.
 
 11. [Install](./fonts.md#installation) and [Configure](./fonts.md#configuration) macOS-like **Fonts** (including Emojis).
 
+12. Add a _Genie Mode_ animation when minimising or reopening a window from the dock:
+
+    - Launch the **System Settings** application.
+    - Select the **Window Management** menu item under the **Apps & Windows** section.
+    - In the **Window Management** view, select the **Desktop Effects** menu item.
+    - Using the provided search bar in the **Desktop Effects** page, search for the `Magic Lamp` setting.
+    - Select the corresponding **Magic Lamp** checkbox to enable it.
+    - Click its corresponding **Gear Cog** icon to configure it.
+    - In the newly opened **Configure** window, set the **Animation duration** to `400 milliseconds`.
+    - Click the **Apply** button and **OK** in the **Configure** window.
+    - Click the **Apply** button in the **Desktop Effects** page.
+
 ---
 
 ## Widgets
