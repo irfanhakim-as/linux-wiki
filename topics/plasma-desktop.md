@@ -327,50 +327,27 @@ This details some customisation options for the Plasma Desktop.
 
 5. Adjust the **Panel Height** as you wish i.e. `32`.
 
-6. Add Widgets to the Menu Bar:
+6. [Add](#adding-a-widget) the following **Widgets** to the Menu Bar:
 
-   - Click the **Add Widgets...** button.
-
-   - Search for the widget in the provided search bar from the **Widgets** panel.
-
-   - Locate the widget and click and drag it to the Menu Bar.
-
-   - Release the widget to add it to the Menu Bar.
-
-   - Do so for each of the following widgets:
-
-     - `Application Launcher`.
-     - `Window Title` by "dhruv8sh" (Requires a download).
-     - `Global Menu` (Added by default).
-     - `Digital Clock`.
-     - `System Tray`.
-     - `Peek at Desktop`.
-
-        For widgets that require a download, download them by:
-
-        - Clicking the **Get New Widgets...** button.
-        - Select the **Download New Plasma Widgets** option.
-        - Use the provided search bar to search for the widget by their name.
-        - Locate the widget and click the **Install** button.
-        - If prompted to **Pick Your Installation Option**, click the desired downloadable item's corresponding **Install** button.
-        - Close the **Download New Plasma Widgets** window after you've finished downloading all the widgets you need.
-
-        **Alternatively**, some of the widgets could be [installed](./yay.md#install) using `yay` directly:
-
-        - Window Title: `plasma6-applets-window-title`
+   - **Application Launcher**
+   - **Window Title** by **dhruv8sh** or `plasma6-applets-window-title` (AUR): [Requires installation](#installing-a-widget)
+   - **Global Menu**
+   - **Digital Clock**
+   - **System Tray**
+   - **Peek at Desktop**
 
 7. Position the widgets by clicking and dragging them like so on the Menu Bar in this order (from left to right):
 
-   - `Application Launcher`.
-   - `Window Title`.
-   - `Global Menu`.
-   - Add a `Panel Spacer` by clicking the **Add Spacer** button.
-   - `Digital Clock`.
-   - Add a `Panel Spacer` by clicking the **Add Spacer** button.
-   - `System Tray`.
-   - `Peek at Desktop`.
+   - **Application Launcher**
+   - **Window Title**
+   - **Global Menu**
+   - **Panel Spacer** (Click the **Add Spacer** button)
+   - **Digital Clock**
+   - **Panel Spacer** (Click the **Add Spacer** button)
+   - **System Tray**
+   - **Peek at Desktop**
 
-8. Configure the widgets by right clicking each widget and selecting the **Configure...** option:
+8.  [Configure](#configuring-a-widget) the following widgets as such:
 
    - **Window Title**:
      - **Appearance**:
@@ -412,9 +389,9 @@ This details some customisation options for the Plasma Desktop.
          - Font Size: `12`.
        - Click the **Apply** button.
      - Leave the rest as default and click the **OK** button.
-   - [**System Tray**](#cleaner-system-tray).
+   - [**System Tray**](#cleaner-system-tray)
 
-9. Click the **Done** button in the **Panel Settings** panel.
+9.  Click the **Done** button in the **Panel Settings** panel.
 
 ### macOS-like Desktop
 
