@@ -213,33 +213,33 @@ This details some customisation options for the Plasma Desktop.
 
 1. Right click the **Upward/Downward Arrow** icon at the system taskbar or menu bar that says **Show hidden icons**.
 
-2. Click **Configure System Tray...**.
+2. Click the **Configure System Tray...** menu item.
 
 3. In the **General** section:
 
-    - Set the **Panel icon size** to `Small`.
+    - **Panel icon size**: `Small`
 
-    - Set the **Panel icon spacing** to `Small` (on a screen lower than 1080p) or `Normal` (on a 1080p or higher screen).
+    - **Panel icon spacing**: `Small` (<1080p screen) or `Normal` (1080p> screen)
 
 4. Navigate to the **Entries** section and make the following (recommended) configurations:
 
-    - Set **AnyDesk** to `Always hidden`.
+    - **AnyDesk**: `Always hidden`
 
-    - Set **firewall-applet** to `Always hidden`.
+    - **firewall-applet**: `Always hidden`
 
-    - Set **Updates** to `Always hidden`.
+    - **Updates**: `Always hidden`
 
-    - Set **KDE Connect** to `Always shown`.
+    - **KDE Connect**: `Always shown`
 
-    - Set **Keyboard Layout** to `Always hidden`.
+    - **Keyboard Layout**: `Always hidden`
 
-    - Set **Lock Keys Status** to `Always hidden`.
+    - **Lock Keys Status**: `Always hidden`
 
-    - Set **Clipboard** to `Always hidden`.
+    - **Clipboard**: `Always hidden`
 
-    - Set **Media Player** to `Always hidden`.
+    - **Media Player**: `Always hidden`
 
-    - Set **Notifications** to `Always shown`.
+    - **Notifications**: `Always shown`
 
 5. Click **Apply** then **OK**.
 
