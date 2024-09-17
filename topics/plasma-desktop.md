@@ -218,9 +218,9 @@ This details some customisation options for the Plasma Desktop.
      - **General**:
        - Icon: `app-launcher`
        - Show application as: `Name only`
-       - Apps icon size: `Huge`
-       - Favs icon size: `Large`
-       - Favs icon size (Power/Restart/Logout/Lock icons): `Medium`
+       - Apps icon size: `Huge` (<1080p screen) or `Enormous` (1080p> screen)
+       - Favs icon size: `Large` (<1080p screen) or `Huge` (1080p> screen)
+       - Favs icon size (Power/Restart/Logout/Lock icons): `Medium` (<1080p screen) or `Large` (1080p> screen)
 
 7.  Click the **Done** button in the **Panel Settings** panel.
 
