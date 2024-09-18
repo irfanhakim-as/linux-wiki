@@ -71,7 +71,7 @@ This details the installation steps for Toshy.
 1. Clone the Toshy Git repository to the home directory:
 
     ```sh
-    git clone ~/toshy https://github.com/RedBearAK/toshy.git
+    git clone https://github.com/RedBearAK/toshy.git ~/toshy
     ```
 
 2. Enter the cloned `toshy` repository:
