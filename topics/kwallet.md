@@ -45,9 +45,9 @@ This details how to setup and create a KDE Wallet and use it by default.
 
 2. Launch the **System Settings** application.
 
-3. Under the **Personalization** group, expand the **KDE Wallet** section.
+3. Under the **Security & Privacy** group, expand the **KDE Wallet** section.
 
-4. Under the **Automatic Wallet Selection** section, click the **New** button corresponding to the **Select wallet to use as default** option.
+4. In the **KDE Wallet** page, under the **Automatic Wallet Selection** section, click the **New** button corresponding to the **Select wallet to use as default** option.
 
 5. Enter a name for the wallet i.e. `kdewallet` and click the **OK** button.
 
@@ -57,9 +57,13 @@ This details how to setup and create a KDE Wallet and use it by default.
 
 8. Click the **Finish** button.
 
-9. Back in the **KDE Wallet** section, expand the **Select wallet to use as default** option and select the wallet you just created.
+9. If prompted to enter the passphrase of your chosen GPG key, enter it and select the **OK** button.
 
-10. Click the **Apply** button at the bottom right.
+10. Back in the **KDE Wallet** section, expand the **Select wallet to use as default** dropdown and select the wallet you just created.
+
+11. Click the **Apply** button at the bottom right.
+
+12. If prompted to authenticate, enter your user credentials and click the **OK** button.
 
 ---
 
