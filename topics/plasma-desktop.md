@@ -275,17 +275,22 @@ This details some customisation options for the Plasma Desktop.
 
 1. [Install](yay.md#install) the `kdeplasma-addons` package using `yay` to add more task switcher options.
 
-2. Launch the **System Settings** app.
+    > [!NOTE]  
+    > This additional package is no longer needed on KDE Plasma 6 or newer.
 
-3. Click the **Window Management** section.
+2. Launch the **System Settings** application.
 
-4. Click the **Task Switcher** section.
+3. Click the **Window Management** menu item under the **Apps & Windows** section.
 
-5. In the **Main** tab, under the **Vizualisation** section, click the dropdown above the **Shortcuts** options.
+4. Click the **Task Switcher** menu item.
 
-6. By default, the **Breeze** task switcher is selected, switch this to **Thumbnail Grid**.
+5. In the **Main** tab of the **Task Switcher** page, within the **Visualization** section, configure the following:
 
-7. Under the **Shortcuts** section, configure as follows:
+   - Uncheck the **Show selected window** option to disable it.
+   - Check the **Effect** dropdown option to enable the chosen effect.
+   - Expand the **Effect** dropdown and select the **Thumbnail Grid** option.
+
+6.  Under the **Shortcuts** section, configure as follows:
 
     > [!IMPORTANT]  
     > Skip this redundant and breaking step if you intend to use [Toshy](./toshy.md#task-switcher).
@@ -300,7 +305,7 @@ This details some customisation options for the Plasma Desktop.
       - Forward: `None`
       - Reverse: `None`
 
-8. Click **Apply**.
+7.  Click the **Apply** button.
 
 ### Prettier Icons
 
