@@ -426,7 +426,19 @@ This details some customisation options for the Plasma Desktop.
 
 2. Click the **Colors & Themes** menu item under the **Appearance & Style** section.
 
-3. Configure the **Application Style**:
+3. Configure the **Colors**:
+
+   - Click the **Colors** menu item.
+
+   - Click the **Get New...** button.
+
+   - In the provided search bar, search for `MkosBigSur-Dark` (Dark) or `Mkos-BigSur-Colors` (Light) and click the **Install** button.
+
+   - Close the **Download New Color Schemes** window.
+
+   - In the **Colors** page, select the **MkosBigSur-Dark** (Dark) or **Mkos-BigSur** (Light) option and click the **Apply** button.
+
+4. Configure the **Application Style**:
 
    - Click the **Application Style** menu item.
 
@@ -452,7 +464,7 @@ This details some customisation options for the Plasma Desktop.
 
    - Click the **Apply** button.
 
-4. Configure the **Plasma Style**:
+5. Configure the **Plasma Style**:
 
    - Click the **Plasma Style** menu item.
 
@@ -464,7 +476,7 @@ This details some customisation options for the Plasma Desktop.
 
    - In the **Plasma Style** page, select the **AppleDark-ALL** (Dark) or **mkos-BigSur** (Light) option and click the **Apply** button.
 
-5. Configure the **Window Decorations**:
+6. Configure the **Window Decorations**:
 
    - Click the **Window Decorations** menu item.
 
@@ -493,15 +505,15 @@ This details some customisation options for the Plasma Desktop.
      - Drag the **Maximize** button to the right of the **Minimize** button.
      - Click the **Apply** button.
 
-6. Configure macOS-like [**Icons** and **Cursors**](#prettier-icons).
+7. Configure macOS-like [**Icons** and **Cursors**](#prettier-icons).
 
-7. Configure the **Splash Screen** *(Optional)*:
+8. Configure the **Splash Screen** *(Optional)*:
 
    - Click the **Splash Screen** menu item.
 
    - In the **Splash Screen** page, select the **None** option and click the **Apply** button.
 
-8. Configure the **Login Screen**:
+9.  Configure the **Login Screen**:
 
    - Click the **Login Screen (SDDM)** menu item.
 
@@ -517,16 +529,16 @@ This details some customisation options for the Plasma Desktop.
 
    - When prompted to authenticate, enter your user password and click **OK**.
 
-9. Add an [**Application Menu Bar**](#menu-bar) to the top of the screen.
+10. Add an [**Application Menu Bar**](#menu-bar) to the top of the screen.
 
-10. Configure the **Default Panel** as a macOS-like [Dock](#floating-dock).
+11. Configure the **Default Panel** as a macOS-like [Dock](#floating-dock).
 
     > [!NOTE]  
     > It is no longer recommended to replace the default panel with a [**Plank**](./plank.md#setup) dock due to incompatibility with Wayland.
 
-11. [Install](./fonts.md#installation) and [Configure](./fonts.md#configuration) macOS-like **Fonts** (including Emojis).
+12. [Install](./fonts.md#installation) and [Configure](./fonts.md#configuration) macOS-like **Fonts** (including Emojis).
 
-12. Add a _Genie Mode_ animation when minimising or reopening a window from the dock:
+13. Add a _Genie Mode_ animation when minimising or reopening a window from the dock:
 
     - Launch the **System Settings** application.
     - Select the **Window Management** menu item under the **Apps & Windows** section.
