@@ -88,6 +88,7 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
     - [References](#references-15)
   - [Toshy](#toshy)
     - [References](#references-16)
+  - [Zram](#zram)
 
 ## References
 
@@ -646,3 +647,9 @@ This details the setup and configuration of Toshy for the purpose of matching th
 - [Setup](../topics/toshy.md#setup)
 - [Configuration](../topics/toshy.md#configuration)
 - [Additional Workarounds](../topics/toshy.md#additional-workarounds)
+
+---
+
+## [Zram](../topics/zram.md#setup)
+
+This details how to setup Zram to be used as an alternative to swap.
