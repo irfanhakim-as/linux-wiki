@@ -510,6 +510,11 @@ This details some customisation options for the Plasma Desktop.
      - Drag the **Maximize** button to the right of the **Minimize** button.
      - Click the **Apply** button.
 
+   - Some applications require additional configuration for these customisations to be applied correctly:
+
+     - [Firefox](firefox.md#follow-kde-plasma-window-decoration)
+     - [Thunderbird](thunderbird.md#follow-kde-plasma-window-decoration)
+
 7. Configure macOS-like [**Icons** and **Cursors**](#prettier-icons).
 
 8. Configure the **Splash Screen** *(Optional)*:
