@@ -49,20 +49,21 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
     - [References](#references-6)
   - [Backing up with Vorta](#backing-up-with-vorta)
     - [References](#references-7)
-  - [Thunderbird Configuration](#thunderbird-configuration)
+  - [Thunderbird](#thunderbird)
+    - [References](#references-8)
   - [Discord Troubleshooting](#discord-troubleshooting)
   - [Migrating (Firefox) to Flatpak](#migrating-firefox-to-flatpak)
   - [EmuDeck](#emudeck)
   - [Recommended Global Flatpak Permissions](#recommended-global-flatpak-permissions)
   - [Using a Touchpad](#using-a-touchpad)
-    - [References](#references-8)
-  - [Generate GPG Key and Use with Git](#generate-gpg-key-and-use-with-git)
     - [References](#references-9)
+  - [Generate GPG Key and Use with Git](#generate-gpg-key-and-use-with-git)
+    - [References](#references-10)
   - [Desktop Auto Login](#desktop-auto-login)
   - [KDE Wallet](#kde-wallet)
-    - [References](#references-10)
-  - [Distrobox Installation and Usage](#distrobox-installation-and-usage)
     - [References](#references-11)
+  - [Distrobox Installation and Usage](#distrobox-installation-and-usage)
+    - [References](#references-12)
   - [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
   - [VS Code Integration with Distrobox](#vs-code-integration-with-distrobox)
   - [Deb Package Installation](#deb-package-installation)
@@ -74,19 +75,19 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
   - [Miniconda Environments](#miniconda-environments)
   - [XP-Pen](#xp-pen)
   - [OBS Studio](#obs-studio)
-    - [References](#references-12)
+    - [References](#references-13)
   - [Magewell Capture Device on OBS](#magewell-capture-device-on-obs)
   - [KDE Connect](#kde-connect)
   - [SearXNG](#searxng)
-    - [References](#references-13)
+    - [References](#references-14)
   - [Link's Awakening DX HD](#links-awakening-dx-hd)
   - [Ocarina of Time](#ocarina-of-time)
   - [Majora's Mask](#majoras-mask)
   - [Connecting to WireGuard](#connecting-to-wireguard)
   - [Wayland](#wayland)
-    - [References](#references-14)
-  - [Toshy](#toshy)
     - [References](#references-15)
+  - [Toshy](#toshy)
+    - [References](#references-16)
 
 ## References
 
@@ -418,9 +419,14 @@ This details installing and setting up Vorta to have it backup our personal file
 
 ---
 
-## [Thunderbird Configuration](../topics/thunderbird.md#configuration)
+## Thunderbird
 
-This details how to configure Thunderbird including its default sort order and sort type.
+This details how to update Thunderbird's configurations and preferences as well as some recommended settings.
+
+### References
+
+- [Configuration](../topics/thunderbird.md#configuration)
+- [Preferences](../topics/thunderbird.md#preferences)
 
 ---
 
