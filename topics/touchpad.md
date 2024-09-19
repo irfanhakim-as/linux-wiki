@@ -1,11 +1,11 @@
 # Touchpad
 
+> [!IMPORTANT]  
+> This guide focuses on a specific system comprised of an Arch Linux based PC using KDE Plasma on X11, and the Apple Magic Trackpad 2.
+
 ## Description
 
 This details how we could configure and setup a touchpad for use on desktop Linux.
-
-> [!IMPORTANT]  
-> This guide focuses on a specific system comprised of an Arch Linux based PC using KDE Plasma on X11, and the Apple Magic Trackpad 2.
 
 ## Directory
 
