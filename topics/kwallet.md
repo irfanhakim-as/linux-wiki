@@ -98,7 +98,7 @@ This details how to create and setup a KDE Wallet and use it by default.
 
 ### Description
 
-This details how to set our KDE Wallet to auto unlock with our desktop at the expense of security.
+This details how to set our KDE Wallet to auto unlock upon login.
 
 ### References
 
