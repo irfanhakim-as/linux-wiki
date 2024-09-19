@@ -15,17 +15,20 @@ KDE Wallet Manager is a tool to manage passwords on the KDE Plasma system. By us
   - [References](#references)
   - [Setup](#setup)
     - [Description](#description-1)
-    - [Steps](#steps)
+    - [References](#references-1)
+    - [Initial Setup](#initial-setup)
+    - [SSH Passphrase](#ssh-passphrase)
+    - [GPG Passphrase](#gpg-passphrase)
   - [Auto Unlock](#auto-unlock)
     - [Description](#description-2)
-    - [References](#references-1)
-    - [Steps](#steps-1)
+    - [References](#references-2)
+    - [Steps](#steps)
     - [Blowfish](#blowfish)
     - [GPG](#gpg)
   - [Fix Error with Visual Studio Code](#fix-error-with-visual-studio-code)
     - [Description](#description-3)
-    - [References](#references-2)
-    - [Steps](#steps-2)
+    - [References](#references-3)
+    - [Steps](#steps-1)
 
 ## References
 
@@ -39,7 +42,12 @@ KDE Wallet Manager is a tool to manage passwords on the KDE Plasma system. By us
 
 This details how to create and setup a KDE Wallet and use it by default.
 
-### Steps
+### References
+
+- [Using the KDE Wallet to store ssh key passphrases](https://wiki.archlinux.org/title/KDE_Wallet#Using_the_KDE_Wallet_to_store_ssh_key_passphrases)
+- [Store GPG key passphrases](https://wiki.archlinux.org/title/KDE_Wallet#Store_GPG_key_passphrases)
+
+### Initial Setup
 
 1. [Install](yay.md#install) the `kwalletmanager` package using `yay` to easily configure our KDE Wallet(s).
 
@@ -88,6 +96,43 @@ This details how to create and setup a KDE Wallet and use it by default.
 15. Click the **Apply** button at the bottom right.
 
 16. If prompted to authenticate, enter your user credentials and click the **OK** button.
+
+### SSH Passphrase
+
+This describes how to use KDE Wallet to store SSH key passphrases:
+
+1. [Install](yay.md#install) the `ksshaskpass` package using `yay`.
+
+2. Create an `environment.d` directory if it does not yet exist:
+
+    ```sh
+    mkdir -p ~/.config/environment.d
+    ```
+
+3. Create an `environment.d` file named `ssh_askpass.conf`:
+
+    ```sh
+    nano ~/.config/environment.d/ssh_askpass.conf
+    ```
+
+    Add the following values to the file and save it:
+
+    ```conf
+    SSH_ASKPASS=/usr/bin/ksshaskpass
+    SSH_ASKPASS_REQUIRE=prefer
+    ```
+
+### GPG Passphrase
+
+This describes how to use KDE Wallet to store GPG key passphrases:
+
+1. [Install](yay.md#install) the `kwalletcli` package using `yay`.
+
+2. [Update the GPG agent configuration file](gpg.md#update-config) with the following value:
+
+    ```conf
+    pinentry-program /usr/bin/pinentry-kwallet
+    ```
 
 ---
 
