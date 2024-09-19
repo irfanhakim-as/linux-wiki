@@ -22,7 +22,8 @@ This details how we could configure and setup a touchpad for use on desktop Linu
   - [Smooth Scrolling in Mozilla Applications](#smooth-scrolling-in-mozilla-applications)
     - [Description](#description-3)
     - [References](#references-1)
-    - [Steps](#steps-2)
+    - [Firefox](#firefox)
+    - [Thunderbird](#thunderbird)
 
 ---
 
@@ -106,7 +107,7 @@ This details how to enable smooth scrolling in Mozilla applications including Fi
 - [Kinetic Scrolling on Linux?](https://community.frame.work/t/solved-kinetic-scrolling-on-linux/17564)
 - [PSA for Firefox users: set MOZ_USE_XINPUT2=1 to enable macOS-like smooth scrolling](https://www.reddit.com/r/linux/comments/72mfv8/psa_for_firefox_users_set_moz_use_xinput21_to)
 
-### Steps
+### Firefox
 
 1. Add the following [Environment Variable](flatpak.md#add-permission-overrides) to the **Firefox** Flatpak app using **Flatseal**:
 
@@ -114,9 +115,22 @@ This details how to enable smooth scrolling in Mozilla applications including Fi
     MOZ_USE_XINPUT2=1
     ```
 
-> [!TIP]  
-> The **Use smooth scrolling** option in Firefox's **Preferences** > **General** > **Browsing** section should be enabled.
+2. In the **General** tab, under the **Browsing** section, update the following [Firefox setting](firefox.md#preferences):
 
-2. Close Firefox if it's running, and launch it again.
+   - **Use smooth scrolling**: `Enabled`
 
-3. Repeat the same steps but for the Thunderbird (**org.mozilla.Thunderbird**) Flatpak. Its **Smooth scrolling** option is located under **Settings** > **General** > **Scrolling**.
+3. Restart the **Firefox** application.
+
+### Thunderbird
+
+1. Add the following [Environment Variable](flatpak.md#add-permission-overrides) to the **Thunderbird** Flatpak app using **Flatseal**:
+
+    ```sh
+    MOZ_USE_XINPUT2=1
+    ```
+
+2. In the **General** tab, under the **Language & Appearance** section, update the following [Thunderbird setting](thunderbird.md#preferences):
+
+   - **Use smooth scrolling**: `Enabled`
+
+3. Restart the **Thunderbird** application.

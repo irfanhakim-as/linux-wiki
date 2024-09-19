@@ -105,24 +105,14 @@ This details how to work around a bug where Firefox keeps crashing on a Wayland 
 
 ### Steps
 
-1. Launch the **Firefox** application.
+1. In the **General** tab, under the **Performance** section, update the following [Firefox settings](firefox.md#preferences):
 
-2. Click the **Hamburger** menu found on the top right of the window.
+   - **Use recommended performance settings**: `Disabled`
 
-3. Click the **Settings** menu item.
-
-4. In the **Find in Settings** search bar, search for `hardware acceleration`.
-
-5. Under **Performance**, configure the following settings:
-
-   - Use recommended performance settings: `Disabled`
-
-   - Use hardware acceleration when available: `Disabled`
+   - **Use hardware acceleration when available**: `Disabled`
 
     > [!NOTE]  
     > These settings should be re-enabled after an actual fix has been released for performance gains.
-
-6. Restart the **Firefox** application.
 
 ---
 

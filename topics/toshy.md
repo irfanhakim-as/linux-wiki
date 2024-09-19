@@ -353,17 +353,7 @@ This details some additional workarounds needed to fix certain unwanted side eff
 
 By default, hitting the <kbd>Alt</kbd> or <kbd>Opt</kbd> key will cause Firefox to steal focus. This can be fixed with a simple configuration on Firefox:
 
-1. Launch the **Firefox** application.
-
-2. In the **Address bar**, type `about:config` and hit the <kbd>Enter</kbd> key.
-
-3. When prompted by the **Proceed with Caution** warning, click the **Accept the Risk and Continue** button.
-
-4. In the provided **Search bar**, search for the setting, `ui.key.menuAccessKeyFocuses`.
-
-5. In the **ui.key.menuAccessKeyFocuses** entry, double click its default value, `true` to update it to `false`.
-
-6. Restart the application.
+1. [Configure](firefox.md#configuration) the **ui.key.menuAccessKeyFocuses** setting and toggle its value to `false`.
 
 ### Thunderbird Menu Stealing Focus
 

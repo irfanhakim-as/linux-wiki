@@ -193,7 +193,6 @@ This makes Flatpak apps use Dolphin as the system file picker and not any others
 ### References
 
 - [Consistent file dialog under KDE Plasma](https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications#Consistent_file_dialog_under_KDE_Plasma)
-- [XDG Desktop Portal integration](https://wiki.archlinux.org/title/Firefox#XDG_Desktop_Portal_integration)
 
 ### Steps
 
@@ -222,6 +221,6 @@ This makes Flatpak apps use Dolphin as the system file picker and not any others
 
 4. Some applications may also require additional steps in order for them to launch and use Portals correctly, such as:
 
-   - Firefox: Launch its **about:config** page and update the value of `widget.use-xdg-desktop-portal.file-picker` to `1` (True).
+   - [Firefox](firefox.md#use-native-file-manager)
 
 5. Reboot your system.
