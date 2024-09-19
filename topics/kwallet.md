@@ -47,23 +47,45 @@ This details how to setup and create a KDE Wallet and use it by default.
 
 3. Under the **Security & Privacy** group, expand the **KDE Wallet** section.
 
-4. In the **KDE Wallet** page, under the **Automatic Wallet Selection** section, click the **New** button corresponding to the **Select wallet to use as default** option.
+4. In the **KDE Wallet** page, in the **Wallet Preferences** tab, check the **Enable the KDE wallet subsystem** box.
 
-5. Enter a name for the wallet i.e. `kdewallet` and click the **OK** button.
+5. Under the **Automatic Wallet Selection** section, click the **New** button corresponding to the **Select wallet to use as default** option.
 
-6. Select either the **Classic, blowfish encrypted file** or the **Use GPG encryption, for better protection** option and click the **Next** button.
+6. Enter a name for the wallet i.e. `kdewallet` and click the **OK** button.
 
-7. If you chose to use GPG encryption, select an existing trusted key in the list. If none exists, [create a new GPG key](./gpg.md#generate-gpg-key) and return to this step.
+    > [!NOTE]  
+    > If this is your first wallet, it is recommended to set its name to `kdewallet`.
 
-8. Click the **Finish** button.
+7. Select one of the two KDE Wallet type options:
 
-9. If prompted to enter the passphrase of your chosen GPG key, enter it and select the **OK** button.
+   - **Classic, blowfish encrypted file** (Recommended)
+   - **Use GPG encryption, for better protection**
 
-10. Back in the **KDE Wallet** section, expand the **Select wallet to use as default** dropdown and select the wallet you just created.
+    Click the **Next** button.
 
-11. Click the **Apply** button at the bottom right.
+8. If you choose to use Blowfish, enter a password but with some considerations in mind:
 
-12. If prompted to authenticate, enter your user credentials and click the **OK** button.
+   - If your desktop is set to autologin and you wish for your wallet to auto unlock: Set an empty password
+   - If your desktop is set to autologin and you do not mind unlocking the wallet each time an app wishes to read from it: Set any secure password
+   - If your desktop is not set to autologin and you wish for your wallet to auto unlock: Set the same password as your user password
+
+    Click the **OK** button.
+
+9. If you chose to use GPG, select an existing trusted key in the list. If none exists, [create a new GPG key](./gpg.md#generate-gpg-key) and return to this step.
+
+10. Click the **Finish** button.
+
+11. If prompted to enter the passphrase of your chosen GPG key, enter it and select the **OK** button.
+
+12. Back in the **Automatic Wallet Selection** section, expand the **Select wallet to use as default** dropdown and select the wallet you just created.
+
+13. Under the **Secret Service** section, check the **Use KWallet for the Secret Service Interface** box.
+
+14. **(Optional)** Navigate to the **Access Control** tab and check the **Prompt when an application accesses a wallet** box.
+
+15. Click the **Apply** button at the bottom right.
+
+16. If prompted to authenticate, enter your user credentials and click the **OK** button.
 
 ---
 
