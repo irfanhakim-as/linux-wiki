@@ -169,7 +169,7 @@ This details configuration steps for enhancing the Dolphin file manager's experi
 
 ### Spectacle-like Window Management
 
-This adds shortcuts that would make managing and moving application windows similar to the third-party macOS application, Spectacle.
+This adds shortcuts that would make managing and moving windows on the desktop behave similarly to the third-party window management utility on macOS, [Spectacle](https://github.com/eczarny/spectacle).
 
 1. Launch the **System Settings** application.
 
