@@ -23,6 +23,7 @@ Toshy is a config file for the `xwaykeyz` Python-based keymapper for Linux along
     - [Task Switcher](#task-switcher)
     - [Emoji Picker](#emoji-picker)
     - [KDE Spectacle](#kde-spectacle)
+    - [Spectacle Window Manager](#spectacle-window-manager)
   - [Additional Workarounds](#additional-workarounds)
     - [Description](#description-3)
     - [References](#references-3)
@@ -334,6 +335,55 @@ To mimic a more macOS-like experience using the Spectacle screenshot utility, ad
     - Key (combination) to take a screenshot interactively: `RC-Shift-Key_4` (<kbd>Shift + Cmd + 4</kbd>)
 
     - Key (combination) to take a screenshot of a window: `RC-Shift-Key_5` (<kbd>Shift + Cmd + 5</kbd>)
+
+    Update these values accordingly.
+
+### Spectacle Window Manager
+
+> [!IMPORTANT]  
+> This part of the section assumes that you are using the KDE Plasma desktop environment.
+
+To mimic the desktop experience of using the popular [Spectacle](https://github.com/eczarny/spectacle) (or [Rectangle](https://github.com/rxhanson/Rectangle)) window management utility on macOS, add the following configuration:
+
+1. In the Toshy config file, search for the `user_apps` slice.
+
+2. Within the start and end of the `user_apps` slice, add the following:
+
+    ```py
+    if DESKTOP_ENV == 'kde':
+        keymap("User overrides: KDE Spectacle WM", {
+            C("RC-Alt-Down"):           C("Super-Down"),                # Quick tile window to the bottom (kde)
+            # C("RC-Ctrl-Shift-Left"):    C(""),                          # Quick tile window to the bottom left (kde)
+            # C("RC-Ctrl-Shift-Right"):   C(""),                          # Quick tile window to the bottom right (kde)
+            C("RC-Alt-Left"):           C("Super-Left"),                # Quick tile window to the left (kde)
+            C("RC-Alt-Right"):          C("Super-Right"),               # Quick tile window to the right (kde)
+            C("RC-Alt-Up"):             C("Super-Up"),                  # Quick tile window to the top (kde)
+            # C("RC-Ctrl-Left"):          C(""),                          # Quick tile window to the top left (kde)
+            # C("RC-Ctrl-Right"):         C(""),                          # Quick tile window to the top right (kde)
+            # C("RC-Alt-C"):              C(""),                          # Move window to the center (kde)
+            C("RC-Alt-F"):              C("Super-Page_Up"),             # Maximize window (kde)
+        }, when = lambda ctx:
+            cnfg.screen_has_focus and
+            matchProps(not_clas=remoteStr)(ctx)
+        )
+    ```
+
+    In this example, these values are assumed:
+
+    - Desktop environment: `kde`
+
+        > [!TIP]  
+        > The `if` condition can be removed if you wish for the configuration to apply to all desktop environments.
+
+    - Key (combination) to quick tile a window to the bottom: `RC-Alt-Down` (<kbd>Cmd + Alt + Down</kbd>)
+
+    - Key (combination) to quick tile a window to the left: `RC-Alt-Left` (<kbd>Cmd + Alt + Left</kbd>)
+
+    - Key (combination) to quick tile a window to the right: `RC-Alt-Right` (<kbd>Cmd + Alt + Right</kbd>)
+
+    - Key (combination) to quick tile a window to the top: `RC-Alt-Up` (<kbd>Cmd + Alt + Up</kbd>)
+
+    - Key (combination) to maximize a window: `RC-Alt-F` (<kbd>Cmd + Alt + F</kbd>)
 
     Update these values accordingly.
 
