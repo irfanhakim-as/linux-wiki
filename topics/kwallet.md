@@ -1,11 +1,11 @@
 # KDE Wallet
 
+> [!NOTE]  
+> This guide assumes that you are using the KDE Plasma desktop environment.
+
 ## Description
 
 KDE Wallet Manager is a tool to manage passwords on the KDE Plasma system. By using the KWallet subsystem it not only allows you to keep your own secrets but also to access and manage the passwords of every application that integrates with KWallet.
-
-> [!NOTE]  
-> This guide assumes that you are using the KDE Plasma desktop environment.
 
 ## Directory
 
