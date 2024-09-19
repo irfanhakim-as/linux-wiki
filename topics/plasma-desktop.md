@@ -159,7 +159,7 @@ This details configuration steps for enhancing the Dolphin file manager's experi
 4. Head to the **Shortcuts** tab and add custom keybindings for:
 
     > [!IMPORTANT]  
-    > Skip this redundant and breaking step if you intend to use [Toshy](./toshy.md#kde-spectacle).
+    > Skip this redundant and breaking step if you intend to use [Toshy](toshy.md#kde-spectacle).
 
 	- **Capture Active Window**: <kbd>Alt + Shift + 5</kbd>
 	- **Capture Current Monitor**: <kbd>Alt + Shift + 3</kbd>
@@ -295,7 +295,7 @@ This details some customisation options for the Plasma Desktop.
 6.  Under the **Shortcuts** section, configure as follows:
 
     > [!IMPORTANT]  
-    > Skip this redundant and breaking step if you intend to use [Toshy](./toshy.md#task-switcher).
+    > Skip this redundant and breaking step if you intend to use [Toshy](toshy.md#task-switcher).
 
     - All windows:
 
