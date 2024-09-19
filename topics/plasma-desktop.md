@@ -740,6 +740,9 @@ This guides how to enable auto login to the desktop for our user.
 
 5. In the **Behavior** page, check the **Automatically log in** box and select your **user** from the inline dropdown. You can also change the default **session** (i.e. `X11` or `Wayland`) here.
 
+    > [!TIP]  
+    > If you instead wish to disable desktop autologin, simply uncheck the **Automatically log in** box.
+
 6. Click the **Apply** button at the bottom.
 
 7. If prompted to authenticate, enter your user credentials and click the **OK** button.
