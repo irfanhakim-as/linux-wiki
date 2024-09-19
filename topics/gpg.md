@@ -95,7 +95,7 @@ This details how to generate a GPG key.
    - Comment: (Leave this blank or add a comment)
    - Change name, comment, email, or okay/quit: `o`
 
-4. Enter a passphrase when prompted (i.e. same as your user password) or leave it empty. Save to password manager if given the option.
+4. Enter a passphrase when prompted or leave it empty. Save to the system's password manager if given the option.
 
 ---
 
