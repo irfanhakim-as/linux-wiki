@@ -94,6 +94,9 @@ This details how we could configure our trackpad to behave more like it would on
 
 ## Smooth Scrolling in Mozilla Applications
 
+> [!NOTE]  
+> This has been tested with the Mozilla Firefox and Mozilla Thunderbird Flatpak running on the X11 graphics platform.
+
 ### Description
 
 This details how to enable smooth scrolling in Mozilla applications including Firefox and Thunderbird on X11.
@@ -104,9 +107,6 @@ This details how to enable smooth scrolling in Mozilla applications including Fi
 - [PSA for Firefox users: set MOZ_USE_XINPUT2=1 to enable macOS-like smooth scrolling](https://www.reddit.com/r/linux/comments/72mfv8/psa_for_firefox_users_set_moz_use_xinput21_to)
 
 ### Steps
-
-> [!NOTE]  
-> This is intended for the Mozilla Firefox and Mozilla Thunderbird Flatpak and the X11 graphics platform.
 
 1. Add the following [Environment Variable](flatpak.md#add-permission-overrides) to the **Firefox** Flatpak app using **Flatseal**:
 
