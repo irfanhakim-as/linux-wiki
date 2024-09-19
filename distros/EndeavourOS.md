@@ -480,7 +480,7 @@ This guides how to enable auto login to the desktop for our user.
 
 ## KDE Wallet
 
-This details how to how to setup and create a default KDE Wallet and set it to auto unlock with our desktop at the expense of security.
+This details how to how to create and setup a KDE Wallet and set it to auto unlock.
 
 ### References
 

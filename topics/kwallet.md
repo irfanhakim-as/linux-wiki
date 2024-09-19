@@ -37,7 +37,7 @@ KDE Wallet Manager is a tool to manage passwords on the KDE Plasma system. By us
 
 ### Description
 
-This details how to setup and create a KDE Wallet and use it by default.
+This details how to create and setup a KDE Wallet and use it by default.
 
 ### Steps
 
