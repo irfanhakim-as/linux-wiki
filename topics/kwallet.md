@@ -65,11 +65,11 @@ This details how to create and setup a KDE Wallet and use it by default.
 
     Click the **Next** button.
 
-8. If you choose to use Blowfish, enter a password but with some considerations in mind:
+8. If you choose to use Blowfish, enter a password but with some considerations depending on your desktop [autologin](plasma-desktop.md#auto-login) and wallet [auto unlock](#auto-unlock) choice:
 
-   - If your desktop is set to autologin and you wish for your wallet to auto unlock: Set an empty password
-   - If your desktop is set to autologin and you do not mind unlocking the wallet each time an app wishes to read from it: Set any secure password
-   - If your desktop is not set to autologin and you wish for your wallet to auto unlock: Set the same password as your user password
+   - To enable **desktop autologin** and **wallet auto unlock**: Set an empty password
+   - To enable **desktop autologin** but not wallet auto unlock: Set any secure password
+   - To enable **wallet auto unlock** but not desktop autologin: Set the same password as your user password
 
     Click the **OK** button.
 
