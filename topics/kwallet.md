@@ -101,7 +101,6 @@ This details how to set our KDE Wallet to auto unlock with our desktop at the ex
 ### References
 
 - [Unlock KDE Wallet automatically on login](https://wiki.archlinux.org/title/KDE_Wallet#Unlock_KDE_Wallet_automatically_on_login)
-- [pam_autologin](https://wiki.archlinux.org/title/Pam_autologin)
 
 ### Steps
 
