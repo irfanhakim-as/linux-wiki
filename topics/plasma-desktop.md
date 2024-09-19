@@ -732,12 +732,14 @@ This guides how to enable auto login to the desktop for our user.
 
 1. Launch the **System Settings** application.
 
-2. Expand the **Startup and Shutdown** section under the **Workspace** group.
+2. Expand the **Colors & Themes** section under the **Appearance & Style** group.
 
-3. Open the **Login Screen (SDDM)** page.
+3. Click the **Login Screen (SDDM)** menu item.
 
-4. Click the **Behavior** button at the bottom.
+4. In the **Login Screen (SDDM)** page, click the **Behavior** button at the top.
 
-5. Check the **Automatically log in** box and select your **user** from the dropdown alongside it. You can also change the default **session** (`Plasma`/`Wayland`) here.
+5. In the **Behavior** page, check the **Automatically log in** box and select your **user** from the inline dropdown. You can also change the default **session** (i.e. `X11` or `Wayland`) here.
 
 6. Click the **Apply** button at the bottom.
+
+7. If prompted to authenticate, enter your user credentials and click the **OK** button.
