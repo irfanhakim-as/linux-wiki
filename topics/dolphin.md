@@ -217,10 +217,11 @@ This makes Flatpak apps use Dolphin as the system file picker and not any others
    - `xdg-desktop-portal-gtk`
    - `xdg-desktop-portal-kde`
 
-3. [Uninstall](yay.md#uninstall) the `xdg-desktop-portal-gnome` package using `yay` if it is installed.
+    > [!NOTE]  
+    > You may need to [uninstall](yay.md#uninstall) the `xdg-desktop-portal-gnome` package using `yay` if it is installed.
 
-4. Some applications may also require additional steps in order for them to launch and use Portals correctly, such as:
+3. Some applications may also require additional steps in order for them to launch and use Portals correctly, such as:
 
    - [Firefox](firefox.md#use-native-file-manager)
 
-5. Reboot your system.
+4. Reboot your system.
