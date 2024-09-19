@@ -55,7 +55,7 @@ This details how to modify Thunderbird's configurations and some recommended set
 
 ### Default Mail Sorting
 
-This details how to configure Thunderbird's default sorting order and type to something more user-friendly:
+This details how to configure Thunderbird's default sorting order and type to something more user-friendly.
 
 1. Update the following settings accordingly:
 
