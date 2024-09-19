@@ -18,9 +18,13 @@ Mozilla Firefox, or simply Firefox, is a free and open source web browser develo
   - [Preferences](#preferences)
     - [Description](#description-2)
     - [Steps](#steps-1)
-  - [Update Default Search Engine](#update-default-search-engine)
+  - [Customise Toolbar](#customise-toolbar)
     - [Description](#description-3)
     - [Steps](#steps-2)
+    - [Follow KDE Plasma Window Decoration](#follow-kde-plasma-window-decoration)
+  - [Update Default Search Engine](#update-default-search-engine)
+    - [Description](#description-4)
+    - [Steps](#steps-3)
 
 ## References
 
@@ -80,6 +84,30 @@ This details how to modify Firefox's preferences and some recommended settings.
 3. Scroll through the **Settings** page and locate any settings you wish to change.
 
 4. Make your changes accordingly.
+
+---
+
+## Customise Toolbar
+
+### Description
+
+This details how to customise Firefox's toolbar and some recommended configurations.
+
+### Steps
+
+1. Launch the **Firefox** application.
+
+2. Right click the **Toolbar** (area surrounding the address bar).
+
+3. Select the **Customize Toolbar...** option.
+
+4. Make your changes accordingly in the **Customize Firefox** page and click the **Done** button once finished.
+
+### Follow KDE Plasma Window Decoration
+
+This details how to make Firefox use the native window decoration theming on KDE Plasma:
+
+1. At the bottom of the **Customize Firefox** page, check the **Title Bar** box to enable it.
 
 ---
 

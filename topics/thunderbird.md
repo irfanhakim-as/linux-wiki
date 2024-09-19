@@ -19,6 +19,7 @@ Mozilla Thunderbird is a free and open-source email client software which also f
     - [Description](#description-2)
     - [Steps](#steps-1)
     - [Stop Showing Start Page](#stop-showing-start-page)
+    - [Follow KDE Plasma Window Decoration](#follow-kde-plasma-window-decoration)
 
 ## References
 
@@ -86,3 +87,9 @@ This details how to modify Thunderbird's preferences and some recommended settin
 This details how to stop Thunderbird from showing the default start page in the message area:
 
 1. In the **General** tab, under the **Thunderbird Start Page** section, uncheck the **When Thunderbird launches, show the Start Page in the message area** option.
+
+### Follow KDE Plasma Window Decoration
+
+This details how to make Thunderbird use the native window decoration theming on KDE Plasma:
+
+1. In the **General** tab, under the **Language & Appearance** section, uncheck the **Hide system window titlebar** option.
