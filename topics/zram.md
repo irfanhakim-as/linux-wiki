@@ -28,7 +28,7 @@ zram, formerly called compcache, is a Linux kernel module for creating a compres
 
 ### Description
 
-This details how to setup Zram to be used as a swap alternative on Linux.
+This details how to setup Zram to be used as an alternative to swap.
 
 ### References
 
