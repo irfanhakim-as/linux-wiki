@@ -369,16 +369,4 @@ By default, hitting the <kbd>Alt</kbd> or <kbd>Opt</kbd> key will cause Firefox 
 
 By default, hitting the <kbd>Alt</kbd> or <kbd>Opt</kbd> key will cause Thunderbird to steal focus. This can be fixed with a simple configuration on Thunderbird:
 
-1. Launch the **Thunderbird** application.
-
-2. Click the **Hamburger** menu located in the top right corner.
-
-3. Click the **Settings** option.
-
-4. Scroll to the very bottom of the Settings page and click the **Config Editor...** button.
-
-5. In the provided **Search bar**, search for the setting, `ui.key.menuAccessKeyFocuses`.
-
-6. In the **ui.key.menuAccessKeyFocuses** entry, double click its default value, `true` to update it to `false`.
-
-7. Restart the application.
+1. [Configure](thunderbird.md#configuration) the **ui.key.menuAccessKeyFocuses** setting and toggle its value to `false`.
