@@ -44,6 +44,13 @@ This details how to setup Zram to be used as an alternative to swap.
     inxi -j
     ```
 
+    Sample output:
+
+    ```sh
+    Swap:
+    Alert: No swap data was found.
+    ```
+
    If swap is enabled, [disable it](btrfs.md#disable-swap) first.
 
 2. [Install](yay.md#install) the `zram-generator` package using `yay`.
