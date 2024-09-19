@@ -20,6 +20,8 @@ KDE Wallet Manager is a tool to manage passwords on the KDE Plasma system. By us
     - [Description](#description-2)
     - [References](#references-1)
     - [Steps](#steps-1)
+    - [Blowfish](#blowfish)
+    - [GPG](#gpg)
   - [Fix Error with Visual Studio Code](#fix-error-with-visual-studio-code)
     - [Description](#description-3)
     - [References](#references-2)
@@ -104,25 +106,47 @@ This details how to set our KDE Wallet to auto unlock with our desktop at the ex
 
 ### Steps
 
-1. Enable auto login for our [KDE Plasma desktop](./plasma-desktop.md#auto-login) if haven't already.
+1. Ensure the chosen default KDE Wallet must be a wallet named `kdewallet` as described in the [Setup](#setup) section.
 
-    > [!NOTE]  
-    > In enabling auto login on KDE Plasma, we will auto login to our desktop every time we turn our computer on. The caveat of this though, applications that require the KDE Wallet (i.e. Discord, Visual Studio Code) will prompt us to enter our password at least once when we attempt to launch them - defeating the purpose of our desktop auto login.
+2. Follow the subsequent steps depending on your wallet type:
 
-2. To fix this issue while still retaining auto login to our desktop, we need to set (or update our existing password to) an empty password for our KDE Wallet:
+   - [Blowfish](#blowfish)
+   - [GPG](#gpg)
+
+    Return to the following step once completed.
+
+3. Restart the system.
+
+### Blowfish
+
+> [!IMPORTANT]  
+> Wallet auto unlock will only work together with desktop [autologin](plasma-desktop.md#auto-login) if the `kdewallet` was configured with an empty password or passphrase. If you wish for the wallet to be secured with a password, desktop autologin must be disabled.
+
+1. Depending on your choice of whether or not your wallet should be secured with a password, enable or disable [autologin](plasma-desktop.md#auto-login) on your desktop.
+
+2. Depending on your choice of desktop autologin setting, set the password for the `kdewallet` wallet:
 
    - Launch the **System Settings** application.
 
-   - Under the **Personalization** group, expand the **KDE Wallet** section.
+   - Under the **Security & Privacy** group, expand the **KDE Wallet** section.
 
    - Click the **Launch Wallet Manager** button at the bottom right.
 
+   - In the newly opened **Wallet Manager** window, navigate to the **kdewallet** wallet if you have multiple wallets.
+
    - Click the **Change Password** button on the top right.
 
-      > [!NOTE]  
-      > If your wallet uses GPG encryption, you will need to [change (remove) the passphrase for the GPG key](./gpg.md#update-gpg-key-passphrase) instead of the wallet password.
+   - Set the password to your user password if you have desktop autologin disabled.
 
-   - Leave both the **Password** and **Verify** fields empty and click the **OK** button.
+   - **Alternatively**, set the password to an empty password if you have enabled desktop autologin.
+
+   - Click the **OK** button.
+
+3. If you are not using desktop autologin and have set the default wallet's password to your user password accordingly, [install](yay.md#install) the `kwallet-pam` package.
+
+### GPG
+
+1. [Set an empty passphrase](gpg.md#update-gpg-key-passphrase) to the GPG key tied to the `kdewallet` wallet.
 
 ---
 
