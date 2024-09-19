@@ -161,6 +161,8 @@ This details how to disable and remove a swap device on a system running BTRFS.
 
    - Click the **Delete** button.
 
+   - When prompted to confirm, click the **Yes** button.
+
 5. Remove or comment entries in the system's `fstab` file relating to the swap device or subvolume:
 
    - Edit the `fstab` file:
