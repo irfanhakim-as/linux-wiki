@@ -145,7 +145,13 @@ This details how to disable and remove a swap device on a system running BTRFS.
     swapoff /swap/swapfile
     ```
 
-3. Delete the `@swap` BTRFS subvolume using the **Btrfs Assistant** application:
+3. Unmount the swap volume (i.e. `/swap`) so it can be deleted:
+
+    ```sh
+    sudo umount /swap
+    ```
+
+4. Delete the `@swap` BTRFS subvolume using the **Btrfs Assistant** application:
 
    - Launch the **Btrfs Assistant** application. [Install](yay.md#install) the `btrfs-assistant` package using `yay` if you do not have it already.
 
@@ -155,7 +161,7 @@ This details how to disable and remove a swap device on a system running BTRFS.
 
    - Click the **Delete** button.
 
-4. Remove or comment entries in the system's `fstab` file relating to the swap device or subvolume:
+5. Remove or comment entries in the system's `fstab` file relating to the swap device or subvolume:
 
    - Edit the `fstab` file:
 
@@ -170,4 +176,4 @@ This details how to disable and remove a swap device on a system running BTRFS.
         #/swap/swapfile                              swap                swap    defaults                                                                                                            0 0
         ```
 
-5. Restart the system and reuse the same step to verify that swap has been disabled.
+6. Restart the system and reuse the same step to verify that swap has been disabled.
