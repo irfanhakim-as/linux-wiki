@@ -53,10 +53,10 @@ This details how to create and setup a KDE Wallet and use it by default.
 
 5. Under the **Automatic Wallet Selection** section, click the **New** button corresponding to the **Select wallet to use as default** option.
 
-6. Enter a name for the wallet i.e. `kdewallet` and click the **OK** button.
+6. Enter a name for the wallet (i.e. `kdewallet`) and click the **OK** button.
 
     > [!NOTE]  
-    > If this is your first wallet, it is recommended to set its name to `kdewallet`.
+    > If you wish to enable wallet [auto unlock](#auto-unlock), you are required to set its name to `kdewallet`.
 
 7. Select one of the two KDE Wallet type options:
 
