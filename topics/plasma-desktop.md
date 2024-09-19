@@ -171,11 +171,13 @@ This details configuration steps for enhancing the Dolphin file manager's experi
 
 This adds shortcuts that would make managing and moving application windows similar to the third-party macOS application, Spectacle.
 
-1. Launch the **System Settings** app.
+1. Launch the **System Settings** application.
 
-2. Expand the **Shortcuts** section.
+2. Expand the **Keyboard** section under the **Input & Output** group.
 
-3. Use the provided **Search** bar to search for these shortcuts and add the following custom shortcuts accordingly:
+3. Select the **Shortcuts** menu item.
+
+4. Using the provided search bar in the **Shortcuts** page, search and configure the following custom shortcuts accordingly:
 
     - Quick Tile Window to the Bottom: <kbd>Alt + Shift + Down</kbd>
     - Quick Tile Window to the Left: <kbd>Alt + Shift + Left</kbd>
@@ -188,7 +190,7 @@ This adds shortcuts that would make managing and moving application windows simi
     - Move Window to the Center: <kbd>Alt + Shift + C</kbd>
     - Maximize Window: <kbd>Alt + Shift + F</kbd>
 
-4. Click the **Apply** button.
+5. Click the **Apply** button.
 
 ---
 
