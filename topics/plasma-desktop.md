@@ -179,16 +179,23 @@ This adds shortcuts that would make managing and moving windows on the desktop b
 
 4. Using the provided search bar in the **Shortcuts** page, search and configure the following custom shortcuts accordingly:
 
+    > [!IMPORTANT]  
+    > Skip the following shortcuts if you intend to use [Toshy](toshy.md#spectacle-window-manager).
+
     - Quick Tile Window to the Bottom: <kbd>Alt + Shift + Down</kbd>
     - Quick Tile Window to the Left: <kbd>Alt + Shift + Left</kbd>
     - Quick Tile Window to the Right: <kbd>Alt + Shift + Right</kbd>
     - Quick Tile Window to the Top: <kbd>Alt + Shift + Up</kbd>
+    - Maximize Window: <kbd>Alt + Shift + F</kbd>
+
+    > [!NOTE]  
+    > You may include the following shortcuts even if you use Toshy as they are currently unsupported.
+
     - Quick Tile Window to the Top Left: <kbd>Meta + Alt + Shift + Left</kbd>
     - Quick Tile Window to the Top Right: <kbd>Meta + Alt + Shift + Right</kbd>
     - Quick Tile Window to the Bottom Left: <kbd>Ctrl + Alt + Shift + Left</kbd>
     - Quick Tile Window to the Bottom Right: <kbd>Ctrl + Alt + Shift + Right</kbd>
     - Move Window to the Center: <kbd>Alt + Shift + C</kbd>
-    - Maximize Window: <kbd>Alt + Shift + F</kbd>
 
 5. Click the **Apply** button.
 
