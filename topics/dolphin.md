@@ -211,6 +211,9 @@ This makes Flatpak apps use Dolphin as the system file picker and not any others
     XDG_CURRENT_DESKTOP=KDE
     ```
 
+    > [!NOTE]  
+    > The `GTK_USE_PORTAL=1` variable and value may have been replaced by `GDK_DEBUG=portals` instead.
+
 2. Make sure these packages have been [installed](yay.md#install) on your machine:
 
    - `xdg-desktop-portal`
