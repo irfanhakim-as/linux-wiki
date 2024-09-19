@@ -18,6 +18,10 @@ Btrfs is a modern copy on write (COW) file system for Linux aimed at implementin
   - [Balance Btrfs Volumes](#balance-btrfs-volumes)
     - [Description](#description-2)
     - [Steps](#steps-1)
+  - [Disable Swap](#disable-swap)
+    - [Description](#description-3)
+    - [References](#references-2)
+    - [Steps](#steps-2)
 
 ## References
 
@@ -88,3 +92,82 @@ If you are using a Btrfs filesystem, it is recommended for you to "balance" your
 2. Launch the `btrfs-assistant` application. You will be asked to authenticate (as it requires `root` permissions).
 
 3. Click the **Start** button in the **Balance** section to balance your Btrfs volumes.
+
+---
+
+## Disable Swap
+
+### Description
+
+This details how to disable and remove a swap device on a system running BTRFS.
+
+### References
+
+- [BTRFs and swap](https://forum.endeavouros.com/t/btrfs-and-swap/44656/6)
+
+### Steps
+
+1. First, verify that swap is indeed currently enabled on the system:
+
+   - First method:
+
+        ```sh
+        inxi -j
+        ```
+
+        Sample output:
+
+        ```sh
+        Swap:
+        ID-1: swap-1 type: file size: 512 MiB used: 511.8 MiB (100.0%)
+            file: /swap/swapfile
+        ```
+
+   - Second method:
+
+        ```sh
+        swapon --show
+        ```
+
+        Sample output:
+
+        ```sh
+        NAME           TYPE SIZE   USED PRIO
+        /swap/swapfile file 512M 511.8M   -2
+        ```
+
+    > [!NOTE]  
+    > Take note of the swap device name such as in this sample being `/swap/swapfile`.
+
+2. Disable the swap device (i.e. `/swap/swapfile`):
+
+    ```sh
+    swapoff /swap/swapfile
+    ```
+
+3. Delete the `@swap` BTRFS subvolume using the **Btrfs Assistant** application:
+
+   - Launch the **Btrfs Assistant** application. [Install](yay.md#install) the `btrfs-assistant` package using `yay` if you do not have it already.
+
+   - Navigate to the **Subvolumes** tab.
+
+   - From the list of subvolumes, locate and highlight the `@swap` subdirectory by selecting it.
+
+   - Click the **Delete** button.
+
+4. Remove or comment entries in the system's `fstab` file relating to the swap device or subvolume:
+
+   - Edit the `fstab` file:
+
+        ```sh
+        sudo nano /etc/fstab
+        ```
+
+   - Remove or comment any entries relating to the swap device or subvolume like so:
+
+        ```sh
+        #UUID=bzxd1bo8-9nnb-ddet-qykk-qjdgr9yytybg   /swap               btrfs   subvol=/@swap,noatime                                                                                               0 0
+        #/swap/swapfile                              swap                swap    defaults                                                                                                            0 0
+        ```
+
+5. Restart the system and reuse the same step to verify that swap has been disabled.
