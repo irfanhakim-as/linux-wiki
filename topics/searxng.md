@@ -34,7 +34,7 @@ This details how to set SearXNG as the default search engine on Firefox.
 
 ### Steps
 
-1. Head to the [referenced](#references-1) **SearXNG instances** page for a list of public SearXNG instances.
+1. Head to the referenced **SearXNG instances** page for a list of public SearXNG instances.
 
 2. From the list of instances, determine which instance you wish to use as the default. Once you have made your choice, click on its **URL** to visit it.
 
