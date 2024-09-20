@@ -38,4 +38,6 @@ This details how to switch to using the LTS kernels by default.
 
 2. [Install](yay.md#install) the kernel headers package, `linux-lts-headers` using `yay`.
 
-3. Reboot the system.
+3. [Regenerate a new GRUB config](grub.md#generate-grub-config) so the new kernel gets loaded in the next boot.
+
+4. Reboot the system.
