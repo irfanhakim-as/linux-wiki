@@ -17,23 +17,23 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
   - [Fish Shell](#fish-shell)
     - [References](#references-2)
   - [Remote Access](#remote-access)
-  - [Enable Bluetooth](#enable-bluetooth)
-  - [Dual-Boot Bluetooth](#dual-boot-bluetooth)
-  - [VM Software Setup](#vm-software-setup)
-  - [Optimising Windows VM](#optimising-windows-vm)
-  - [Timeshift with Btrfs](#timeshift-with-btrfs)
-  - [Balance Btrfs Volumes](#balance-btrfs-volumes)
-  - [GRUB Dual Booting](#grub-dual-booting)
-  - [GRUB Theme Customisation](#grub-theme-customisation)
-  - [Container Runtime](#container-runtime)
+  - [Bluetooth](#bluetooth)
     - [References](#references-3)
-  - [Better Fonts](#better-fonts)
+  - [Virtual Machine](#virtual-machine)
     - [References](#references-4)
+  - [Btrfs](#btrfs)
+    - [References](#references-5)
+  - [GRUB](#grub)
+    - [References](#references-6)
+  - [Container Runtime](#container-runtime)
+    - [References](#references-7)
+  - [Better Fonts](#better-fonts)
+    - [References](#references-8)
   - [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
   - [Default Applications](#default-applications)
   - [Set Alacritty as Default Terminal](#set-alacritty-as-default-terminal)
   - [Display Configuration](#display-configuration)
-    - [References](#references-5)
+    - [References](#references-9)
   - [Plasma Desktop Theme Customisations](#plasma-desktop-theme-customisations)
   - [Plank Dock](#plank-dock)
   - [Gaming Setup](#gaming-setup)
@@ -46,24 +46,24 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
   - [Wallpaper Engine Integration with KDE Plasma](#wallpaper-engine-integration-with-kde-plasma)
   - [Razer Peripheral Support](#razer-peripheral-support)
   - [Wake on LAN or Wireless](#wake-on-lan-or-wireless)
-    - [References](#references-6)
+    - [References](#references-10)
   - [Backing up with Vorta](#backing-up-with-vorta)
-    - [References](#references-7)
+    - [References](#references-11)
   - [Thunderbird](#thunderbird)
-    - [References](#references-8)
+    - [References](#references-12)
   - [Discord Troubleshooting](#discord-troubleshooting)
   - [Migrating (Firefox) to Flatpak](#migrating-firefox-to-flatpak)
   - [EmuDeck](#emudeck)
   - [Recommended Global Flatpak Permissions](#recommended-global-flatpak-permissions)
   - [Using a Touchpad](#using-a-touchpad)
-    - [References](#references-9)
+    - [References](#references-13)
   - [Generate GPG Key and Use with Git](#generate-gpg-key-and-use-with-git)
-    - [References](#references-10)
+    - [References](#references-14)
   - [Desktop Auto Login](#desktop-auto-login)
   - [KDE Wallet](#kde-wallet)
-    - [References](#references-11)
+    - [References](#references-15)
   - [Distrobox Installation and Usage](#distrobox-installation-and-usage)
-    - [References](#references-12)
+    - [References](#references-16)
   - [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
   - [VS Code Integration with Distrobox](#vs-code-integration-with-distrobox)
   - [Deb Package Installation](#deb-package-installation)
@@ -75,19 +75,19 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
   - [Miniconda Environments](#miniconda-environments)
   - [XP-Pen](#xp-pen)
   - [OBS Studio](#obs-studio)
-    - [References](#references-13)
+    - [References](#references-17)
   - [Magewell Capture Device on OBS](#magewell-capture-device-on-obs)
   - [KDE Connect](#kde-connect)
   - [SearXNG](#searxng)
-    - [References](#references-14)
+    - [References](#references-18)
   - [Link's Awakening DX HD](#links-awakening-dx-hd)
   - [Ocarina of Time](#ocarina-of-time)
   - [Majora's Mask](#majoras-mask)
   - [Connecting to WireGuard](#connecting-to-wireguard)
   - [Wayland](#wayland)
-    - [References](#references-15)
+    - [References](#references-19)
   - [Toshy](#toshy)
-    - [References](#references-16)
+    - [References](#references-20)
   - [Zram](#zram)
   - [Switch to LTS Kernel](#switch-to-lts-kernel)
 
@@ -229,51 +229,47 @@ This details how we can enable remote access into our system from other devices 
 
 ---
 
-## [Enable Bluetooth](../topics/bluetooth.md#enable-bluetooth)
+## Bluetooth
 
-EndeavourOS does not enable Bluetooth by default due to security reasons. This details how to enable Bluetooth on our system.
+EndeavourOS does not enable Bluetooth by default due to security reasons. This details how to enable Bluetooth on our system and steps to fix issues with using Bluetooth devices in a dual-boot setup.
 
----
+### References
 
-## [Dual-Boot Bluetooth](../topics/bluetooth.md#dual-boot-bluetooth)
-
-This details how to fix issues with using Bluetooth devices in a dual-boot setup.
-
----
-
-## [VM Software Setup](../topics/virtual-machine.md#vm-software-setup)
-
-This details how to setup Virt-manager, a software that allows creating and managing VMs.
+- [Enable Bluetooth](../topics/bluetooth.md#enable-bluetooth)
+- [Dual-Boot Bluetooth](../topics/bluetooth.md#dual-boot-bluetooth)
 
 ---
 
-## [Optimising Windows VM](../topics/virtual-machine.md#optimising-windows-vm)
+## Virtual Machine
 
-This details some steps that can be done on a Windows VM through VirtManager in order to make the experience a little better.
+This details how to setup Virt-manager, a software that allows creating and managing VMs, and some steps that can be done on a Windows VM through VirtManager in order to make the experience a little better.
 
----
+### References
 
-## [Timeshift with Btrfs](../topics/btrfs.md#timeshift-with-btrfs)
-
-Timeshift for Linux is an application that provides functionality similar to the System Restore feature in Windows and the Time Machine tool in macOS. This details how to setup and use Timeshift with Btrfs.
-
----
-
-## [Balance Btrfs Volumes](../topics/btrfs.md#balance-btrfs-volumes)
-
-If you are using a Btrfs filesystem, it is recommended for you to "balance" your Btrfs volumes on a monthly basis in order to ensure that the free space available on your device is properly unallocated.
+- [VM Software Setup](../topics/virtual-machine.md#vm-software-setup)
+- [Optimising Windows VM](../topics/virtual-machine.md#optimising-windows-vm)
 
 ---
 
-## [GRUB Dual Booting](../topics/grub.md#dual-booting)
+## Btrfs
 
-This details how we can enable dual booting into Windows or another Linux install.
+This details how to set up and use snapshotting with Btrfs using Timeshift and how to balance Btrfs volumes on a periodic basis to ensure that the free space available on your device is properly unallocated.
+
+### References
+
+- [Timeshift with Btrfs](../topics/btrfs.md#timeshift-with-btrfs)
+- [Balance Btrfs Volumes](../topics/btrfs.md#balance-btrfs-volumes)
 
 ---
 
-## [GRUB Theme Customisation](../topics/grub.md#theme-customisation)
+## GRUB
 
-This details how to change the theme/appearance of the GRUB bootloader.
+This details how we can enable dual booting into Windows or another Linux install and how to change the theme/appearance of the GRUB bootloader.
+
+### References
+
+- [GRUB Dual Booting](../topics/grub.md#dual-booting)
+- [GRUB Theme Customisation](../topics/grub.md#theme-customisation)
 
 ---
 
