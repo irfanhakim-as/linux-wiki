@@ -89,6 +89,7 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
   - [Toshy](#toshy)
     - [References](#references-16)
   - [Zram](#zram)
+  - [Switch to LTS Kernel](#switch-to-lts-kernel)
 
 ## References
 
@@ -653,3 +654,9 @@ This details the setup and configuration of Toshy for the purpose of matching th
 ## [Zram](../topics/zram.md#setup)
 
 This details how to setup Zram to be used as an alternative to swap.
+
+---
+
+## [Switch to LTS Kernel](../topics/kernel.md#switch-to-lts-kernel)
+
+This details how to switch to using the LTS kernels by default.
