@@ -95,7 +95,7 @@ This details the installation steps for Toshy.
 
 ### Description
 
-This details some recommended Toshy configuration options for an improved experience.
+This details the process of configuring Toshy and includes some recommended configuration options for an improved experience.
 
 ### References
 
