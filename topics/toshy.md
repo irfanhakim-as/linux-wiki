@@ -104,7 +104,7 @@ This details some recommended Toshy configuration options for an improved experi
 
 ### Steps
 
-1. Update the Toshy configuration supplied from the installation:
+1. Update the Toshy configuration supplied from the installation with the changes you wish to make:
 
     ```sh
     nano ~/.config/toshy/toshy_config.py
