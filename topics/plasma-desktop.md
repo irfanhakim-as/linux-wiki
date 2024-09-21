@@ -393,26 +393,25 @@ This details some customisation options for the Plasma Desktop.
 
    - **Window Title**:
      - **Appearance**:
-       - Label style: `Application`
+       - Text:
+         - When title available: `%a`
+         - When Application Name and Window Title are same: `%a`
+         - When title unavailable: `%q`
+         - Text Formatting:
+           - Size: `16`
+           - Bold: `Enabled`
+           - Italic: `Disabled`
+           - Capitalize First Letters: `Enabled`
        - Icon:
-         - Show when available: `Disabled`
-       - Font:
-         - Bold: `Disabled`
-         - Italic: `Disabled`
-         - First letters capital: `Enabled`
-       - Length: `Based on contents`
-       - Spacing: `4`
-       - Left margin: `4`
-       - Right margin: `4`
+         - Visible: `Disabled`
+       - Margins:
+         - Length: `Based on contents`
+         - Space before icon: `4`
+         - Space between icon and text: `4`
+         - Space after text: `4`
      - **Behavior**:
-       - Filters:
-         - Show only window information from current screen: `Disabled`
-         - Show only when maximized: `Disabled`
-       - Mouse:
-         - Show tooltip on hover: `Enabled`
-         - Scroll to cycle and minimize through your tasks: `Disabled`
-       - Placeholder:
-         - Show activity information: `Enabled`
+       - Info Filtering: Disable all options
+       - Gestures: Disable all options
      - Leave the rest as default
 
    - **Digital Clock**:
@@ -423,7 +422,9 @@ This details some customisation options for the Plasma Desktop.
        - Show time zone: `Only when different from local time zone`
        - Display time zone as: `Code`
        - Time display: `12-Hour`
-       - Date format: `Long Date`
+       - Date format:
+         - `Custom`
+         - `ddd d MMM`
        - Text display: `Manual`
          - Font Family: `SF Pro Display`
          - Font Style: `Regular`
