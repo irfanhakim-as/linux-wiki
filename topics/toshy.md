@@ -152,7 +152,7 @@ If <kbd>Modifier + Click</kbd> (i.e. <kbd>Cmd + Click</kbd>) isn't working relia
 ### Task Switcher
 
 > [!IMPORTANT]  
-> This part of the section assumes that you are using the KDE Plasma desktop environment.
+> This part of the guide assumes that you are using the KDE Plasma desktop environment.
 
 To mimic a more macOS-like experience while switching apps using the Task Switcher, add the following configuration:
 
@@ -303,7 +303,7 @@ If your keyboard has a dedicated F-Key (i.e. <kbd>F7</kbd>) that launches your s
 ### KDE Spectacle
 
 > [!IMPORTANT]  
-> This part of the section assumes that you are using the KDE Plasma desktop environment or the Spectacle screenshot utility.
+> This part of the guide assumes that you are using the KDE Plasma desktop environment or the Spectacle screenshot utility.
 
 To mimic a more macOS-like experience using the Spectacle screenshot utility, add the following configuration:
 
@@ -341,9 +341,9 @@ To mimic a more macOS-like experience using the Spectacle screenshot utility, ad
 ### Spectacle Window Manager
 
 > [!IMPORTANT]  
-> This part of the section assumes that you are using the KDE Plasma desktop environment.
+> This part of the guide assumes that you are using the KDE Plasma desktop environment.
 
-To mimic the desktop experience of using the popular [Spectacle](https://github.com/eczarny/spectacle) (or [Rectangle](https://github.com/rxhanson/Rectangle)) window management utility on macOS, add the following configuration:
+To mimic the desktop experience of using the popular third-party window management utility on macOS, [Spectacle](https://github.com/eczarny/spectacle) (or [Rectangle](https://github.com/rxhanson/Rectangle)), add the following configuration:
 
 1. In the Toshy config file, search for the `user_apps` slice.
 
