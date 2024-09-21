@@ -122,11 +122,11 @@ This details some recommended Toshy configuration options for an improved experi
      - Click the **Toshy Status Indicator** icon in the System Tray.
      - Select the **Re/Start Toshy Services** menu item.
 
-   - **Alternatively**, run the following command in the Terminal:
+   - **Alternatively**, [restart](autostart.md#status-and-restart-service) each of the following services using the terminal:
 
-        ```sh
-        sudo systemctl restart toshy-config.service toshy-session-monitor.service toshy-kde-dbus.service
-        ```
+     - `toshy-config.service`
+     - `toshy-session-monitor.service`
+     - `toshy-kde-dbus.service`
 
 ### Modifier and Click Combination
 
