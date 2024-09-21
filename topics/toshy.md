@@ -38,9 +38,6 @@ Toshy is a config file for the `xwaykeyz` Python-based keymapper for Linux along
 
 ## Setup
 
-> [!IMPORTANT]  
-> This guide assumes that you are using the KDE Plasma desktop environment.
-
 ### Description
 
 This details the installation steps for Toshy.
@@ -50,6 +47,9 @@ This details the installation steps for Toshy.
 - [How to Install](https://github.com/RedBearAK/toshy?tab=readme-ov-file#how-to-install)
 
 ### Prerequisites
+
+> [!IMPORTANT]  
+> This part of the guide assumes that you are using the KDE Plasma desktop environment.
 
 1. For Toshy to work as intended post-install, your Plasma system must be using the native, default set of shortcuts and keybindings.
 
