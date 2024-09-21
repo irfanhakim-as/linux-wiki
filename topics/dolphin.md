@@ -140,7 +140,9 @@ These packages are recommended to be [installed](yay.md#install) using `yay` to 
 
 3. `ffmpegthumbs` to support video thumbnails in Dolphin.
 
-4. `kimageformats` to add support for HEIC image files and GIMP's XCF files.
+4. `libheif` to support HEIF (HEIC) images in KDE Plasma.
+
+5. `kimageformats` to add support for additional image format plugins.
 
 ### Service Menus
 
