@@ -69,47 +69,59 @@ This guide details how to connect to an existing WireGuard VPN on various platfo
     brew install -v wireguard-tools wireguard-go
     ```
 
-2. Identify the device name of the network interface that you use:
+2. Export the intended WireGuard client configuration file to the device from your WireGuard VPN server.
 
-    ```sh
-    networksetup -listallhardwareports
-    ```
+3. Copy over the WireGuard client configuration file to where WireGuard expects it:
 
-    In our example, our network interface is our `Wi-Fi` and its device name is `en0`.
+   - If you are doing this on an Apple Silicon Mac (i.e. M1 and newer):
 
-3. Copy over your WireGuard client configuration file to where WireGuard expects it:
+        ```sh
+        cp <wireguard-config> /opt/homebrew/etc/wireguard/<profile>.conf
+        ```
 
-    If you are doing this on an Apple Silicon Mac (M1 and newer):
+        **Alternatively**, If you are doing this on an Intel Mac:
 
-    ```sh
-    cp <WIREGUARD_CONFIG_FILE> /opt/homebrew/etc/wireguard/<NETWORK_DEVICE_NAME>.conf
-    ```
+        ```sh
+        cp <wireguard-config> /usr/local/etc/wireguard/<profile>.conf
+        ```
 
-    If you are doing this on an Intel Mac:
+   - Replace `<wireguard-config>` with the actual path to your WireGuard client configuration (`.conf`) file (i.e. `~/Downloads/myvpndomain.conf`).
 
-    ```sh
-    cp <WIREGUARD_CONFIG_FILE> /usr/local/etc/wireguard/<NETWORK_DEVICE_NAME>.conf
-    ```
+   - Replace `<profile>` with a short and descriptive name for your WireGuard VPN connection (i.e. `profile-01`).
 
-    >[!NOTE]  
-    > Make sure to replace `<WIREGUARD_CONFIG_FILE>` with the path to your WireGuard client configuration (`.conf`) file and `<NETWORK_DEVICE_NAME>` with the name of the network interface device i.e. `en0`.
+   - For example:
+
+        ```sh
+        cp ~/Downloads/myvpndomain.conf /opt/homebrew/etc/wireguard/profile-01.conf
+        ```
 
 4. To connect to the WireGuard VPN connection, run the following command:
 
     ```sh
-    wg-quick up <NETWORK_DEVICE_NAME>
+    wg-quick up <profile>
     ```
 
-    When prompted to enter your password, enter your user password accordingly.
-
-    Ending the VPN connection is similar but using the `down` command instead:
+    For example, if `<profile>` was set to `profile-01`:
 
     ```sh
-    wg-quick down <NETWORK_DEVICE_NAME>
+    wg-quick up profile-01
     ```
 
-    >[!TIP]  
-    > Similar to before, make sure to replace `<NETWORK_DEVICE_NAME>` with the name of the network interface device i.e. `en0`.
+5. Ending the VPN connection is similar but using the `down` command instead:
+
+    ```sh
+    wg-quick down <profile>
+    ```
+
+    For example, if `<profile>` was set to `profile-01`:
+
+    ```sh
+    wg-quick down profile-01
+    ```
+
+6. When prompted to enter your password, enter your user password accordingly.
+
+7. **(Optional)** For an easier way of managing multiple WireGuard connections, check out the [**wg-quicker**](https://github.com/irfanhakim-as/wg-quicker) project.
 
 ### iOS
 
