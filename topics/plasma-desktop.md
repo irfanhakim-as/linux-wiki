@@ -338,15 +338,15 @@ This details some customisation options for the Plasma Desktop.
 
    - Click the **Cursors** menu item.
 
-   - Click the **Get New...** button.
+   - [Install](yay.md#install) the cursor theme, `bibata-cursor-theme-bin` using `yay` directly.
 
-   - In the provided search bar, search for `Bibata Modern Classic` (Dark) or `Bibata Modern Ice` (Light) and click the **Install** button.
+      **Alternatively**, install the theme graphically through the KDE Plasma Desktop:
 
-   - When prompted to **Pick Your Installation Option**, click the corresponding **Install** button for:
+     - Click the **Get New...** button.
 
-     - `Bibata-Modern-Classic.tar.xz` (Dark) or `Bibata-Modern-Ice.tar.xz` (Light).
+     - In the provided search bar, search for `Bibata Modern Classic` (Dark) or `Bibata Modern Ice` (Light) and click the **Install** button.
 
-   - Close the **Download New Cursors** window.
+     - When prompted to **Pick Your Installation Option**, click the corresponding **Install** button for `Bibata-Modern-Classic.tar.xz` (Dark) or `Bibata-Modern-Ice.tar.xz` (Light).Close the **Download New Cursors** window.
 
    - In the **Cursors** page, select the **Bibata-Modern-Classic** (Dark) or **Bibata-Modern-Ice** (Light) option and click the **Apply** button.
 
