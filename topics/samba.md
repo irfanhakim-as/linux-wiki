@@ -34,6 +34,7 @@ This details how to mount a remote directory to our local machine using Samba.
 ### References
 
 - [Automatic mounting: As mount entry](https://wiki.archlinux.org/title/samba#As_mount_entry)
+- [Use of the x-systemd.automount mount option in /etc/fstab](https://www.suse.com/support/kb/doc/?id=000020402)
 
 ### Steps
 
