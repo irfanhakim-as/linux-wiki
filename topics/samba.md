@@ -84,21 +84,29 @@ This details how to mount a remote directory to our local machine using Samba.
     192.168.0.120      mynas
     ```
 
-6. Add the line to mount our remote directory to the `/etc/fstab` file:
+6. Add a line with our mounting options for the remote directory to our `fstab` file:
 
-    ```sh
-    sudo nano /etc/fstab
-    ```
+   - Declare the mounting options for the remote directory:
 
-    Sample `fstab` entry:
+        ```sh
+        fstab_line="//mynas/mydir   /mnt/mynas   cifs    _netdev,nofail,mfsymlinks,users,x-systemd.automount,credentials=${HOME}/.config/smb/.smbcreds,vers=3.0,uid=$(id -u),gid=$(id -g),iocharset=utf8   0 0"
+        ```
 
-    ```sh
-    # example.org
-    //mynas/mydir    /mnt/mynas    cifs    _netdev,nofail,mfsymlinks,credentials=/home/deck/.config/smb/.smbcreds,vers=3.0,uid=1000,gid=1000,iocharset=utf8    0 0
-    ```
+        Meaning behind some of the included options:
 
-    > [!IMPORTANT]  
-    > This assumes that your remote server's hostname is `mynas`, that it has a directory named `mydir`, and that your username is `deck`. Update them accordingly.
+     - `//mynas/mydir`: `mynas` denotes the sample hostname of the remote server, while `mydir` denotes the sample remote directory on the server.
+     - `/mnt/mynas`: The sample directory that will be used as the mounting point.
+     - `_netdev`: Indicates that the filesystem depends on network availability. It ensures that the mount attempt waits until the network is up.
+     - `nofail`: Allows the boot process to continue even if this mount point fails. It prevents boot hang-ups in case the remote directory is unavailable.
+     - `mfsymlinks`: Enables support for symbolic links in the CIFS/SMB share, allowing symbolic links on the remote system to be followed locally.
+     - `users`: Allows non-root users to mount and unmount the filesystem.
+     - `x-systemd.automount`: Automatically mounts the share when it is accessed, rather than at boot time. This helps avoid delays if the remote system isn't immediately available.
+
+   - Write the line to the `/etc/fstab` file:
+
+        ```sh
+        echo "${fstab_line}" | sudo tee -a /etc/fstab
+        ```
 
 7. Reload the `daemon` for it to recognise the changes made to our `fstab` file:
 
