@@ -24,6 +24,9 @@ set -U fish_user_paths $HOME/.local/bin $fish_user_paths
 set fish_greeting                                                                                               # Supresses fish's intro message
 set TERM "xterm-256color"                                                                                      # Sets the terminal type
 set -x GPG_TTY (tty)                                                                                           # Sets the GPG_TTY variable
+if set -q SSH_CONNECTION; and not set -q DISPLAY
+    set -x SSH_ASKPASS_REQUIRE never                                                                           # Get ssh passphrase from terminal in non-graphical session
+end
 
 # Editors
 set -x GIT_EDITOR "/usr/bin/nano"                                                                              # $GIT_EDITOR use nano as default git editor
