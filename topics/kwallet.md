@@ -123,6 +123,18 @@ This describes how to use KDE Wallet to store SSH key passphrases:
     SSH_ASKPASS_REQUIRE=prefer
     ```
 
+4. **(Optional)** As it is, this will utilise the KDE Wallet to get the passphrase for the SSH key. However, this is also true even when the user has no access to a graphical session (i.e. in a remote SSH session).
+
+    To solve this, add the following logic to your shell profile (i.e. [`fish` config](fish.md#configuration)):
+
+    ```sh
+    if set -q SSH_CONNECTION; and not set -q DISPLAY
+      set -x SSH_ASKPASS_REQUIRE never
+    end
+    ```
+
+    This sets the value of `SSH_ASKPASS_REQUIRE` to `never` when the user is logged in remotely via SSH and does not have access to a graphical session.
+
 ### GPG Passphrase
 
 This describes how to use KDE Wallet to store GPG key passphrases:
@@ -134,6 +146,42 @@ This describes how to use KDE Wallet to store GPG key passphrases:
     ```conf
     pinentry-program /usr/bin/pinentry-kwallet
     ```
+
+3. **(Optional)** As it is, this will utilise the KDE Wallet to get the passphrase for the GPG key. However, this is also true even when the user has no access to a graphical session (i.e. in a remote SSH session).
+
+    To solve this:
+
+   - Write a script to determine the `pinentry` program to use in your path (i.e. `~/.local/bin/pinentry-auto`):
+
+      ```sh
+      nano ~/.local/bin/pinentry-auto
+      ```
+
+      Add the following content to the file and save the script:
+
+      ```sh
+      #!/bin/sh
+      # reference: https://stackoverflow.com/a/77564644
+
+      set -eu
+
+      GRAPHICAL_PINENTRY=$(which pinentry-kwallet)
+      TERMINAL_PINENTRY=$(which pinentry-curses)
+
+      if [ -z "${SSH_CONNECTION-}" ] && [ -n "${DISPLAY-}" ]; then
+          exec "${GRAPHICAL_PINENTRY}" "${@}"
+      else
+          exec "${TERMINAL_PINENTRY}" "${@}"
+      fi
+      ```
+
+   - [Update the GPG agent configuration file](gpg.md#update-config) by setting `pinentry-program` to the script you had written (i.e. `~/.local/bin/pinentry-auto`):
+
+      ```conf
+      pinentry-program ~/.local/bin/pinentry-auto
+      ```
+
+    This tells GPG to use the script to determine how to get the GPG passphrase - namely, `pinentry-curses` when the user is logged in remotely via SSH and does not have access to a graphical session.
 
 ---
 
