@@ -47,6 +47,7 @@ This details how to create and setup a KDE Wallet and use it by default.
 - [Using the KDE Wallet to store ssh key passphrases](https://wiki.archlinux.org/title/KDE_Wallet#Using_the_KDE_Wallet_to_store_ssh_key_passphrases)
 - [Store GPG key passphrases](https://wiki.archlinux.org/title/KDE_Wallet#Store_GPG_key_passphrases)
 - [How to get gpg-agent to choose an appropriate variant of the pinentry program?](https://stackoverflow.com/questions/77549879/how-to-get-gpg-agent-to-choose-an-appropriate-variant-of-the-pinentry-program)
+- [environment.d](https://www.freedesktop.org/software/systemd/man/latest/environment.d.html)
 
 ### Initial Setup
 
