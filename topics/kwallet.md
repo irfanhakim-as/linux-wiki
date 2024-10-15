@@ -130,9 +130,13 @@ This describes how to use KDE Wallet to store SSH key passphrases:
     To solve this, add the following logic to your default shell profile (i.e. [`fish`](fish.md#configuration)):
 
     ```sh
-    if set -q SSH_CONNECTION; and not set -q DISPLAY
-      set -x SSH_ASKPASS_REQUIRE never
-    end
+    set -x SSH_ASKPASS_REQUIRE (set -q SSH_CONNECTION; and not set -q DISPLAY; and echo never; or echo prefer)
+    ```
+
+    If your default shell profile is `bash`, add the following line instead:
+
+    ```sh
+    export SSH_ASKPASS_REQUIRE=$(if [[ -n ${SSH_CONNECTION} && -z ${DISPLAY} ]]; then echo "never"; else echo "prefer"; fi)
     ```
 
     > [!IMPORTANT]  
