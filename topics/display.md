@@ -71,9 +71,10 @@ This details how to adjust the brightness of your connected screen(s) on KDE Pla
 
 2. Adjust the **Display Brightness** slider of each attached screens accordingly.
 
-    This adjusts the brightness of all connected screens to the specified level.
+### Multiple Screens (Deprecated)
 
-### Multiple Screens
+> [!NOTE]  
+> This part of the guide has been deprecated and is no longer needed in KDE Plasma 6.2+.
 
 1. [Install](yay.md#install) the `ddcutil` package (should come preinstalled by default in most cases) using `yay`.
 
