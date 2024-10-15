@@ -140,7 +140,7 @@ This describes how to use KDE Wallet to store SSH key passphrases:
     ```
 
     > [!IMPORTANT]  
-    > This logic will need to be reimplemented and adapted if the user uses a different default shell (i.e. `bash`).
+    > This logic will need to be reimplemented and adapted if the user uses a different default shell than any of the earlier examples (i.e. `zsh`).
 
     This sets the value of `SSH_ASKPASS_REQUIRE` to `never` when the user is logged in remotely via SSH and does not have access to a graphical session.
 
