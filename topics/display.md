@@ -15,8 +15,8 @@ This details configuration options pertaining display.
   - [Screen Brightness Adjustment](#screen-brightness-adjustment)
     - [Description](#description-2)
     - [References](#references)
-    - [Single Screen](#single-screen)
-    - [Multiple Screens](#multiple-screens)
+    - [Steps](#steps-1)
+    - [Multiple Screens (Deprecated)](#multiple-screens-deprecated)
 
 ---
 
