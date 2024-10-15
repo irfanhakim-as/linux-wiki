@@ -62,14 +62,14 @@ This details how to adjust the brightness of your connected screen(s) on KDE Pla
 
 - [Alt tab problem with Fedora KDE](https://discuss.kde.org/t/alt-tab-problem-with-fedora-kde/17280/1)
 
-### Single Screen
+### Steps
 
 > [!NOTE]  
-> KDE Plasma 6 has built-in support for adjusting the brightness of multiple screens by default - however, it is not possible to adjust the brightness of each screen individually.
+> KDE Plasma 6.2+ has built-in support for adjusting the brightness of multiple screens individually by default.
 
 1. On the desktop's **System Tray**, click the **Brightness and Color** Applet.
 
-2. Adjust the **Display Brightness** slider accordingly.
+2. Adjust the **Display Brightness** slider of each attached screens accordingly.
 
     This adjusts the brightness of all connected screens to the specified level.
 
