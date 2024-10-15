@@ -127,7 +127,7 @@ This describes how to use KDE Wallet to store SSH key passphrases:
 
 4. **(Optional)** As it is, this will utilise the KDE Wallet to get the passphrase for the SSH key. However, this is also true even when the user has no access to a graphical session (i.e. in a remote SSH session).
 
-    To solve this, add the following logic to your default shell profile (i.e. [`fish` config](fish.md#configuration)):
+    To solve this, add the following logic to your default shell profile (i.e. [`fish`](fish.md#configuration)):
 
     ```sh
     if set -q SSH_CONNECTION; and not set -q DISPLAY
