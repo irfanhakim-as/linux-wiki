@@ -115,7 +115,7 @@ This details how we can enforce automatic signing for all our commits and tags i
     gpg --list-secret-keys --keyid-format long
     ```
 
-3. From this output, locate our GPG key and take note of the row containing the secret key value denoted by `sec`:
+3. From the given output, locate our GPG key and take note of the row containing its corresponding secret key denoted by the abbreviation `sec`. For example:
 
     ```
     sec   ed25519/1H89FHO4MGAJTJ9Z 2024-04-07 [SC] [expires: 2025-04-07]
