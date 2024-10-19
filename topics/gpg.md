@@ -152,7 +152,7 @@ This details how we can enforce automatic signing for all our commits and tags i
 
 7. Register the public key to GitLab:
 
-   - Go to GitLab's [GPG Keys](https://gitlab.com/-/profile/gpg_keys) page.
+   - Go to GitLab's [GPG Keys](https://gitlab.com/-/user_settings/gpg_keys) page.
    - Click the **Add new key** button.
    - Paste our GPG public key into the **Key** text field.
    - Click the **Add key** button.
