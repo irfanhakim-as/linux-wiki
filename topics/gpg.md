@@ -98,9 +98,6 @@ This details how to generate a GPG key.
 > [!IMPORTANT]  
 > A portion of this guide assumes you are using the [**Fish**](fish.md) shell. If you are using a different shell, make any required adjustments accordingly.
 
-> [!NOTE]  
-> This guide assumes that you have already generated a GPG key. If you have not, please refer to the [Generate GPG Key](#generate-gpg-key) section.
-
 ### Description
 
 This details how we can enforce automatic signing for all our commits and tags in Git and GitHub/GitLab.
@@ -111,25 +108,27 @@ This details how we can enforce automatic signing for all our commits and tags i
 
 ### Steps
 
-1. List our GPG keys:
+1. [Create a GPG key](#generate-gpg-key) if you have not already.
+
+2. List our GPG keys:
 
     ```sh
     gpg --list-secret-keys --keyid-format long
     ```
 
-2. From this output, locate our GPG key and take note of the value of the second column from the row that has `sec` in the first column:
+3. From this output, locate our GPG key and take note of the value of the second column from the row that has `sec` in the first column:
 
     ```
     sec   ed25519/1H89FHO4MGAJTJ9Z
     ```
 
-3. Copy the value trailing the `/` (i.e. `1H89FHO4MGAJTJ9Z`), and get our GPG public key using the following command:
+4. Copy the value trailing the `/` (i.e. `1H89FHO4MGAJTJ9Z`), and get our GPG public key using the following command:
 
     ```sh
     gpg --armor --export 1H89FHO4MGAJTJ9Z
     ```
 
-4. The GPG public key we require looks something like this:
+5. The GPG public key we require looks something like this:
 
     ```
     -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -143,7 +142,7 @@ This details how we can enforce automatic signing for all our commits and tags i
 
     Copy the entire public key.
 
-5. Register the public key to GitHub:
+6. Register the public key to GitHub:
 
    - Go to GitHub's [SSH and GPG keys](https://github.com/settings/keys) page.
    - Under the **GPG keys** section, click the **New GPG key** button.
@@ -151,14 +150,14 @@ This details how we can enforce automatic signing for all our commits and tags i
    - Paste our GPG public key into the **Key** text field.
    - Click the **Add GPG key** button.
 
-6. Register the public key to GitLab:
+7. Register the public key to GitLab:
 
    - Go to GitLab's [GPG Keys](https://gitlab.com/-/profile/gpg_keys) page.
    - Click the **Add new key** button.
    - Paste our GPG public key into the **Key** text field.
    - Click the **Add key** button.
 
-7. Configure Git to use our GPG key and enforce automatic signing for all our commits and tags.
+8. Configure Git to use our GPG key and enforce automatic signing for all our commits and tags.
 
     Register our GPG key to Git:
 
@@ -181,7 +180,7 @@ This details how we can enforce automatic signing for all our commits and tags i
     git config --global tag.gpgSign true
     ```
 
-8. To ensure that GPG uses the correct terminal for user interaction when performing cryptographic operations, add `GPG_TTY` as a global environment variable to your shell profile (i.e. `fish`).
+9.  To ensure that GPG uses the correct terminal for user interaction when performing cryptographic operations, add `GPG_TTY` as a global environment variable to your shell profile (i.e. `fish`).
 
     > [!WARNING]
     > This step assumes that your default shell is `fish`.
