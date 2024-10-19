@@ -70,7 +70,7 @@ This details how to generate a GPG key.
 
 ### Steps
 
-1. Launch a Terminal app (i.e. **Konsole**).
+1. Launch a Terminal application (i.e. **Konsole**).
 
 2. Generate a GPG key using the `gpg` command:
 
@@ -88,6 +88,8 @@ This details how to generate a GPG key.
    - Email address: `user@example.org` (Add your email address here)
    - Comment: (Leave this blank or add a comment)
    - Change name, comment, email, or okay/quit: `o`
+
+    Make any of your own adjustments to the above values as desired.
 
 4. Enter a passphrase when prompted or leave it empty. Save to the system's password manager if given the option.
 
@@ -110,25 +112,37 @@ This details how we can enforce automatic signing for all our commits and tags i
 
 1. [Create a GPG key](#generate-gpg-key) if you have not already.
 
-2. List our GPG keys:
+2. List down all available GPG keys:
 
     ```sh
     gpg --list-secret-keys --keyid-format long
     ```
 
-3. From this output, locate our GPG key and take note of the value of the second column from the row that has `sec` in the first column:
+3. From this output, locate our GPG key and take note of the row containing the secret key value denoted by `sec`:
 
     ```
-    sec   ed25519/1H89FHO4MGAJTJ9Z
+    sec   ed25519/1H89FHO4MGAJTJ9Z 2024-04-07 [SC] [expires: 2025-04-07]
     ```
 
-4. Copy the value trailing the `/` (i.e. `1H89FHO4MGAJTJ9Z`), and get our GPG public key using the following command:
+    Get the long key ID by copying the value trailing the `/`. Based on our example, the long key ID would be the following value:
+
+    ```
+    1H89FHO4MGAJTJ9Z
+    ```
+
+4. Using the long key ID, get its corresponding GPG public key using the following command:
+
+    ```sh
+    gpg --armor --export <long-key-id>
+    ```
+
+    For example, assuming our long key ID is `1H89FHO4MGAJTJ9Z`:
 
     ```sh
     gpg --armor --export 1H89FHO4MGAJTJ9Z
     ```
 
-5. The GPG public key we require looks something like this:
+5. The GPG public key we require would look something like the following:
 
     ```
     -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -140,17 +154,17 @@ This details how we can enforce automatic signing for all our commits and tags i
     -----END PGP PUBLIC KEY BLOCK-----
     ```
 
-    Copy the entire public key.
+    Copy the entire content of the public key.
 
-6. Register the public key to GitHub:
+6. To register the GPG public key to GitHub, do the following:
 
    - Go to GitHub's [SSH and GPG keys](https://github.com/settings/keys) page.
    - Under the **GPG keys** section, click the **New GPG key** button.
-   - Add a title for the GPG key (i.e. your system's hostname).
+   - Add a title for the GPG key (i.e. your system's user and hostname).
    - Paste our GPG public key into the **Key** text field.
    - Click the **Add GPG key** button.
 
-7. Register the public key to GitLab:
+7. To register the GPG public key to GitLab, do the following:
 
    - Go to GitLab's [GPG Keys](https://gitlab.com/-/user_settings/gpg_keys) page.
    - Click the **Add new key** button.
@@ -159,49 +173,51 @@ This details how we can enforce automatic signing for all our commits and tags i
 
 8. Configure Git to use our GPG key and enforce automatic signing for all our commits and tags.
 
-    Register our GPG key to Git:
+   - Register our GPG key to Git using the long key ID:
 
-    ```sh
-    git config --global user.signingkey 1H89FHO4MGAJTJ9Z
-    ```
+        ```sh
+        git config --global user.signingkey <long-key-id>
+        ```
 
-    > [!WARNING]  
-    > Replace `1H89FHO4MGAJTJ9Z` with the value you used in step 3.
+        For example, assuming our long key ID is `1H89FHO4MGAJTJ9Z`:
 
-    Set automatic commit signing:
+        ```sh
+        git config --global user.signingkey 1H89FHO4MGAJTJ9Z
+        ```
 
-    ```sh
-    git config --global commit.gpgSign true
-    ```
+   - Set automatic commit signing:
 
-    Set automatic tag signing:
+        ```sh
+        git config --global commit.gpgSign true
+        ```
 
-    ```sh
-    git config --global tag.gpgSign true
-    ```
+   - Set automatic tag signing:
 
-9.  To ensure that GPG uses the correct terminal for user interaction when performing cryptographic operations, add `GPG_TTY` as a global environment variable to your shell profile (i.e. `fish`).
+        ```sh
+        git config --global tag.gpgSign true
+        ```
 
-    > [!WARNING]
-    > This step assumes that your default shell is `fish`.
+9.  To ensure that GPG uses the correct terminal for user interaction when performing cryptographic operations, add `GPG_TTY` as a global environment variable to your default shell profile (i.e. `fish`).
 
-    Edit the shell profile (i.e. `config.fish`):
+    - Update the default shell profile (i.e. `~/.config/fish/config.fish`):
 
-    ```sh
-    nano ~/.config/fish/config.fish
-    ```
+        ```sh
+        nano ~/.config/fish/config.fish
+        ```
 
-    Add the following line to the shell profile:
+    - Add the following line to the shell profile:
 
-    ```sh
-    set -x GPG_TTY (tty)
-    ```
+        ```sh
+        set -x GPG_TTY (tty)
+        ```
 
-    Reload the shell profile we have updated:
+        This sample variable assignment is only applicable to `fish`. Update the line accordingly if your default shell profile is different (i.e. `bash`).
 
-    ```sh
-    source ~/.config/fish/config.fish
-    ```
+    - Reload the updated shell profile (i.e. `~/.config/fish/config.fish`):
+
+        ```sh
+        source ~/.config/fish/config.fish
+        ```
 
 ---
 
