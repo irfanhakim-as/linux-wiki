@@ -197,23 +197,21 @@ This details how we can enforce automatic signing for all our commits and tags i
         git config --global tag.gpgSign true
         ```
 
-9.  To ensure that GPG uses the correct terminal for user interaction when performing cryptographic operations, add `GPG_TTY` as a global environment variable to your default shell profile (i.e. `fish`).
+9.  To ensure that GPG uses the correct terminal for user interaction when performing cryptographic operations, set `GPG_TTY` to the value of `tty` in your default shell profile.
 
-    - Update the default shell profile (i.e. `~/.config/fish/config.fish`):
-
-        ```sh
-        nano ~/.config/fish/config.fish
-        ```
-
-    - Add the following line to the shell profile:
+    - Update the default shell profile (i.e. [`fish`](fish.md#configuration)) with the following variable assignment:
 
         ```sh
         set -x GPG_TTY (tty)
         ```
 
-        This sample variable assignment is only applicable to `fish`. Update the line accordingly if your default shell profile is different (i.e. `bash`).
+        If your default shell profile is `bash`, add the following line instead:
 
-    - Reload the updated shell profile (i.e. `~/.config/fish/config.fish`):
+        ```sh
+        export GPG_TTY=$(tty)
+        ```
+
+    - Reload the updated shell profile (i.e. `~/.config/fish/config.fish`) to apply the changes:
 
         ```sh
         source ~/.config/fish/config.fish
