@@ -227,13 +227,13 @@ This details how we can enforce automatic signing for all our commits and tags i
 
 5.  To ensure that GPG uses the correct terminal for user interaction when performing cryptographic operations, set `GPG_TTY` to the value of `tty` in your default shell profile.
 
-    - Update the default shell profile (i.e. [`fish`](fish.md#configuration)) with the following variable assignment:
+    - Update the profile of your default shell (i.e. [`fish`](fish.md#configuration)) with the following variable assignment:
 
         ```sh
         set -x GPG_TTY (tty)
         ```
 
-        If your default shell profile is `bash`, add the following line instead:
+        If your default shell is `bash`, add the following line instead to its shell profile:
 
         ```sh
         export GPG_TTY=$(tty)
