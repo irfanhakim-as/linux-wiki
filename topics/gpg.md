@@ -117,7 +117,7 @@ This details how to get certain values relating to our GPG key.
 
 ### GPG Key ID
 
-This details how to acquire the unique identifier that is used to identify our GPG key:
+This details how to acquire the unique identifier (long key ID) that is used to identify our GPG key:
 
 1. List the system's GPG secret keys:
 
