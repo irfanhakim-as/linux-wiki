@@ -207,13 +207,13 @@ This details how we can enforce automatic signing for all our commits and tags i
 
 4. Configure Git to use our GPG key and enforce automatic signing for all our commits and tags.
 
-    Register our [GPG key ID](#gpg-key-id) (i.e. `1H89FHO4MGAJTJ9Z`) to Git:
+   - Register our [GPG key ID](#gpg-key-id) (i.e. `1H89FHO4MGAJTJ9Z`) to Git:
 
-    ```sh
-    git config --global user.signingkey 1H89FHO4MGAJTJ9Z
-    ```
+        ```sh
+        git config --global user.signingkey 1H89FHO4MGAJTJ9Z
+        ```
 
-    Set automatic commit signing:
+   - Set automatic commit signing:
 
         ```sh
         git config --global commit.gpgSign true
