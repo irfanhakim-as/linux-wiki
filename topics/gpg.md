@@ -67,6 +67,7 @@ This details how to generate a GPG key.
 ### References
 
 - [GPG Usage](https://wiki.archlinux.org/title/GnuPG#Usage)
+- [Generating a new GPG key](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)
 
 ### Steps
 
