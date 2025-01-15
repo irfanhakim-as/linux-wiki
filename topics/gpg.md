@@ -304,3 +304,137 @@ This details how to update the passphrase of a GPG key.
 5. Enter the new passphrase and confirm it when prompted.
 
     You **may** need to enter the `save` subcommand in the `gpg>` prompt to save changes made to the GPG key.
+
+---
+
+## Renewing Expired GPG Keys
+
+### Description
+
+This details how to renew expired GPG keys.
+
+### References
+
+- [Updating expired GPG keys and their backup](https://gist.github.com/TheSherlockHomie/a91d3ecdce8d0ea2bfa38b67c0355d00)
+- [Renew GPG key](https://gist.github.com/krisleech/760213ed287ea9da85521c7c9aac1df0)
+- [Extending expiration date](https://wiki.archlinux.org/title/GnuPG#Extending_expiration_date)
+
+### Steps
+
+1. Get our [GPG key ID](#gpg-key-id) (i.e. `1H89FHO4MGAJTJ9Z`).
+
+2. Edit the GPG key using the following command:
+
+    ```sh
+    gpg --edit-key <gpg-key-id>
+    ```
+
+    Replace `<gpg-key-id>` with the value of our GPG key ID (i.e. `1H89FHO4MGAJTJ9Z`) accordingly.
+
+3. In the `gpg>` prompt, enter the `expire` subcommand to update the GPG key's expiration date:
+
+    ```sh
+    expire
+    ```
+
+4. When prompted, submit the following values to renew the secret key:
+
+   - Key is valid for? (0): `1y` for one year
+   - Is this correct? (y/N): `y` to accept the key's new expiration date
+
+    Sample output:
+
+    ```
+        sec  ed25519/1H89FHO4MGAJTJ9Z
+            created: 2024-01-15  expires: 2026-01-15  usage: SC
+            trust: ultimate      validity: ultimate
+        ssb  cv25519/A1B2C3D4E5F6G7H8
+            created: 2024-01-15  expired: 2025-01-14  usage: E
+        [ultimate] (1). My Name <user@example.com>
+    ```
+
+5. After renewing the GPG key's secret key, you may need to renew the GPG key's subkey(s) as well if you have received a warning like the following:
+
+    ```
+        gpg: WARNING: Your encryption subkey expires soon.
+        gpg: You may want to change its expiration date too.
+        gpg: WARNING: No valid encryption subkey left over.
+    ```
+
+   - In the same `gpg>` session, enter the `list` subcommand to show your GPG key:
+
+        ```sh
+        list
+        ```
+
+        Sample output:
+
+        ```
+            sec  ed25519/1H89FHO4MGAJTJ9Z
+                created: 2024-01-15  expires: 2026-01-15  usage: SC
+                trust: ultimate      validity: ultimate
+            ssb  cv25519/A1B2C3D4E5F6G7H8
+                created: 2024-01-15  expired: 2025-01-14  usage: E
+            [ultimate] (1). My Name <user@example.com>
+        ```
+
+        You will need to renew every subkey(s) (denoted by the `ssb` prefix) that has expired.
+
+   - To select the first subkey (i.e. `1`), enter the following command:
+
+        ```sh
+        key 1
+        ```
+
+        Sample output:
+
+        ```
+            ssb* cv25519/A1B2C3D4E5F6G7H8
+        ```
+
+        The asterisk (`*`) indicates that the subkey has been selected.
+
+   - Enter the `expire` subcommand to update the selected subkey's expiration date:
+
+        ```sh
+        expire
+        ```
+
+        Enter the same values you have submitted to renew the secret key earlier when prompted. Sample output:
+
+        ```
+            sec  ed25519/1H89FHO4MGAJTJ9Z
+                created: 2024-01-15  expires: 2026-01-15  usage: SC
+                trust: ultimate      validity: ultimate
+            ssb* cv25519/A1B2C3D4E5F6G7H8
+                created: 2024-01-15  expires: 2026-01-15  usage: E
+            [ultimate] (1). My Name <user@example.com>
+        ```
+
+        The expiration date of each of your GPG key's subkey(s) should be updated accordingly.
+
+6. After the GPG key's secret key and subkey(s) expiration date have been updated, enter the `trust` subcommand to update the GPG key's trust level:
+
+    ```sh
+    trust
+    ```
+
+    When prompted, select the `ultimate` trust level (i.e. `5`):
+
+    ```sh
+    5
+    ```
+
+    Confirm the selected trust level:
+
+    ```sh
+    y
+    ```
+
+7. After the GPG key's secret key and subkey(s) expiration date have been updated, enter the `save` subcommand (in the `gpg>` prompt) to save changes made to the GPG key:
+
+    ```sh
+    save
+    ```
+
+8. If you have previously registered the public key of your GPG key with any services such as GitHub or GitLab, you **may** need to update them with your new [public key](#gpg-public-key) accordingly.
