@@ -35,6 +35,10 @@ GnuPG is a complete and free implementation of the OpenPGP standard as defined b
     - [Description](#description-6)
     - [References](#references-6)
     - [Steps](#steps-4)
+  - [Renewing Expired GPG Keys](#renewing-expired-gpg-keys)
+    - [Description](#description-7)
+    - [References](#references-7)
+    - [Steps](#steps-5)
 
 ## References
 
