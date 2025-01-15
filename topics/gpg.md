@@ -86,7 +86,7 @@ This details how to generate a GPG key.
    - Key is valid for: `1y`
    - Is this correct: `y`
    - Real name: `My Name` (Add your real name here)
-   - Email address: `user@example.org` (Add your email address here)
+   - Email address: `user@example.com` (Add your email address here)
    - Comment: (Leave this blank or add a comment)
    - Change name, comment, email, or okay/quit: `o`
 
