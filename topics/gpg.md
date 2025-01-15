@@ -18,17 +18,22 @@ GnuPG is a complete and free implementation of the OpenPGP standard as defined b
     - [Description](#description-2)
     - [References](#references-2)
     - [Steps](#steps-1)
-  - [Sign Git Commits](#sign-git-commits)
+  - [Getting GPG Key Values](#getting-gpg-key-values)
     - [Description](#description-3)
-    - [References](#references-3)
-    - [Steps](#steps-2)
-  - [Update Config](#update-config)
+  - [References](#references-3)
+    - [GPG Key ID](#gpg-key-id)
+    - [GPG Public Key](#gpg-public-key)
+  - [Sign Git Commits](#sign-git-commits)
     - [Description](#description-4)
     - [References](#references-4)
-    - [Steps](#steps-3)
-  - [Update GPG Key Passphrase](#update-gpg-key-passphrase)
+    - [Steps](#steps-2)
+  - [Update Config](#update-config)
     - [Description](#description-5)
     - [References](#references-5)
+    - [Steps](#steps-3)
+  - [Update GPG Key Passphrase](#update-gpg-key-passphrase)
+    - [Description](#description-6)
+    - [References](#references-6)
     - [Steps](#steps-4)
 
 ## References
@@ -96,6 +101,77 @@ This details how to generate a GPG key.
 
 ---
 
+## Getting GPG Key Values
+
+### Description
+
+This details how to get certain values relating to our GPG key.
+
+## References
+
+- [Checking for existing GPG keys](https://docs.github.com/en/authentication/managing-commit-signature-verification/checking-for-existing-gpg-keys)
+
+### GPG Key ID
+
+This details how to acquire the unique identifier that is used to identify our GPG key:
+
+1. List the system's GPG secret keys:
+
+    ```sh
+    gpg --list-secret-keys --keyid-format long
+    ```
+
+    Sample output:
+
+    ```
+        /home/user/.gnupg/pubring.kbx
+        ------------------------------
+        sec   ed25519/1H89FHO4MGAJTJ9Z 2024-01-15 [SC] [expires: 2026-01-15]
+            0A41C9F6335DBF47A1A186FAC82F22229FCCE1BF
+        uid                 [ultimate] My Name <user@example.com>
+        ssb   cv25519/A1B2C3D4E5F6G7H8 2024-01-15 [E] [expires: 2026-01-15]
+    ```
+
+2. From this output, locate our GPG key and take note of the value of the second column from the row that says `sec` (Secret key) in the first column:
+
+    ```
+        sec   ed25519/1H89FHO4MGAJTJ9Z
+    ```
+
+    From this example, such value is `ed25519/1H89FHO4MGAJTJ9Z`.
+
+3. Copy the value trailing the `/` character (i.e. `1H89FHO4MGAJTJ9Z`), which is our GPG key ID:
+
+    ```
+        1H89FHO4MGAJTJ9Z
+    ```
+
+### GPG Public Key
+
+This details how to get the public key of our GPG key:
+
+1. After acquiring our [GPG key ID](#gpg-key-id) (i.e. `1H89FHO4MGAJTJ9Z`), use it to export our GPG public key:
+
+    ```sh
+    gpg --armor --export 1H89FHO4MGAJTJ9Z
+    ```
+
+2. Copy the GPG public key from the output accordingly.
+
+    Sample output:
+
+    ```
+        -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+        7Ze49bA33Xzun7SbusOQspoUIYsgPny2eitPOKRvavumM+397nTftVhHia/eI410
+        ...
+        Lz8/MGzO2FgC33XdFwhyyp3yQH18XCnV4IMUgrFNrG==
+        =iT48
+        -----END PGP PUBLIC KEY BLOCK-----
+    ```
+
+---
+
 ## Sign Git Commits
 
 ### Description
@@ -108,53 +184,9 @@ This details how we can enforce automatic signing for all our commits and tags i
 
 ### Steps
 
-1. [Create a GPG key](#generate-gpg-key) if you have not already.
+1. Copy the [public key](#gpg-public-key) of our GPG key.
 
-2. List down all available GPG keys:
-
-    ```sh
-    gpg --list-secret-keys --keyid-format long
-    ```
-
-3. From the given output, locate our GPG key and take note of the row containing its corresponding secret key denoted by the abbreviation `sec`. For example:
-
-    ```
-    sec   ed25519/1H89FHO4MGAJTJ9Z 2024-04-07 [SC] [expires: 2025-04-07]
-    ```
-
-    Get the long key ID by copying the value trailing the `/`. Based on our example, the long key ID would be the following value:
-
-    ```
-    1H89FHO4MGAJTJ9Z
-    ```
-
-4. Using the long key ID, get its corresponding GPG public key using the following command:
-
-    ```sh
-    gpg --armor --export <long-key-id>
-    ```
-
-    For example, assuming our long key ID is `1H89FHO4MGAJTJ9Z`:
-
-    ```sh
-    gpg --armor --export 1H89FHO4MGAJTJ9Z
-    ```
-
-5. The GPG public key we require would look something like the following:
-
-    ```
-    -----BEGIN PGP PUBLIC KEY BLOCK-----
-
-    7Ze49bA33Xzun7SbusOQspoUIYsgPny2eitPOKRvavumM+397nTftVhHia/eI410
-    ...
-    Lz8/MGzO2FgC33XdFwhyyp3yQH18XCnV4IMUgrFNrG==
-    =iT48
-    -----END PGP PUBLIC KEY BLOCK-----
-    ```
-
-    Copy the entire content of the public key.
-
-6. To register the GPG public key to GitHub, do the following:
+2. Register the public key to GitHub:
 
    - Go to GitHub's [SSH and GPG keys](https://github.com/settings/keys) page.
    - Under the **GPG keys** section, click the **New GPG key** button.
@@ -162,28 +194,22 @@ This details how we can enforce automatic signing for all our commits and tags i
    - Paste our GPG public key into the **Key** text field.
    - Click the **Add GPG key** button.
 
-7. To register the GPG public key to GitLab, do the following:
+3. Register the public key to GitLab:
 
    - Go to GitLab's [GPG Keys](https://gitlab.com/-/user_settings/gpg_keys) page.
    - Click the **Add new key** button.
    - Paste our GPG public key into the **Key** text field.
    - Click the **Add key** button.
 
-8. Configure Git to use our GPG key and enforce automatic signing for all our commits and tags.
+4. Configure Git to use our GPG key and enforce automatic signing for all our commits and tags.
 
-   - Register our GPG key to Git using the long key ID:
+    Register our [GPG key ID](#gpg-key-id) (i.e. `1H89FHO4MGAJTJ9Z`) to Git:
 
-        ```sh
-        git config --global user.signingkey <long-key-id>
-        ```
+    ```sh
+    git config --global user.signingkey 1H89FHO4MGAJTJ9Z
+    ```
 
-        For example, assuming our long key ID is `1H89FHO4MGAJTJ9Z`:
-
-        ```sh
-        git config --global user.signingkey 1H89FHO4MGAJTJ9Z
-        ```
-
-   - Set automatic commit signing:
+    Set automatic commit signing:
 
         ```sh
         git config --global commit.gpgSign true
@@ -195,7 +221,7 @@ This details how we can enforce automatic signing for all our commits and tags i
         git config --global tag.gpgSign true
         ```
 
-9.  To ensure that GPG uses the correct terminal for user interaction when performing cryptographic operations, set `GPG_TTY` to the value of `tty` in your default shell profile.
+5.  To ensure that GPG uses the correct terminal for user interaction when performing cryptographic operations, set `GPG_TTY` to the value of `tty` in your default shell profile.
 
     - Update the default shell profile (i.e. [`fish`](fish.md#configuration)) with the following variable assignment:
 
@@ -257,32 +283,24 @@ This details how to update the passphrase of a GPG key.
 
 ### Steps
 
-1. List our GPG keys:
+1. Get our [GPG key ID](#gpg-key-id) (i.e. `1H89FHO4MGAJTJ9Z`).
+
+2. Edit the GPG key using the following command:
 
     ```sh
-    gpg --list-secret-keys --keyid-format long
+    gpg --edit-key <gpg-key-id>
     ```
 
-2. From this output, locate our GPG key and take note of the value of the second column from the row that has `sec` in the first column:
+    Replace `<gpg-key-id>` with the value of our GPG key ID (i.e. `1H89FHO4MGAJTJ9Z`) accordingly.
 
-    ```
-    sec   ed25519/1H89FHO4MGAJTJ9Z
-    ```
-
-3. Copy the value trailing the `/` (i.e. `1H89FHO4MGAJTJ9Z`), and edit the GPG key using the following command:
-
-    ```sh
-    gpg --edit-key 1H89FHO4MGAJTJ9Z
-    ```
-
-4. In the `gpg>` prompt, enter the `passwd` subcommand to change the passphrase:
+3. In the `gpg>` prompt, enter the `passwd` subcommand to change the passphrase:
 
     ```sh
     passwd
     ```
 
-5. Enter the current passphrase of the GPG key when prompted.
+4. Enter the current passphrase of the GPG key when prompted.
 
-6. Enter the new passphrase and confirm it when prompted.
+5. Enter the new passphrase and confirm it when prompted.
 
-    You **may** need to enter the `save` command in the `gpg>` prompt to save changes made to the GPG key.
+    You **may** need to enter the `save` subcommand in the `gpg>` prompt to save changes made to the GPG key.
