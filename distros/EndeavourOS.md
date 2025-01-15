@@ -57,13 +57,14 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
   - [Recommended Global Flatpak Permissions](#recommended-global-flatpak-permissions)
   - [Using a Touchpad](#using-a-touchpad)
     - [References](#references-13)
-  - [Generate GPG Key and Use with Git](#generate-gpg-key-and-use-with-git)
-    - [References](#references-14)
+  - [GnuPG (GPG)](#gnupg-gpg)
+    - [Generate GPG Key and Use with Git](#generate-gpg-key-and-use-with-git)
+    - [Renewing Expired GPG Keys](#renewing-expired-gpg-keys)
   - [Desktop Auto Login](#desktop-auto-login)
   - [KDE Wallet](#kde-wallet)
-    - [References](#references-15)
+    - [References](#references-14)
   - [Distrobox Installation and Usage](#distrobox-installation-and-usage)
-    - [References](#references-16)
+    - [References](#references-15)
   - [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
   - [VS Code Integration with Distrobox](#vs-code-integration-with-distrobox)
   - [Deb Package Installation](#deb-package-installation)
@@ -75,19 +76,19 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
   - [Miniconda Environments](#miniconda-environments)
   - [XP-Pen](#xp-pen)
   - [OBS Studio](#obs-studio)
-    - [References](#references-17)
+    - [References](#references-16)
   - [Magewell Capture Device on OBS](#magewell-capture-device-on-obs)
   - [KDE Connect](#kde-connect)
   - [SearXNG](#searxng)
-    - [References](#references-18)
+    - [References](#references-17)
   - [Link's Awakening DX HD](#links-awakening-dx-hd)
   - [Ocarina of Time](#ocarina-of-time)
   - [Majora's Mask](#majoras-mask)
   - [Connecting to WireGuard](#connecting-to-wireguard)
   - [Wayland](#wayland)
-    - [References](#references-19)
+    - [References](#references-18)
   - [Toshy](#toshy)
-    - [References](#references-20)
+    - [References](#references-19)
   - [Zram](#zram)
   - [Switch to LTS Kernel](#switch-to-lts-kernel)
 
@@ -464,15 +465,21 @@ This details on how to configure and use a trackpad such as the Apple Magic Trac
 
 ---
 
-## Generate GPG Key and Use with Git
+## GnuPG (GPG)
 
-This details how to setup GPG, generate a GPG key, and enforce automatic signing for all our commits and tags in Git and GitHub/GitLab.
+### Generate GPG Key and Use with Git
 
-### References
+This details how to setup GPG, generate a GPG key, and enforce automatic signing for all our commits and tags in Git and GitHub/GitLab:
 
 - [Setup](../topics/gpg.md#setup)
 - [Generate GPG Key](../topics/gpg.md#generate-gpg-key)
 - [Sign Git Commits](../topics/gpg.md#sign-git-commits)
+
+### Renewing Expired GPG Keys
+
+This details how to renew expired GPG keys:
+
+- [Renewing Expired GPG Keys](../topics/gpg.md#renewing-expired-gpg-keys)
 
 ---
 
