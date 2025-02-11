@@ -28,6 +28,7 @@ This topic focuses on autostart applications.
     - [Discord (Flatpak)](#discord-flatpak)
     - [Signal (Flatpak)](#signal-flatpak)
     - [Vorta (Flatpak)](#vorta-flatpak)
+    - [Element (Flatpak)](#element-flatpak)
 
 ---
 
@@ -190,3 +191,13 @@ This details known configurations for certain applications on how to have them a
     ```
 
     Silent flag: `--daemonize`
+
+### Element (Flatpak)
+
+- Argument:
+
+    ```sh
+    run --branch=stable --arch=x86_64 --command=/app/bin/element --file-forwarding im.riot.Riot --hidden @@u %U @@
+    ```
+
+    Silent flag: `--hidden`
