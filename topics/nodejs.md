@@ -30,6 +30,9 @@ Node.js is a cross-platform, open-source JavaScript runtime environment that can
 
 ## Installation
 
+> [!NOTE]  
+> You may skip this section of the guide if you wish to install Node.js using [nvm](#node-version-manager-nvm).
+
 ### Description
 
 This details a basic installation setup for Node.js (and npm) on your system.
