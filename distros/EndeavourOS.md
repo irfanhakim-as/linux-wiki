@@ -211,7 +211,7 @@ org.telegram.desktop
 tv.plex.PlexDesktop
 ```
 
-[Pip](../topics/python.md#pip-usage) packages:
+[Pip](../topics/python.md#pip-usage) libraries:
 
 ```
 bt-dualboot
