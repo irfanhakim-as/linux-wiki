@@ -122,12 +122,13 @@ From Desktop mode, this details on how to configure default applications of vari
 
 ## Fish Shell
 
-This details on how to make Fish the default shell for the user, and setting an ideal configuration or profile for the Fish shell.
+This details on how to make Fish the default shell for the user, setting an ideal configuration or profile for the Fish shell, and installing the Fisher plugin manager.
 
 ### References
 
 - [Fish Make Default](../topics/fish.md#make-default)
 - [Fish Configuration](../topics/fish.md#configuration)
+- [Fisher Plugin Manager](../topics/fish.md#fisher-plugin-manager)
 
 ### Notes
 

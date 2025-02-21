@@ -215,12 +215,13 @@ bt-dualboot
 
 ## Fish Shell
 
-This details the installation of the Fish shell, making it the default shell for the user, and setting an ideal configuration or profile for the Fish shell.
+This details the installation of the Fish shell, making it the default shell for the user, setting an ideal configuration or profile for the Fish shell, and installing the Fisher plugin manager.
 
 ### References
 
 - [Fish Setup](../topics/fish.md#setup)
 - [Fish Configuration](../topics/fish.md#configuration)
+- [Fisher Plugin Manager](../topics/fish.md#fisher-plugin-manager)
 
 ---
 
