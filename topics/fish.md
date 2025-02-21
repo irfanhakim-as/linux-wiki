@@ -18,6 +18,13 @@ Fish is a smart and user-friendly command line shell for macOS, Linux, and the r
     - [Description](#description-2)
     - [References](#references-1)
     - [Steps](#steps)
+  - [Fisher Plugin Manager](#fisher-plugin-manager)
+    - [Description](#description-3)
+    - [References](#references-2)
+    - [Install Fisher](#install-fisher)
+    - [Install Plugins](#install-plugins)
+    - [Update Plugins](#update-plugins)
+    - [Uninstall Plugins](#uninstall-plugins)
 
 ## References
 
@@ -134,3 +141,64 @@ This details an example, ideal configuration or profile for the Fish shell.
     ```sh
     source ~/.config/fish/config.fish
     ```
+
+---
+
+## Fisher Plugin Manager
+
+### Description
+
+This details how to install and use the Fisher plugin manager for the Fish shell.
+
+### References
+
+- [Fisher](https://github.com/jorgebucaran/fisher)
+
+### Install Fisher
+
+1. [Install](yay.md#install) the `fisher` package using your package manager (i.e. `yay`).
+
+### Install Plugins
+
+> [!IMPORTANT]  
+> This part of the guide assumes that you have already [installed](#installation) Fisher.
+
+1. Run the following command to install a Fisher-compatible plugin:
+
+    ```sh
+    fisher install <plugin>
+    ```
+
+    Replace `<plugin>` with the name of the plugin you wish to install (i.e. `jorgebucaran/nvm.fish`)
+
+### Update Plugins
+
+> [!IMPORTANT]  
+> This part of the guide assumes that you have already [installed](#installation) Fisher.
+
+1. Run the following command to update a plugin you have installed:
+
+    ```sh
+    fisher update <plugin>
+    ```
+
+    Replace `<plugin>` with the name of the plugin you wish to update (i.e. `jorgebucaran/nvm.fish`)
+
+2. **Alternatively**, to update all installed plugins, run the same command without specifying a plugin:
+
+    ```sh
+    fisher update
+    ```
+
+### Uninstall Plugins
+
+> [!IMPORTANT]  
+> This part of the guide assumes that you have already [installed](#installation) Fisher.
+
+1. Run the following command to uninstall a plugin you have installed:
+
+    ```sh
+    fisher remove <plugin>
+    ```
+
+    Replace `<plugin>` with the name of the plugin you wish to uninstall (i.e. `jorgebucaran/nvm.fish`)
