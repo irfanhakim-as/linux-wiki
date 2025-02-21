@@ -78,12 +78,12 @@ This details how to install Bazzite and some things that need to be done.
 
 5. During the first boot setup, simply follow all the prompts, and select any applications you may wish to install. I recommend:
 
-	- EmuDeck
-	- DeckyLoader
-	- LibreOffice
-	- Thunderbird
-	- VLC
-	- Google Chrome
+   - EmuDeck
+   - DeckyLoader
+   - LibreOffice
+   - Thunderbird
+   - VLC
+   - Google Chrome
 
 6. By default, Bazzite should run in a Wayland session. If you wish for Bazzite to run in an X.Org/X11 session by default, you can toggle this by running the following command:
 
