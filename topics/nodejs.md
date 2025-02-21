@@ -36,7 +36,7 @@ This details a basic installation setup for Node.js (and npm) on your system.
 
 ### References
 
-- [Installation](https://wiki.archlinux.org/title/Node.js#Installation)
+- [ArchWiki](https://wiki.archlinux.org/title/Node.js#Installation)
 
 ### Steps
 
