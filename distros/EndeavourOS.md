@@ -12,28 +12,29 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
   - [Yay Installation](#yay-installation)
   - [Install Discover and add Flatpak](#install-discover-and-add-flatpak)
     - [References](#references-1)
-  - [Python/Pip Installation](#pythonpip-installation)
+  - [Python](#python)
+    - [References](#references-2)
   - [Recommended Software](#recommended-software)
   - [Fish Shell](#fish-shell)
-    - [References](#references-2)
+    - [References](#references-3)
   - [Remote Access](#remote-access)
   - [Bluetooth](#bluetooth)
-    - [References](#references-3)
-  - [Virtual Machine](#virtual-machine)
     - [References](#references-4)
-  - [Btrfs](#btrfs)
+  - [Virtual Machine](#virtual-machine)
     - [References](#references-5)
-  - [GRUB](#grub)
+  - [Btrfs](#btrfs)
     - [References](#references-6)
-  - [Container Runtime](#container-runtime)
+  - [GRUB](#grub)
     - [References](#references-7)
-  - [Better Fonts](#better-fonts)
+  - [Container Runtime](#container-runtime)
     - [References](#references-8)
+  - [Better Fonts](#better-fonts)
+    - [References](#references-9)
   - [Plasma Desktop Quality of Life Improvements](#plasma-desktop-quality-of-life-improvements)
   - [Default Applications](#default-applications)
   - [Set Alacritty as Default Terminal](#set-alacritty-as-default-terminal)
   - [Display Configuration](#display-configuration)
-    - [References](#references-9)
+    - [References](#references-10)
   - [Plasma Desktop Theme Customisations](#plasma-desktop-theme-customisations)
   - [Plank Dock](#plank-dock)
   - [Gaming Setup](#gaming-setup)
@@ -46,25 +47,25 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
   - [Wallpaper Engine Integration with KDE Plasma](#wallpaper-engine-integration-with-kde-plasma)
   - [Razer Peripheral Support](#razer-peripheral-support)
   - [Wake on LAN or Wireless](#wake-on-lan-or-wireless)
-    - [References](#references-10)
-  - [Backing up with Vorta](#backing-up-with-vorta)
     - [References](#references-11)
-  - [Thunderbird](#thunderbird)
+  - [Backing up with Vorta](#backing-up-with-vorta)
     - [References](#references-12)
+  - [Thunderbird](#thunderbird)
+    - [References](#references-13)
   - [Discord Troubleshooting](#discord-troubleshooting)
   - [Migrating (Firefox) to Flatpak](#migrating-firefox-to-flatpak)
   - [EmuDeck](#emudeck)
   - [Recommended Global Flatpak Permissions](#recommended-global-flatpak-permissions)
   - [Using a Touchpad](#using-a-touchpad)
-    - [References](#references-13)
+    - [References](#references-14)
   - [GnuPG (GPG)](#gnupg-gpg)
     - [Generate GPG Key and Use with Git](#generate-gpg-key-and-use-with-git)
     - [Renewing Expired GPG Keys](#renewing-expired-gpg-keys)
   - [Desktop Auto Login](#desktop-auto-login)
   - [KDE Wallet](#kde-wallet)
-    - [References](#references-14)
-  - [Distrobox Installation and Usage](#distrobox-installation-and-usage)
     - [References](#references-15)
+  - [Distrobox Installation and Usage](#distrobox-installation-and-usage)
+    - [References](#references-16)
   - [Install Applications/Libraries via Distrobox](#install-applicationslibraries-via-distrobox)
   - [VS Code Integration with Distrobox](#vs-code-integration-with-distrobox)
   - [Deb Package Installation](#deb-package-installation)
@@ -73,22 +74,21 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
   - [Mounting a Secondary Internal Disk](#mounting-a-secondary-internal-disk)
   - [Mounting Remote Directory](#mounting-remote-directory)
   - [Fix Kwallet Error in Visual Studio Code](#fix-kwallet-error-in-visual-studio-code)
-  - [Miniconda Environments](#miniconda-environments)
   - [XP-Pen](#xp-pen)
   - [OBS Studio](#obs-studio)
-    - [References](#references-16)
+    - [References](#references-17)
   - [Magewell Capture Device on OBS](#magewell-capture-device-on-obs)
   - [KDE Connect](#kde-connect)
   - [SearXNG](#searxng)
-    - [References](#references-17)
+    - [References](#references-18)
   - [Link's Awakening DX HD](#links-awakening-dx-hd)
   - [Ocarina of Time](#ocarina-of-time)
   - [Majora's Mask](#majoras-mask)
   - [Connecting to WireGuard](#connecting-to-wireguard)
   - [Wayland](#wayland)
-    - [References](#references-18)
-  - [Toshy](#toshy)
     - [References](#references-19)
+  - [Toshy](#toshy)
+    - [References](#references-20)
   - [Zram](#zram)
   - [Switch to LTS Kernel](#switch-to-lts-kernel)
 
@@ -115,9 +115,15 @@ This installs the Discover app store, Flatpak, and adds the Flathub repository.
 
 ---
 
-## [Python/Pip Installation](../topics/python.md#installation)
+## Python
 
-This guide details on how to install both `python`, the programming language, and `pip`, Python's package manager.
+This guide details on how to install Python (the programming language), Pip (Python's package manager), and how to install, setup, and use Conda to create Python environments of various versions.
+
+### References
+
+- [Python Installation](../topics/python.md#installation)
+- [Pip Installation](../topics/python.md#pip-installation)
+- [Miniconda Environments](../topics/python.md#miniconda-environments)
 
 ---
 
@@ -557,12 +563,6 @@ This details how to mount a remote directory to our local machine using Samba.
 ## [Fix Kwallet Error in Visual Studio Code](../topics/kwallet.md#fix-error-with-visual-studio-code)
 
 This guide details on how we could solve the **You're running in a KDE environment but the OS keyring is not available for encryption. Ensure you have kwallet running.** error when launching Visual Studio Code.
-
----
-
-## [Miniconda Environments](../topics/python.md#miniconda-environments)
-
-This guide details on how we could install, setup, and use Conda to create `python` environments of various `python` versions.
 
 ---
 
