@@ -91,6 +91,8 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
     - [References](#references-20)
   - [Zram](#zram)
   - [Switch to LTS Kernel](#switch-to-lts-kernel)
+  - [Node.js](#nodejs)
+    - [References](#references-21)
 
 ## References
 
@@ -664,3 +666,14 @@ This details how to setup Zram to be used as an alternative to swap.
 ## [Switch to LTS Kernel](../topics/kernel.md#switch-to-lts-kernel)
 
 This details how to switch to using the LTS kernels by default.
+
+---
+
+## Node.js
+
+This guide details on how to install Node.js, npm, and how to manage multiple Node.js versions using Node Version Manager (nvm).
+
+### References
+
+- [Node.js Installation](../topics/nodejs.md#installation)
+- [Node Version Manager (nvm)](../topics/nodejs.md#node-version-manager-nvm)
