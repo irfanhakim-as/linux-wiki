@@ -14,14 +14,15 @@ Python is a programming language that lets you work quickly and integrate system
     - [Description](#description-1)
     - [References](#references-1)
     - [Steps](#steps)
-  - [Pip Usage](#pip-usage)
+  - [Pip](#pip)
     - [Description](#description-2)
     - [References](#references-2)
-    - [Steps](#steps-1)
+    - [Pip Installation](#pip-installation)
+    - [Pip Usage](#pip-usage)
   - [Miniconda Environments](#miniconda-environments)
     - [Description](#description-3)
     - [References](#references-3)
-    - [Steps](#steps-2)
+    - [Steps](#steps-1)
 
 ## References
 
@@ -42,78 +43,78 @@ This guide details on how to install both `python`, the programming language, an
 
 ### Steps
 
-1. Install `python` using `pacman` (or `yay`):
-
-    ```sh
-    sudo pacman -S python
-    ```
-
-2. Install `pip` using `pacman` (or `yay`):
-
-    ```sh
-    sudo pacman -S python-pip
-    ```
-
-    Alternatively, we could also install `pip` using `python` itself:
-
-    ```sh
-    python -m ensurepip --upgrade
-    ```
+1. [Install](yay.md#install) the `python` package using your package manager (i.e. `yay`).
 
 ---
 
-## Pip Usage
+## Pip
+
+> [!IMPORTANT]  
+> This section of the guide assumes that you have already [installed](#installation) Python.
 
 ### Description
 
-This guide details on how use `pip` to perform several operations including installing Python packages.
+This guide details on how install and use `pip` to perform several operations including installing Python packages.
 
 ### References
 
 - [Pip User Guide](https://pip.pypa.io/en/stable/user_guide)
 
-### Steps
+### Pip Installation
+
+1. [Install](yay.md#install) the `pip` package using your package manager (i.e. `yay`).
+
+2. **Alternatively**, you may also install Pip using Python itself:
+
+    ```sh
+    python -m ensurepip --upgrade
+    ```
+
+### Pip Usage
+
+> [!IMPORTANT]  
+> This part of the guide assumes that you have already [installed](#pip-installation) Pip.
 
 > [!NOTE]  
-> Replace `<package>` with the actual name of the package you wish to search, install, or update.
+> Replace `<library>` with the actual name of the Python library.
 
-1. To install a Python package:
-
-    ```sh
-    pip install <package>
-    ```
-
-2. To upgrade a Python package:
+1. To install a Python library:
 
     ```sh
-    pip install --upgrade <package>
+    pip install <library>
     ```
 
-3. To uninstall a Python package:
+2. To upgrade a Python library:
 
     ```sh
-    pip uninstall <package>
+    pip install --upgrade <library>
     ```
 
-4. To search for a Python package:
+3. To uninstall a Python library:
 
     ```sh
-    pip search <package>
+    pip uninstall <library>
     ```
 
-5. To list all installed Python packages:
+4. To search for a Python library:
+
+    ```sh
+    pip search <library>
+    ```
+
+5. To list all installed Python library:
 
     ```sh
     pip list
     ```
 
-6. To freeze all installed Python packages into a `requirements.txt` file:
+6. To freeze all installed Python libraries into a `requirements.txt` file:
 
     ```sh
     pip freeze > requirements.txt
     ```
 
-7. To install all Python packages listed in a `requirements.txt` file:
+7. To install all Python libraries listed in a `requirements.txt` file:
 
     ```sh
     pip install -r requirements.txt
