@@ -23,6 +23,9 @@ Nvidia is a software and fabless company which designs graphics processing units
 
 ## GreenWithEnvy
 
+> [!WARNING]  
+> This utility is no longer usable for systems running on Wayland. Efforts to bring Wayland support is still [ongoing](https://gitlab.com/leinardi/gwe/-/merge_requests/80).
+
 ### Description
 
 This details setting up GreenWithEnvy, a system utility for controlling NVIDIA GPUs.
