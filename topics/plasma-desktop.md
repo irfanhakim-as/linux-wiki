@@ -524,6 +524,7 @@ This details some customisation options for the Plasma Desktop.
 
      - [Firefox](firefox.md#follow-kde-plasma-window-decoration)
      - [Thunderbird](thunderbird.md#follow-kde-plasma-window-decoration)
+     - [Visual Studio Code](vscode.md#native-title-bar)
 
 7. Configure macOS-like [**Icons** and **Cursors**](#prettier-icons).
 
