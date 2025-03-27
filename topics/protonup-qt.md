@@ -71,9 +71,9 @@ This details the steps to update the GE-Proton version for your installed games.
 
 4. Select the older version of GE-Proton that is currently in use and click the **Show info** button.
 
-5. In the newly opened **About compatibility tool** window, click the **Batch update** button.
+5. In the newly opened **About compatibility tool** window, click the **Batch Update** button.
 
-6. Under the **New version** dropdown, select the latest version of `GE-Proton` we just installed, and click the **Batch update** button.
+6. Under the **New version** dropdown, select the latest version of `GE-Proton` we just installed, and click the **Batch Update** button.
 
 7. Once the batch update is complete, click the **Close** button to close the **About compatibility tool** window.
 
