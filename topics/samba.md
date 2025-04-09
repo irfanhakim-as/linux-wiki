@@ -95,13 +95,13 @@ This details how to mount a remote directory to our local machine using Samba.
 
         Meaning behind some of the included options:
 
-     - `//mynas/mydir`: `mynas` denotes the sample hostname of the remote server, while `mydir` denotes the sample remote directory on the server.
-     - `/mnt/mynas`: The sample directory that will be used as the mounting point.
-     - `_netdev`: Indicates that the filesystem depends on network availability. It ensures that the mount attempt waits until the network is up.
-     - `nofail`: Allows the boot process to continue even if this mount point fails. It prevents boot hang-ups in case the remote directory is unavailable.
-     - `mfsymlinks`: Enables support for symbolic links in the CIFS/SMB share, allowing symbolic links on the remote system to be followed locally.
-     - `users`: Allows non-root users to mount and unmount the filesystem.
-     - `x-systemd.automount`: Automatically mounts the share when it is accessed, rather than at boot time. This helps avoid delays if the remote system isn't immediately available.
+        - `//mynas/mydir`: `mynas` denotes the sample hostname of the remote server, while `mydir` denotes the sample remote directory on the server.
+        - /mnt/mynas`: The sample directory that will be used as the mounting point.
+        - `_netdev`: Indicates that the filesystem depends on network availability. It ensures that the mount attempt waits until the network is up.
+        - `nofail`: Allows the boot process to continue even if this mount point fails. It prevents boot hang-ups in case the remote directory is unavailable.
+        - `mfsymlinks`: Enables support for symbolic links in the CIFS/SMB share, allowing symbolic links on the remote system to be followed locally.
+        - `users`: Allows non-root users to mount and unmount the filesystem.
+        - `x-systemd.automount`: Automatically mounts the share when it is accessed, rather than at boot time. This helps avoid delays if the remote system isn't immediately available.
 
    - Write the line to the `/etc/fstab` file:
 
