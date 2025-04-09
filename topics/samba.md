@@ -103,6 +103,8 @@ This details how to mount a remote directory to our local machine using Samba.
         - `users`: Allows non-root users to mount and unmount the filesystem.
         - `x-systemd.automount`: Automatically mounts the share when it is accessed, rather than at boot time. This helps avoid delays if the remote system isn't immediately available.
 
+        Feel free to omit or add to these sample options depending on your needs.
+
    - Write the line to the `/etc/fstab` file:
 
         ```sh
