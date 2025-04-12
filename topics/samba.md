@@ -129,7 +129,7 @@ This details how to mount a remote Samba share to our local machine.
 
 ### Description
 
-This details how to mount a remote directory to our local machine using Samba.
+This details how to unmount a remote directory from our local machine.
 
 ### References
 
