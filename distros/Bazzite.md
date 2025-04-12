@@ -206,7 +206,7 @@ This details some customisation options for the Plasma desktop.
 
 ## [Mounting Remote Directory](../topics/samba.md#mounting-remote-directory)
 
-This details how to mount a remote directory to our local machine using Samba.
+This details how to mount a remote Samba share to our local machine.
 
 ### Notes
 

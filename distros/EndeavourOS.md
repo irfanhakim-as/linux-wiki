@@ -558,7 +558,7 @@ This details how we could add a secondary internal drive to our computer.
 
 ## [Mounting Remote Directory](../topics/samba.md#mounting-remote-directory)
 
-This details how to mount a remote directory to our local machine using Samba.
+This details how to mount a remote Samba share to our local machine.
 
 ---
 

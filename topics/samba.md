@@ -29,7 +29,7 @@ Samba is a free software re-implementation of the SMB networking protocol, and w
 
 ### Description
 
-This details how to mount a remote directory to our local machine using Samba.
+This details how to mount a remote Samba share to our local machine.
 
 ### References
 
