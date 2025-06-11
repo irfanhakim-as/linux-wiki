@@ -194,7 +194,7 @@ This details how to add support for a clone of the Apple Magic Trackpad such as 
    sudo udevadm control --reload-rules && sudo udevadm trigger
    ```
 
-   Your Magic Trackpad clone should now be using the `hid-multitouch` driver and should work as intended.
+   Your Magic Trackpad clone should now be using the `hid-multitouch` driver and work as intended.
 
 4. **(Optional)** Note that due to the way the `udev` rules file is set up, this workaround will only work for the Magic Trackpad clone, while _breaking_ an actual, original Apple Magic Trackpad 2. To revert it, rename the rules file:
 
