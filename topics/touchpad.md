@@ -24,6 +24,10 @@ This details how we could configure and setup a touchpad for use on desktop Linu
     - [References](#references-1)
     - [Firefox](#firefox)
     - [Thunderbird](#thunderbird)
+  - [Apple Magic Trackpad Clone](#apple-magic-trackpad-clone)
+    - [Description](#description-4)
+    - [References](#references-2)
+    - [Steps](#steps-2)
 
 ---
 
@@ -134,3 +138,68 @@ This details how to enable smooth scrolling in Mozilla applications including Fi
    - **Use smooth scrolling**: `Enabled`
 
 3. Restart the **Thunderbird** application.
+
+---
+
+## Apple Magic Trackpad Clone
+
+### Description
+
+This details how to add support for a clone of the Apple Magic Trackpad such as the [JOMAA KB96](https://www.aliexpress.com/item/1005008016979688.html).
+
+### References
+
+- [A better way of getting Bosto touchpad working](https://www.reddit.com/r/Fedora/comments/1b901w1/a_better_way_of_getting_bosto_touchpad_working)
+- [udev - RULES FILES](https://man7.org/linux/man-pages/man7/udev.7.html#RULES_FILES)
+
+### Steps
+
+1. This _workaround_ only works with _true_ Apple Magic Trackpad clones. Hence, while the (clone) trackpad is attached to your system, run the following command to ensure its `VID` and `PID` value matches the original Apple Magic Trackpad 2 (i.e. `05ac:0265`):
+
+   ```sh
+   lsusb | grep -i '05ac:0265'
+   ```
+
+   Sample output:
+
+   ```
+     Bus 001 Device 008: ID 05ac:0265 Apple, Inc.
+     Bus 003 Device 024: ID 05ac:0265 Apple, Inc. Magic Trackpad
+   ```
+
+   Based on this example, `Apple, Inc.` is the Magic Trackpad clone, meanwhile `Apple, Inc. Magic Trackpad` is the original Apple Magic Trackpad 2.
+
+2. Create a custom `udev` rules file (i.e. `99-magic-trackpad-clone.rules`) to _tell_ the system to use the `hid-multitouch` driver instead of the default `magicmouse` driver for the Magic Trackpad (and by extension, its clone):
+
+   ```sh
+   sudo nano /etc/udev/rules.d/99-magic-trackpad-clone.rules
+   ```
+
+   Content of the rules file:
+
+   ```
+   # /etc/udev/rules.d/99-magic-trackpad-clone.rules
+   # Source: https://www.reddit.com/r/Fedora/comments/1b901w1/a_better_way_of_getting_bosto_touchpad_working
+   # 2024 March 07, u/NonStandardUser
+   # No tinkering required, just add this rule to udev.
+
+   KERNEL=="0003:05AC:0265.*", \
+   PROGRAM="/bin/sh -c 'echo -n %k > /sys/bus/hid/drivers/magicmouse/unbind;\
+   echo -n %k > /sys/bus/hid/drivers/hid-multitouch/bind'"
+   ```
+
+3. To apply the workaround, either reattach the Magic Trackpad clone to your system, or run the following command:
+
+   ```sh
+   sudo udevadm control --reload-rules && sudo udevadm trigger
+   ```
+
+   Your Magic Trackpad clone should now be using the `hid-multitouch` driver and should work as intended.
+
+4. **(Optional)** Note that due to the way the `udev` rules file is set up, this workaround will only work for the Magic Trackpad clone, while _breaking_ an actual, original Apple Magic Trackpad 2. To revert it, rename the rules file:
+
+   ```sh
+   sudo mv /etc/udev/rules.d/99-magic-trackpad-clone.rules /etc/udev/rules.d/99-magic-trackpad-clone.rules.disabled
+   ```
+
+   The original Apple Magic Trackpad 2 will then work as per usual after reattaching it to your system (while the Magic Trackpad clone will not).
