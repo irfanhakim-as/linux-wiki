@@ -167,7 +167,7 @@ This details how to add support for a clone of the Apple Magic Trackpad such as 
      Bus 003 Device 024: ID 05ac:0265 Apple, Inc. Magic Trackpad
    ```
 
-   Based on this example, `Apple, Inc.` is the Magic Trackpad clone, meanwhile `Apple, Inc. Magic Trackpad` is the original Apple Magic Trackpad 2.
+   Based on this example, `Apple, Inc.` is the Magic Trackpad clone we wish to enable support for and use, meanwhile `Apple, Inc. Magic Trackpad` is the original Apple Magic Trackpad 2 - note that both of them share the same `VID` and `PID` values.
 
 2. Create a custom `udev` rules file (i.e. `99-magic-trackpad-clone.rules`) to _tell_ the system to use the `hid-multitouch` driver instead of the default `magicmouse` driver for the Magic Trackpad (and by extension, its clone):
 
