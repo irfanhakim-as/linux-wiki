@@ -464,7 +464,7 @@ This details how to set global permissions for Flatpak apps and the recommended 
 
 ## Using a Touchpad
 
-This details on how to configure and use a trackpad such as the Apple Magic Trackpad 2 with macOS-like gestures on X11.
+This details on how to configure and use a trackpad such as the Apple Magic Trackpad 2 with macOS-like gestures.
 
 ### References
 

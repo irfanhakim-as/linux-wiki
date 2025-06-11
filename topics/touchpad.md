@@ -31,7 +31,7 @@ This details how we could configure and setup a touchpad for use on desktop Linu
 
 ### Description
 
-This details optional configurations for the trackpad.
+This details recommended configuration options for the trackpad on KDE Plasma.
 
 ### Steps
 
@@ -57,9 +57,12 @@ This details optional configurations for the trackpad.
 
 ## macOS-like Gestures
 
+> [!NOTE]  
+> This guide is theoretically supposed to only work with X11, but from testing, it also works on Wayland.
+
 ### Description
 
-This details how we could configure our trackpad to behave more like it would on macOS, on X11.
+This details how we could configure our trackpad to behave more like it would on macOS.
 
 ### References
 
@@ -95,12 +98,9 @@ This details how we could configure our trackpad to behave more like it would on
 
 ## Smooth Scrolling in Mozilla Applications
 
-> [!NOTE]  
-> This has been tested with the Mozilla Firefox and Mozilla Thunderbird Flatpak running on the X11 graphics platform.
-
 ### Description
 
-This details how to enable smooth scrolling in Mozilla applications including Firefox and Thunderbird on X11.
+This details how to enable smooth scrolling in Mozilla applications including Firefox and Thunderbird.
 
 ### References
 
