@@ -1,7 +1,7 @@
 # Touchpad
 
 > [!IMPORTANT]  
-> This guide focuses on a specific system comprised of an Arch Linux based PC using KDE Plasma on X11, and the Apple Magic Trackpad 2.
+> This guide is tested on a system comprised of an Arch Linux based PC running KDE Plasma using the Apple Magic Trackpad 2 (or its [clone](#apple-magic-trackpad-clone)).
 
 ## Description
 
