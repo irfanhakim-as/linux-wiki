@@ -82,9 +82,15 @@ This details how we could configure our trackpad to behave more like it would on
 
 3. Restart the system or run the `touchegg` command manually i.e. through **KRunner** for the first time.
 
-4. Configure Touchégg:
+4. Configure the touchpad gestures using Touchégg:
 
-   - Edit the Touchégg configuration file:
+   - Create the `touchegg` configuration directory if it's not already available:
+
+      ```sh
+      mkdir -p ~/.config/touchegg
+      ```
+
+   - Create or update the Touchégg configuration file:
 
       ```sh
       nano ~/.config/touchegg/touchegg.conf
