@@ -65,7 +65,7 @@ This details the installation steps for Toshy.
 
     5. Click the **Apply** button.
 
-2. For Toshy to install successfully, [update](./yay.md#update) (and reboot) your system beforehand.
+2. For Toshy to install successfully, [update](yay.md#update) (and reboot) your system beforehand.
 
 ### Steps
 
