@@ -45,6 +45,7 @@ This details the installation steps for Toshy.
 ### References
 
 - [How to Install](https://github.com/RedBearAK/toshy?tab=readme-ov-file#how-to-install)
+- [How to install Toshy with a single command](https://github.com/RedBearAK/toshy/wiki/How-to-install-Toshy-with-a-single-command)
 
 ### Prerequisites
 
@@ -69,25 +70,15 @@ This details the installation steps for Toshy.
 
 ### Steps
 
-1. Clone the Toshy Git repository to the home directory:
+1. Ensure you have the `wget` package [installed](yay.md#install) on your system.
+
+2. Install Toshy using the provided bootstrap script:
 
     ```sh
-    git clone https://github.com/RedBearAK/toshy.git ~/toshy
+    bash -c "$(curl -L https://raw.githubusercontent.com/RedBearAK/toshy/main/scripts/bootstrap.sh || wget -O - https://raw.githubusercontent.com/RedBearAK/toshy/main/scripts/bootstrap.sh)"
     ```
 
-2. Enter the cloned `toshy` repository:
-
-    ```sh
-    cd ~/toshy
-    ```
-
-3. Install Toshy:
-
-    ```sh
-    ./setup_toshy.py install
-    ```
-
-4. Reboot the system.
+3. Reboot the system.
 
 ---
 
