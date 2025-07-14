@@ -37,6 +37,7 @@ This details how to add web-based services to Steam so they can be accessed in g
 
 ### References
 
+- [Xbox Cloud Gaming in Microsoft Edge with Steam Deck](https://support.microsoft.com/en-au/topic/xbox-cloud-gaming-in-microsoft-edge-with-steam-deck-43dd011b-0ce8-4810-8302-965be6d53296)
 - [Make Firefox work better in game mode](https://www.reddit.com/r/SteamDeck/comments/16eiyi6/make_firefox_work_better_in_game_mode)
 - [Watch DRM content on Firefox](https://support.mozilla.org/en-US/kb/enable-drm)
 
