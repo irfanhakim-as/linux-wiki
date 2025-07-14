@@ -1,11 +1,11 @@
 # Steam
 
+> [!NOTE]  
+> Parts of this guide may assume that your system is [SteamOS](../distros/SteamOS.md) based or [SteamOS-like](../distros/Bazzite.md).
+
 ## Description
 
 Steam is a video game digital distribution service and storefront developed by [Valve Corporation](https://www.valvesoftware.com).
-
-> [!NOTE]  
-> Parts of this guide may assume that your system is [SteamOS](../distros/SteamOS.md) based or [SteamOS-like](../distros/Bazzite.md).
 
 ## Directory
 
