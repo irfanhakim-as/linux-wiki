@@ -46,33 +46,45 @@ This details how to mount a remote Samba share to our local machine.
 2. Create the directory that will be used as the mounting point (i.e. `/mnt/mynas`):
 
     ```sh
-    sudo mkdir /mnt/mynas
+    sudo mkdir -p <mountpoint>
     ```
 
-3. Change ownership of the mounting point to our user:
+    For example:
 
     ```sh
-    sudo chown ${USER}: /mnt/mynas
+    sudo mkdir -p /mnt/mynas
     ```
 
-4. Create our credentials file that will be used to access the remote directory (i.e. `.smbcreds`):
+3. Create our credentials file that will be used to access the remote directory (i.e. `.smbcreds`):
 
-    ```sh
-    mkdir -p ~/.config/smb
-    ```
+   - Pre-create the directory for the credentials file:
 
-    ```sh
-    nano ~/.config/smb/.smbcreds
-    ```
+        ```sh
+        mkdir -p ~/.config/smb
+        ```
 
-    Content of the credentials file:
+   - Write and save the credentials file:
 
-    ```
-    username=mynasuser
-    password=mynaspassword
-    ```
+        ```sh
+        nano ~/.config/smb/.smbcreds
+        ```
 
-5. Add the IP address of our remote server to our `/etc/hosts` file:
+        Content of the credentials file:
+
+        ```sh
+        username=<nas-user>
+        password=<nas-password>
+        ```
+
+        Replace the values with the credentials of the Samba share user accordingly.
+
+   - Update the permissions of the credentials file to secure it:
+
+        ```sh
+        chmod 600 ~/.config/smb/.smbcreds
+        ```
+
+4. **(Optional)** Add the IP address of our remote server to our `/etc/hosts` file:
 
     ```sh
     sudo nano /etc/hosts
@@ -85,7 +97,9 @@ This details how to mount a remote Samba share to our local machine.
     192.168.0.120      mynas
     ```
 
-6. Add a line with our mounting options for the remote directory to our `fstab` file:
+    Replace the IP address and the hostname of the remote Samba server accordingly.
+
+5. Add our mounting options for the remote directory using the system's `fstab` file:
 
    - Declare the mounting options for the remote directory:
 
@@ -111,13 +125,13 @@ This details how to mount a remote Samba share to our local machine.
         echo "${fstab_line}" | sudo tee -a /etc/fstab
         ```
 
-7. Reload the `daemon` for it to recognise the changes made to our `fstab` file:
+6. Reload the `daemon` for it to recognise the changes made to our `fstab` file:
 
     ```sh
     sudo systemctl daemon-reload
     ```
 
-8. Mount the remote directory to our new mounting point:
+7. Mount the remote directory to our new mounting point:
 
     ```sh
     sudo mount /mnt/mynas
