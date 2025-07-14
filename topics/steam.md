@@ -15,11 +15,12 @@ Steam is a video game digital distribution service and storefront developed by [
   - [References](#references)
   - [Add Non-Steam Services](#add-non-steam-services)
     - [Description](#description-1)
+    - [References](#references-1)
     - [Steps](#steps)
     - [Recommendations](#recommendations)
   - [Troubleshooting](#troubleshooting)
     - [Description](#description-2)
-    - [References](#references-1)
+    - [References](#references-2)
     - [Move Content Failure](#move-content-failure)
 
 ## References
@@ -32,51 +33,90 @@ Steam is a video game digital distribution service and storefront developed by [
 
 ### Description
 
-This details how to add non-Steam services based on Google Chrome, to Steam so it can be accessed in gaming mode.
+This details how to add web-based services to Steam so they can be accessed in gaming mode.
+
+### References
+
+- [Make Firefox work better in game mode](https://www.reddit.com/r/SteamDeck/comments/16eiyi6/make_firefox_work_better_in_game_mode)
+- [Watch DRM content on Firefox](https://support.mozilla.org/en-US/kb/enable-drm)
 
 ### Steps
 
-1. [Install](flatpak.md#install) the **Google Chrome** (`com.google.Chrome`) app as a Flatpak.
+1. [Install](flatpak.md#install) a web browser such as **Firefox** (`org.mozilla.firefox `) or **Google Chrome** (`com.google.Chrome`) as a Flatpak.
 
-2. In the **Application Launcher** (Start Menu), locate Google Chrome, right click on it and select **Add to Steam**.
+2. If you intend to use Firefox for this process, pre-configure it as follows:
 
-3. On **Steam**, locate the added **Google Chrome** app.
+   - Launch the **Firefox** application on your desktop.
+   - In the address bar, type `about:profiles` and submit by hitting the <kbd>Enter</kbd> key.
+   - In the **About Profiles** page, identify the current default profile (i.e. `default-release`).
+   - Click the **Create a New Profile** button.
+   - In the **Create Profile Wizard** window, click the **Next** button to begin creating the new profile.
+   - In the provided form of the **Create Profile Wizard** window, configure the following:
 
-4. Right click the app and select **Properties**.
+     - Enter new profile name: `SteamOS`
 
-5. In the **Shortcut** section of the **Properties** menu, rename the app to the intended service (i.e. `Netflix`).
+      Click the **Finish** button to finish creating the new profile.
 
-6. Leave the **Target** section (`"/usr/bin/flatpak"`) and the **Start In** section (`"/usr/bin/"`) as is.
+   - Back in the **About Profiles** page, locate the previous default profile (i.e. `default-release`) and click its corresponding **Set as default profile** button to make it the default again.
+   - Locate the newly created profile (i.e. `SteamOS`) and click its corresponding **Launch profile in new browser** button.
+   - In the browser window of the new profile:
 
-7. In the **Launch Options** section, by default, it will be filled with this command:
+     - If there is a sidebar showing, right click the sidebar, and select the **Hide sidebar** context menu option.
+     - [Configure](firefox.md#configuration) the `full-screen-api.ignore-widgets` setting to `true`.
+     - Add any extension(s) to the browser (i.e. uBlock Origin).
+     - If you wish to use any web apps that require DRM (i.e. Spotify), login to said service, and attempt to access a DRM content to prompt an **Enable DRM** option you need to click to enable for the first time.
 
-    ```sh
-    "run" "--branch=stable" "--arch=x86_64" "--command=/app/bin/chrome" "--file-forwarding" "com.google.Chrome" "@@u" "@@"
-    ```
+   - You may close the browser window of the new profile once you have finished pre-configuring it.
 
-    Update it with the following command instead:
+3. In the **Application Launcher** (Start Menu), locate the web browser (i.e. **Firefox**), right click on its app icon, and select **Add to Steam**.
 
-    ```sh
-    run --branch=stable --arch=x86_64 --command=/app/bin/chrome --file-forwarding com.google.Chrome @@u @@ --window-size=1024,640 --force-device-scale-factor=1.25 --device-scale-factor=1.25 --kiosk "https://www.google.com"
-    ```
+4. On the **Steam** application, locate the web browser that has been added to your Steam library.
 
-    or:
+5. Right click the web browser application from your Steam library and select **Properties**.
 
-    ```sh
-    "run" "--branch=stable" "--arch=x86_64" "--command=/app/bin/chrome" "--file-forwarding" "com.google.Chrome" "@@u" "@@" "--window-size=1024,640" "--force-device-scale-factor=1.25" "--device-scale-factor=1.25" "--kiosk" "https://www.google.com"
-    ```
+6. In the **Shortcut** section of the **Properties** menu, rename the app to the intended web service (i.e. `YouTube`).
 
-    Replace the `"https://www.google.com"` value with the URL of the intended service (i.e. `"https://www.netflix.com"`).
+7. Leave the **Target** section (i.e. `"/usr/bin/flatpak"`) and the **Start In** section (i.e. `"/usr/bin/"`) as is.
 
-8. Test run it while you're still on Desktop mode, if it works, it should be ready to use in Gaming mode.
+8. In the **Launch Options** section, by default, it will be filled with this command:
+
+   - Firefox:
+
+      ```sh
+      "run" "--branch=stable" "--arch=x86_64" "--command=firefox" "--file-forwarding" "org.mozilla.firefox" "@@u" "@@"
+      ```
+
+      Chrome:
+
+      ```sh
+      "run" "--branch=stable" "--arch=x86_64" "--command=/app/bin/chrome" "--file-forwarding" "com.google.Chrome" "@@u" "@@"
+      ```
+
+   - Replace the value of this section to the following command instead, according to your browser:
+
+      Firefox:
+
+      ```sh
+      "run" "--branch=stable" "--arch=x86_64" "--socket=wayland" "--env=MOZ_ENABLE_WAYLAND=1" "--env=GDK_SCALE=1.25" "--command=firefox" "--file-forwarding" "org.mozilla.firefox" "@@u" "@@" "-P" "SteamOS" "--kiosk" "https://www.google.com"
+      ```
+
+      Chrome:
+
+      ```sh
+      "run" "--branch=stable" "--arch=x86_64" "--command=/app/bin/chrome" "--file-forwarding" "com.google.Chrome" "@@u" "@@" "--window-size=1024,640" "--force-device-scale-factor=1.25" "--device-scale-factor=1.25" "--kiosk" "https://www.google.com"
+      ```
+
+      Replace the `"https://www.google.com"` value with the URL of the intended service (i.e. `"https://www.youtube.com"`).
+
+9. Test run it while you're still on Desktop mode, if it works, it should be ready to use in Gaming mode.
 
 ### Recommendations
 
-- Use the **Web Browser** controller layout for these apps, if it's not used by default.
+- In gaming mode, use the **Web Browser** controller layout for these apps if it's not used by default:
+
+  - To exit from the app while in gaming mode, use the <kbd>Ctrl</kbd> + <kbd>W</kbd> keybind to close the tab (and hence, the app) via the left menu button on your controller (i.e. **Share** on the DS4 controller, **View** on the Steam Deck controller).
 
 - Add some artworks (i.e. capsules, hero, logo, etc.) for the service using the **SteamGridDB** plugin from **Decky Loader**.
-
-- To exit from the app while in gaming mode, use the left menu button on your controller (i.e. **Share** on the DS4 controller, **View** on the Steam Deck controller). The **Web Browser** controller layout must be used for this to work.
 
 ---
 
