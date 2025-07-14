@@ -69,7 +69,7 @@ This details how to add web-based services to Steam so they can be accessed in g
 
    - You may close the browser window of the new profile once you have finished pre-configuring it.
 
-3. In the **Application Launcher** (Start Menu), locate the web browser (i.e. **Firefox**), right click on its app icon, and select **Add to Steam**.
+3. In the **Application Launcher** (Start Menu), locate the web browser (i.e. **Firefox**), right click on its app icon, and select the **Add to Steam** context menu option.
 
 4. On the **Steam** application, locate the web browser that has been added to your Steam library.
 
