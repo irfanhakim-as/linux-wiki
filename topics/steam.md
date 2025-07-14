@@ -64,8 +64,8 @@ This details how to add web-based services to Steam so they can be accessed in g
 
      - If there is a sidebar showing, right click the sidebar, and select the **Hide sidebar** context menu option.
      - [Configure](firefox.md#configuration) the `full-screen-api.ignore-widgets` setting to `true`.
-     - Add any extension(s) to the browser (i.e. uBlock Origin).
      - If you wish to use any web apps that require DRM (i.e. Spotify), login to said service, and attempt to access a DRM content to prompt an **Enable DRM** option you need to click to enable for the first time.
+     - **(Optional)** Add any extension(s) you wish to use on the browser (i.e. uBlock Origin).
 
    - You may close the browser window of the new profile once you have finished pre-configuring it.
 
