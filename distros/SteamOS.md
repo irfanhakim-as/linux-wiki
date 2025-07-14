@@ -33,7 +33,7 @@ SteamOS is a Linux distribution developed by [Valve](https://www.valvesoftware.c
   - [Backing up with Vorta](#backing-up-with-vorta)
     - [References](#references-4)
     - [Notes](#notes-2)
-  - [Add Non-Steam Services](#add-non-steam-services)
+  - [Add Web Apps to Steam](#add-web-apps-to-steam)
   - [Applying Translation Patches to ROMs](#applying-translation-patches-to-roms)
   - [Fixing DRM issues with Google Chrome](#fixing-drm-issues-with-google-chrome)
   - [Install Git LFS](#install-git-lfs)
@@ -251,9 +251,9 @@ This details installing and setting up Vorta to have it backup our personal file
 
 ---
 
-## [Add Non-Steam Services](../topics/steam.md#add-non-steam-services)
+## [Add Web Apps to Steam](../topics/steam.md#add-web-apps-to-steam)
 
-This details how to add non-Steam services based on Google Chrome, to Steam so it can be accessed in gaming mode.
+This details how to add web-based services to Steam so they can be accessed in gaming mode.
 
 ---
 

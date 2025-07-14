@@ -13,7 +13,7 @@ Steam is a video game digital distribution service and storefront developed by [
   - [Description](#description)
   - [Directory](#directory)
   - [References](#references)
-  - [Add Non-Steam Services](#add-non-steam-services)
+  - [Add Web Apps to Steam](#add-web-apps-to-steam)
     - [Description](#description-1)
     - [References](#references-1)
     - [Steps](#steps)
@@ -29,7 +29,7 @@ Steam is a video game digital distribution service and storefront developed by [
 
 ---
 
-## Add Non-Steam Services
+## Add Web Apps to Steam
 
 ### Description
 
