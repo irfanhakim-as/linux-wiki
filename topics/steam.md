@@ -45,7 +45,7 @@ This details how to add web-based services to Steam so they can be accessed in g
 
 1. [Install](flatpak.md#install) a web browser such as **Firefox** (`org.mozilla.firefox `) or **Google Chrome** (`com.google.Chrome`) as a Flatpak.
 
-2. If you intend to use Firefox for this process, pre-configure it as follows:
+2. If you intend to use Firefox for this process, pre-configure it as follows for the first time:
 
    - Launch the **Firefox** application on your desktop.
    - In the address bar, type `about:profiles` and submit by hitting the <kbd>Enter</kbd> key.
