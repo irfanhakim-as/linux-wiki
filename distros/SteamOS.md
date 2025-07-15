@@ -202,6 +202,8 @@ This details how to mount a remote Samba share to our local machine.
 
 - Configurations made to the system's `fstab` file will not persist through (major) updates - use the `systemd` mount unit method instead to mount the remote storage.
 
+- Changes made to the system's `hosts` file will not persist either - when referencing the remote storage server in your mount configuration, use its IP address instead of its hostname.
+
 ---
 
 ## Backing up with Vorta
