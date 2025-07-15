@@ -35,6 +35,7 @@ This details how to mount a remote Samba share to our local machine.
 
 - [Automatic mounting: As mount entry](https://wiki.archlinux.org/title/samba#As_mount_entry)
 - [Use of the x-systemd.automount mount option in /etc/fstab](https://www.suse.com/support/kb/doc/?id=000020402)
+- [systemd.mount](https://www.freedesktop.org/software/systemd/man/latest/systemd.mount.html)
 
 ### Steps
 
@@ -125,7 +126,112 @@ This details how to mount a remote Samba share to our local machine.
         echo "${fstab_line}" | sudo tee -a /etc/fstab
         ```
 
-6. Reload the `daemon` for it to recognise the changes made to our `fstab` file:
+6. **Alternatively**, if using `fstab` is not a lasting option such as on immutable systems like [SteamOS](../distros/SteamOS.md) or [Bazzite](../distros/Bazzite.md), we could add our mounting options using `systemd` mount units instead:
+
+   - Get the numerical value of our user ID (UID):
+
+        ```sh
+        id -u
+        ```
+
+        Sample UID output:
+
+        ```sh
+          1000
+        ```
+
+   - Get the numerical value of our group ID (GID):
+
+        ```sh
+        id -g
+        ```
+
+        Sample GID output:
+
+        ```sh
+          1000
+        ```
+
+   - The name of the mount unit file to create, which requires corresponding to the intended mountpoint (i.e. `/mnt/mynas`):
+
+        ```sh
+        systemd-escape --path "<mountpoint>" --suffix=mount
+        ```
+
+        For example:
+
+        ```sh
+        systemd-escape --path "/mnt/mynas" --suffix=mount
+        ```
+
+        Sample output:
+
+        ```
+          mnt-mynas.mount
+        ```
+
+   - Add our intended mount options to the mount unit file:
+
+     - Create the mount unit file (i.e. `mnt-mynas.mount`):
+
+        ```sh
+        sudo nano /etc/systemd/system/'<mount-unit-file>'
+        ```
+
+        For example:
+
+        ```sh
+        sudo nano /etc/systemd/system/'mnt-mynas.mount'
+        ```
+
+     - Add the following configuration to the file:
+
+        ```ini
+        [Unit]
+        Description=Mount Samba share
+        After=network-online.target
+        Wants=network-online.target
+
+        [Mount]
+        What=//<nas-host>/<nas-share>
+        Where=<mountpoint>
+        Type=cifs
+        Options=_netdev,nofail,mfsymlinks,credentials=/home/<user>/.config/smb/.smbcreds,vers=3.0,uid=<uid>,gid=<gid>,iocharset=utf8
+
+        [Install]
+        WantedBy=multi-user.target
+        ```
+
+        Replace the following placeholders with your own values accordingly:
+
+        - `<nas-host>`: The hostname or IP address of the remote Samba server (i.e. `mynas`)
+        - `<nas-share>`: The remote directory on the Samba server (i.e. `mydir`)
+        - `<mountpoint>`: The intended mountpoint of the remote directory (i.e. `/mnt/mynas`)
+        - `<user>`: The username of the user that is mounting the remote directory (i.e. `myuser`)
+        - `<uid>`: The numerical value of the user's UID (i.e. `1000`)
+        - `<gid>`: The numerical value of the user's GID (i.e. `1000`)
+
+        Feel free to also omit or add to these sample mount options depending on your needs.
+
+     - Sample mount unit file configuration:
+
+        ```ini
+        [Unit]
+        Description=Mount Samba share
+        After=network-online.target
+        Wants=network-online.target
+
+        [Mount]
+        What=//mynas/mydir
+        Where=/mnt/mynas
+        Type=cifs
+        Options=_netdev,nofail,mfsymlinks,credentials=/home/myuser/.config/smb/.smbcreds,vers=3.0,uid=1000,gid=1000,iocharset=utf8
+
+        [Install]
+        WantedBy=multi-user.target
+        ```
+
+7. Reload the systemd manager configuration for our configuration to be recognised:
 
     ```sh
     sudo systemctl daemon-reload
@@ -141,6 +247,18 @@ This details how to mount a remote Samba share to our local machine.
 
     ```sh
     sudo mount /mnt/mynas
+    ```
+
+9. **Alternatively**, enable and start the mount unit file (i.e. `mnt-mynas.mount`) to mount the remote directory immediately and on boot:
+
+    ```sh
+    sudo systemctl enable --now '<mount-unit-file>'
+    ```
+
+    For example:
+
+    ```sh
+    sudo systemctl enable --now 'mnt-mynas.mount'
     ```
 
 ---
