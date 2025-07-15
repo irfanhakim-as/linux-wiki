@@ -40,6 +40,10 @@ This guide focuses on general emulation topics.
     - [Description](#description-4)
     - [References](#references-2)
     - [Steps](#steps)
+  - [Convert BIN/CUE ROMs to ISO](#convert-bincue-roms-to-iso)
+    - [Description](#description-5)
+    - [References](#references-3)
+    - [Steps](#steps-1)
 
 ---
 
@@ -348,3 +352,46 @@ This details how we can convert `.xci` Nintendo Switch games to `.nsp`.
     `4nxci` expects the `.xci` game file, while the `-k` flag expects the full path to our keys, `prod.keys`.
 
     You will get an `.nsp` game file of the `.xci` we had passed to `4nxci` to convert in the same working directory at the end.
+
+---
+
+## Convert BIN/CUE ROMs to ISO
+
+### Description
+
+This details how we can convert `.bin` and `.cue` ROMs to `.iso`.
+
+### References
+
+- [BinChunker for Unix / Linux](http://he.fi/bchunk)
+- [How to dump your PSX Games (for Mac)](https://jackrobinson.co.nz/blog/extracting-psx-games)
+
+### Steps
+
+1. [Install](yay.md#install) the `bchunk` package using `yay` in your system or in an Arch Linux based [Distrobox](distrobox.md) container.
+
+2. **(Optional)** Create a dedicated working directory for converting each `.bin` and `.cue` pair:
+
+    ```sh
+    mkdir mygame
+    ```
+
+3. Place your game's `.bin` and `.cue` pair to the working directory:
+
+    ```sh
+    mv mygame.bin mygame.cue mygame
+    ```
+
+4. Convert the files into a single ISO file:
+
+    ```sh
+    bchunk <bin-file> <cue-file> <basename>
+    ```
+
+    For example:
+
+    ```sh
+    bchunk mygame.bin mygame.cue mygame
+    ```
+
+    By the end, you will get a single ISO file called `<basename>01.iso` (i.e. `mygame01.iso`).
