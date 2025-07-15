@@ -36,6 +36,7 @@ This details how to mount a remote Samba share to our local machine.
 - [Automatic mounting: As mount entry](https://wiki.archlinux.org/title/samba#As_mount_entry)
 - [Use of the x-systemd.automount mount option in /etc/fstab](https://www.suse.com/support/kb/doc/?id=000020402)
 - [systemd.mount](https://www.freedesktop.org/software/systemd/man/latest/systemd.mount.html)
+- [Mounting SMB Shares with Systemd](https://www.reddit.com/r/SteamDeck/comments/ymjnjy/mounting_smb_shares_with_systemd)
 
 ### Steps
 
