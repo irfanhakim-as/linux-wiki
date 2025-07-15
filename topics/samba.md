@@ -43,7 +43,7 @@ This details how to mount a remote Samba share to our local machine.
     > [!NOTE]  
     > Installing `samba` will also install other required packages such as `cifs-utils` and `smbclient` automatically.
 
-2. Create the directory that will be used as the mounting point (i.e. `/mnt/mynas`):
+2. Create the directory that will be used as the mountpoint for the remote storage (i.e. `/mnt/mynas`):
 
     ```sh
     sudo mkdir -p <mountpoint>
@@ -131,7 +131,13 @@ This details how to mount a remote Samba share to our local machine.
     sudo systemctl daemon-reload
     ```
 
-7. Mount the remote directory to our new mounting point:
+8. Mount the remote directory to our mountpoint (i.e. `/mnt/mynas`) based on our `fstab` configuration:
+
+    ```sh
+    sudo mount <mountpoint>
+    ```
+
+    For example:
 
     ```sh
     sudo mount /mnt/mynas
