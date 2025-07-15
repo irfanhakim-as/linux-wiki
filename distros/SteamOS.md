@@ -198,7 +198,9 @@ This details how to mount a remote Samba share to our local machine.
 
 ### Notes
 
-- It's _potentially_ recommended to use a path within our user directory as the mounting point for the remote directory to avoid potential issues with the system's immutability. If you still wish to mount it outside of the user directory, be sure to only mount it from within `/mnt`.
+- It's _potentially_ recommended to use a path within our user directory as the mountpoint for the remote directory (i.e. `/home/deck/mynas`) to avoid potential issues with the system's immutability.
+
+- Configurations made to the system's `fstab` file will not persist through (major) updates - use the `systemd` mount unit method instead to mount the remote storage.
 
 ---
 
