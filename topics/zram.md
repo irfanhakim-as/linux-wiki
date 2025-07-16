@@ -80,7 +80,7 @@ This details how to setup Zram to be used as an alternative to swap.
 
 4. Reload and start the relevant services:
 
-   - Reload the systemd manager configuration:
+   - Reload the `systemd` manager configuration:
 
         ```sh
         sudo systemctl daemon-reload

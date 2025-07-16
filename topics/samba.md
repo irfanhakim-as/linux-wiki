@@ -232,7 +232,7 @@ This details how to mount a remote Samba share to our local machine.
         WantedBy=multi-user.target
         ```
 
-7. Reload the systemd manager configuration for our configuration to be recognised:
+7. Reload the `systemd` manager configuration for our configuration to be recognised:
 
     ```sh
     sudo systemctl daemon-reload
