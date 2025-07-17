@@ -276,34 +276,68 @@ This details how to unmount a remote directory from our local machine.
 
 ### Steps
 
-1. Unmount the remote directory from our local machine:
+1. Depending on how you have [mounted the remote directory](#mounting-remote-directory), unmount it from your system:
+
+   - If you had mounted it using the `mount` command, unmount the remote storage from the mountpoint (i.e. `/mnt/mynas`) using `umount`:
+
+        ```sh
+        sudo umount <mountpoint>
+        ```
+
+        For example:
+
+        ```sh
+        sudo umount /mnt/mynas
+        ```
+
+        If you receive an error message such as the target being busy, add the `--lazy` flag to the same command to force the unmount:
+
+        ```sh
+        sudo umount --lazy <mountpoint>
+        ```
+
+   - **Alternatively**, if you had mounted it using a `systemd` mount unit file (i.e. `mnt-mynas.mount`), unmount the remote storage by stopping the mount unit:
+
+        ```sh
+        sudo systemctl stop '<mount-unit-file>'
+        ```
+
+        For example:
+
+        ```sh
+        sudo systemctl stop 'mnt-mynas.mount'
+        ```
+
+2. Prevent the remote directory from being automatically mounted from the next boot, again, depending on how you have [mounted the remote directory](#mounting-remote-directory):
+
+   - If you had made your mount configuration using the `fstab` file, remove it from the file:
+
+        ```sh
+        sudo nano /etc/fstab
+        ```
+
+        Remove the line that corresponds to the remote directory by deleting it or commenting it out. For example:
+
+        ```diff
+          # example.org
+        - //mynas/mydir    /mnt/mynas    cifs    _netdev,nofail,mfsymlinks,credentials=/home/deck/.config/smb/.smbcreds,vers=3.0,uid=1000,gid=1000,iocharset=utf8    0 0
+        + #//mynas/mydir    /mnt/mynas    cifs    _netdev,nofail,mfsymlinks,credentials=/home/deck/.config/smb/.smbcreds,vers=3.0,uid=1000,gid=1000,iocharset=utf8    0 0
+        ```
+
+   - **Alternatively**, if you had made your mount configuration using a `systemd` mount unit file (i.e. `mnt-mynas.mount`), disable the mount unit and delete its corresponding file:
+
+        ```sh
+        sudo systemctl disable '<mount-unit-file>' && sudo rm /etc/systemd/system/'<mount-unit-file>'
+        ```
+
+        For example:
+
+        ```sh
+        sudo systemctl disable 'mnt-mynas.mount' && sudo rm /etc/systemd/system/'mnt-mynas.mount'
+        ```
+
+3. Reload the `systemd` manager configuration for our configuration changes to be recognised:
 
     ```sh
-    sudo umount /mnt/mynas
+    sudo systemctl daemon-reload
     ```
-
-    > [!IMPORTANT]  
-    > This example assumes that the remote directory is mounted at `/mnt/mynas`. Update the path accordingly.
-
-    If you receive an error message such as the target being busy, you can use the following command to force the unmount:
-
-    ```sh
-    sudo umount -l /mnt/mynas
-    ```
-
-    The `-l` flag stands for `lazy` and will force the detachment of the mount point.
-
-2. If the previously mounted directory has been added as a mount entry in the `/etc/fstab` file, you can remove it by editing the file:
-
-    ```sh
-    sudo nano /etc/fstab
-    ```
-
-    Remove the line that corresponds to the mount point you wish to remove by deleting or commenting it out. For example:
-
-    ```sh
-    # example.org
-    # //mynas/mydir    /mnt/mynas    cifs    _netdev,nofail,mfsymlinks,credentials=/home/deck/.config/smb/.smbcreds,vers=3.0,uid=1000,gid=1000,iocharset=utf8    0 0
-    ```
-
-    Save the file and exit the editor. This will prevent the mount point from being automatically mounted from the next boot.
