@@ -101,7 +101,7 @@ This details how to mount a remote Samba share to our local machine.
 
     Replace the IP address and the hostname of the remote Samba server accordingly.
 
-5. Add our mounting options for the remote directory using the system's `fstab` file:
+5. Add our mount configuration for the remote directory using the system's `fstab` file:
 
    - Declare the mounting options for the remote directory:
 
@@ -127,7 +127,7 @@ This details how to mount a remote Samba share to our local machine.
         echo "${fstab_line}" | sudo tee -a /etc/fstab
         ```
 
-6. **Alternatively**, if using `fstab` is not a lasting option such as on immutable systems like [SteamOS](../distros/SteamOS.md) or [Bazzite](../distros/Bazzite.md), we could add our mounting options using `systemd` mount units instead:
+6. **Alternatively**, if using `fstab` is not a lasting option such as on immutable systems like [SteamOS](../distros/SteamOS.md) or [Bazzite](../distros/Bazzite.md), we could add our mount configuration using `systemd` mount units instead:
 
    - Get the numerical value of our user ID (UID):
 
