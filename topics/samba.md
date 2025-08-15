@@ -25,6 +25,22 @@ Samba is a free software re-implementation of the SMB networking protocol, and w
 
 ---
 
+## Installation
+
+### Description
+
+This details how to install Samba on a Linux system.
+
+### References
+
+- [Installation](https://wiki.archlinux.org/title/Samba#Installation)
+
+### Steps
+
+1. [Install](yay.md#install) the `samba` package using your package manager (i.e. `yay`) - this will automatically install other dependencies such as `smbclient` and `cifs-utils`.
+
+---
+
 ## Mounting Remote Directory
 
 ### Description
