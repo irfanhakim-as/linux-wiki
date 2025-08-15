@@ -56,10 +56,7 @@ This details how to mount a remote Samba share to our local machine.
 
 ### Steps
 
-1. Ensure that all necessary packages are [installed](yay.md#install), including `cifs-utils`, `samba`, and `smbclient`.
-
-    > [!NOTE]  
-    > Installing `samba` will also install other required packages such as `cifs-utils` and `smbclient` automatically.
+1. Ensure that all necessary packages are [installed](#installation).
 
 2. Create the directory that will be used as the mountpoint for the remote storage (i.e. `/mnt/mynas`):
 
