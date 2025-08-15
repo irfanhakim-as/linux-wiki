@@ -354,3 +354,138 @@ This details how to unmount a remote directory from our local machine.
     ```sh
     sudo systemctl daemon-reload
     ```
+
+---
+
+## Sharing a Directory Remotely
+
+### Description
+
+This details how to share a local directory remotely as a Samba share.
+
+### References
+
+- [Advanced configuration](https://wiki.archlinux.org/title/Samba#Advanced_configuration)
+
+### Steps
+
+1. Ensure that all necessary packages are [installed](#installation).
+
+2. Create a basic Samba configuration to start with if one does not exist yet:
+
+   - Create the Samba configuration file:
+
+     ```sh
+     sudo nano /etc/samba/smb.conf
+     ```
+
+   - Add and save the following configuration to the file:
+
+     ```ini
+     [global]
+       follow symlinks = yes
+       wide links = yes
+       unix extensions = no
+     ```
+
+3. Prepare the directory that is to be shared on the system, if not already:
+
+     ```sh
+     mkdir -p <share-directory-path>
+     ```
+
+     For example, create a directory (i.e. `myshare`) on a mounted external storage (i.e. `/run/media/myuser/external-storage`):
+
+     ```sh
+     mkdir -p /run/media/myuser/external-storage/myshare
+     ```
+
+4. Create a configuration file dedicated to configuring the Samba share:
+
+   - Create the Samba share configuration file (i.e. `myshare.conf`):
+
+     ```sh
+     sudo nano /etc/samba/<share-config-file>
+     ```
+
+     For example:
+
+     ```sh
+     sudo nano /etc/samba/myshare.conf
+     ```
+
+   - Add and save the following configuration to the Samba share configuration file:
+
+     ```ini
+     [<share-name>]
+       path = <share-directory-path>
+       browseable = yes
+       writable = yes
+       guest ok = no
+       read only = no
+     ```
+
+     For example:
+
+     ```ini
+     [myshare]
+       path = /run/media/myuser/external-storage/myshare
+       browseable = yes
+       writable = yes
+       guest ok = no
+       read only = no
+     ```
+
+     Feel free to update the Samba share configuration according to your needs.
+
+   - Update the system's Samba configuration file to include the new Samba share configuration file we had just created:
+
+     ```sh
+     sudo nano /etc/samba/smb.conf
+     ```
+
+     Add the following line to the existing configuration:
+
+     ```diff
+       [global]
+         follow symlinks = yes
+         wide links = yes
+         unix extensions = no
+     +   include = <share-config-file-path>
+     ```
+
+     For example:
+
+     ```ini
+     [global]
+       follow symlinks = yes
+       wide links = yes
+       unix extensions = no
+       include = /etc/samba/myshare.conf
+     ```
+
+5. Since the Samba share was configured to require an authenticated user, create a Samba user credentials for an existing user on the system (i.e. `myuser`):
+
+     ```sh
+     sudo smbpasswd -a <username>
+     ```
+
+     For example:
+
+     ```sh
+     sudo smbpasswd -a myuser
+     ```
+
+     Set a secure password for the Samba share user when prompted.
+
+6. Finally, start and enable the Samba service to apply the configuration changes we had made:
+
+     ```sh
+     sudo systemctl enable --now smb.service
+     ```
+
+     or restart it if it is already running:
+
+     ```sh
+     sudo systemctl restart smb.service
+     ```
