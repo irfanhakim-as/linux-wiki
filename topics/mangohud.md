@@ -28,7 +28,10 @@ This details the installation and basic configuration of MangoHud.
 
 ### Steps
 
-1. [Install](yay.md#install) **MangoHud** (`mangohud lib32-mangohud`) using `yay`.
+1. [Install](yay.md#install) the following packages using your package manager (i.e. `yay`) to install MangoHud:
+
+   - `mangohud`
+   - `lib32-mangohud`
 
 2. Configure the MangoHud overlay:
 
