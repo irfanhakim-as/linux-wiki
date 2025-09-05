@@ -32,6 +32,9 @@ This details the installation and setup of Podman on Linux and macOS as an alter
 
 - [Install Podman in a static manner](https://github.com/89luca89/distrobox/blob/main/docs/posts/install_podman_static.md)
 - [Installing on Mac & Windows](https://podman.io/docs/installation#installing-on-mac--windows)
+- [[Error] podman returns "Error: open /etc/containers/policy.json: no such file or directory" lilipod works](https://github.com/89luca89/distrobox/issues/1509)
+- [policy.json](https://raw.githubusercontent.com/containers/podman/refs/heads/main/test/policy.json)
+- [containers-policy.json](https://man.archlinux.org/man/containers-policy.json.5.en)
 
 ### Linux
 
@@ -69,6 +72,36 @@ This details the installation and setup of Podman on Linux and macOS as an alter
 
     ```sh
     bash ~/get-podman-launcher.sh
+    ```
+
+4. If you encounter such an error while building or running a container using `podman` post-installation:
+
+    ```
+      Error: open /etc/containers/policy.json: no such file or directory
+    ```
+
+    Create the following configuration directory on the system:
+
+    ```sh
+    mkdir -p ~/.config/containers
+    ```
+
+    Create the following policy configuration file:
+
+    ```sh
+    nano ~/.config/containers/policy.json
+    ```
+
+    Add and save the following configuration to the file:
+
+    ```json
+    {
+        "default": [
+            {
+                "type": "insecureAcceptAnything"
+            }
+        ]
+    }
     ```
 
 ### macOS
