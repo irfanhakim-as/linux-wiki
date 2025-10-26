@@ -20,7 +20,7 @@ GnuPG is a complete and free implementation of the OpenPGP standard as defined b
     - [Steps](#steps-1)
   - [Getting GPG Key Values](#getting-gpg-key-values)
     - [Description](#description-3)
-  - [References](#references-3)
+    - [References](#references-3)
     - [GPG Key ID](#gpg-key-id)
     - [GPG Public Key](#gpg-public-key)
   - [Sign Git Commits](#sign-git-commits)
@@ -111,7 +111,7 @@ This details how to generate a GPG key.
 
 This details how to get certain values relating to our GPG key.
 
-## References
+### References
 
 - [Checking for existing GPG keys](https://docs.github.com/en/authentication/managing-commit-signature-verification/checking-for-existing-gpg-keys)
 
