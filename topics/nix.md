@@ -1,0 +1,373 @@
+# Nix
+
+## Description
+
+Nix is a purely functional package manager that aims to make package management reproducible, declarative and reliable.
+
+## Directory
+
+- [Nix](#nix)
+  - [Description](#description)
+  - [Directory](#directory)
+  - [References](#references)
+  - [Setup](#setup)
+    - [Description](#description-1)
+    - [References](#references-1)
+    - [Installation](#installation)
+    - [Post-Install Setup](#post-install-setup)
+  - [NixGL](#nixgl)
+    - [Description](#description-2)
+    - [References](#references-2)
+    - [Installing NixGL](#installing-nixgl)
+    - [Update Application Desktop File to Use NixGL](#update-application-desktop-file-to-use-nixgl)
+  - [Usage](#usage)
+    - [Description](#description-3)
+    - [References](#references-3)
+    - [Adding a Channel](#adding-a-channel)
+    - [Updating a Channel](#updating-a-channel)
+    - [Install Software](#install-software)
+    - [Update Software](#update-software)
+    - [Remove Software](#remove-software)
+    - [Search Software](#search-software)
+    - [Clean Up](#clean-up)
+
+## References
+
+- [NixOS](https://nixos.org)
+- [ArchWiki](https://wiki.archlinux.org/title/Nix)
+
+---
+
+## Setup
+
+### Description
+
+This details how to install Nix using Lix, a project aiming for improvements in the Nix ecosystem by providing a hard fork version from the Nix package manager.
+
+### References
+
+- [Installing Lix](https://lix.systems/install)
+- [The Lix Installer Usage](https://git.lix.systems/lix-project/lix-installer#usage)
+- [Installation](https://wiki.archlinux.org/title/Nix#Installation)
+
+### Installation
+
+1. Install Nix using the Lix installer:
+
+    ```sh
+    curl --proto '=https' --tlsv1.2 -sSf -L https://install.lix.systems/lix | sh -s -- install
+    ```
+
+2. **Alternatively**, The Lix installer installs Lix by following a plan made by a planner. If you wish to install following plans other than the default, such as one dedicated to the Steam Deck, simply add the name of the planner (i.e. `steam-deck`) to the install command:
+
+    ```sh
+    curl --proto '=https' --tlsv1.2 -sSf -L https://install.lix.systems/lix | sh -s -- install steam-deck
+    ```
+
+3. Follow the guided installation steps provided by the installer until completion.
+
+4. Reboot the system.
+
+5. Go through the [post-installation setup steps](#post-install-setup).
+
+### Post-Install Setup
+
+This details the post-installation steps for a complete Lix/Nix setup:
+
+1. By default, there might not be a (software) channel available on the system for you to install packages from. In such a case, [add the `nixpkgs` channel](#adding-a-channel) (`https://nixos.org/channels/nixpkgs-unstable`) on the system.
+
+2. On a non-NixOS system, graphical applications (i.e. Alacritty, MPV, etc.) may not work out of the box:
+
+   - [Install and set up NixGL](#installing-nixgl) on the system.
+   - Going forward, if you have [installed any Nix packages](#install-software) that are graphical and would not work without NixGL, [update the application desktop file](#update-application-desktop-file-to-use-nixgl) to use NixGL by default.
+
+---
+
+## NixGL
+
+### Description
+
+NixGL solves the "OpenGL" problem with Nix by providing wrappers that let graphical applications access your system's graphics drivers. It also works for Vulkan programmes.
+
+### References
+
+- [NixGL](https://github.com/nix-community/nixGL)
+- [Graphical acceleration](https://wiki.archlinux.org/title/Nix#Graphical_acceleration)
+
+### Installing NixGL
+
+This details the process of installing NixGL:
+
+1. [Add the `nixgl` channel](#adding-a-channel) (`https://github.com/nix-community/nixGL`) on the system.
+
+2. [Install](#install-software) the `auto.nixGLDefault` package from the `nixgl` channel (i.e. `nixgl.auto.nixGLDefault`).
+
+### Update Application Desktop File to Use NixGL
+
+> [!NOTE]  
+> This part of the guide assumes that you have [installed NixGL](#installing-nixgl) on your system.
+
+This details the process of updating desktop files to launch graphical apps with NixGL:
+
+1. First and foremost, verify that the graphical application you have installed could not be launched without NixGL:
+
+   - For example, if you had installed `alacritty` from the `nixpkgs` channel, try and launch the application from the terminal:
+
+       ```sh
+       alacritty
+       ```
+
+   - If the application fails to launch as is, try and launching it with `nixGL` (the capitalisation matters):
+
+       ```sh
+       nixGL <application>
+       ```
+
+       For example:
+
+       ```sh
+       nixGL alacritty
+       ```
+
+   - If that fixes the issue, proceed with the following steps.
+
+2. Copy the Nix package's desktop file to the local applications directory:
+
+    ```sh
+    cp ~/.nix-profile/share/applications/<application>.desktop ~/.local/share/applications/
+    ```
+
+    For example:
+
+    ```sh
+    cp ~/.nix-profile/share/applications/Alacritty.desktop ~/.local/share/applications/
+    ```
+
+3. Update the permissions of the local desktop file you had copied to be writable:
+
+    ```sh
+    chmod +w ~/.local/share/applications/<application>.desktop
+    ```
+
+    For example:
+
+    ```sh
+    chmod +w ~/.local/share/applications/Alacritty.desktop
+    ```
+
+4. Update the command(s) to launch the application with `nixGL`:
+
+   - Update the local desktop file:
+
+        ```sh
+        nano ~/.local/share/applications/Alacritty.desktop
+        ```
+
+   - Prepend `nixGL` to all `Exec` line command(s) in the file. For example:
+
+        ```diff
+          [Desktop Entry]
+          Type=Application
+          TryExec=alacritty
+        - Exec=alacritty
+        + Exec=nixGL alacritty
+          Icon=Alacritty
+          Terminal=false
+          Categories=System;TerminalEmulator;
+
+          Name=Alacritty
+          GenericName=Terminal
+          Comment=A fast, cross-platform, OpenGL terminal emulator
+          StartupNotify=true
+          StartupWMClass=Alacritty
+          Actions=New;
+
+          [Desktop Action New]
+          Name=New Terminal
+        - Exec=alacritty
+        + Exec=nixGL alacritty
+        ```
+
+   - Save changes made and close the local desktop file.
+
+5. Update the database of MIME types handled by desktop files for the local applications directory:
+
+    ```sh
+    update-desktop-database ~/.local/share/applications/
+    ```
+
+6. Try and launch the application again through its desktop application icon (i.e. from the application launcher) and verify that the application now works as intended.
+
+---
+
+## Usage
+
+### Description
+
+This details some common usage steps for basic package management using Nix.
+
+### References
+
+- [Usage](https://wiki.archlinux.org/title/Nix#Usage)
+- [Quick Start](https://docs.lix.systems/manual/lix/stable/quick-start.html)
+- [nix-channel](https://docs.lix.systems/manual/lix/stable/command-ref/nix-channel.html)
+- [nix-env](https://docs.lix.systems/manual/lix/stable/command-ref/nix-env.html)
+- [nix search](https://docs.lix.systems/manual/lix/stable/command-ref/new-cli/nix3-search.html)
+
+### Adding a Channel
+
+This details the process of adding a Nix software repository (channel) to the system:
+
+1. To add a Nix channel on the system:
+
+    ```sh
+    nix-channel --add <url> [name]
+    ```
+
+    - Replace `<url>` with the URL of the channel you wish to add (i.e. `https://nixos.org/channels/nixpkgs-unstable`)
+    - **(Optional)** Replace `[name]` with a descriptive name for the channel (i.e. `nixpkgs`)
+    - For example:
+
+        ```sh
+        nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
+        ```
+
+2. [Update the channel](#updating-a-channel) to get the latest collection of available packages and updates.
+
+### Updating a Channel
+
+This details the process of updating a Nix software repository (channel) on the system:
+
+1. To update a particular channel or multiple of them on the system:
+
+    ```sh
+    nix-channel --update [names]
+    ```
+
+    - For example, to update a single channel called `nixpkgs`:
+
+        ```sh
+        nix-channel --update nixpkgs
+        ```
+
+    - Or, in a different example, to update a channel called `channel1` and another called `channel2`:
+
+        ```sh
+        nix-channel --update channel1 channel2
+        ```
+
+2. **Alternatively**, to update all available channels on the system:
+
+    ```sh
+    nix-channel --update
+    ```
+
+### Install Software
+
+This details the process of installing software:
+
+1. [Update the available channels](#updating-a-channel) on the system to get the latest collection of available packages and updates.
+
+2. To install a single Nix package from a channel:
+
+    ```sh
+    nix-env -iA <channel>.<package>
+    ```
+
+    As an example, to install the `hello` package from the `nixpkgs` channel:
+
+    ```sh
+    nix-env -iA nixpkgs.hello
+    ```
+
+3. To install multiple packages in a single command, simply separate each package with a space:
+
+    ```sh
+    nix-env -iA <channel>.<package> <channel>.<package> <channel>.<package>
+    ```
+
+### Update Software
+
+This details the process of updating a software or the system:
+
+1. [Update the available channels](#updating-a-channel) on the system to get the latest collection of available packages and updates.
+
+2. To update a particular Nix package or multiple of them, specify the name of the package(s):
+
+    ```sh
+    nix-env -u <package>
+    ```
+
+    - For example, to update a single package called `hello`:
+
+        ```sh
+        nix-env -u hello
+        ```
+
+    - Or, in a different example, to update a package called `package1` and another called `package2`:
+
+        ```sh
+        nix-env -u package1 package2
+        ```
+
+3. To update the entire system:
+
+    ```sh
+    nix-env -u
+    ```
+
+### Remove Software
+
+This details the process of uninstalling software:
+
+1. To uninstall a single Nix package from the system:
+
+    ```sh
+    nix-env -e <package>
+    ```
+
+    As an example, to uninstall the `hello` package:
+
+    ```sh
+    nix-env -e hello
+    ```
+
+2. To uninstall multiple packages in a single command, simply separate each package with a space:
+
+    ```sh
+    nix-env -e <package> <package> <package>
+    ```
+
+3. **(Optional)** Uninstalling a package does not automatically get rid of orphaned packages and dependencies. To get rid of them from time to time, perform a [clean up](#clean-up).
+
+### Search Software
+
+This details the process of searching software:
+
+1. To search for a Nix package:
+
+    ```sh
+    nix search nixpkgs <package>
+    ```
+
+    As an example, to search for the `hello` package:
+
+    ```sh
+    nix search nixpkgs hello
+    ```
+
+### Clean Up
+
+This details the process of cleaning up the system:
+
+1. To remove old Nix package versions and unused dependencies:
+
+    ```sh
+    nix-collect-garbage
+    ```
+
+2. **(Optional)** To also remove old generations (snapshots of previous package installations) and perform a more thorough cleanup of the system:
+
+    ```sh
+    nix-collect-garbage --delete-old
+    ```
