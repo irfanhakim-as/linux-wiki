@@ -669,7 +669,7 @@ This details the setup and configuration of Toshy for the purpose of matching th
 
 ## [Zram](../topics/zram.md#setup)
 
-This details how to setup Zram to be used as an alternative to swap.
+This details how to setup Zram to be used as an alternative to [swap](#enable-swap).
 
 ---
 
