@@ -159,6 +159,7 @@ unrar
 unzip
 wget
 which
+qdiskinfo
 ```
 
 [Flatpak](../topics/flatpak.md#install) packages:
@@ -212,6 +213,10 @@ org.raspberrypi.rpi-imager
 org.signal.Signal
 org.telegram.desktop
 com.github.iwalton3.jellyfin-media-player
+im.nheko.Nheko
+me.kozec.syncthingtk
+io.github.softfever.OrcaSlicer
+com.bitwarden.desktop
 ```
 
 [Pip](../topics/python.md#pip-usage) libraries:
