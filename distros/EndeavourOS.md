@@ -25,6 +25,7 @@ EndeavourOS is an Arch-based distro that provides an Arch experience without the
   - [Btrfs](#btrfs)
     - [Timeshift with Btrfs](#timeshift-with-btrfs)
     - [Balance Btrfs Volumes](#balance-btrfs-volumes)
+    - [Enable Swap](#enable-swap)
   - [GRUB](#grub)
     - [References](#references-6)
   - [Container Runtime](#container-runtime)
@@ -273,6 +274,10 @@ This details how to set up and use snapshotting with BTRFS using Timeshift.
 ### [Balance Btrfs Volumes](../topics/btrfs.md#balance-btrfs-volumes)
 
 This details how to balance Btrfs volumes on a periodic basis to ensure that the free space available on your device is properly unallocated.
+
+### [Enable Swap](../topics/btrfs.md#enable-swap)
+
+This details how to add and enable a swap file on a system running BTRFS, as an alternative to [Zram](#zram).
 
 ---
 
