@@ -185,7 +185,7 @@ com.visualstudio.code
 dev.vencord.Vesktop
 fr.handbrake.ghb
 io.github.jonmagon.kdiskmark
-io.github.mimbrero.WhatsAppDesktop
+com.rtosta.zapzap
 io.gitlab.librewolf-community
 io.mpv.Mpv
 it.mijorus.gearlever
