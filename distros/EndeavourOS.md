@@ -211,7 +211,7 @@ org.qbittorrent.qBittorrent
 org.raspberrypi.rpi-imager
 org.signal.Signal
 org.telegram.desktop
-tv.plex.PlexDesktop
+com.github.iwalton3.jellyfin-media-player
 ```
 
 [Pip](../topics/python.md#pip-usage) libraries:
