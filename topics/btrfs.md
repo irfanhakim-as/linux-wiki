@@ -324,71 +324,96 @@ This details how to disable and remove a swap device on a system running BTRFS:
 
    - First method:
 
-        ```sh
-        inxi -j
-        ```
+      ```sh
+      inxi -j
+      ```
 
-        Sample output:
+      Sample output:
 
-        ```sh
+      ```
         Swap:
         ID-1: swap-1 type: file size: 512 MiB used: 511.8 MiB (100.0%)
             file: /swap/swapfile
-        ```
+      ```
 
    - Second method:
 
-        ```sh
-        swapon --show
-        ```
+      ```sh
+      swapon --show
+      ```
 
-        Sample output:
+      Sample output:
 
-        ```sh
+      ```
         NAME           TYPE SIZE   USED PRIO
         /swap/swapfile file 512M 511.8M   -2
-        ```
+      ```
 
-    > [!NOTE]  
-    > Take note of the swap device name such as in this sample being `/swap/swapfile`.
+      Take note of the name of the swap device on the system (i.e. `/swap/swapfile`).
 
-2. Disable the swap device (i.e. `/swap/swapfile`):
+2. Disable the (file-based) swap device (i.e. `/swap/swapfile`):
 
     ```sh
-    swapoff /swap/swapfile
+    sudo swapoff /swap/swapfile
     ```
 
-3. Unmount the swap volume (i.e. `/swap`) so it can be deleted:
+3. Unmount the swap subvolume from its mountpoint (i.e. `/swap`):
 
     ```sh
     sudo umount /swap
     ```
 
-4. Delete the `@swap` BTRFS subvolume using the **Btrfs Assistant** application:
+    **(Optional)** You may also delete the mountpoint as it is no longer needed:
+
+    ```sh
+    sudo rm -r /swap
+    ```
+
+4. Delete the swap BTRFS subvolume (i.e. `@swap`) using the **Btrfs Assistant** application:
 
    - Launch the **Btrfs Assistant** application. [Install](yay.md#install) the `btrfs-assistant` package using `yay` if you do not have it already.
 
    - Navigate to the **Subvolumes** tab.
 
-   - From the list of subvolumes, locate and highlight the `@swap` subdirectory by selecting it.
+   - From the list of subvolumes, locate and highlight the swap BTRFS subvolume (i.e. `@swap`) by selecting it.
 
    - Click the **Delete** button.
 
    - When prompted to confirm, click the **Yes** button.
 
-5. Remove or comment entries in the system's `fstab` file relating to the swap device or subvolume:
+5. Prevent the system from attempting to mount the deleted swap BTRFS subvolume and activate the swap file on boot:
 
-   - Edit the `fstab` file:
+   - Update the system's `fstab` file:
 
-        ```sh
-        sudo nano /etc/fstab
-        ```
+      ```sh
+      sudo nano /etc/fstab
+      ```
 
-   - Remove or comment any entries relating to the swap device or subvolume like so:
+   - Remove or comment the following line that mounts the swap BTRFS subvolume to the designated mountpoint (i.e. `/swap`):
 
-        ```sh
-        #UUID=bzxd1bo8-9nnb-ddet-qykk-qjdgr9yytybg   /swap               btrfs   subvol=/@swap,noatime                                                                                               0 0
-        #/swap/swapfile                              swap                swap    defaults                                                                                                            0 0
-        ```
+      ```diff
+      - UUID=<uuid> /swap          btrfs   subvol=/@swap,noatime              0 0
+      + #UUID=<uuid> /swap          btrfs   subvol=/@swap,noatime              0 0
+      ```
 
-6. Restart the system and reuse the same step to verify that swap has been disabled.
+      Replace `<uuid>` with the UUID of the BTRFS filesystem (i.e. `bzxd1bo8-9nnb-ddet-qykk-qjdgr9yytybg`). For example:
+
+      ```
+      UUID=bzxd1bo8-9nnb-ddet-qykk-qjdgr9yytybg /swap          btrfs   subvol=/@swap,noatime              0 0
+      ```
+
+   - Add the following line to the `fstab` file to activate the swap file we had created as swap space on boot (i.e. `/swap/swapfile`):
+
+      ```diff
+      - /swap/swapfile                            swap           swap    defaults
+      + #/swap/swapfile                            swap           swap    defaults
+      ```
+
+   - Sample entries after they have been disabled by commenting them:
+
+      ```
+      #UUID=bzxd1bo8-9nnb-ddet-qykk-qjdgr9yytybg /swap          btrfs   subvol=/@swap,noatime              0 0
+      #/swap/swapfile                            swap           swap    defaults
+      ```
+
+6. Reboot the system and reuse the same step to verify that swap has been disabled.
