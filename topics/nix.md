@@ -49,26 +49,35 @@ This details how to install Nix using Lix, a project aiming for improvements in 
 - [Installing Lix](https://lix.systems/install)
 - [The Lix Installer Usage](https://git.lix.systems/lix-project/lix-installer#usage)
 - [Installation](https://wiki.archlinux.org/title/Nix#Installation)
+- [experimental-nix-installer](https://github.com/NixOS/experimental-nix-installer)
 
 ### Installation
 
-1. Install Nix using the Lix installer:
+1. Install Nix using **ONE** of the following installation methods:
 
-    ```sh
-    curl --proto '=https' --tlsv1.2 -sSf -L https://install.lix.systems/lix | sh -s -- install
-    ```
+   - The experimental Nix installer:
 
-2. **Alternatively**, The Lix installer installs Lix by following a plan made by a planner. If you wish to install following plans other than the default, such as one dedicated to the Steam Deck, simply add the name of the planner (i.e. `steam-deck`) to the install command:
+        ```sh
+        curl --proto '=https' --tlsv1.2 -sSf -L https://artifacts.nixos.org/experimental-installer | sh -s -- install
+        ```
 
-    ```sh
-    curl --proto '=https' --tlsv1.2 -sSf -L https://install.lix.systems/lix | sh -s -- install steam-deck
-    ```
+   - The Lix installer:
 
-3. Follow the guided installation steps provided by the installer until completion.
+        ```sh
+        curl --proto '=https' --tlsv1.2 -sSf -L https://install.lix.systems/lix | sh -s -- install
+        ```
 
-4. Reboot the system.
+        **Alternatively**, if you wish for the Lix installer to install Nix following (install) plans other than the default, such as one dedicated to the Steam Deck, simply add the name of the planner (i.e. `steam-deck`) to the install command:
 
-5. Go through the [post-installation setup steps](#post-install-setup).
+        ```sh
+        curl --proto '=https' --tlsv1.2 -sSf -L https://install.lix.systems/lix | sh -s -- install steam-deck
+        ```
+
+2. Follow the guided installation steps provided by the installer until completion.
+
+3. Reboot the system to start using Nix.
+
+4. Go through the [post-installation setup steps](#post-install-setup) to complete the Nix setup.
 
 ### Post-Install Setup
 
