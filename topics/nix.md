@@ -98,7 +98,7 @@ NixGL solves the "OpenGL" problem with Nix by providing wrappers that let graphi
 
 This details the process of installing NixGL:
 
-1. [Add the `nixgl` channel](#adding-a-channel) (`https://github.com/nix-community/nixGL`) on the system.
+1. [Add the `nixgl` channel](#adding-a-channel) (`https://github.com/nix-community/nixGL/archive/main.tar.gz`) on the system.
 
 2. [Install](#install-software) the `auto.nixGLDefault` package from the `nixgl` channel (i.e. `nixgl.auto.nixGLDefault`).
 
