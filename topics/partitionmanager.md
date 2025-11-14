@@ -72,7 +72,7 @@ This guide details on how we could clone a disk using KDE Partition Manager.
 
    - Once done, right click each of the partition in the newly cloned **Target** drive, and select the **Properties** option and locate the partition's `UUID`. Take note of each of their `UUID` values as we will need them later.
 
-8. Update `/etc/fstab`:
+8. Update the system `fstab` file:
 
    - Locate the exact partition in the **Target** drive which is the `root` partition. You could do this by checking it from KDE Partition Manager, or by using the following command:
 
@@ -82,33 +82,46 @@ This guide details on how we could clone a disk using KDE Partition Manager.
 
    - In this example, the `root` partition of the **Target** drive is `/dev/nvme0n1p2`, and uses the `btrfs` filesystem.
 
-      We will need to mount this partition in the Manjaro KDE Plasma Live USB desktop. First, we need to create a directory as the mounting point (i.e. `/mnt/nvme0n1p2`):
+      Mount the `root` partition to the mounting point:
 
       ```sh
-      sudo mkdir /mnt/nvme0n1p2
+      sudo mount /dev/nvme0n1p2 /mnt
       ```
 
-   - Mount the `root` partition to the mounting point:
+      **Alternatively**, if the `root` partition is a [Btrfs](btrfs.md) partition, mount the corresponding `root` subvolume (i.e. `@`) to the mounting point instead:
 
       ```sh
-      sudo mount /dev/nvme0n1p2 /mnt/nvme0n1p2
+      sudo mount -o subvol=@ /dev/nvme0n1p2 /mnt
       ```
 
-   - Make a backup of the `/etc/fstab` file from the `root` partition:
+   - Make a backup of the system's existing `fstab` file in the `root` partition:
 
       ```sh
-      sudo cp /mnt/nvme0n1p2/@/etc/fstab /mnt/nvme0n1p2/@/etc/fstab.bak
+      sudo cp /mnt/etc/fstab /mnt/etc/fstab.bak
       ```
 
-   - Edit the `/etc/fstab` file from the `root` partition:
+   - Update the `fstab` file in the `root` partition:
 
       ```sh
-      sudo nano /mnt/nvme0n1p2/@/etc/fstab
+      sudo nano /mnt/etc/fstab
       ```
 
-   - Replace all the old `UUID` values found in the `fstab` file with the `UUID` values of your new partitions in the **Target** drive.
+   - Replace all the old `UUID` values found in the `fstab` file with the `UUID` values of your new partitions in the **Target** drive. For example:
 
-      Do note that if a `btrfs` partition shares the same `UUID` with a partition from the **Source** drive, identify the new partition (i.e. `/dev/nvme0n1p2`) and generate a new `UUID` for it:
+      ```diff
+      - UUID=a7f3c2e5-4b8d-4a19-9f6e-2d1c8e4f7a3b   /                   btrfs   subvol=/@,noatime,compress=zstd                                                                                                          0 0
+      - UUID=a7f3c2e5-4b8d-4a19-9f6e-2d1c8e4f7a3b   /home               btrfs   subvol=/@home,noatime,compress=zstd                                                                                                      0 0
+      - UUID=a7f3c2e5-4b8d-4a19-9f6e-2d1c8e4f7a3b   /var/cache          btrfs   subvol=/@cache,noatime,compress=zstd                                                                                                     0 0
+      - UUID=a7f3c2e5-4b8d-4a19-9f6e-2d1c8e4f7a3b   /var/log            btrfs   subvol=/@log,noatime,compress=zstd                                                                                                       0 0
+      - UUID=a7f3c2e5-4b8d-4a19-9f6e-2d1c8e4f7a3b   /swap               btrfs   subvol=/@swap,noatime
+      + UUID=bzxd1bo8-9nnb-ddet-qykk-qjdgr9yytybg   /                   btrfs   subvol=/@,noatime,compress=zstd                                                                                                          0 0
+      + UUID=bzxd1bo8-9nnb-ddet-qykk-qjdgr9yytybg   /home               btrfs   subvol=/@home,noatime,compress=zstd                                                                                                      0 0
+      + UUID=bzxd1bo8-9nnb-ddet-qykk-qjdgr9yytybg   /var/cache          btrfs   subvol=/@cache,noatime,compress=zstd                                                                                                     0 0
+      + UUID=bzxd1bo8-9nnb-ddet-qykk-qjdgr9yytybg   /var/log            btrfs   subvol=/@log,noatime,compress=zstd                                                                                                       0 0
+      + UUID=bzxd1bo8-9nnb-ddet-qykk-qjdgr9yytybg   /swap               btrfs   subvol=/@swap,noatime
+      ```
+
+      Do note that if a `btrfs` partition from the **Target** drive shares the same `UUID` with its corresponding partition from the **Source** drive, generate a new `UUID` for said partition (i.e. `/dev/nvme0n1p2`):
 
       ```sh
       btrfstune -U $(uuidgen) /dev/nvme0n1p2
@@ -116,45 +129,46 @@ This guide details on how we could clone a disk using KDE Partition Manager.
 
       If the new `fat32` (`boot`) partition on the **Target** drive shares the same `UUID` as the old `boot` partition, it should be safe for you to just delete the old `boot` partition from the **Source** drive using the **KDE Partition Manager** app (make sure to apply the changes after selecting the **Delete** option).
 
-9. Update GRUB:
+9. Update the system GRUB:
 
-   - After finishing all the earlier steps, you can unmount any mounted partitions (i.e. `/mnt/nvme0n1p2`) and shut down the KDE Plasma Live USB Desktop session:
-
-      ```sh
-      sudo umount /mnt/nvme0n1p2 && sudo shutdown now
-      ```
-
-   - Remove the USB stick from the PC, and turn the PC back on, and get back into the UEFI/BIOS.
-
-   - In the **Boot** section, ensure that the newly cloned **Target** drive is set as the first in the boot order/priority.
-
-   - Once confirmed, choose the **Save & Reset** option in the BIOS and let the PC reboot into the GRUB of your new **Target** drive.
-
-   - Once you're in GRUB, quickly click the arrow keys of your keyboard (before it proceeds to desktop) and highlight the default boot entry of the GRUB (usually the first, top entry).
-
-   - Once highlighted, press the <kbd>E</kbd> key to edit the boot entry option.
-
-   - Locate all of the old `UUID` values in said entry and replace them with the new `UUID` values of their corresponding partitions (usually just the `root` partition).
-
-   - Once updated, execute the option that boots into the desktop using your updated entry. Usually this is done by pressing <kbd>Ctrl + X</kbd>.
-
-   - Once you've successfully booted into the desktop of your new drive, open the terminal to permanently update all of your new GRUB boot entries as the update we had done earlier was only temporary.
-
-   - Before we do that, ensure that we are indeed in the newly cloned desktop by checking that our `/etc/fstab` file has all the correct, updated `UUID` values of our newly cloned **Target** drive:
+   - With the `root` partition still mounted to the mounting point (i.e. `/mnt`), check the system's `fstab` file to find out where the `fat32` (`boot`) partition should be mounted to:
 
       ```sh
-      sudo cat /etc/fstab
+      sudo cat /mnt/etc/fstab
       ```
 
-   - Once we have confirmed that, create a backup of our existing GRUB config:
+      For example:
 
       ```
-      sudo cp /boot/grub/grub.cfg /boot/grub/grub.cfg.bak
+        UUID=A7F3-C2E5                              /boot/efi           vfat    noatime                                                                                                                                  0 2
       ```
 
-   - Now we can [regenerate a new GRUB config](grub.md#generate-grub-config) to override the old, outdated one.
+      In this sample `boot` partition, it is intended to be mounted to `/boot/efi` on the `root` partition.
 
-   - Restart your PC to confirm that the new GRUB config works, and your brand new drive and cloned desktop should be all set.
+   - Mount the `boot` partition (i.e. `/dev/nvme0n1p1`) to its intended mountpoint (i.e. `/boot/efi`) on the `root` partition we have mounted (i.e. `/mnt`):
+
+      ```sh
+      sudo mount /dev/nvme0n1p1 /mnt/boot/efi
+      ```
+
+   - Mount essential system directories and `chroot` into the `root` partition of the **Target** drive to access it as if we have booted into it:
+
+      ```sh
+      sudo mount --bind /dev /mnt/dev
+      sudo mount --bind /proc /mnt/proc
+      sudo mount --bind /sys /mnt/sys
+      sudo chroot /mnt
+      ```
+
+   - Create a backup of the system's existing GRUB config:
+
+      ```sh
+      sudo cp /mnt/boot/grub/grub.cfg /mnt/boot/grub/grub.cfg.bak
+      ```
+
+   - [Regenerate a new GRUB config](grub.md#generate-grub-config) to override the old, outdated one on the system.
+
+   - Reboot your computer without the Live USB Stick and **Source** drive attached to confirm that the new GRUB config works, and that the cloned desktop on your brand new **Target** drive is all set.
 
 ---
 
