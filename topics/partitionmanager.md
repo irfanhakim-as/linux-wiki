@@ -53,7 +53,7 @@ This guide details on how we could clone a disk using KDE Partition Manager.
 6. In the **Boot** section of the UEFI, locate the **Boot Override** option and select the USB drive to boot into the Manjaro KDE Plasma Live USB.
 
 > [!IMPORTANT]  
-> The target drive should be of the same capcaity or bigger than the source drive.
+> The target drive should be of the same capacity or bigger than the source drive.
 
 > [!CAUTION]  
 > The following steps will wipe the target drive clean, so make sure that you have backed up all the data you need from the target drive before proceeding.
