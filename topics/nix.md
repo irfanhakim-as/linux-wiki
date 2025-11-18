@@ -50,6 +50,8 @@ This details how to install Nix using Lix, a project aiming for improvements in 
 - [The Lix Installer Usage](https://git.lix.systems/lix-project/lix-installer#usage)
 - [Installation](https://wiki.archlinux.org/title/Nix#Installation)
 - [experimental-nix-installer](https://github.com/NixOS/experimental-nix-installer)
+- [Nix - The Best Package Manager](https://youtu.be/BwEIXIjLTNs)
+- [Error: experimental Nix feature ‘nix-command’ is disabled](https://discourse.nixos.org/t/error-experimental-nix-feature-nix-command-is-disabled/18089)
 
 ### Installation
 
@@ -89,6 +91,26 @@ This details the post-installation steps for a complete Lix/Nix setup:
 
    - [Install and set up NixGL](#installing-nixgl) on the system.
    - Going forward, if you have [installed any Nix packages](#install-software) that are graphical and would not work without NixGL, [update the application desktop file](#update-application-desktop-file-to-use-nixgl) to use NixGL by default.
+
+3. Enable Nix's experimental features on the system:
+
+   - Create the Nix configuration directory if it does not exist already:
+
+        ```sh
+        mkdir -p ~/.config/nix
+        ```
+
+   - Create or update the configuration file:
+
+        ```sh
+        nano ~/.config/nix/nix.conf
+        ```
+
+   - Add and save the following line to the configuration file:
+
+        ```sh
+        experimental-features = nix-command flakes
+        ```
 
 ---
 
