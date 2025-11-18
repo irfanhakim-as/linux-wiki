@@ -83,7 +83,7 @@ This details how to install Nix using Lix, a project aiming for improvements in 
 
 This details the post-installation steps for a complete Lix/Nix setup:
 
-1. By default, there might not be a (software) channel available on the system for you to install packages from. In such a case, [add the `nixpkgs` channel](#adding-a-channel) (`https://nixos.org/channels/nixpkgs-unstable`) on the system.
+1. By default, there might not be a (software) channel available on the system for you to install packages from. If that is the case, [add the `nixpkgs` channel](#adding-a-channel) (`https://nixos.org/channels/nixpkgs-unstable`) on the system.
 
 2. On a non-NixOS system, graphical applications (i.e. Alacritty, MPV, etc.) may not work out of the box:
 
