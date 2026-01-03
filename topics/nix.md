@@ -49,7 +49,7 @@ This details how to install Nix using Lix, a project aiming for improvements in 
 - [Installing Lix](https://lix.systems/install)
 - [The Lix Installer Usage](https://git.lix.systems/lix-project/lix-installer#usage)
 - [Installation](https://wiki.archlinux.org/title/Nix#Installation)
-- [experimental-nix-installer](https://github.com/NixOS/experimental-nix-installer)
+- [nix-installer](https://github.com/NixOS/nix-installer)
 - [Nix - The Best Package Manager](https://youtu.be/BwEIXIjLTNs)
 - [Error: experimental Nix feature ‘nix-command’ is disabled](https://discourse.nixos.org/t/error-experimental-nix-feature-nix-command-is-disabled/18089)
 
