@@ -332,7 +332,7 @@ This details how to disable and remove a swap device on a system running BTRFS:
 
       ```
         Swap:
-        ID-1: swap-1 type: file size: 512 MiB used: 511.8 MiB (100.0%)
+          ID-1: swap-1 type: file size: 512 MiB used: 511.8 MiB (100.0%)
             file: /swap/swapfile
       ```
 
