@@ -22,6 +22,7 @@ Btrfs is a modern copy on write (COW) file system for Linux aimed at implementin
     - [Description](#description-3)
     - [References](#references-2)
     - [Enable Swap](#enable-swap)
+    - [Resize Swap](#resize-swap)
     - [Disable Swap](#disable-swap)
 
 ## References
@@ -315,6 +316,107 @@ This details how to add and enable a swap file on a system running BTRFS:
       ```
 
    - Upon next boot, the swap BTRFS subvolume will be mounted and the swap file will be activated accordingly.
+
+### Resize Swap
+
+> [!NOTE]  
+> This guide assumes that you have previously [enabled swap](#enable-swap) on the system, and have not disabled it.
+
+This details how to resize a swap file on a system running BTRFS:
+
+1. First, verify that swap is currently enabled on the system:
+
+   - First method:
+
+      ```sh
+      inxi -j
+      ```
+
+      Sample output:
+
+      ```
+        Swap:
+          ID-1: swap-1 type: file size: 16 GiB used: 10.2 MiB (0.1%)
+            file: /swap/swapfile
+      ```
+
+   - Second method:
+
+      ```sh
+      swapon --show
+      ```
+
+      Sample output:
+
+      ```
+        NAME           TYPE SIZE  USED PRIO
+        /swap/swapfile file  16G 10.5M   -2
+      ```
+
+2. Disable the swap file (i.e. `/swap/swapfile`) on the system, **temporarily**:
+
+   ```sh
+   sudo swapoff /swap/swapfile
+   ```
+
+3. Delete the current swap file (i.e. `/swap/swapfile`):
+
+   ```sh
+   sudo rm /swap/swapfile
+   ```
+
+4. Create the replacement, appropriately sized swap file (i.e. `/swap/swapfile`):
+
+   ```sh
+   sudo btrfs filesystem mkswapfile --size <size>g --uuid clear /swap/swapfile
+   ```
+
+   For example, for 32GB of swap space:
+
+   ```sh
+   sudo btrfs filesystem mkswapfile --size 32g --uuid clear /swap/swapfile
+   ```
+
+   Sample output:
+
+   ```
+     create swapfile /swap/swapfile size 32.00GiB (34359738368)
+   ```
+
+5. Activate the swap file (i.e. `/swap/swapfile`) as swap space on the system:
+
+   ```sh
+   sudo swapon /swap/swapfile
+   ```
+
+6. Verify that swap has been enabled on the system:
+
+   - First method:
+
+      ```sh
+      inxi -j
+      ```
+
+      Sample output:
+
+      ```
+        Swap:
+          ID-1: swap-1 type: file size: 32 GiB used: 983.3 MiB (3.0%)
+             file: /swap/swapfile
+      ```
+
+   - Second method:
+
+      ```sh
+      swapon --show
+      ```
+
+      Sample output:
+
+      ```
+        NAME           TYPE SIZE   USED PRIO
+        /swap/swapfile file  32G 987.1M   -2
+      ```
 
 ### Disable Swap
 
