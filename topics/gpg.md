@@ -35,10 +35,14 @@ GnuPG is a complete and free implementation of the OpenPGP standard as defined b
     - [Description](#description-6)
     - [References](#references-6)
     - [Steps](#steps-4)
-  - [Renewing Expired GPG Keys](#renewing-expired-gpg-keys)
+  - [Add Additional Identity to GPG Key](#add-additional-identity-to-gpg-key)
     - [Description](#description-7)
     - [References](#references-7)
     - [Steps](#steps-5)
+  - [Renewing Expired GPG Keys](#renewing-expired-gpg-keys)
+    - [Description](#description-8)
+    - [References](#references-8)
+    - [Steps](#steps-6)
 
 ## References
 
@@ -308,6 +312,51 @@ This details how to update the passphrase of a GPG key.
 5. Enter the new passphrase and confirm it when prompted.
 
     You **may** need to enter the `save` subcommand in the `gpg>` prompt to save changes made to the GPG key.
+
+---
+
+## Add Additional Identity to GPG Key
+
+### Description
+
+This details how to add additional identity including name and email addresses (UIDs) to an existing GPG key.
+
+### References
+
+- [Edit your key](https://wiki.archlinux.org/title/GnuPG#Edit_your_key)
+
+### Steps
+
+1. Get our [GPG key ID](#gpg-key-id) (i.e. `1H89FHO4MGAJTJ9Z`).
+
+2. Edit the GPG key using the following command:
+
+    ```sh
+    gpg --edit-key <gpg-key-id>
+    ```
+
+    Replace `<gpg-key-id>` with the value of our GPG key ID (i.e. `1H89FHO4MGAJTJ9Z`) accordingly.
+
+3. In the `gpg>` prompt, enter the `adduid` subcommand to add a new email address:
+
+    ```sh
+    adduid
+    ```
+
+4. Add the following values when prompted:
+
+   - Real name: `My Name` (Add your real name here)
+   - Email address: `work@example.com` (Add your email address here)
+   - Comment: (Leave this blank or add a comment)
+   - Change name, comment, email, or okay/quit: `o`
+
+5. After adding the new email, enter the `save` subcommand to save changes:
+
+    ```sh
+    save
+    ```
+
+6. If you have previously registered the public key of your GPG key with any services such as GitHub or GitLab, you will need to replace them with your new [public key](#gpg-public-key) accordingly.
 
 ---
 
